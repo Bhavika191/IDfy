@@ -225,9 +225,32 @@ button {
 }
 
 /************************************************ Fonts **************************************************/
+@font-face {
+  font-family: "HelveticaNeueBlack";
+  src: url("fonts/HelveticaNeueBlack.woff2") format("woff2"), url("fonts/HelveticaNeueBlack.woff") format("woff");
+}
+@font-face {
+  font-family: "HelveticaNeueBold";
+  src: url("fonts/HelveticaNeueBold.woff2") format("woff2"), url("fonts/HelveticaNeueBold.woff") format("woff");
+}
+@font-face {
+  font-family: "HelveticaNeueLight";
+  src: url("fonts/HelveticaNeueLight.woff2") format("woff2"), url("fonts/HelveticaNeueLight.woff") format("woff");
+}
+@font-face {
+  font-family: "HelveticaNeueMedium";
+  src: url("fonts/HelveticaNeueMedium.woff2") format("woff2"), url("fonts/HelveticaNeueMedium.woff") format("woff");
+}
+@font-face {
+  font-family: "HelveticaNeueThin";
+  src: url("fonts/HelveticaNeueThin.woff2") format("woff2"), url("fonts/HelveticaNeueThin.woff") format("woff");
+}
+@font-face {
+  font-family: "HelveticaNeueUltraLight";
+  src: url("fonts/HelveticaNeueUltraLight.woff2") format("woff2"), url("fonts/HelveticaNeueUltraLight.woff") format("woff");
+}
 /************************************************ Common CSS **************************************************/
 body {
-  font-family: "DM Sans", sans-serif;
   position: relative;
 }
 
@@ -243,192 +266,89 @@ img {
   height: inherit !important;
 }
 
-.slick-dots > li:only-child {
-  display: none;
-}
-
-.ctaBlack {
-  padding: 16px 32px;
-  font-family: "DM Sans", sans-serif;
-  font-size: 20px;
-  line-height: 140%;
-  letter-spacing: 4px;
-  font-weight: 500;
+.ctaRed {
+  padding: 16px 30px;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: -2%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  border-radius: 8px;
-  border: 2px solid #FFFFFF;
+  border-radius: 40px;
   text-decoration: none;
   color: #FFFFFF;
-  text-transform: uppercase;
+  text-transform: capitalize;
+  transition: 0.3s all ease-in-out;
+  background: #CE1010;
+}
+@media screen and (max-width: 1600px) {
+  .ctaRed {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .ctaRed {
+    font-size: 12px;
+  }
+}
+.ctaRed:hover {
+  color: #FFFFFF;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.3019607843);
   transition: 0.3s all ease-in-out;
 }
 @media screen and (max-width: 1600px) {
-  .ctaBlack {
-    font-size: 18px;
-  }
-}
-@media screen and (max-width: 720px) {
-  .ctaBlack {
-    font-size: 16px;
-  }
-}
-.ctaBlack span {
-  color: #FFFFFF;
-  font-family: "DM Sans", sans-serif;
-  display: flex;
-  align-items: center;
-  transition: 0.3s all ease-in-out;
-  text-align: center;
-}
-.ctaBlack span img {
-  margin-left: 22px;
-  width: 13px;
-  height: 13px;
-  transition: 0.3s all ease-in-out;
-}
-.ctaBlack span svg {
-  margin-left: 22px;
-  width: 13px;
-  height: 13px;
-  transition: 0.3s all ease-in-out;
-}
-.ctaBlack:hover {
-  border: 2px solid #455DFF;
-  color: #FFFFFF;
-}
-.ctaBlack:hover img {
-  transform: rotate(45deg);
-}
-@media screen and (max-width: 1600px) {
-  .ctaBlack {
+  .ctaRed {
     padding: 14px 28px;
   }
 }
 @media screen and (max-width: 1400px) {
-  .ctaBlack {
+  .ctaRed {
     padding: 11px 22px;
-  }
-  .ctaBlack span img {
-    margin-left: 20px;
-    width: 12px;
-    height: 12px;
-  }
-  .ctaBlack span svg {
-    margin-left: 20px;
-    width: 12px;
-    height: 12px;
   }
 }
 @media screen and (max-width: 1200px) {
-  .ctaBlack {
+  .ctaRed {
     padding: 10px 20px;
-  }
-  .ctaBlack span img {
-    width: 10px;
-    height: 10px;
-    margin-left: 20px;
-  }
-  .ctaBlack span svg {
-    width: 10px;
-    height: 10px;
-    margin-left: 20px;
-  }
-}
-@media screen and (max-width: 820px) {
-  .ctaBlack span img {
-    margin-left: 12px;
-  }
-  .ctaBlack span svg {
-    margin-left: 12px;
   }
 }
 @media screen and (max-width: 720px) {
-  .ctaBlack {
+  .ctaRed {
     padding: 8px 16px;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: 3.2px;
-    text-transform: uppercase;
-  }
-  .ctaBlack span {
-    line-height: 24px;
-  }
-  .ctaBlack span img {
-    margin-left: 12px;
-  }
-  .ctaBlack span svg {
-    margin-left: 12px;
   }
 }
 
 .ctaWhite {
-  padding: 16px 32px;
-  font-family: "DM Sans", sans-serif;
-  font-size: 20px;
-  letter-spacing: 4px;
-  line-height: 140%;
-  font-weight: 500;
+  padding: 16px 30px;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: -2%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  border-radius: 8px;
-  border: 1px solid #FFFFFF;
-  background: #FFFFFF;
+  border-radius: 40px;
   text-decoration: none;
-  color: #3E3E3E;
-  text-transform: uppercase;
-  transition: all 0.3s ease-out;
+  color: #343434;
+  text-transform: capitalize;
+  transition: 0.3s all ease-in-out;
+  background: #FFFFFF;
+  border: 1px solid #343434;
 }
 @media screen and (max-width: 1600px) {
   .ctaWhite {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1400px) {
   .ctaWhite {
-    font-size: 16px;
+    font-size: 12px;
   }
-}
-.ctaWhite span {
-  color: #3E3E3E;
-  display: flex;
-  align-items: center;
-  transition: 0.3s all ease-in-out;
-  text-align: center;
-}
-.ctaWhite span img {
-  margin-left: 22px;
-  width: 13px;
-  height: 13px;
-  transition: 0.3s all ease-in-out;
-}
-.ctaWhite span svg {
-  margin-left: 22px;
-  width: 13px;
-  height: 13px;
-  transition: 0.3s all ease-in-out;
 }
 .ctaWhite:hover {
-  color: #fff;
-  background: #455DFF;
-  border: 1px solid #455DFF;
-}
-.ctaWhite:hover img {
-  transform: rotate(45deg);
-}
-.ctaWhite:hover svg {
-  transform: rotate(45deg);
-}
-.ctaWhite:hover svg path {
-  stroke: #fff;
-}
-.ctaWhite:hover span {
-  color: #fff;
+  color: #343434;
+  box-shadow: 2px 3px 4px 0px rgba(0, 0, 0, 0.1490196078);
+  transition: 0.3s all ease-in-out;
 }
 @media screen and (max-width: 1600px) {
   .ctaWhite {
@@ -439,56 +359,67 @@ img {
   .ctaWhite {
     padding: 11px 22px;
   }
-  .ctaWhite span img {
-    margin-left: 20px;
-    width: 12px;
-    height: 12px;
-  }
-  .ctaWhite span svg {
-    margin-left: 20px;
-    width: 12px;
-    height: 12px;
-  }
 }
 @media screen and (max-width: 1200px) {
   .ctaWhite {
     padding: 10px 20px;
   }
-  .ctaWhite span img {
-    width: 10px;
-    height: 10px;
-    margin-left: 20px;
-  }
-  .ctaWhite span svg {
-    width: 10px;
-    height: 10px;
-    margin-left: 20px;
-  }
-}
-@media screen and (max-width: 820px) {
-  .ctaWhite span img {
-    margin-left: 12px;
-  }
-  .ctaWhite span svg {
-    margin-left: 12px;
-  }
 }
 @media screen and (max-width: 720px) {
   .ctaWhite {
     padding: 8px 16px;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: 3.2px;
-    text-transform: uppercase;
   }
-  .ctaWhite span {
-    line-height: 24px;
+}
+
+.ctaBlue {
+  padding: 16px 30px;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: -2%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 40px;
+  text-decoration: none;
+  color: #FFFFFF;
+  text-transform: capitalize;
+  transition: 0.3s all ease-in-out;
+  background: #1C43B9;
+  border: 1px solid #FFFFFF;
+}
+@media screen and (max-width: 1600px) {
+  .ctaBlue {
+    font-size: 14px;
   }
-  .ctaWhite span img {
-    margin-left: 12px;
+}
+@media screen and (max-width: 1400px) {
+  .ctaBlue {
+    font-size: 12px;
   }
-  .ctaWhite span svg {
-    margin-left: 12px;
+}
+.ctaBlue:hover {
+  color: #1C43B9;
+  background: #FFFFFF;
+  transition: 0.3s all ease-in-out;
+}
+@media screen and (max-width: 1600px) {
+  .ctaBlue {
+    padding: 14px 28px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .ctaBlue {
+    padding: 11px 22px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .ctaBlue {
+    padding: 10px 20px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .ctaBlue {
+    padding: 8px 16px;
   }
 }/*# sourceMappingURL=main.css.map */

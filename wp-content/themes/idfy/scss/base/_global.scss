@@ -226,13 +226,42 @@ button {
 }
 
 /************************************************ Fonts **************************************************/
-$fontdmsans: 'DM Sans', sans-serif;
-$fontspacegrotesk: 'Space Grotesk', sans-serif;
+@font-face {
+    font-family: 'HelveticaNeueBlack';
+    src: url('fonts/HelveticaNeueBlack.woff2') format('woff2'),
+        url('fonts/HelveticaNeueBlack.woff') format('woff');
+}
+@font-face {
+    font-family: 'HelveticaNeueBold';
+    src: url('fonts/HelveticaNeueBold.woff2') format('woff2'),
+        url('fonts/HelveticaNeueBold.woff') format('woff');
+}
+@font-face {
+    font-family: 'HelveticaNeueLight';
+    src: url('fonts/HelveticaNeueLight.woff2') format('woff2'),
+        url('fonts/HelveticaNeueLight.woff') format('woff');
+}
+@font-face {
+    font-family: 'HelveticaNeueMedium';
+    src: url('fonts/HelveticaNeueMedium.woff2') format('woff2'),
+        url('fonts/HelveticaNeueMedium.woff') format('woff');
+}
+@font-face {
+    font-family: 'HelveticaNeueThin';
+    src: url('fonts/HelveticaNeueThin.woff2') format('woff2'),
+        url('fonts/HelveticaNeueThin.woff') format('woff');
+}
+@font-face {
+    font-family: 'HelveticaNeueUltraLight';
+    src: url('fonts/HelveticaNeueUltraLight.woff2') format('woff2'),
+        url('fonts/HelveticaNeueUltraLight.woff') format('woff');
+}
+
 
 /************************************************ Common CSS **************************************************/
 
 body{
-    font-family:$fontdmsans;position: relative;
+    position: relative;
 }
 
 @mixin wrapper {
@@ -338,111 +367,67 @@ body{
 }
 
 
+$fonthelveticaneueblack: 'HelveticaNeueBlack';
+$fonthelveticaneuebold: 'HelveticaNeueBold';
+$fonthelveticaneuelight: 'HelveticaNeueLight';
+$fonthelveticaneuemedium: 'HelveticaNeueMedium';
+$fonthelveticaneuethin: 'HelveticaNeueThin';
+$fonthelveticaneueultralight: 'HelveticaNeueUltraLight';
 
-
-$fontW100 : 100;
-$fontW200 : 200;
-$fontW300 : 300;
-$fontW400 : 400;
-$fontW500 : 500;
-$fontW600 : 600;
-$fontW700 : 700;
-$fontW800 : 800;
-$fontW900 : 900;
+$colorRed : #CE1010;
+$colorBlue: #1C43B9;
+$colorGray : #343434;
+$colorLightgray: #808080;
+$colorWhite : #FFFFFF;
 
 img {max-width: 100%;}
 .slick-track {display: flex !important;}
 .slick-slide {height: inherit !important;}
-.slick-dots {
-    > li:only-child {
-        display: none;
-    }
-}
 
-.ctaBlack {padding: 16px 32px;font-family: $fontdmsans;@include font20;line-height: 140%;letter-spacing: 4px;font-weight: $fontW500;display: inline-flex;align-items: center;justify-content: center;cursor: pointer;border-radius: 8px;border: 2px solid #FFFFFF;text-decoration: none;color: #FFFFFF;text-transform: uppercase;transition: 0.3s all ease-in-out;
-    span{color: #FFFFFF;font-family: $fontdmsans;display: flex;align-items: center;transition: 0.3s all ease-in-out;text-align:center;
-        img{margin-left: 22px;width: 13px;height: 13px;transition: 0.3s all ease-in-out;}
-        svg{margin-left: 22px;width: 13px;height: 13px;transition: 0.3s all ease-in-out;}
-    }
-    &:hover{border: 2px solid #455DFF;color: #FFFFFF;
-        img{transform: rotate(45deg);}
-    }
+.ctaRed {padding: 16px 30px;;@include font16;line-height: 16px;letter-spacing: -2%;display: inline-flex;align-items: center;justify-content: center;cursor: pointer;border-radius: 40px;text-decoration: none;color: $colorWhite;text-transform: capitalize;transition: 0.3s all ease-in-out;background: $colorRed;
+    &:hover{color: $colorWhite;box-shadow: 2px 2px 5px 1px #0000004D;transition: 0.3s all ease-in-out;}
     @media screen and (max-width:1600px) {
         padding: 14px 28px;
     }
     @media screen and (max-width:1400px) {
         padding: 11px 22px;
-        span{
-            img{margin-left: 20px;width: 12px;height: 12px;}
-            svg{margin-left: 20px;width: 12px;height: 12px;}
-        }
     }
     @media screen and (max-width:1200px) {
         padding: 10px 20px;
-        span{img{width: 10px;height: 10px;margin-left: 20px;}svg{width: 10px;height: 10px;margin-left: 20px;}}
-    
-    }
-    @media screen and (max-width:820px) {
-        span{
-            img{margin-left: 12px;}
-            svg{margin-left: 12px;}
-        }
     }
     @media screen and (max-width:720px) {
         padding: 8px 16px;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 24px;
-        letter-spacing: 3.2px;
-        text-transform: uppercase;
-        span{line-height: 24px;
-            img{margin-left: 12px;}
-            svg{margin-left: 12px;}
-        }
     }
 }
 
-.ctaWhite {padding: 16px 32px;font-family: $fontdmsans;@include font20;letter-spacing: 4px;line-height: 140%;font-weight: $fontW500;display: inline-flex;align-items: center;justify-content: center;cursor: pointer;border-radius: 8px;border: 1px solid #FFFFFF;background: #FFFFFF;text-decoration: none;color: #3E3E3E;text-transform: uppercase;transition: all 0.3s ease-out;
-    span{color: #3E3E3E;display: flex;align-items: center;transition: 0.3s all ease-in-out;text-align:center;
-        img{margin-left: 22px;width: 13px;height: 13px;transition: 0.3s all ease-in-out;}
-        svg{margin-left: 22px;width: 13px;height: 13px;transition: 0.3s all ease-in-out;}
-    }
-    &:hover{color: #fff;background: #455DFF;border: 1px solid #455DFF;
-        img{transform: rotate(45deg);}
-        svg{path{stroke: #fff;}transform: rotate(45deg);}
-        span{color: #fff;};
-    }
+.ctaWhite {padding: 16px 30px;;@include font16;line-height: 16px;letter-spacing: -2%;display: inline-flex;align-items: center;justify-content: center;cursor: pointer;border-radius: 40px;text-decoration: none;color: $colorGray;text-transform: capitalize;transition: 0.3s all ease-in-out;background: $colorWhite;border: 1px solid $colorGray;
+    &:hover{color: $colorGray;box-shadow: 2px 3px 4px 0px #00000026;transition: 0.3s all ease-in-out;}
     @media screen and (max-width:1600px) {
         padding: 14px 28px;
     }
     @media screen and (max-width:1400px) {
         padding: 11px 22px;
-        span{
-            img{margin-left: 20px;width: 12px;height: 12px;}
-            svg{margin-left: 20px;width: 12px;height: 12px;}
-        }
     }
     @media screen and (max-width:1200px) {
         padding: 10px 20px;
-        span{img{width: 10px;height: 10px;margin-left: 20px;}svg{width: 10px;height: 10px;margin-left: 20px;}}
-    }
-
-    @media screen and (max-width:820px) {
-        span{
-            img{margin-left: 12px;}
-            svg{margin-left: 12px;}
-        }
     }
     @media screen and (max-width:720px) {
         padding: 8px 16px;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 24px;
-        letter-spacing: 3.2px;
-        text-transform: uppercase;
-        span{line-height: 24px;
-            img{margin-left: 12px;}
-            svg{margin-left: 12px;}
-        }
+    }
+}
+
+.ctaBlue {padding: 16px 30px;;@include font16;line-height: 16px;letter-spacing: -2%;display: inline-flex;align-items: center;justify-content: center;cursor: pointer;border-radius: 40px;text-decoration: none;color: $colorWhite;text-transform: capitalize;transition: 0.3s all ease-in-out;background: $colorBlue;border: 1px solid #FFFFFF;
+    &:hover{color: $colorBlue;background: $colorWhite;transition: 0.3s all ease-in-out;}
+    @media screen and (max-width:1600px) {
+        padding: 14px 28px;
+    }
+    @media screen and (max-width:1400px) {
+        padding: 11px 22px;
+    }
+    @media screen and (max-width:1200px) {
+        padding: 10px 20px;
+    }
+    @media screen and (max-width:720px) {
+        padding: 8px 16px;
     }
 }
