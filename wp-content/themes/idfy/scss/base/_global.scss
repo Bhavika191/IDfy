@@ -188,7 +188,6 @@ template {
 
 html,
 body {
-    background: #080808 !important;
     scroll-behavior: smooth;
 }
 
@@ -262,6 +261,7 @@ button {
 
 body{
     position: relative;
+    background: #fff;
 }
 
 @mixin wrapper {
@@ -305,6 +305,23 @@ body{
     }
 }
 
+@mixin font72 {
+    font-size: 72px;
+
+    @media screen and (max-width:1600px) {
+        font-size: 62px;
+    }
+    @media screen and (max-width:1400px) {
+        font-size: 52px;
+    }
+    @media screen and (max-width:1280px) {
+        font-size: 38px;
+    }
+    @media screen and (max-width:1024px) {
+        font-size: 26px;
+    }
+}
+
 
 @mixin font48 {
     font-size: 48px;
@@ -332,6 +349,62 @@ body{
     }
 }
 
+@mixin font38 {
+    font-size: 38px;
+
+    @media screen and (max-width:1600px) {
+        font-size: 30px;
+    }
+    @media screen and (max-width:1400px) {
+        font-size: 26px;
+    }
+    @media screen and (max-width:1280px) {
+        font-size: 22px;
+    }
+    @media screen and (max-width:1024px) {
+        font-size: 20px;
+    }
+}
+
+@mixin font34{
+    font-size: 34px;
+
+    @media screen and (max-width:1600px) {
+        font-size: 26px;
+    }
+    @media screen and (max-width:1400px) {
+        font-size: 22px;
+    }
+    @media screen and (max-width:1280px) {
+        font-size: 20px;
+    }
+    @media screen and (max-width:1024px) {
+        font-size: 16px;
+    }
+    @media screen and (max-width:720px) {
+        font-size: 14px;
+    }
+}
+
+@mixin font32{
+    font-size: 32px;
+
+    @media screen and (max-width:1600px) {
+        font-size: 24px;
+    }
+    @media screen and (max-width:1400px) {
+        font-size: 20px;
+    }
+    @media screen and (max-width:1280px) {
+        font-size: 18px;
+    }
+    @media screen and (max-width:1024px) {
+        font-size: 14px;
+    }
+    @media screen and (max-width:720px) {
+        font-size: 12px;
+    }
+}
 
 @mixin font24 {
     font-size: 24px;
@@ -344,6 +417,17 @@ body{
     }
 }
 
+@mixin font22 {
+    font-size: 22px;
+
+    @media screen and (max-width:1600px) {
+        font-size: 18px;
+    }
+    @media screen and (max-width:1400px) {
+        font-size: 16px;
+    }
+}
+
 @mixin font20 {
     font-size: 20px;
 
@@ -351,6 +435,13 @@ body{
         font-size: 18px;
     }
     @media screen and (max-width:720px) {
+        font-size: 16px;
+    }
+}
+@mixin font18{
+    font-size: 18px;
+
+    @media screen and (max-width:1200px) {
         font-size: 16px;
     }
 }
@@ -366,6 +457,14 @@ body{
     }
 }
 
+@mixin font14 {
+    font-size: 14px;
+}
+
+
+@mixin font12 {
+    font-size: 12px;
+}
 
 $fonthelveticaneueblack: 'HelveticaNeueBlack';
 $fonthelveticaneuebold: 'HelveticaNeueBold';
@@ -374,6 +473,8 @@ $fonthelveticaneuemedium: 'HelveticaNeueMedium';
 $fonthelveticaneuethin: 'HelveticaNeueThin';
 $fonthelveticaneueultralight: 'HelveticaNeueUltraLight';
 
+
+$colorBlack : #000000;
 $colorRed : #CE1010;
 $colorBlue: #1C43B9;
 $colorGray : #343434;
@@ -384,7 +485,7 @@ img {max-width: 100%;}
 .slick-track {display: flex !important;}
 .slick-slide {height: inherit !important;}
 
-.ctaRed {padding: 16px 30px;;@include font16;line-height: 16px;letter-spacing: -2%;display: inline-flex;align-items: center;justify-content: center;cursor: pointer;border-radius: 40px;text-decoration: none;color: $colorWhite;text-transform: capitalize;transition: 0.3s all ease-in-out;background: $colorRed;
+.ctaRed {padding: 16px 30px;;@include font16;line-height: 16px;letter-spacing: 0px;font-family: $fonthelveticaneuebold;display: inline-flex;align-items: center;justify-content: center;cursor: pointer;border-radius: 40px;text-decoration: none;color: $colorWhite;text-transform: capitalize;transition: 0.3s all ease-in-out;background: $colorRed;
     &:hover{color: $colorWhite;box-shadow: 2px 2px 5px 1px #0000004D;transition: 0.3s all ease-in-out;}
     @media screen and (max-width:1600px) {
         padding: 14px 28px;
@@ -396,11 +497,11 @@ img {max-width: 100%;}
         padding: 10px 20px;
     }
     @media screen and (max-width:720px) {
-        padding: 8px 16px;
+        padding: 12px 20px;font-size: 16px;
     }
 }
 
-.ctaWhite {padding: 16px 30px;;@include font16;line-height: 16px;letter-spacing: -2%;display: inline-flex;align-items: center;justify-content: center;cursor: pointer;border-radius: 40px;text-decoration: none;color: $colorGray;text-transform: capitalize;transition: 0.3s all ease-in-out;background: $colorWhite;border: 1px solid $colorGray;
+.ctaWhite {padding: 16px 30px;;@include font16;line-height: 16px;letter-spacing: 0px;font-family: $fonthelveticaneuebold;display: inline-flex;align-items: center;justify-content: center;cursor: pointer;border-radius: 40px;text-decoration: none;color: $colorGray;text-transform: capitalize;transition: 0.3s all ease-in-out;background: $colorWhite;border: 1px solid $colorGray;
     &:hover{color: $colorGray;box-shadow: 2px 3px 4px 0px #00000026;transition: 0.3s all ease-in-out;}
     @media screen and (max-width:1600px) {
         padding: 14px 28px;
@@ -412,11 +513,11 @@ img {max-width: 100%;}
         padding: 10px 20px;
     }
     @media screen and (max-width:720px) {
-        padding: 8px 16px;
+        padding: 12px 20px;font-size: 16px;
     }
 }
 
-.ctaBlue {padding: 16px 30px;;@include font16;line-height: 16px;letter-spacing: -2%;display: inline-flex;align-items: center;justify-content: center;cursor: pointer;border-radius: 40px;text-decoration: none;color: $colorWhite;text-transform: capitalize;transition: 0.3s all ease-in-out;background: $colorBlue;border: 1px solid #FFFFFF;
+.ctaBlue {padding: 16px 30px;;@include font16;line-height: 16px;letter-spacing: 0px;font-family: $fonthelveticaneuebold;display: inline-flex;align-items: center;justify-content: center;cursor: pointer;border-radius: 40px;text-decoration: none;color: $colorWhite;text-transform: capitalize;transition: 0.3s all ease-in-out;background: $colorBlue;border: 1px solid #FFFFFF;
     &:hover{color: $colorBlue;background: $colorWhite;transition: 0.3s all ease-in-out;}
     @media screen and (max-width:1600px) {
         padding: 14px 28px;
@@ -428,6 +529,6 @@ img {max-width: 100%;}
         padding: 10px 20px;
     }
     @media screen and (max-width:720px) {
-        padding: 8px 16px;
+        padding: 12px 20px;font-size: 16px;
     }
 }
