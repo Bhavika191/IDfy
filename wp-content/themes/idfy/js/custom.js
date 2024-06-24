@@ -109,12 +109,40 @@ $("#trigger").click(function () {
 });
 // Show more footer js ends
 
-
-
 $(document).ready(function () {
     $(".mainLinks .solutionLink").click(function () {
         $('.dropdownsolution').toggleClass("activeDropdown");
     });
 });
+
+// ------------------Header Dropdown JS--------------------- //
+document.addEventListener('DOMContentLoaded', () => {
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    dropdowns.forEach(dropdown => {
+        dropdown.addEventListener('click', function (event) {
+            // Prevent default behavior
+            event.preventDefault();
+            // Close other open dropdowns
+            dropdowns.forEach(dd => {
+                if (dd !== this) {
+                    dd.classList.remove('active');
+                }
+            });
+            // Toggle the current dropdown
+            this.classList.toggle('active');
+        });
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('.dropdown')) {
+            dropdowns.forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+        }
+    });
+});
+// ------------------Header Dropdown JS--------------------- //
 
 
