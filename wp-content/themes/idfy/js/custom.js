@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const leftArrow = document.getElementById('left-arrow');
     const rightArrow = document.getElementById('right-arrow');
     let currentYearIndex = 0;
+    let autoProceedInterval;
 
     function showContent(year) {
         contentSections.forEach(section => {
@@ -50,27 +51,43 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    function startAutoProceed() {
+        clearInterval(autoProceedInterval);
+        autoProceedInterval = setInterval(() => {
+            if (currentYearIndex < years.length - 1) {
+                navigateToYear(currentYearIndex + 1);
+            } else {
+                currentYearIndex = 0;
+                navigateToYear(currentYearIndex);
+            }
+        }, 3000);
+    }
+
     years.forEach((year, index) => {
         year.addEventListener('click', () => {
             navigateToYear(index);
+            startAutoProceed(); // Restart auto proceed when a year is clicked
         });
     });
 
     leftArrow.addEventListener('click', () => {
         if (currentYearIndex > 0) {
             navigateToYear(currentYearIndex - 1);
+            startAutoProceed(); // Restart auto proceed when left arrow is clicked
         }
     });
 
     rightArrow.addEventListener('click', () => {
         if (currentYearIndex < years.length - 1) {
             navigateToYear(currentYearIndex + 1);
+            startAutoProceed(); // Restart auto proceed when right arrow is clicked
         }
     });
 
     // Initialize with the first year's content
     if (years.length > 0) {
         navigateToYear(0);
+        startAutoProceed();
     }
 });
 // Timeline JS starts
@@ -99,3 +116,5 @@ $(document).ready(function () {
         $('.dropdownsolution').toggleClass("activeDropdown");
     });
 });
+
+

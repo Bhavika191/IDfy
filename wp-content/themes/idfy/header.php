@@ -41,60 +41,60 @@
 						<ul>
 							<li>
 								<a href="#" class="solutionLink">solutions</a>
+								<div class="dropdownsolution">
+									<div class="Card360">
+										<div class="Img360">
+											<img src="<?php bloginfo('template_directory'); ?>/images/360-img.svg" alt="">
+										</div>
+										<h3>IDfy360</h3>
+										<p>Comprehensive Identity Verification Solution</p>
+										<ul>
+											<li><img src="<?php bloginfo('template_directory'); ?>/images/360-card-rightimg.svg" alt="">No-code Onboarding</li>
+											<li><img src="<?php bloginfo('template_directory'); ?>/images/360-card-rightimg.svg" alt="">Fast, secure onboarding for customers</li>
+											<li><img src="<?php bloginfo('template_directory'); ?>/images/360-card-rightimg.svg" alt="">Tailored solutions delivered to industries</li>
+										</ul>
+									</div>
+									<div class="subLinks">
+										<div class="innerBoxes">
+											<h3>KYC API Suite</h3>
+											<p>Streamline Identity Verification Effortlessly</p>
+										</div>
+										<div class="innerBoxes">
+											<h3>KYC API Suite</h3>
+											<p>Streamline Identity Verification Effortlessly</p>
+										</div>
+										<div class="innerBoxes">
+											<h3>KYC API Suite</h3>
+											<p>Streamline Identity Verification Effortlessly</p>
+										</div>
+										<div class="innerBoxes">
+											<h3>KYC API Suite</h3>
+											<p>Streamline Identity Verification Effortlessly</p>
+										</div>
+										<div class="innerBoxes">
+											<h3>KYC API Suite</h3>
+											<p>Streamline Identity Verification Effortlessly</p>
+										</div>
+										<div class="innerBoxes">
+											<h3>KYC API Suite</h3>
+											<p>Streamline Identity Verification Effortlessly</p>
+										</div>
+										<div class="innerBoxes">
+											<h3>KYC API Suite</h3>
+											<p>Streamline Identity Verification Effortlessly</p>
+										</div>
+									</div>
+									<div class="selfService">
+										<h3>Self Serve Portal</h3>
+										<div class="innerLinks">
+											<a href="#">API Central</a>
+											<a href="#">BGV Self Serve</a>
+										</div>
+									</div>
+								</div>
 							</li>
 						</ul>
 					</nav>
-				</div>
-				<div class="dropdownsolution">
-					<div class="Card360">
-						<div class="Img360">
-							<img src="<?php bloginfo('template_directory'); ?>/images/360-img.svg" alt="">
-						</div>
-						<h3>IDfy360</h3>
-						<p>Comprehensive Identity Verification Solution</p>
-						<ul>
-							<li><img src="<?php bloginfo('template_directory'); ?>/images/360-card-rightimg.svg" alt="">No-code Onboarding</li>
-							<li><img src="<?php bloginfo('template_directory'); ?>/images/360-card-rightimg.svg" alt="">Fast, secure onboarding for customers</li>
-							<li><img src="<?php bloginfo('template_directory'); ?>/images/360-card-rightimg.svg" alt="">Tailored solutions delivered to industries</li>
-						</ul>
-					</div>
-					<div class="subLinks">
-						<div class="innerBoxes">
-							<h3>KYC API Suite</h3>
-							<p>Streamline Identity Verification Effortlessly</p>
-						</div>
-						<div class="innerBoxes">
-							<h3>KYC API Suite</h3>
-							<p>Streamline Identity Verification Effortlessly</p>
-						</div>
-						<div class="innerBoxes">
-							<h3>KYC API Suite</h3>
-							<p>Streamline Identity Verification Effortlessly</p>
-						</div>
-						<div class="innerBoxes">
-							<h3>KYC API Suite</h3>
-							<p>Streamline Identity Verification Effortlessly</p>
-						</div>
-						<div class="innerBoxes">
-							<h3>KYC API Suite</h3>
-							<p>Streamline Identity Verification Effortlessly</p>
-						</div>
-						<div class="innerBoxes">
-							<h3>KYC API Suite</h3>
-							<p>Streamline Identity Verification Effortlessly</p>
-						</div>
-						<div class="innerBoxes">
-							<h3>KYC API Suite</h3>
-							<p>Streamline Identity Verification Effortlessly</p>
-						</div>
-					</div>
-					<div class="selfService">
-						<h3>Self Serve Portal</h3>
-						<div class="innerLinks">
-							<a href="#">API Central</a>
-							<a href="#">BGV Self Serve</a>
-						</div>
-					</div>
 				</div>
 			</div>
 		</header>
