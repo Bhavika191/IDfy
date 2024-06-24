@@ -1,0 +1,32 @@
+header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;background: transparent;width: 100%;z-index: 4;
+    .headerWrapper{@include wrapper;display: flex;justify-content: space-between;align-items: center;
+        .logoBox{width: 109px;overflow: hidden;padding: 24px 0px;}
+        .mainLinks{
+            ul li {position: relative;
+                a{@include font14;font-family: $fonthelveticaneuebold;line-height: normal;text-transform: uppercase;color: $colorBlue;text-align: center;position: relative;
+                    &::before{content: "";position: absolute;z-index: 2;background: url("../images/header-dropdown-icon.svg") no-repeat;top: 50%;transform: translateY(-50%);right: -20px;width: 12px;height: 10px;}
+                }
+            }
+        }
+        .dropdownsolution{display: none;
+            &.activeDropdown{display: flex;align-items: flex-start;justify-content: space-between;background: #fff;position: absolute;width:fit-content;left: 0;right: 0;margin: 0 auto;top: 112px;border-radius: 30px;padding: 54px;
+                .Card360{border-radius: 30px;border: 1px solid rgba(52, 52, 52, 0.50);padding: 30px 40px;width: 30%;
+                    h3{@include font32;font-family: $fonthelveticaneuebold;color: $colorBlue;line-height: normal;letter-spacing: 0.32px;margin: 14px 0px 10px;}
+                    p{@include font16;font-family: $fonthelveticaneuelight;color: $colorGray;line-height: 125%;}
+                    ul{
+                        li{@include font18;font-family: $fonthelveticaneuelight;color: $colorGray;line-height: normal;display: flex;align-items: center;margin-top: 24px;
+                            img{width: 24px;height: 24px;margin-right: 16px;}
+                        }
+                    }
+                }
+                .subLinks{width: 40%;display: flex;align-items: flex-start;justify-content: space-between;flex-wrap: wrap;
+                    .innerBoxes{width: 48%;
+                        h3{@include font20;font-family: $fonthelveticaneuemedium;color: $colorGray;line-height: 100%;margin-bottom: 10px;}
+                        p{@include font16;font-family: $fonthelveticaneuelight;line-height: normal;color: rgba(52, 52, 52, 0.8);}
+                    }
+                }
+                .selfService{width: 20%;}
+            }
+        }
+    }
+}
