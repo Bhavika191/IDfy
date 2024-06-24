@@ -932,6 +932,202 @@ footer .footerWrapper .copyright h3 {
     font-size: 12px;
   }
 }
+@media screen and (max-width: 1600px) {
+  footer .footerWrapper {
+    padding: 100px 180px 30px;
+  }
+  footer .footerWrapper .topFooter {
+    margin-bottom: 44px;
+  }
+  footer .footerWrapper .topFooter .footerlogo .logoDiv {
+    width: 120px;
+  }
+  footer .footerWrapper .topFooter .footerlogo .socialmediaIcons {
+    margin-top: 22px;
+  }
+  footer .footerWrapper .topFooter .footerlogo .socialmediaIcons a {
+    width: 30px;
+    height: 30px;
+    margin-right: 12px;
+  }
+  footer .footerWrapper .topFooter .footerLinks .innerLinks ul {
+    margin-top: 14px;
+  }
+  footer .footerWrapper .topFooter .footerLinks .innerLinks ul li {
+    margin-bottom: 12px;
+  }
+  footer .footerWrapper .topFooter .footerForm .checkboxForm {
+    margin-top: 18px;
+  }
+  footer .footerWrapper .topFooter .footerForm .checkboxForm .form-group {
+    margin-bottom: 12px;
+  }
+  footer .footerWrapper .topFooter .footerForm .checkboxForm .form-group label:before {
+    height: 20px;
+    width: 20px;
+    margin-right: 12px;
+  }
+  footer .footerWrapper .topFooter .footerForm .checkboxForm .form-group input:checked + label:after {
+    left: 8px;
+    width: 3px;
+    height: 8px;
+  }
+  footer .footerWrapper .topFooter .footerForm .checkboxForm .emailDiv {
+    margin-top: 35px;
+  }
+  footer .footerWrapper .topFooter .footerForm .checkboxForm .emailDiv input {
+    margin: 12px 0px 18px;
+    padding: 12px 16px;
+  }
+  footer .footerWrapper .showmore-lessdiv #trigger {
+    padding: 8px 18px;
+  }
+  footer .footerWrapper .footerBottom {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+  }
+  footer .footerWrapper .footerBottom .footerLinks .innerLinks ul {
+    margin-top: 14px;
+  }
+  footer .footerWrapper .footerBottom .footerLinks .innerLinks ul li {
+    margin-bottom: 12px;
+  }
+  footer .footerWrapper .copyright {
+    margin-top: 12px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  footer .footerWrapper {
+    padding: 80px 140px 25px;
+  }
+  footer .footerWrapper .topFooter {
+    margin-bottom: 34px;
+  }
+  footer .footerWrapper .topFooter .footerlogo .logoDiv {
+    width: 110px;
+  }
+  footer .footerWrapper .topFooter .footerlogo .socialmediaIcons {
+    margin-top: 20px;
+  }
+  footer .footerWrapper .topFooter .footerlogo .socialmediaIcons a {
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+  }
+  footer .footerWrapper .topFooter .footerLinks .innerLinks ul {
+    margin-top: 12px;
+  }
+  footer .footerWrapper .topFooter .footerLinks .innerLinks ul li {
+    margin-bottom: 10px;
+  }
+  footer .footerWrapper .topFooter .footerForm .checkboxForm {
+    margin-top: 16px;
+  }
+  footer .footerWrapper .topFooter .footerForm .checkboxForm .form-group {
+    margin-bottom: 10px;
+  }
+  footer .footerWrapper .topFooter .footerForm .checkboxForm .form-group label:before {
+    height: 18px;
+    width: 18px;
+    margin-right: 10px;
+  }
+  footer .footerWrapper .topFooter .footerForm .checkboxForm .form-group input:checked + label:after {
+    left: 7px;
+    top: 3px;
+  }
+  footer .footerWrapper .topFooter .footerForm .checkboxForm .emailDiv {
+    margin-top: 28px;
+  }
+  footer .footerWrapper .topFooter .footerForm .checkboxForm .emailDiv input {
+    margin: 12px 0px 16px;
+    padding: 10px 14px;
+  }
+  footer .footerWrapper .footerBottom {
+    padding-top: 40px;
+    padding-bottom: 30px;
+    margin-bottom: 18px;
+  }
+  footer .footerWrapper .footerBottom .footerLinks .innerLinks ul {
+    margin-top: 12px;
+  }
+  footer .footerWrapper .footerBottom .footerLinks .innerLinks ul li {
+    margin-bottom: 10px;
+  }
+  footer .footerWrapper .copyright {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  footer .footerWrapper {
+    padding: 60px 100px 20px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  footer .footerWrapper {
+    padding: 50px 70px 20px;
+  }
+  footer .footerWrapper .topFooter {
+    margin-bottom: 24px;
+  }
+  footer .footerWrapper .topFooter .footerlogo .logoDiv {
+    width: 100px;
+  }
+  footer .footerWrapper .topFooter .footerlogo .socialmediaIcons {
+    margin-top: 18px;
+  }
+  footer .footerWrapper .topFooter .footerlogo .socialmediaIcons a {
+    width: 26px;
+    height: 26px;
+    margin-right: 9px;
+  }
+  footer .footerWrapper .topFooter .footerLinks {
+    width: 42%;
+  }
+  footer .footerWrapper .topFooter .footerLinks .innerLinks ul {
+    margin-top: 10px;
+  }
+  footer .footerWrapper .topFooter .footerLinks .innerLinks ul li {
+    margin-bottom: 8px;
+  }
+  footer .footerWrapper .topFooter .footerForm {
+    width: 28%;
+  }
+  footer .footerWrapper .topFooter .footerForm .checkboxForm {
+    margin-top: 14px;
+  }
+  footer .footerWrapper .topFooter .footerForm .checkboxForm .form-group {
+    margin-bottom: 8px;
+  }
+  footer .footerWrapper .topFooter .footerForm .checkboxForm .form-group label:before {
+    height: 16px;
+    width: 16px;
+    margin-right: 8px;
+  }
+  footer .footerWrapper .topFooter .footerForm .checkboxForm .form-group input:checked + label:after {
+    top: 4px;
+    width: 2px;
+    height: 6px;
+  }
+  footer .footerWrapper .topFooter .footerForm .checkboxForm .emailDiv {
+    margin-top: 24px;
+  }
+  footer .footerWrapper .topFooter .footerForm .checkboxForm .emailDiv input {
+    margin: 12px 0px 14px;
+    padding: 10px 12px;
+  }
+  footer .footerWrapper .footerBottom {
+    padding-top: 30px;
+    padding-bottom: 26px;
+    margin-bottom: 16px;
+  }
+  footer .footerWrapper .footerBottom .footerLinks .innerLinks ul {
+    margin-top: 10px;
+  }
+  footer .footerWrapper .footerBottom .footerLinks .innerLinks ul li {
+    margin-bottom: 8px;
+  }
+}
 
 .bannerSection {
   margin: 200px 0px 116px;
