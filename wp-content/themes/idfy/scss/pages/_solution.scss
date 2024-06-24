@@ -82,11 +82,11 @@
             }
             .timeline {display: flex;align-items: center;position: relative;justify-content: space-between;margin: 0px 130px;
                 .timeline-year {cursor: pointer;margin-right: 60px;position: relative;z-index: 3;transition: background-color 0.3s, color 0.3s;
-                    .circle{border-radius: 50%;border:none;width: 50px;height: 50px;display: flex;align-items: center;justify-content: center;background: #fff;
-                        span{background: #A7B0CA;border-radius: 50%;display: block;height: 20px;width: 20px;padding: 15px}
+                    .circle{border-radius: 50%;border:none;width: 42px;height: 42px;display: flex;align-items: center;justify-content: center;background: #fff;
+                        span{background: #A7B0CA;border-radius: 50%;display: block;height: 20px;width: 20px;}
                     }
-                    h4{@include font24;font-family: $fonthelveticaneuebold;color:$colorGray;line-height: normal;}
-                    &:nth-last-child(2){margin-right: 0px;}
+                    h4{@include font24;font-family: $fonthelveticaneuebold;color:$colorGray;line-height: normal;margin-top: 20px;}
+                    &:nth-last-child(2){margin-right: -12px;}
                     &.crossed{
                         .circle{
                             span{background: $colorBlue;}
@@ -98,7 +98,7 @@
                     }
 
                 }
-                .progress-container {position: absolute;bottom: 44px;left: 0;width: 100%;background-color: #A7B0CA;
+                .progress-container {position: absolute;bottom: 64px;left: 0;width: 100%;background-color: #A7B0CA;
                     .progress-bar {height: 5px;background-color: $colorBlue;transition: width 1s;width: 0; /* Start with 0 width */}
                 }
             }
@@ -134,12 +134,12 @@
                 }
                 .timeline {margin: 0px 110px;
                     .timeline-year {margin-right: 50px;
-                        .circle{width: 40px;height: 40px;
-                            span{height: 15px;width: 15px;padding: 12px}
+                        .circle{width: 32px;height: 32px;
+                            span{height: 15px;width: 15px;}
                         }
-    
+                        h4{margin-top: 16px;}
                     }
-                    .progress-container {bottom: 40px;
+                    .progress-container {bottom: 52px;
                         .progress-bar {height: 4px;}
                     }
                 }
@@ -174,12 +174,12 @@
                 }
                 .timeline {margin: 0px 90px;
                     .timeline-year {margin-right: 40px;
-                        .circle{width: 35px;height: 35px;
-                            span{height: 10px;width: 10px;padding: 10px}
+                        .circle{width: 28px;height: 28px;
+                            span{height: 10px;width: 10px;}
                         }
-    
+                        h4{margin-top: 14px;}
                     }
-                    .progress-container {bottom: 35px;
+                    .progress-container {bottom: 45px;
                         .progress-bar {height: 4px;}
                     }
                 }
@@ -215,11 +215,11 @@
                 .timeline {margin: 0px 60px;
                     .timeline-year {margin-right: 30px;
                         .circle{width: 30px;height: 30px;
-                            span{height: 8px;width: 8px;padding: 8px}
+                            span{height: 10px;width: 10px;}
                         }
-    
+                        h4{margin-top: 12px;}
                     }
-                    .progress-container {bottom: 32px;
+                    .progress-container {bottom: 44px;
                         .progress-bar {height: 3px;}
                     }
                 }
@@ -254,9 +254,11 @@
                         }
                     }
                 }
-                .timelineContainerdiv{overflow-x: scroll;}
+                .timelineContainerdiv{overflow-x: scroll;-ms-overflow-style: none; /* for Internet Explorer, Edge */scrollbar-width: none; /* for Firefox */
+                        &::-webkit-scrollbar {display: none; /* for Chrome, Safari, and Opera */}
+                }
                 .timeline{margin: 0px;
-                    .timeline-year{margin-right: 100px;}
+                    .timeline-year{margin-right: 150px;}
                     .progress-container {background: transparent;
                         
                     }
@@ -282,6 +284,9 @@
                             }
                         }
                     }
+                }
+                .timeline{
+                    .timeline-year{margin-right: 100px;}
                 }
             }
         }
@@ -414,6 +419,35 @@
                     }
                 }
             }
+        }
+    }
+}
+
+
+.bookDemodiv{background: #1E1E1E;
+    .innerWrapper{padding: 50px 200px;display: flex;align-items: center;justify-content: space-between;
+        h2{@include font32;font-family: $fonthelveticaneuelight;line-height: normal;letter-spacing: 1.5px;color: $colorWhite;}
+    }
+    @media screen and (max-width:1600px) {
+        .innerWrapper{padding: 40px 180px;
+        }
+    }
+    @media screen and (max-width:1400px) {
+        .innerWrapper{padding: 30px 150px;
+        }
+    }
+    @media screen and (max-width:1200px) {
+        .innerWrapper{padding: 25px 120px;
+        }
+    }
+    @media screen and (max-width:820px) {
+        .innerWrapper{padding: 20px 90px;
+        }
+    }
+    @media screen and (max-width:720px) {
+        .innerWrapper{padding: 40px 20px;display: block;
+            h2{font-size: 24px;letter-spacing: 1.8px;}
+            .ctaRed{margin-top: 24px;}
         }
     }
 }
