@@ -176,41 +176,43 @@
                 </div>
                 <div class="arrow right-arrow" id="right-arrow"> <img src="<?php bloginfo('template_directory'); ?>/images/timeline-next-arrow.svg" alt=""></div>
             </div>
-            <div class="timeline">
-                <div class="timeline-year" data-year="2011">
-                    <div class="circle"><span></span></div>
-                    <h4>2011</h4>
-                </div>
-                <div class="timeline-year" data-year="2013">
-                    <div class="circle"><span></span></div>
-                    <h4>2013</h4>
-                </div>
-                <div class="timeline-year" data-year="2015">
-                    <div class="circle"><span></span></div>
-                    <h4>2015</h4>
-                </div>
-                <div class="timeline-year" data-year="2018">
-                    <div class="circle"><span></span></div>
-                    <h4>2018</h4>
-                </div>
-                <div class="timeline-year" data-year="2020">
-                    <div class="circle"><span></span></div>
-                    <h4>2020</h4>
-                </div>
-                <div class="timeline-year" data-year="2022">
-                    <div class="circle"><span></span></div>
-                    <h4>2022</h4>
-                </div>
-                <div class="timeline-year" data-year="2023">
-                    <div class="circle"><span></span></div>
-                    <h4>2023</h4>
-                </div>
-                <div class="timeline-year" data-year="2024">
-                    <div class="circle"><span></span></div>
-                    <h4>2024</h4>
-                </div>
-                <div class="progress-container">
-                    <div class="progress-bar" id="progress-bar"></div>
+            <div class="timelineContainerdiv">
+                <div class="timeline">
+                    <div class="timeline-year" data-year="2011">
+                        <div class="circle"><span></span></div>
+                        <h4>2011</h4>
+                    </div>
+                    <div class="timeline-year" data-year="2013">
+                        <div class="circle"><span></span></div>
+                        <h4>2013</h4>
+                    </div>
+                    <div class="timeline-year" data-year="2015">
+                        <div class="circle"><span></span></div>
+                        <h4>2015</h4>
+                    </div>
+                    <div class="timeline-year" data-year="2018">
+                        <div class="circle"><span></span></div>
+                        <h4>2018</h4>
+                    </div>
+                    <div class="timeline-year" data-year="2020">
+                        <div class="circle"><span></span></div>
+                        <h4>2020</h4>
+                    </div>
+                    <div class="timeline-year" data-year="2022">
+                        <div class="circle"><span></span></div>
+                        <h4>2022</h4>
+                    </div>
+                    <div class="timeline-year" data-year="2023">
+                        <div class="circle"><span></span></div>
+                        <h4>2023</h4>
+                    </div>
+                    <div class="timeline-year" data-year="2024">
+                        <div class="circle"><span></span></div>
+                        <h4>2024</h4>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progress-bar"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -419,6 +421,16 @@
         </div>
     </div>
 </section>
+
+<section class="bookDemodiv">
+    <div class="innerWrapper">
+        <h2>Didn’t find what you’re looking for?</h2>
+        <a href="#" class="ctaRed">Book a Demo</a>
+    </div>
+</section>
+
+
+
 
 
 <?php get_footer(); ?>
