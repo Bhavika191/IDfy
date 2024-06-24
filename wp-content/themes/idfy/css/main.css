@@ -2050,26 +2050,26 @@ footer .footerWrapper .copyright h3 {
 .bannerSection {
   margin: 200px 0px 116px;
   position: relative;
+  height: calc(100vh - 200px);
 }
 .bannerSection::before {
   content: url("../images/red-dots-banner.svg");
   position: absolute;
   z-index: 2;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 10%;
   left: 0;
 }
 .bannerSection::after {
   content: url("../images/blue-dots-banner.svg");
   position: absolute;
   z-index: 2;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 10%;
   right: 0;
 }
 .bannerSection .bannerInner {
   width: 60%;
   margin: 0 auto;
+  height: 100%;
 }
 .bannerSection .bannerInner h1 {
   font-size: 72px;
@@ -2175,19 +2175,25 @@ footer .footerWrapper .copyright h3 {
     font-size: 14px;
   }
 }
-.bannerSection .bannerInner .downArrow {
-  margin-top: 150px;
+.bannerSection .downArrow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 30px;
+  margin: 0 auto;
 }
-.bannerSection .bannerInner .downArrow img {
+.bannerSection .downArrow img {
   margin: 0 auto;
 }
 @media screen and (max-width: 1600px) {
   .bannerSection {
     margin: 180px 0px 90px;
+    height: calc(100vh - 180px);
   }
   .bannerSection::before {
     scale: 0.9;
     left: -8px;
+    top: 6%;
   }
   .bannerSection::after {
     scale: 0.9;
@@ -2206,21 +2212,21 @@ footer .footerWrapper .copyright h3 {
   .bannerSection .bannerInner h2 {
     margin: 54px 0px 40px;
   }
-  .bannerSection .bannerInner .downArrow {
-    margin-top: 120px;
-  }
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1440px) {
   .bannerSection {
     margin: 160px 0px 80px;
+    height: calc(100vh - 160px);
   }
   .bannerSection::before {
     scale: 0.8;
     left: -13px;
+    top: -3%;
   }
   .bannerSection::after {
     scale: 0.8;
     right: -20px;
+    top: -10%;
   }
   .bannerSection .bannerInner {
     width: 54%;
@@ -2235,13 +2241,11 @@ footer .footerWrapper .copyright h3 {
   .bannerSection .bannerInner h2 {
     margin: 44px 0px 35px;
   }
-  .bannerSection .bannerInner .downArrow {
-    margin-top: 100px;
-  }
 }
 @media screen and (max-width: 1200px) {
   .bannerSection {
     margin: 140px 0px 60px;
+    height: calc(100vh - 140px);
   }
   .bannerSection .bannerInner {
     width: 60%;
@@ -2249,21 +2253,34 @@ footer .footerWrapper .copyright h3 {
   .bannerSection .bannerInner h2 {
     margin: 44px 0px 30px;
   }
-  .bannerSection .bannerInner .downArrow {
-    margin-top: 80px;
+}
+@media screen and (max-width: 1024px) {
+  .bannerSection {
+    height: auto;
+  }
+  .bannerSection::before {
+    scale: 0.6;
+    top: -40%;
+  }
+  .bannerSection::after {
+    scale: 0.6;
+    top: -40%;
+  }
+  .bannerSection .downArrow {
+    position: unset;
+    margin-top: 50px;
   }
 }
 @media screen and (max-width: 820px) {
   .bannerSection {
     margin: 120px 0px 90px;
+    overflow: hidden;
   }
   .bannerSection::before {
-    left: -54px;
-    display: none;
+    left: -53px;
   }
   .bannerSection::after {
-    right: -142px;
-    display: none;
+    right: -130px;
   }
   .bannerSection .bannerInner {
     width: 85%;
@@ -2277,9 +2294,6 @@ footer .footerWrapper .copyright h3 {
   }
   .bannerSection .bannerInner h3 {
     line-height: 171%;
-  }
-  .bannerSection .bannerInner .downArrow {
-    margin-top: 45px;
   }
 }
 
@@ -3087,7 +3101,8 @@ footer .footerWrapper .copyright h3 {
   color: rgba(52, 52, 52, 0.8);
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  padding: 0px 0px 20px 32px;
+  background: url("../images/right-icon.svg") no-repeat;
 }
 @media screen and (max-width: 1600px) {
   .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .contentDiv .solutionList ul li {
@@ -3098,9 +3113,6 @@ footer .footerWrapper .copyright h3 {
   .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .contentDiv .solutionList ul li {
     font-size: 16px;
   }
-}
-.ourSolutions .solutionWrapper .innerDatadiv .innerDiv .contentDiv .solutionList ul li:last-child {
-  margin-bottom: 0px;
 }
 .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .contentDiv .solutionList ul li img {
   margin-right: 8px;
@@ -3143,7 +3155,7 @@ footer .footerWrapper .copyright h3 {
     margin: 20px 0px 50px;
   }
   .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .contentDiv .solutionList ul li {
-    margin-bottom: 16px;
+    padding: 0px 0px 16px 32px;
   }
   .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .contentDiv .solutionList ul li img {
     margin-right: 10px;
@@ -3180,7 +3192,7 @@ footer .footerWrapper .copyright h3 {
     margin: 18px 0px 40px;
   }
   .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .contentDiv .solutionList ul li {
-    margin-bottom: 14px;
+    padding: 0px 0px 14px 32px;
   }
   .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .contentDiv .solutionList ul li img {
     margin-right: 8px;
@@ -3216,7 +3228,7 @@ footer .footerWrapper .copyright h3 {
     margin: 16px 0px 32px;
   }
   .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .contentDiv .solutionList ul li {
-    margin-bottom: 12px;
+    padding: 0px 0px 12px 32px;
   }
   .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .contentDiv .solutionList ul li img {
     margin-right: 6px;
@@ -3263,7 +3275,7 @@ footer .footerWrapper .copyright h3 {
     margin: 24px 0px 48px;
   }
   .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .contentDiv .solutionList ul li {
-    margin-bottom: 22px;
+    padding: 0px 0px 22px 32px;
   }
   .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .contentDiv .solutionList ul li img {
     margin-right: 8px;
