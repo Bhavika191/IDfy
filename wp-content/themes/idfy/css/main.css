@@ -1863,7 +1863,6 @@ footer .footerWrapper .copyright h3 {
   }
   .yearTimeline .timelineWrapper .timelineData .timeline {
     margin: 0px 60px;
-    overflow-x: scroll;
   }
   .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year {
     margin-right: 30px;
@@ -1903,6 +1902,9 @@ footer .footerWrapper .copyright h3 {
   }
   .yearTimeline .timelineWrapper .timelineData .contentDiv {
     margin-bottom: 40px;
+  }
+  .yearTimeline .timelineWrapper .timelineData .contentDiv .arrow {
+    display: none;
   }
   .yearTimeline .timelineWrapper .timelineData .contentDiv .yearContentdata {
     margin: 0px 0px;
@@ -1950,8 +1952,17 @@ footer .footerWrapper .copyright h3 {
     bottom: 20px;
     left: 67px;
   }
+  .yearTimeline .timelineWrapper .timelineData .timelineContainerdiv {
+    overflow-x: scroll;
+  }
   .yearTimeline .timelineWrapper .timelineData .timeline {
-    display: none;
+    margin: 0px;
+  }
+  .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year {
+    margin-right: 100px;
+  }
+  .yearTimeline .timelineWrapper .timelineData .timeline .progress-container {
+    background: transparent;
   }
   .yearTimeline .timelineWrapper .idfyDesc {
     margin-top: 20px;

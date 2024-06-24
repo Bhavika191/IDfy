@@ -212,7 +212,7 @@
                         }
                     }
                 }
-                .timeline {margin: 0px 60px;overflow-x: scroll;
+                .timeline {margin: 0px 60px;
                     .timeline-year {margin-right: 30px;
                         .circle{width: 30px;height: 30px;
                             span{height: 8px;width: 8px;padding: 8px}
@@ -236,7 +236,7 @@
             }
             .timelineData{
                 .contentDiv{margin-bottom: 40px;
-                    // .arrow{display: none;}
+                    .arrow{display: none;}
                     .yearContentdata{margin: 0px 0px;
                         .year-content{flex-direction: column-reverse;
                             .innerContent{width: 100%;margin-top: 24px;
@@ -254,7 +254,13 @@
                         }
                     }
                 }
-                .timeline{display: none;}
+                .timelineContainerdiv{overflow-x: scroll;}
+                .timeline{margin: 0px;
+                    .timeline-year{margin-right: 100px;}
+                    .progress-container {background: transparent;
+                        
+                    }
+                }
             }
             .idfyDesc{margin-top: 20px;
                 h4{line-height: 100%;}
