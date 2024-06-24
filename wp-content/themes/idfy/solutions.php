@@ -121,14 +121,14 @@
 </section>
 
 <section class="bookDemodiv">
-    <div class="innerWrapper">
-        <h2>Didn’t find what you’re looking for?</h2>
-        <a href="#" class="ctaRed">Book a Demo</a>
-    </div>
+    <?php if( have_rows('book_demo_section') ): ?>
+        <?php while( have_rows('book_demo_section') ): the_row(); ?>
+            <div class="innerWrapper">
+                <h2><?php echo get_sub_field('section_heading'); ?></h2>
+                <a href="<?php echo get_sub_field('cta_link'); ?>" class="ctaRed"><?php echo get_sub_field('cta_text'); ?></a>
+            </div>
+        <?php endwhile; ?>
+    <?php endif; ?>
 </section>
-
-
-
-
 
 <?php get_footer(); ?>
