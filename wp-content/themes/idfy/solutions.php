@@ -5,9 +5,9 @@
         <h1>" When you invent the ship, you Also invent the shipwreck "</h1>
         <h2>Paul Virilio</h2>
         <h3>It was in this digital transformation context that IDfy was born. Over the years, our product launches have mirrored major global digital economy milestones. Our solutions address the evolving needs of trust and security in today's interconnected world.</h3>
-        <div class="downArrow">
+    </div>
+    <div class="downArrow">
             <img src="<?php bloginfo('template_directory'); ?>/images/banner-down-arrow.svg" alt="">
-        </div>
     </div>
 </section>
 
@@ -240,15 +240,12 @@
                     <div class="solutionList">
                         <ul>
                             <li>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/right-icon.svg" alt="">
                                 Customer experience
                             </li>
                             <li>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/right-icon.svg" alt="">
                                 Customer experience
                             </li>
                             <li>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/right-icon.svg" alt="">
                                 Customer experience
                             </li>
                         </ul>
@@ -267,15 +264,12 @@
                     <div class="solutionList">
                         <ul>
                             <li>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/right-icon.svg" alt="">
                                 Customer experience
                             </li>
                             <li>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/right-icon.svg" alt="">
                                 Customer experience
                             </li>
                             <li>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/right-icon.svg" alt="">
                                 Customer experience
                             </li>
                         </ul>
@@ -294,15 +288,12 @@
                     <div class="solutionList">
                         <ul>
                             <li>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/right-icon.svg" alt="">
                                 Customer experience
                             </li>
                             <li>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/right-icon.svg" alt="">
                                 Customer experience
                             </li>
                             <li>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/right-icon.svg" alt="">
                                 Customer experience
                             </li>
                         </ul>
@@ -321,15 +312,12 @@
                     <div class="solutionList">
                         <ul>
                             <li>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/right-icon.svg" alt="">
                                 Customer experience
                             </li>
                             <li>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/right-icon.svg" alt="">
                                 Customer experience
                             </li>
                             <li>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/right-icon.svg" alt="">
                                 Customer experience
                             </li>
                         </ul>
@@ -348,15 +336,12 @@
                     <div class="solutionList">
                         <ul>
                             <li>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/right-icon.svg" alt="">
                                 Customer experience
                             </li>
                             <li>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/right-icon.svg" alt="">
                                 Customer experience
                             </li>
                             <li>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/right-icon.svg" alt="">
                                 Customer experience
                             </li>
                         </ul>
@@ -375,15 +360,12 @@
                     <div class="solutionList">
                         <ul>
                             <li>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/right-icon.svg" alt="">
                                 Customer experience
                             </li>
                             <li>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/right-icon.svg" alt="">
                                 Customer experience
                             </li>
                             <li>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/right-icon.svg" alt="">
                                 Customer experience
                             </li>
                         </ul>
@@ -402,15 +384,12 @@
                     <div class="solutionList">
                         <ul>
                             <li>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/right-icon.svg" alt="">
                                 Customer experience
                             </li>
                             <li>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/right-icon.svg" alt="">
                                 Customer experience
                             </li>
                             <li>
-                                <img src="<?php bloginfo('template_directory'); ?>/images/right-icon.svg" alt="">
                                 Customer experience
                             </li>
                         </ul>
