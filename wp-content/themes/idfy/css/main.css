@@ -1421,6 +1421,7 @@ header .navbar .hamburger-menu {
     width: 100%;
     transition: 0.5s all ease-in-out;
     overflow: hidden;
+    height: 100vh;
   }
   header .navbar .hamburger-menu .overlay::before {
     content: "";
@@ -1436,7 +1437,6 @@ header .navbar .hamburger-menu {
   header .navbar .hamburger-menu .overlay.open {
     right: 0;
     background: #fff;
-    height: 100vh;
   }
   header .navbar .hamburger-menu .overlay .overlay-wrapper {
     position: relative;
