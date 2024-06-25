@@ -223,6 +223,8 @@ if ($(".pioneerSlidersec").length) {
         autoplay: true,
         speed: 1000,
         autoplaySpeed: 2000,
+        fade: true,
+        cssEase: 'linear',
         responsive: [
             {
                 breakpoint: 1025,

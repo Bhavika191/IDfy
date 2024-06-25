@@ -158,8 +158,8 @@
             </div>
             <div class="box-container-two">
                 <div class="box active-two" id="boxesImg"><img src="<?php bloginfo('template_directory'); ?>/images/pionner-slider-img.webp" alt=""></div>
-                <div class="box" id="boxesImg"><img src="<?php bloginfo('template_directory'); ?>/images/timeline-img.webp" alt=""></div>
-                <div class="box" id="boxesImg"><img src="<?php bloginfo('template_directory'); ?>/images/our-solution-img.webp" alt=""></div>
+                <div class="box" id="boxesImg"><img src="<?php bloginfo('template_directory'); ?>/images/pionner-slider-img.webp" alt=""></div>
+                <div class="box" id="boxesImg"><img src="<?php bloginfo('template_directory'); ?>/images/pionner-slider-img.webp" alt=""></div>
             </div>
         </div>
     </div>

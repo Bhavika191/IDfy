@@ -97,44 +97,32 @@
             h2{@include font32;font-family: $fonthelveticaneuemedium;text-transform: capitalize;line-height: 103%;letter-spacing: 0px;color: $colorGray;text-align: center;}
             p{@include font16;font-family: $fonthelveticaneuelight;line-height: normal;margin: 40px auto 0px;color: $colorGray;text-align: center;width: 20%;}
         }
-        .boxContent{
+        .boxContent{position: relative;margin-top: 40px;
+            .box-container{
+                #boxesData{position: absolute;top: 20%;left: -12%;width: 50%;border-radius: 20px;border: 0.685px solid rgba(0, 0, 0, 0.20);background: #FFF;box-shadow: 13.705px 13.705px 20.557px 0px rgba(0, 0, 0, 0.20);padding: 24px 30px;transition: 0.7s all ease-in-out;
+                    &:nth-child(2){top: 40%;right: -20%;left: unset;}
+                    &:nth-child(3){top: 67%;left: -20%}
+                    p{@include font16;font-family: $fonthelveticaneuemedium;line-height: normal;color: #080808;}
+                    a{margin-top: 20px;display: none;}
+                }
+                .activeBoxes{border-radius: 20px;border: 0.685px solid rgba(0, 0, 0, 0.20); background: #1C43B9 !important;box-shadow: 13.705px 13.705px 20.557px 0px rgba(0, 0, 0, 0.20);transition: 0.7s all ease-in-out;
+                    p{font-size: 20px !important;color: $colorWhite !important;}
+                    a{display: inline-flex !important;}
+                }
+            }
             .box-container-two{
                 #boxesImg{border-radius: 50%;overflow: hidden;margin: 0 auto;}
-               #boxesImg{display: none;}
+               #boxesImg{display: none;width: 65%;}
                 .active-two{display: block !important;}
             }
         }
     }
 }
  
-  .box-container {
-    display: flex;
-    justify-content: space-around;
-    width: 80%;
-    margin: auto;
-    .box {
-        width: 20%;
-        height: 200px;
-        background-color: #ccc;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.5rem;
-        transition: background-color 0.3s;
-      }
-  }
+ 
   
-  .activeBoxes {
-    background-color: #f00;
-    color: #fff;
-  }
   .box-container-two {
     display: flex;
     justify-content: space-around;
-    width: 80%;
-    margin: auto;
-  }
-  .active-two {
-    background-color: #00f;
-    color: #fff;
+    
   }
