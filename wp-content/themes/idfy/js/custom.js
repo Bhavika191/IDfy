@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let currentYearIndex = 0;
     let autoProceedInterval;
 
+
     function showContent(year) {
         contentSections.forEach(section => {
             section.classList.remove('active');
@@ -21,14 +22,14 @@ document.addEventListener("DOMContentLoaded", function () {
         const width = toRect.right - timelineRect.left;
 
         progressBar.style.width = `${width}px`;
-        // Add crossed class to timeline-years as progress bar passes through them
+
+        // Add processed class to timeline-years as progress bar passes through them
         years.forEach(year => {
             const yearRect = year.getBoundingClientRect();
             if (yearRect.left <= toRect.right) {
-                year.classList.add('crossed');
-            }
-            else {
-                year.classList.remove('crossed');
+                year.classList.add('processed');
+            } else {
+                year.classList.remove('processed');
             }
         });
     }
@@ -37,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
         years.forEach(year => {
             year.classList.remove('active');
         });
+
         yearElement.classList.add('active');
     }
 
@@ -58,9 +60,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 navigateToYear(currentYearIndex + 1);
             } else {
                 currentYearIndex = 0;
+                years.forEach(year => year.classList.remove('processed')); // Reset all processed classes
                 navigateToYear(currentYearIndex);
             }
-        }, 3000);
+        }, 4000);
     }
 
     years.forEach((year, index) => {
@@ -82,9 +85,16 @@ document.addEventListener("DOMContentLoaded", function () {
             navigateToYear(currentYearIndex + 1);
             startAutoProceed(); // Restart auto proceed when right arrow is clicked
         }
+
+        // Remove crossed class when moving forward
+        years.forEach((year, index) => {
+            if (index > currentYearIndex) {
+                year.classList.remove('crossed');
+            }
+        });
     });
 
-    // Initialize with the first year's content
+    // Initialize with the first year's content and start auto proceed
     if (years.length > 0) {
         navigateToYear(0);
         startAutoProceed();

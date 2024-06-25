@@ -90,19 +90,28 @@
                     }
                     h4{@include font24;font-family: $fonthelveticaneuebold;color:$colorGray;line-height: normal;margin-top: 20px;}
                     &:nth-last-child(2){margin-right: -12px;}
-                    &.crossed{
+                    &:nth-last-child(2){
+                        .progressSvg{display: none;}
+                    }
+                   
+                    &.processed{
                         .circle{
                             span{background: $colorBlue;}
                         }
+                        .progressSvg{
+                            line{stroke: $colorBlue;transition: 4s all ease-in-out;stroke-width: 3px;}
+                        }
                     }
+
                     &.active{
                         .circle{border: 1px solid $colorBlue;
                         }
                     }
+                    .progressSvg{position: absolute;bottom: 40px;line{transition: 4s all ease-in-out;}}
 
                 }
-                .progress-container {position: absolute;bottom: 64px;left: 0;width: 100%;background-color: #A7B0CA;
-                    .progress-bar {height: 5px;background-color: $colorBlue;transition: width 1s;width: 0; /* Start with 0 width */}
+                .progress-container {position: absolute;bottom: 64px;left: 0;width: 100%;background-color: transparent;
+                    .progress-bar {height: 5px;background-color: transparent;transition: width 1s;width: 0; /* Start with 0 width */}
                 }
             }
         }
