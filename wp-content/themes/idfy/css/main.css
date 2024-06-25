@@ -3996,10 +3996,96 @@ footer .footerWrapper .copyright h3 {
   background-color: #f0f0f0;
   margin-bottom: 50vh;
 }
-.fraudstoriesSec .boxContent .box-container-two #boxesImg {
+.fraudstoriesSec .innerWrapper {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+@media screen and (max-width: 1600px) {
+  .fraudstoriesSec .innerWrapper {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .fraudstoriesSec .innerWrapper {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .fraudstoriesSec .innerWrapper {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .fraudstoriesSec .innerWrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.fraudstoriesSec .innerWrapper .secHeading h2 {
+  font-size: 32px;
+  font-family: "HelveticaNeueMedium";
+  text-transform: capitalize;
+  line-height: 103%;
+  letter-spacing: 0px;
+  color: #343434;
+  text-align: center;
+}
+@media screen and (max-width: 1600px) {
+  .fraudstoriesSec .innerWrapper .secHeading h2 {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .fraudstoriesSec .innerWrapper .secHeading h2 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .fraudstoriesSec .innerWrapper .secHeading h2 {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .fraudstoriesSec .innerWrapper .secHeading h2 {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .fraudstoriesSec .innerWrapper .secHeading h2 {
+    font-size: 12px;
+  }
+}
+.fraudstoriesSec .innerWrapper .secHeading p {
+  font-size: 16px;
+  font-family: "HelveticaNeueLight";
+  line-height: normal;
+  margin: 40px auto 0px;
+  color: #343434;
+  text-align: center;
+  width: 20%;
+}
+@media screen and (max-width: 1600px) {
+  .fraudstoriesSec .innerWrapper .secHeading p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .fraudstoriesSec .innerWrapper .secHeading p {
+    font-size: 12px;
+  }
+}
+.fraudstoriesSec .innerWrapper .boxContent .box-container-two #boxesImg {
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.fraudstoriesSec .innerWrapper .boxContent .box-container-two #boxesImg {
   display: none;
 }
-.fraudstoriesSec .boxContent .box-container-two .active-two {
+.fraudstoriesSec .innerWrapper .boxContent .box-container-two .active-two {
   display: block !important;
 }
 
@@ -4020,7 +4106,7 @@ footer .footerWrapper .copyright h3 {
   transition: background-color 0.3s;
 }
 
-.active {
+.activeBoxes {
   background-color: #f00;
   color: #fff;
 }

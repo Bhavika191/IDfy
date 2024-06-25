@@ -92,10 +92,17 @@
 
 
 .fraudstoriesSec{height: 100vh;display: flex;justify-content: center;align-items: center; position: relative;width: 100%; background-color: #f0f0f0; margin-bottom: 50vh; 
-    .boxContent{
-        .box-container-two{
-           #boxesImg{display: none;}
-            .active-two{display: block !important;}
+    .innerWrapper{@include wrapper;
+        .secHeading{
+            h2{@include font32;font-family: $fonthelveticaneuemedium;text-transform: capitalize;line-height: 103%;letter-spacing: 0px;color: $colorGray;text-align: center;}
+            p{@include font16;font-family: $fonthelveticaneuelight;line-height: normal;margin: 40px auto 0px;color: $colorGray;text-align: center;width: 20%;}
+        }
+        .boxContent{
+            .box-container-two{
+                #boxesImg{border-radius: 50%;overflow: hidden;margin: 0 auto;}
+               #boxesImg{display: none;}
+                .active-two{display: block !important;}
+            }
         }
     }
 }
@@ -117,7 +124,7 @@
       }
   }
   
-  .active {
+  .activeBoxes {
     background-color: #f00;
     color: #fff;
   }

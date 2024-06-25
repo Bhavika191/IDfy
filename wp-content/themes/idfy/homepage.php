@@ -143,7 +143,7 @@
         </div>
         <div class="boxContent">
             <div class="box-container">
-                <div class="box" id="boxesData">
+                <div class="box activeBoxes" id="boxesData">
                     <p>Agni was enjoying his Sunday Agni was enjoying his Sunday morning cup of tea,  morning cup of tea, when morning cup tea, when he got a call from the police...</p>
                     <a href="#" class="ctaBlue">Read More</a>
                 </div>
@@ -157,7 +157,7 @@
                 </div>
             </div>
             <div class="box-container-two">
-                <div class="box" id="boxesImg"><img src="<?php bloginfo('template_directory'); ?>/images/pionner-slider-img.webp" alt=""></div>
+                <div class="box active-two" id="boxesImg"><img src="<?php bloginfo('template_directory'); ?>/images/pionner-slider-img.webp" alt=""></div>
                 <div class="box" id="boxesImg"><img src="<?php bloginfo('template_directory'); ?>/images/timeline-img.webp" alt=""></div>
                 <div class="box" id="boxesImg"><img src="<?php bloginfo('template_directory'); ?>/images/our-solution-img.webp" alt=""></div>
             </div>
