@@ -79,7 +79,12 @@
                     <p>Onboard users, employees or gig workers with a simple QR code</p>
                 </div>
                 <div class="imageDiv">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/pionner-slider-img.webp" alt="">
+                    <div class="mainImg">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/pionner-slider-img.webp" alt="">
+                    </div>
+                    <div class="dots">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/hp-pioneer-slide-dots.svg" alt="">
+                    </div>
                 </div>
             </div>
             <div class="innerSlides">
@@ -88,7 +93,12 @@
                     <p>Onboard users, employees or gig workers with a simple QR code</p>
                 </div>
                 <div class="imageDiv">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/pionner-slider-img.webp" alt="">
+                    <div class="mainImg">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/pionner-slider-img.webp" alt="">
+                    </div>
+                    <div class="dots">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/hp-pioneer-slide-dots.svg" alt="">
+                    </div>
                 </div>
             </div>
             <div class="innerSlides">
@@ -97,7 +107,12 @@
                     <p>Onboard users, employees or gig workers with a simple QR code</p>
                 </div>
                 <div class="imageDiv">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/pionner-slider-img.webp" alt="">
+                    <div class="mainImg">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/pionner-slider-img.webp" alt="">
+                    </div>
+                    <div class="dots">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/hp-pioneer-slide-dots.svg" alt="">
+                    </div>
                 </div>
             </div>
             <div class="innerSlides">
@@ -106,11 +121,50 @@
                     <p>Onboard users, employees or gig workers with a simple QR code</p>
                 </div>
                 <div class="imageDiv">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/pionner-slider-img.webp" alt="">
+                    <div class="mainImg">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/pionner-slider-img.webp" alt="">
+                    </div>
+                    <div class="dots">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/hp-pioneer-slide-dots.svg" alt="">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+
+
+<section class="fraudstoriesSec fixed-section" id="fixedSection">
+    <div class="innerWrapper">
+        <div class="secHeading">
+            <h2>#fraudstories</h2>
+            <p>Explore how we are working towards eliminating fraud and establishing trust.</p>
+        </div>
+        <div class="boxContent">
+            <div class="box-container">
+                <div class="box" id="boxesData">
+                    <p>Agni was enjoying his Sunday Agni was enjoying his Sunday morning cup of tea,  morning cup of tea, when morning cup tea, when he got a call from the police...</p>
+                    <a href="#" class="ctaBlue">Read More</a>
+                </div>
+                <div class="box" id="boxesData">
+                    <p>Agni was enjoying his Sunday Agni was enjoying his Sunday morning cup of tea,  morning cup of tea, when morning cup tea, when he got a call from the police...</p>
+                    <a href="#" class="ctaBlue">Read More</a>
+                </div>
+                <div class="box" id="boxesData">
+                    <p>Agni was enjoying his Sunday Agni was enjoying his Sunday morning cup of tea,  morning cup of tea, when morning cup tea, when he got a call from the police...</p>
+                    <a href="#" class="ctaBlue">Read More</a>
+                </div>
+            </div>
+            <div class="box-container-two">
+                <div class="box" id="boxesImg"><img src="<?php bloginfo('template_directory'); ?>/images/pionner-slider-img.webp" alt=""></div>
+                <div class="box" id="boxesImg"><img src="<?php bloginfo('template_directory'); ?>/images/timeline-img.webp" alt=""></div>
+                <div class="box" id="boxesImg"><img src="<?php bloginfo('template_directory'); ?>/images/our-solution-img.webp" alt=""></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 
 <?php get_footer(); ?>

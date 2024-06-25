@@ -40,19 +40,94 @@
 
 
 .pioneerSlidersec{margin-bottom: 400px;
-    .pionnerwrapper{padding: 0px 230px;
-        .secHeading{margin-bottom: -120px;position: relative;z-index: 2;
+    .pionnerwrapper{
+        .secHeading{margin-bottom: -150px;position: relative;z-index: 2;width: 45%;padding-left:  230px;
             h3{@include font48;font-family: $fonthelveticaneuemedium;letter-spacing: 0px;line-height: normal;color: $colorGray;}
             h2{@include font160;font-family: $fonthelveticaneuebold;text-transform: capitalize;letter-spacing: -4px;line-height: normal;color: $colorGray;}
         }
         .pioneerSlider{margin-bottom: 0px;
-            .innerSlides{display: flex;align-items: center;justify-content: space-between;
+            .innerSlides{display: flex;align-items: center;justify-content: space-between;padding: 0px 230px;
                 .contentDiv{width: 42%;text-align: left;
                     h3{@include font48;font-family: $fonthelveticaneuebold;letter-spacing: -1px;line-height: 66%;color: $colorGray;}
                     p{@include font24;font-family: $fonthelveticaneuelight;line-height: normal;color: $colorGray;margin-top: 24px;width: 60%;}
                 }
-                .imageDiv{width: 46%;}
+                .imageDiv{width: 46%;position: relative;
+                    .mainImg{border-radius: 50%;overflow: hidden;position: relative;}
+                    .dots{position: absolute;bottom: 10px;right: -50px;}
+                }
+            }
+            .slick-dots{bottom: 32px;left: 230px;width: unset;
+                li{width: 10px;height:10px;border-radius:90px;margin: 0px 6px;transition: 0.5s all ease-in-out;
+                    button{width: 100%;height: 100%;border-radius:90px;background: transparent;padding: 0;background: #343434;
+                        &::before{font-size: 0;}
+                    }
+                    &:hover{background: #343434;}
+                }
+                .slick-active{width: 65px;height:10px;transition: 0.5s all ease-in-out;
+                    button{width: 100%;height: 100%;
+                        background: #343434;
+                        &::before{
+                            opacity: unset;
+                            color: #343434;
+                        }
+                    }
+                }
+            }
+            .slick-prev,
+            .slick-next {position: absolute;top: 50%;transform: translateY(-50%);width: 40px;height: 40px;cursor: pointer;z-index: 2;border: 1px solid #000;border-radius: 50%;
+                &.slick-next {right: 80px;
+                &::before {display: block;scale: 0.8;
+                        content: url(../images/timeline-next-arrow.svg);
+                    }
+                }
+                &.slick-prev {left: 80px;
+                    &::before {display: block;scale: 0.8;
+                        content: url(../images/timeline-prev-arrow.svg);
+                    }
+                }
             }
         }
     }
 }
+
+
+.fraudstoriesSec{height: 100vh;display: flex;justify-content: center;align-items: center; position: relative;width: 100%; background-color: #f0f0f0; margin-bottom: 50vh; 
+    .boxContent{
+        .box-container-two{
+           #boxesImg{display: none;}
+            .active-two{display: block !important;}
+        }
+    }
+}
+ 
+  .box-container {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+    .box {
+        width: 20%;
+        height: 200px;
+        background-color: #ccc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        transition: background-color 0.3s;
+      }
+  }
+  
+  .active {
+    background-color: #f00;
+    color: #fff;
+  }
+  .box-container-two {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+  }
+  .active-two {
+    background-color: #00f;
+    color: #fff;
+  }

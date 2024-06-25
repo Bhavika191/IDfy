@@ -107,7 +107,10 @@
                         .circle{border: 1px solid $colorBlue;background: #fff;position: relative;z-index: 3;
                         }
                     }
-                    .progressSvg{position: absolute;bottom: 57px;left: 62px;line{transition: 1s all ease-out;}}
+                    .progressSvg{position: absolute;bottom: 57px;left: 62px;
+                        line{transition: 1s all ease-out;}
+                        // svg{line{&:nth-last-child(1),&:nth-last-child(2),&:nth-last-child(3),&:nth-last-child(4),&:nth-last-child(5){display: none;}}}
+                    }
 
                 }
 

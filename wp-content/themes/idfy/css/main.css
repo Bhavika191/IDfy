@@ -3804,13 +3804,12 @@ footer .footerWrapper .copyright h3 {
 .pioneerSlidersec {
   margin-bottom: 400px;
 }
-.pioneerSlidersec .pionnerwrapper {
-  padding: 0px 230px;
-}
 .pioneerSlidersec .pionnerwrapper .secHeading {
-  margin-bottom: -120px;
+  margin-bottom: -150px;
   position: relative;
   z-index: 2;
+  width: 45%;
+  padding-left: 230px;
 }
 .pioneerSlidersec .pionnerwrapper .secHeading h3 {
   font-size: 48px;
@@ -3859,6 +3858,7 @@ footer .footerWrapper .copyright h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0px 230px;
 }
 .pioneerSlidersec .pionnerwrapper .pioneerSlider .innerSlides .contentDiv {
   width: 42%;
@@ -3901,4 +3901,138 @@ footer .footerWrapper .copyright h3 {
 }
 .pioneerSlidersec .pionnerwrapper .pioneerSlider .innerSlides .imageDiv {
   width: 46%;
+  position: relative;
+}
+.pioneerSlidersec .pionnerwrapper .pioneerSlider .innerSlides .imageDiv .mainImg {
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+.pioneerSlidersec .pionnerwrapper .pioneerSlider .innerSlides .imageDiv .dots {
+  position: absolute;
+  bottom: 10px;
+  right: -50px;
+}
+.pioneerSlidersec .pionnerwrapper .pioneerSlider .slick-dots {
+  bottom: 32px;
+  left: 230px;
+  width: unset;
+}
+.pioneerSlidersec .pionnerwrapper .pioneerSlider .slick-dots li {
+  width: 10px;
+  height: 10px;
+  border-radius: 90px;
+  margin: 0px 6px;
+  transition: 0.5s all ease-in-out;
+}
+.pioneerSlidersec .pionnerwrapper .pioneerSlider .slick-dots li button {
+  width: 100%;
+  height: 100%;
+  border-radius: 90px;
+  background: transparent;
+  padding: 0;
+  background: #343434;
+}
+.pioneerSlidersec .pionnerwrapper .pioneerSlider .slick-dots li button::before {
+  font-size: 0;
+}
+.pioneerSlidersec .pionnerwrapper .pioneerSlider .slick-dots li:hover {
+  background: #343434;
+}
+.pioneerSlidersec .pionnerwrapper .pioneerSlider .slick-dots .slick-active {
+  width: 65px;
+  height: 10px;
+  transition: 0.5s all ease-in-out;
+}
+.pioneerSlidersec .pionnerwrapper .pioneerSlider .slick-dots .slick-active button {
+  width: 100%;
+  height: 100%;
+  background: #343434;
+}
+.pioneerSlidersec .pionnerwrapper .pioneerSlider .slick-dots .slick-active button::before {
+  opacity: unset;
+  color: #343434;
+}
+.pioneerSlidersec .pionnerwrapper .pioneerSlider .slick-prev,
+.pioneerSlidersec .pionnerwrapper .pioneerSlider .slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 2;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+.pioneerSlidersec .pionnerwrapper .pioneerSlider .slick-prev.slick-next,
+.pioneerSlidersec .pionnerwrapper .pioneerSlider .slick-next.slick-next {
+  right: 80px;
+}
+.pioneerSlidersec .pionnerwrapper .pioneerSlider .slick-prev.slick-next::before,
+.pioneerSlidersec .pionnerwrapper .pioneerSlider .slick-next.slick-next::before {
+  display: block;
+  scale: 0.8;
+  content: url(../images/timeline-next-arrow.svg);
+}
+.pioneerSlidersec .pionnerwrapper .pioneerSlider .slick-prev.slick-prev,
+.pioneerSlidersec .pionnerwrapper .pioneerSlider .slick-next.slick-prev {
+  left: 80px;
+}
+.pioneerSlidersec .pionnerwrapper .pioneerSlider .slick-prev.slick-prev::before,
+.pioneerSlidersec .pionnerwrapper .pioneerSlider .slick-next.slick-prev::before {
+  display: block;
+  scale: 0.8;
+  content: url(../images/timeline-prev-arrow.svg);
+}
+
+.fraudstoriesSec {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  background-color: #f0f0f0;
+  margin-bottom: 50vh;
+}
+.fraudstoriesSec .boxContent .box-container-two #boxesImg {
+  display: none;
+}
+.fraudstoriesSec .boxContent .box-container-two .active-two {
+  display: block !important;
+}
+
+.box-container {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+}
+.box-container .box {
+  width: 20%;
+  height: 200px;
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  transition: background-color 0.3s;
+}
+
+.active {
+  background-color: #f00;
+  color: #fff;
+}
+
+.box-container-two {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+}
+
+.active-two {
+  background-color: #00f;
+  color: #fff;
 }/*# sourceMappingURL=main.css.map */
