@@ -25,10 +25,10 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                         }
                         .dropdown-section-menu{width: calc(52% - 75px);
                             .menu-wrapper{display: flex;flex-wrap: wrap;gap: 0px 80px;
-                                .dropdown-menu{padding: 20px 32px;flex-basis:44%;
+                                .dropdown-menu{padding: 20px 32px;flex-basis:44%;display:block;
                                     &:hover{border-radius: 20px;background: rgba(28, 67, 185, 0.10);}
-                                    h4{@include font20;font-weight: 500;line-height: 100%;font-family: $fonthelveticaneuemedium;margin-bottom: 12px;}
-                                    p{@include font16;font-weight: 400;font-family: $fonthelveticaneuelight;}
+                                    h4{@include font20;font-weight: 500;line-height: 100%;font-family: $fonthelveticaneuemedium;margin-bottom: 12px;text-align: left}
+                                    p{@include font16;font-weight: 400;font-family: $fonthelveticaneuelight;text-transform: capitalize;text-align: left;}
                                 }
                             }
                         }
@@ -36,16 +36,20 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                             .portal-wrapper{padding: 20px 58px;
                                 h5{@include font14;font-weight: 700;line-height: 142.857%;text-transform: uppercase;color:$colorGray;font-family: $fonthelveticaneuemedium;margin-bottom: 25px;}
                                 ul{
-                                    li{@include font20;font-weight: 500;line-height: 100%;font-family: $fonthelveticaneuemedium;color: $colorBlack;margin-bottom: 44px;}
+                                    li{
+                                        a{
+                                            @include font20;font-weight: 500;line-height: 100%;font-family: $fonthelveticaneuemedium;color: $colorBlack;margin-bottom: 44px;display: block;text-align: left;
+                                        }
+                                    }
                                 }
                             }
                         }
                         .dropdown-section-menu2{width: 100%;
                             .menu-wrapper{display: flex;flex-wrap: wrap;gap: 0px 80px;
-                                .dropdown-menu{padding: 20px 32px;
+                                .dropdown-menu{padding: 20px 32px;display:block;
                                     &:hover{border-radius: 20px;background: rgba(28, 67, 185, 0.10);}
-                                    h4{@include font20;font-weight: 500;line-height: 100%;font-family: $fonthelveticaneuemedium;margin-bottom: 12px;}
-                                    p{@include font16;font-weight: 400;font-family: $fonthelveticaneuelight;}
+                                    h4{@include font20;font-weight: 500;line-height: 100%;font-family: $fonthelveticaneuemedium;margin-bottom: 12px;text-align: left}
+                                    p{@include font16;font-weight: 400;font-family: $fonthelveticaneuelight;text-transform: capitalize;text-align: left;}
                                 }
                             }
                         }
@@ -89,6 +93,7 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
             }
         }
         .header-elements{display: flex;gap: 24px;align-items: center;}
+        .hamburger-menu{display: none;}
     }
     @media all and (max-width:1800px){
         .navbar{
@@ -590,6 +595,54 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
             }
         }
     }
-    @media all and (max-width:1024px){}
+    @media all and (max-width:1024px){
+        .navbar{align-items: center;
+            .logo{width: 54px;padding: 15px 0px;z-index: 9;}
+            .nav-links{display: none;}
+            .header-elements{display: none;}
+            .hamburger-menu {display: block;
+                .button_toggle {position: relative;width: 24px;height: 6px;cursor: pointer;z-index: 1;transition: opacity 0.25s ease;
+                  &.active {
+                    span {width: 30px;}
+                    .top {transform: translateY(0) translateX(0) rotate(45deg);transition: 0.3s all ease-in-out;background: $colorGray;width: 30px;}
+                    .bottom {transform: translateY(0) translateX(0) rotate(-45deg);transition: 0.3s all ease-in-out;background: $colorGray;width: 30px;top: 0;}
+                  }
+                  span {background: #ffffff;border: none;height: 1.4px;position: absolute;top: 0;left: 0;transition: all 0.35s ease;cursor: pointer;
+                    &:nth-of-type(1) {width: 30px;background: #ffffff;}
+                    &:nth-of-type(2) {top: 7px;width: 30px;background: #ffffff;}
+                  }
+                }
+                .overlay {position: absolute;top: 0;right: -110%;width: 100%;transition: 0.5s all ease-in-out;overflow: hidden;
+                  &::before {content: '';position: absolute;top: 0;left: 0;right: 0;bottom: 0;width: 100%;height: 100%;z-index: -1;}
+                  &.open {right: 0;background: #fff;height: 100vh;}
+                  .overlay-wrapper{position: relative;padding: 24px;width: 100%;height:100%;
+                    .scrollDiv{overflow-y: scroll;height: 100%;
+                        .overlay-menu {
+                            .main-menu {margin-top: 60px;
+                                .main-list{
+                                    &.active{
+                                        .sub-menu{display: block;}
+                                        .main-nav{&::before{transform: rotate(180deg) translateY(50%);}}
+                                    }
+                                    .main-nav{position: relative;display: block;font-size: 18px;font-weight: 500;line-height: normal;letter-spacing: -0.54px;text-transform: capitalize;color: $colorBlack;font-family: $fonthelveticaneuemedium;padding: 15px;border-radius: 8px;background: rgba(28, 67, 185, 0.10);margin-bottom: 9px;
+                                        &::before{content: "";position: absolute;z-index: 2;background: url("../images/humberger-arrow.svg") no-repeat;top: 50%;transform: translateY(-50%);right: 25px;width: 20px;height: 10px;transition:all 0.3s ease-in-out;}
+                                    }
+                                    .sub-menu{margin: 18px 0px 24px 0px;display:none;
+                                        .sub-list{&:not(:last-child){margin-bottom: 20px;}padding: 0px 15px;
+                                            .sub-nav{display: block;color: $colorBlack;font-family: $fonthelveticaneuemedium;font-size: 16px;font-weight: 500;line-height: normal;}
+                                        }
+                                    }
+                                }
+                            }
+                          }
+                    }
+                    .fixCta{z-index: 8;position: absolute;bottom: 0;left: 0;right: 0;display: flex;justify-content: center;align-items: center;width: 100%;padding: 20px 24px;
+                        a{width: 100%;}
+                    }
+                    }
+                }
+              }
+        }
+    }
     @media all and (max-width:680px){}
 }

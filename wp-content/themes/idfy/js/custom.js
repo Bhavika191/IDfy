@@ -92,7 +92,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // Timeline JS starts
 
-
 // Show more footer js starts
 var more = false;
 $("#trigger").click(function () {
@@ -115,22 +114,24 @@ $(document).ready(function () {
     });
 });
 
+// ----------------------------------------Shamal's Code-----------------------------------------//
 // ------------------Header Dropdown JS--------------------- //
-document.addEventListener('DOMContentLoaded', () => {
+$(document).ready(function() {
     const dropdowns = document.querySelectorAll('.dropdown');
 
     dropdowns.forEach(dropdown => {
-        dropdown.addEventListener('click', function (event) {
-            // Prevent default behavior
+        const dropbtn = dropdown.querySelector('.dropbtn');
+        dropbtn.addEventListener('click', function (event) {
+            // Prevent default behavior for the dropdown button
             event.preventDefault();
             // Close other open dropdowns
             dropdowns.forEach(dd => {
-                if (dd !== this) {
+                if (dd !== dropdown) {
                     dd.classList.remove('active');
                 }
             });
             // Toggle the current dropdown
-            this.classList.toggle('active');
+            dropdown.classList.toggle('active');
         });
     });
 
@@ -144,5 +145,55 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 // ------------------Header Dropdown JS--------------------- //
+
+// -----------------Mobile Header Menu----------------------//
+$(document).ready(function () {
+    if ($(window).width() <= 1024) {
+      $("#toggle").click(function () {
+        $(this).toggleClass("active");
+        $("#overlay").toggleClass("open");
+        if ($("#overlay").hasClass("open")) {
+          menuOpen = true; // Menu is open
+          $('body').css("overflow", "hidden");
+          $('html').css("overflow", "hidden");
+        } else {
+          menuOpen = false; // Menu is closed
+          $('body').css("overflow", "visible");
+          $('html').css("overflow", "visible");
+        }
+      });
+    }
+});
+
+$(document).ready(function() {
+    const mainNavs = document.querySelectorAll('.main-nav');
+
+    mainNavs.forEach(mainNav => {
+        mainNav.addEventListener('click', function (event) {
+            // Prevent default behavior
+            event.preventDefault();
+            // Toggle the current dropdown
+            const parentLi = this.closest('.main-list');
+            parentLi.classList.toggle('active');
+            // Close other open dropdowns
+            mainNavs.forEach(nav => {
+                if (nav !== this) {
+                    nav.closest('.main-list').classList.remove('active');
+                }
+            });
+        });
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!event.target.closest('.main-list')) {
+            mainNavs.forEach(mainNav => {
+                mainNav.closest('.main-list').classList.remove('active');
+            });
+        }
+    });
+});
+// -----------------Mobile Header Menu----------------------//
+// ----------------------------------------Shamal's Code-----------------------------------------//
 
 
