@@ -32,36 +32,81 @@
         <div class="enterpriseLogos">
             <div class="logoDiv">
                 <div class="innerBoxes">
-                    <a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/amex-logo.webp" alt=""></a>
+                    <img src="<?php bloginfo('template_directory'); ?>/images/amex-logo.webp" alt="">
                 </div>
                 <div class="innerBoxes">
-                    <a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/paypal-logo.webp" alt=""></a>
+                    <img src="<?php bloginfo('template_directory'); ?>/images/paypal-logo.webp" alt="">
                 </div>
                 <div class="innerBoxes">
-                    <a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/unilever-logo.webp" alt=""></a>
+                    <img src="<?php bloginfo('template_directory'); ?>/images/unilever-logo.webp" alt="">
                 </div>
                 <div class="innerBoxes">
-                    <a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/uno-bank-logo.webp" alt=""></a>
+                    <img src="<?php bloginfo('template_directory'); ?>/images/uno-bank-logo.webp" alt="">
                 </div>
                 <div class="innerBoxes">
-                    <a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/phonepe-logo.webp" alt=""></a>
+                    <img src="<?php bloginfo('template_directory'); ?>/images/phonepe-logo.webp" alt="">
+                </div>
+                <div class="innerBoxes">
+                    <img src="<?php bloginfo('template_directory'); ?>/images/julo-logo.webp" alt="">
+                </div>
+                <div class="innerBoxes">
+                    <img src="<?php bloginfo('template_directory'); ?>/images/hdfc-bank-logo.webp" alt="">
+                </div>
+                <div class="innerBoxes">
+                    <img src="<?php bloginfo('template_directory'); ?>/images/bajaj-logo.webp" alt="">
+                </div>
+                <div class="innerBoxes">
+                    <img src="<?php bloginfo('template_directory'); ?>/images/britannia-logo.webp" alt="">
+                </div>
+                <div class="innerBoxes">
+                    <img src="<?php bloginfo('template_directory'); ?>/images/zomato-logo.webp" alt="">
                 </div>
             </div>
-            <div class="logoDiv">
-                <div class="innerBoxes">
-                    <a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/julo-logo.webp" alt=""></a>
+        </div>
+    </div>
+</section>
+
+<section class="pioneerSlidersec">
+    <div class="pionnerwrapper">
+        <div class="secHeading">
+            <h3>IDfy is a </h3>
+            <h2>Pioneer</h2>
+        </div>
+        <div class="pioneerSlider">
+            <div class="innerSlides">
+                <div class="contentDiv">
+                    <h3>No-code onboarding</h3>
+                    <p>Onboard users, employees or gig workers with a simple QR code</p>
                 </div>
-                <div class="innerBoxes">
-                    <a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/hdfc-bank-logo.webp" alt=""></a>
+                <div class="imageDiv">
+                    <img src="<?php bloginfo('template_directory'); ?>/images/pionner-slider-img.webp" alt="">
                 </div>
-                <div class="innerBoxes">
-                    <a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/bajaj-logo.webp" alt=""></a>
+            </div>
+            <div class="innerSlides">
+                <div class="contentDiv">
+                    <h3>No-code onboarding</h3>
+                    <p>Onboard users, employees or gig workers with a simple QR code</p>
                 </div>
-                <div class="innerBoxes">
-                    <a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/britannia-logo.webp" alt=""></a>
+                <div class="imageDiv">
+                    <img src="<?php bloginfo('template_directory'); ?>/images/pionner-slider-img.webp" alt="">
                 </div>
-                <div class="innerBoxes">
-                    <a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/zomato-logo.webp" alt=""></a>
+            </div>
+            <div class="innerSlides">
+                <div class="contentDiv">
+                    <h3>No-code onboarding</h3>
+                    <p>Onboard users, employees or gig workers with a simple QR code</p>
+                </div>
+                <div class="imageDiv">
+                    <img src="<?php bloginfo('template_directory'); ?>/images/pionner-slider-img.webp" alt="">
+                </div>
+            </div>
+            <div class="innerSlides">
+                <div class="contentDiv">
+                    <h3>No-code onboarding</h3>
+                    <p>Onboard users, employees or gig workers with a simple QR code</p>
+                </div>
+                <div class="imageDiv">
+                    <img src="<?php bloginfo('template_directory'); ?>/images/pionner-slider-img.webp" alt="">
                 </div>
             </div>
         </div>

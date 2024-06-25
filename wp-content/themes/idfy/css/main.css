@@ -2507,6 +2507,7 @@ footer .footerWrapper .copyright h3 {
   position: relative;
   justify-content: space-between;
   margin: 0px 130px;
+  overflow: hidden;
 }
 .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year {
   cursor: pointer;
@@ -2520,6 +2521,7 @@ footer .footerWrapper .copyright h3 {
   border: none;
   width: 42px;
   height: 42px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2560,18 +2562,26 @@ footer .footerWrapper .copyright h3 {
 }
 .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year.processed .progressSvg line {
   stroke: #1C43B9;
-  transition: 4s all ease-in-out;
-  stroke-width: 3px;
+  transition: 3s all ease-out;
+  stroke-width: 2px;
 }
 .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year.active .circle {
   border: 1px solid #1C43B9;
+  background: #fff;
+  position: relative;
+  z-index: 3;
 }
 .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg {
   position: absolute;
-  bottom: 40px;
+  bottom: 57px;
+  left: 62px;
 }
 .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg line {
-  transition: 4s all ease-in-out;
+  transition: 1s all ease-out;
+}
+.yearTimeline .timelineWrapper .timelineData .timeline .progressSvg {
+  display: flex;
+  align-items: center;
 }
 .yearTimeline .timelineWrapper .timelineData .timeline .progress-container {
   position: absolute;
@@ -2915,6 +2925,7 @@ footer .footerWrapper .copyright h3 {
   }
   .yearTimeline .timelineWrapper .timelineData .timeline {
     margin: 0px;
+    overflow: unset;
   }
   .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year {
     margin-right: 150px;
@@ -3593,21 +3604,123 @@ footer .footerWrapper .copyright h3 {
   bottom: -30px;
 }
 .enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv .innerBoxes {
+  width: 20%;
   border-top: 1px solid #343434;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0px;
+}
+.enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv .innerBoxes:nth-child(1), .enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv .innerBoxes:nth-child(2), .enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv .innerBoxes:nth-child(3), .enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv .innerBoxes:nth-child(4), .enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv .innerBoxes:nth-child(5) {
+  border-top: none;
+}
+.enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv .innerBoxes img {
+  margin: 0 auto;
+}
+
+.pioneerSlidersec {
+  margin-bottom: 400px;
+}
+.pioneerSlidersec .pionnerwrapper {
+  padding: 0px 230px;
+}
+.pioneerSlidersec .pionnerwrapper .secHeading {
+  margin-bottom: -120px;
+  position: relative;
+  z-index: 2;
+}
+.pioneerSlidersec .pionnerwrapper .secHeading h3 {
+  font-size: 48px;
+  font-family: "HelveticaNeueMedium";
+  letter-spacing: 0px;
+  line-height: normal;
+  color: #343434;
+}
+@media screen and (max-width: 1600px) {
+  .pioneerSlidersec .pionnerwrapper .secHeading h3 {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .pioneerSlidersec .pionnerwrapper .secHeading h3 {
+    font-size: 32px;
+  }
+}
+.pioneerSlidersec .pionnerwrapper .secHeading h2 {
+  font-size: 160px;
+  font-family: "HelveticaNeueBold";
+  text-transform: capitalize;
+  letter-spacing: -4px;
+  line-height: normal;
+  color: #343434;
+}
+@media screen and (max-width: 1600px) {
+  .pioneerSlidersec .pionnerwrapper .secHeading h2 {
+    font-size: 140px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .pioneerSlidersec .pionnerwrapper .secHeading h2 {
+    font-size: 120px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .pioneerSlidersec .pionnerwrapper .secHeading h2 {
+    font-size: 106px;
+  }
+}
+.pioneerSlidersec .pionnerwrapper .pioneerSlider {
+  margin-bottom: 0px;
+}
+.pioneerSlidersec .pionnerwrapper .pioneerSlider .innerSlides {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv:first-child {
-  border-top: 0px;
+.pioneerSlidersec .pionnerwrapper .pioneerSlider .innerSlides .contentDiv {
+  width: 42%;
+  text-align: left;
 }
-.enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv .innerBoxes {
-  width: 20%;
+.pioneerSlidersec .pionnerwrapper .pioneerSlider .innerSlides .contentDiv h3 {
+  font-size: 48px;
+  font-family: "HelveticaNeueBold";
+  letter-spacing: -1px;
+  line-height: 66%;
+  color: #343434;
 }
-.enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv .innerBoxes a {
-  padding: 40px 0px;
-  display: block;
+@media screen and (max-width: 1600px) {
+  .pioneerSlidersec .pionnerwrapper .pioneerSlider .innerSlides .contentDiv h3 {
+    font-size: 40px;
+  }
 }
-.enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv .innerBoxes a img {
-  margin: 0 auto;
+@media screen and (max-width: 1400px) {
+  .pioneerSlidersec .pionnerwrapper .pioneerSlider .innerSlides .contentDiv h3 {
+    font-size: 32px;
+  }
+}
+.pioneerSlidersec .pionnerwrapper .pioneerSlider .innerSlides .contentDiv p {
+  font-size: 24px;
+  font-family: "HelveticaNeueLight";
+  line-height: normal;
+  color: #343434;
+  margin-top: 24px;
+  width: 60%;
+}
+@media screen and (max-width: 1600px) {
+  .pioneerSlidersec .pionnerwrapper .pioneerSlider .innerSlides .contentDiv p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .pioneerSlidersec .pionnerwrapper .pioneerSlider .innerSlides .contentDiv p {
+    font-size: 18px;
+  }
+}
+.pioneerSlidersec .pionnerwrapper .pioneerSlider .innerSlides .imageDiv {
+  width: 46%;
 }/*# sourceMappingURL=main.css.map */

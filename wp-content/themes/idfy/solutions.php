@@ -65,14 +65,18 @@
                                             <h4><?php echo get_sub_field('journey_year'); ?></h4>
                                         </div>
                                         <div class="progressSvg">
-                                            <svg id="progress-svg"  width="129" height="18" viewBox="0 0 129 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <svg width="289" height="18" viewBox="0 0 289 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <line x1="0.5" y1="2.1857e-08" x2="0.499999" y2="18" stroke="#A7B0CA" />
                                                 <line x1="32.5" y1="2.1857e-08" x2="32.5" y2="18" stroke="#A7B0CA" />
                                                 <line x1="64.5" y1="2.1857e-08" x2="64.5" y2="18" stroke="#A7B0CA" />
                                                 <line x1="96.5" y1="2.1857e-08" x2="96.5" y2="18" stroke="#A7B0CA" />
                                                 <line x1="128.5" y1="2.1857e-08" x2="128.5" y2="18" stroke="#A7B0CA" />
+                                                <line x1="160.5" y1="2.1857e-08" x2="160.5" y2="18" stroke="#A7B0CA" />
+                                                <line x1="192.5" y1="2.1857e-08" x2="192.5" y2="18" stroke="#A7B0CA" />
+                                                <line x1="224.5" y1="2.1857e-08" x2="224.5" y2="18" stroke="#A7B0CA" />
+                                                <line x1="256.5" y1="2.1857e-08" x2="256.5" y2="18" stroke="#A7B0CA" />
+                                                <line x1="288.5" y1="2.1857e-08" x2="288.5" y2="18" stroke="#A7B0CA" />
                                             </svg>
-
                                         </div>
                                     </div>
                                 <?php endwhile; ?>

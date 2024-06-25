@@ -286,6 +286,19 @@ body{
     }
 }
 
+@mixin font160 {
+    font-size: 160px;
+
+    @media screen and (max-width:1600px) {
+        font-size: 140px;
+    }
+    @media screen and (max-width:1400px) {
+        font-size: 120px;
+    }
+    @media screen and (max-width:1280px) {
+        font-size: 106px;
+    }
+}
 
 
 @mixin font100 {

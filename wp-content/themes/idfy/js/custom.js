@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 years.forEach(year => year.classList.remove('processed')); // Reset all processed classes
                 navigateToYear(currentYearIndex);
             }
-        }, 4000);
+        }, 3000);
     }
 
     years.forEach((year, index) => {
@@ -156,3 +156,32 @@ document.addEventListener('DOMContentLoaded', () => {
 // ------------------Header Dropdown JS--------------------- //
 
 
+
+
+// slider js starts
+if ($(".pioneerSlidersec").length) {
+    $(".pioneerSlider").slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: true,
+      infinite: false,
+      responsive: [
+        {
+          breakpoint: 1025,
+          settings: {
+            arrows: false,
+            slidesToShow: 1,
+          },
+        },
+        {
+          breakpoint: 720,
+          settings: {
+            arrows: false,
+            slidesToShow: 1,
+          },
+        },
+      ],
+    });
+  }
+// slider js ends
