@@ -15,7 +15,6 @@
     <?php endif; ?>
 </section>
 
-
 <section class="yearTimeline">
     <?php if( have_rows('our_journey_section') ): ?>
         <?php while( have_rows('our_journey_section') ): the_row(); ?>
@@ -75,7 +74,6 @@
         <?php endwhile; ?>
     <?php endif; ?>
 </section>
-
 
 <section class="ourSolutions">
     <?php if( have_rows('our_solutions_section') ): ?>
