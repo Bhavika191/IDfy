@@ -1,8 +1,8 @@
 <?php get_header(); /* Template Name: Solutions */ ?>
 
 <section class="bannerSection">
-    <?php if( have_rows('banner_section') ): ?>
-        <?php while( have_rows('banner_section') ): the_row(); ?>
+    <?php if (have_rows('banner_section')) : ?>
+        <?php while (have_rows('banner_section')) : the_row(); ?>
             <div class="bannerInner">
                 <h1>" <?php echo get_sub_field('banner_heading'); ?> "</h1>
                 <h2><?php echo get_sub_field('banner_name'); ?></h2>
@@ -16,8 +16,8 @@
 </section>
 
 <section class="yearTimeline">
-    <?php if( have_rows('our_journey_section') ): ?>
-        <?php while( have_rows('our_journey_section') ): the_row(); ?>
+    <?php if (have_rows('our_journey_section')) : ?>
+        <?php while (have_rows('our_journey_section')) : the_row(); ?>
             <div class="timelineWrapper">
                 <div class="secHeading">
                     <h2><?php echo get_sub_field('section_heading'); ?></h2>
@@ -26,8 +26,8 @@
                     <div class="contentDiv" id="contentDiv">
                         <div class="arrow left-arrow" id="left-arrow"> <img src="<?php bloginfo('template_directory'); ?>/images/timeline-prev-arrow.svg" alt=""></div>
                         <div class="yearContentdata">
-                            <?php if( have_rows('our_journey_content') ): ?>
-                                <?php while( have_rows('our_journey_content') ): the_row(); ?>
+                            <?php if (have_rows('our_journey_content')) : ?>
+                                <?php while (have_rows('our_journey_content')) : the_row(); ?>
                                     <div class="year-content" data-year="<?php echo get_sub_field('journey_year'); ?>">
                                         <div class="innerContent">
                                             <h3><?php echo get_sub_field('journey_year'); ?></h3>
@@ -37,7 +37,8 @@
                                         </div>
                                         <div class="innerImg">
                                             <div class="imgDiv">
-                                                <?php $journeyimage = get_sub_field('card_image'); if( !empty( $journeyimage ) ): ?>
+                                                <?php $journeyimage = get_sub_field('card_image');
+                                                if (!empty($journeyimage)) : ?>
                                                     <img src="<?php echo esc_url($journeyimage['url']); ?>" loading="lazy" alt="<?php echo esc_attr($journeyimage['alt']); ?>" />
                                                 <?php endif; ?>
                                             </div>
@@ -53,17 +54,19 @@
                         </div>
                         <div class="arrow right-arrow" id="right-arrow"> <img src="<?php bloginfo('template_directory'); ?>/images/timeline-next-arrow.svg" alt=""></div>
                     </div>
-                    <div class="timeline">
-                        <?php if( have_rows('our_journey_content') ): ?>
-                            <?php while( have_rows('our_journey_content') ): the_row(); ?>
-                                <div class="timeline-year" data-year="<?php echo get_sub_field('journey_year'); ?>">
-                                    <div class="circle"><span></span></div>
-                                    <h4><?php echo get_sub_field('journey_year'); ?></h4>
-                                </div>
-                            <?php endwhile; ?>
-                        <?php endif; ?>
-                        <div class="progress-container">
-                            <div class="progress-bar" id="progress-bar"></div>
+                    <div class="timelineContainerdiv">
+                        <div class="timeline">
+                            <?php if (have_rows('our_journey_content')) : ?>
+                                <?php while (have_rows('our_journey_content')) : the_row(); ?>
+                                    <div class="timeline-year" data-year="<?php echo get_sub_field('journey_year'); ?>">
+                                        <div class="circle"><span></span></div>
+                                        <h4><?php echo get_sub_field('journey_year'); ?></h4>
+                                    </div>
+                                <?php endwhile; ?>
+                            <?php endif; ?>
+                            <div class="progress-container">
+                                <div class="progress-bar" id="progress-bar"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -76,18 +79,19 @@
 </section>
 
 <section class="ourSolutions">
-    <?php if( have_rows('our_solutions_section') ): ?>
-        <?php while( have_rows('our_solutions_section') ): the_row(); ?>
+    <?php if (have_rows('our_solutions_section')) : ?>
+        <?php while (have_rows('our_solutions_section')) : the_row(); ?>
             <div class="solutionWrapper">
                 <div class="secHeading">
                     <h2><?php echo get_sub_field('section_heading'); ?></h2>
                 </div>
                 <div class="innerDatadiv">
-                    <?php if( have_rows('our_solutions_content') ): ?>
-                        <?php while( have_rows('our_solutions_content') ): the_row(); ?>
+                    <?php if (have_rows('our_solutions_content')) : ?>
+                        <?php while (have_rows('our_solutions_content')) : the_row(); ?>
                             <div class="innerDiv">
                                 <div class="imgDiv">
-                                    <?php $solutionimage = get_sub_field('card_image'); if( !empty( $solutionimage ) ): ?>
+                                    <?php $solutionimage = get_sub_field('card_image');
+                                    if (!empty($solutionimage)) : ?>
                                         <img src="<?php echo esc_url($solutionimage['url']); ?>" loading="lazy" alt="<?php echo esc_attr($solutionimage['alt']); ?>" />
                                     <?php endif; ?>
                                 </div>
@@ -97,8 +101,8 @@
                                     <p><?php echo get_sub_field('card_description'); ?></p>
                                     <div class="solutionList">
                                         <ul>
-                                            <?php if( have_rows('card_pointers') ): ?>
-                                                <?php while( have_rows('card_pointers') ): the_row(); ?>
+                                            <?php if (have_rows('card_pointers')) : ?>
+                                                <?php while (have_rows('card_pointers')) : the_row(); ?>
                                                     <li>
                                                         <?php echo get_sub_field('pointers_text'); ?>
                                                     </li>
@@ -118,8 +122,8 @@
 </section>
 
 <section class="bookDemodiv">
-    <?php if( have_rows('book_demo_section') ): ?>
-        <?php while( have_rows('book_demo_section') ): the_row(); ?>
+    <?php if (have_rows('book_demo_section')) : ?>
+        <?php while (have_rows('book_demo_section')) : the_row(); ?>
             <div class="innerWrapper">
                 <h2><?php echo get_sub_field('section_heading'); ?></h2>
                 <a href="<?php echo get_sub_field('cta_link'); ?>" class="ctaRed"><?php echo get_sub_field('cta_text'); ?></a>
