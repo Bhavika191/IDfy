@@ -102,7 +102,6 @@
                                             <?php if( have_rows('card_pointers') ): ?>
                                                 <?php while( have_rows('card_pointers') ): the_row(); ?>
                                                     <li>
-                                                        <img src="<?php bloginfo('template_directory'); ?>/images/right-icon.svg" alt="">
                                                         <?php echo get_sub_field('pointers_text'); ?>
                                                     </li>
                                                 <?php endwhile; ?>
