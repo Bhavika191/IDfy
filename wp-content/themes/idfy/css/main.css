@@ -2730,22 +2730,37 @@ footer .footerWrapper .copyright h3 {
 .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year:nth-last-child(2) {
   margin-right: -12px;
 }
-.yearTimeline .timelineWrapper .timelineData .timeline .timeline-year.crossed .circle span {
+.yearTimeline .timelineWrapper .timelineData .timeline .timeline-year:nth-last-child(2) .progressSvg {
+  display: none;
+}
+.yearTimeline .timelineWrapper .timelineData .timeline .timeline-year.processed .circle span {
   background: #1C43B9;
+}
+.yearTimeline .timelineWrapper .timelineData .timeline .timeline-year.processed .progressSvg line {
+  stroke: #1C43B9;
+  transition: 4s all ease-in-out;
+  stroke-width: 3px;
 }
 .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year.active .circle {
   border: 1px solid #1C43B9;
+}
+.yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg {
+  position: absolute;
+  bottom: 40px;
+}
+.yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg line {
+  transition: 4s all ease-in-out;
 }
 .yearTimeline .timelineWrapper .timelineData .timeline .progress-container {
   position: absolute;
   bottom: 64px;
   left: 0;
   width: 100%;
-  background-color: #A7B0CA;
+  background-color: transparent;
 }
 .yearTimeline .timelineWrapper .timelineData .timeline .progress-container .progress-bar {
   height: 5px;
-  background-color: #1C43B9;
+  background-color: transparent;
   transition: width 1s;
   width: 0; /* Start with 0 width */
 }
