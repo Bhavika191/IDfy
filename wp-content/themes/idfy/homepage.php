@@ -3,6 +3,9 @@
 <section class="bannerSectionhp">
     <div class="bannerWrapper">
         <div class="bannerBg">
+            <video autoplay muted loop playsinline preload="metadata">
+                <source src="<?php bloginfo('template_directory'); ?>/images/banner-video.mp4" type="video/mp4">
+            </video>
             <img src="<?php bloginfo('template_directory'); ?>/images/banner-img-hp.webp" alt="">
         </div>
         <div class="bannerContent">
@@ -12,13 +15,13 @@
         </div>
         <div class="bannerbtmLinks">
             <ul>
-                <li><a href="#">KYC</a></li>
-                <li><a href="#">Background Verification</a></li>
-                <li><a href="#">Risk & Fraud</a></li>
-                <li><a href="#">Digital Onboarding</a></li>
-                <li><a href="#">Privacy & Consent</a></li>
-                <li><a href="#">Video Solutions</a></li>
-                <li><a href="#">CrimeCheck</a></li>
+                <li>KYC</li>
+                <li>Background Verification</li>
+                <li>Risk & Fraud</li>
+                <li>Digital Onboarding</li>
+                <li>Privacy & Consent</li>
+                <li>Video Solutions</li>
+                <li>CrimeCheck</li>
             </ul>
         </div>
     </div>
@@ -136,34 +139,34 @@
 <section class="onboardingJourneysec">
     <div class="innerWrapper">
         <div class="secHeading">
-            <h2>10X faster onboarding journeys</h2>
-            <p>Go live in 1 day with 0 coding</p>
+            <h2>IDfy as a Platform</h2>
+            <p>Fighting Fraud at Scale with the Least Possible Friction</p>
             <a href="#" class="ctaRed">Explore IDfy 360</a>
         </div>
         <div class="journeyData">
             <div class="contentDiv">
                 <div class="innerBoxes">
-                    <h3>Customizable:</h3>
-                    <h4>Build any journey from scratch</h4>
+                    <h3>Plug & Play:</h3>
+                    <h4>Bring your own Stack</h4>
                     <ul>
-                        <li>Zero-code, drag-and-drop workflows</li>
-                        <li>Customized and white-labeled for every business</li>
+                        <li>Integrate with your own systems easily</li>
+                        <li>Go-live in a jiffy</li>
                     </ul>
                 </div>
                 <div class="innerBoxes">
-                    <h3>Dynamic:</h3>
-                    <h4>Capabilities across use-cases, across industries</h4>
+                    <h3>Comprehensive:</h3>
+                    <h4>End to End Solutions</h4>
                     <ul>
-                        <li>Onboard customers, delivery partners, and merchants</li>
-                        <li>140+ APIs to pick and choose from</li>
+                        <li>Choose from our suite of 140+ onboarding and risk APIs</li>
+                        <li>Or bring your own APIs</li>
                     </ul>
                 </div>
                 <div class="innerBoxes">
-                    <h3>Seamless:</h3>
-                    <h4>Integrate easily, anywhere</h4>
+                    <h3>Customize:</h3>
+                    <h4>Build your journey from scratch</h4>
                     <ul>
-                        <li>Integrate with your CRM and LOS directly</li>
-                        <li>Bring your own APIs to integrate with vendors</li>
+                        <li>No-code; Drag & drop workflows></li>
+                        <li>White label the user experience</li>
                     </ul>
                 </div>
             </div>
@@ -194,26 +197,27 @@
             </div>
             <div class="contentDiv">
                 <div class="innerBoxes">
-                    <h3>Super-fast:</h3>
-                    <h4>Go live in just 1 day</h4>
+                    <h3>Insights:</h3>
+                    <h4>Outsmart your competition</h4>
                     <ul>
-                        <li>Faster go-live with no coding </li>
-                        <li>Reduced drop-offs with higher conversions</li>
+                        <li>Gather Intel with real-time data dashboards</li>
+                        <li>Track and optimize your journeys</li>
                     </ul>
                 </div>
                 <div class="innerBoxes">
-                    <h3>Risk-free:</h3>
-                    <h4>Pre-screen users to slash risks of fraud</h4>
+                    <h3>Mitigate Risk:</h3>
+                    <h4>The latest fraud-busting tech</h4>
                     <ul>
-                        <li>Pre-integrated checks for AML, GST, BSA, credit bureau, etc.</li>
-                        <li>Bring your own risk checks</li>
+                        <li>Detect document tampering, impersonation and more</li>
+                        <li>Proprietary and predictive risk-modeling</li>
                     </ul>
                 </div>
                 <div class="innerBoxes">
-                    <h3>Live insights:</h3>
-                    <h4>Integrate easily, anywhere</h4>
+                    <h3>Enterprise Ready:</h3>
+                    <h4>Grow with confidence</h4>
                     <ul>
-                        <li>Real-time tracking and optimization</li>
+                        <li>ISO and SOC 2, Type 2 certified platforms</li>
+                        <li> Highly resilient and highly scalable across process and tech</li>
                     </ul>
                 </div>
             </div>
