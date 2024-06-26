@@ -2,6 +2,7 @@
     .bannerWrapper{height: 100%;position: relative;
         .bannerBg{width: 100%;height: 100%;
             img{width: 100%;height: 100%;object-fit: cover;}
+            video{position: absolute;top: 0;left: 0;right: 0;width: 100%;height: 100%;object-fit: cover;}
         }
         .bannerContent{position: absolute;left: 80px;top: 50%;transform: translateY(-50%);width: 50%;
             h1{@include font100;font-family: $fonthelveticaneuebold;color: $colorWhite;text-transform: capitalize;letter-spacing: -3px;line-height: 100%;}
@@ -9,12 +10,11 @@
         }
         .bannerbtmLinks{position: absolute;right: 230px;bottom: 90px;
             ul{display: flex;align-items: center;
-                li{padding-right: 76px;position: relative;
+                li{padding-right: 76px;position: relative;@include font20;font-family: $fonthelveticaneuemedium;color: $colorWhite;letter-spacing: 0.2px;line-height: normal;text-align: center;
                     &::before{content: "";position: absolute;width: 12px;height: 12px;background: #CE0F11;border-radius: 50%;right: 32px;top: 50%;transform: translateY(-50%)}
                     &:last-child{padding-right: 0px;
                         &::before{content: none}
                     }
-                    a{@include font20;font-family: $fonthelveticaneuemedium;color: $colorWhite;letter-spacing: 0.2px;line-height: normal;text-align: center;}
                 }
             }
         }

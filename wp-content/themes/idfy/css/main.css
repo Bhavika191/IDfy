@@ -3704,6 +3704,15 @@ footer .footerWrapper .copyright h3 {
   height: 100%;
   object-fit: cover;
 }
+.bannerSectionhp .bannerWrapper .bannerBg video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .bannerSectionhp .bannerWrapper .bannerContent {
   position: absolute;
   left: 80px;
@@ -3783,6 +3792,22 @@ footer .footerWrapper .copyright h3 {
 .bannerSectionhp .bannerWrapper .bannerbtmLinks ul li {
   padding-right: 76px;
   position: relative;
+  font-size: 20px;
+  font-family: "HelveticaNeueMedium";
+  color: #FFFFFF;
+  letter-spacing: 0.2px;
+  line-height: normal;
+  text-align: center;
+}
+@media screen and (max-width: 1600px) {
+  .bannerSectionhp .bannerWrapper .bannerbtmLinks ul li {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 720px) {
+  .bannerSectionhp .bannerWrapper .bannerbtmLinks ul li {
+    font-size: 16px;
+  }
 }
 .bannerSectionhp .bannerWrapper .bannerbtmLinks ul li::before {
   content: "";
@@ -3800,24 +3825,6 @@ footer .footerWrapper .copyright h3 {
 }
 .bannerSectionhp .bannerWrapper .bannerbtmLinks ul li:last-child::before {
   content: none;
-}
-.bannerSectionhp .bannerWrapper .bannerbtmLinks ul li a {
-  font-size: 20px;
-  font-family: "HelveticaNeueMedium";
-  color: #FFFFFF;
-  letter-spacing: 0.2px;
-  line-height: normal;
-  text-align: center;
-}
-@media screen and (max-width: 1600px) {
-  .bannerSectionhp .bannerWrapper .bannerbtmLinks ul li a {
-    font-size: 18px;
-  }
-}
-@media screen and (max-width: 720px) {
-  .bannerSectionhp .bannerWrapper .bannerbtmLinks ul li a {
-    font-size: 16px;
-  }
 }
 
 .enterpriseSection {
