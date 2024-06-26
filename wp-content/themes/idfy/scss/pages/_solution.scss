@@ -1,7 +1,7 @@
-.bannerSection{margin: 200px 0px 116px;position: relative;height: calc(100vh - 200px);
-    &::before{content: url("../images/red-dots-banner.svg");position: absolute;z-index: 2;top: 10%;left: 0;}
-    &::after{content: url("../images/blue-dots-banner.svg");position: absolute;z-index: 2;top: 10%;right: 0;}
-    .bannerInner{width: 60%;margin: 0 auto;height: 100%;
+.bannerSection{margin: 0px 0px 116px;position: relative;height: 100vh;
+    &::before{content: url("../images/red-dots-banner.svg");position: absolute;z-index: 2;top: 50%;transform: translateY(-50%);left: 0;}
+    &::after{content: url("../images/blue-dots-banner.svg");position: absolute;z-index: 2;top: 50%;transform: translateY(-50%);;right: 0;}
+    .bannerInner{width: 60%;margin: 0 auto;height: 100%;display: flex;flex-flow: column;justify-content: center;
         h1{@include font72;font-family: $fonthelveticaneueultralight;line-height: 144%;color: #3E3E3E;letter-spacing: 2px;text-transform: capitalize;text-align: center;position: relative;
             &::after{content: "";position: absolute;background: $colorLightgray;width: 35px;height: 4px;margin: 0 auto;left: 0;right: 0;bottom: -32px;}
         }
@@ -11,8 +11,8 @@
     .downArrow{position: absolute;left: 0;right: 0;bottom: 30px;margin: 0 auto;
         img{margin: 0 auto;}
     }
-    @media screen and (max-width:1600px) {margin: 180px 0px 90px;height: calc(100vh - 180px);
-        &::before{scale: 0.9;left: -8px;top: 6%;}
+    @media screen and (max-width:1600px) {margin: 0px 0px 90px;
+        &::before{scale: 0.9;left: -8px;}
         &::after{scale: 0.9;right: -8px;}
         .bannerInner{width: 56%;
             h1{letter-spacing: 1px;
@@ -21,9 +21,9 @@
             h2{margin: 54px 0px 40px;}
         }
     }
-    @media screen and (max-width:1440px) {margin: 160px 0px 80px;height: calc(100vh - 160px);
-        &::before{scale: 0.8;left: -13px;top: -3%;}
-        &::after{scale: 0.8;right: -20px;top: -10%;}
+    @media screen and (max-width:1440px) {margin: 0px 0px 80px;
+        &::before{scale: 0.8;left: -13px;}
+        &::after{scale: 0.8;right: -20px;}
         .bannerInner{width: 54%;
             h1{letter-spacing: 2px;
                 &::after{width:40px;bottom: -28px;}
@@ -31,17 +31,16 @@
             h2{margin: 44px 0px 35px;}
         }
     }
-    @media screen and (max-width:1200px) {margin: 140px 0px 60px;height: calc(100vh - 140px);
+    @media screen and (max-width:1200px) {margin: 0px 0px 60px;
         .bannerInner{width: 60%;
             h2{margin: 44px 0px 30px;}
         }
     }
-    @media screen and (max-width:1024px) {height: auto;
-        &::before{scale: 0.6;top: -40%;}
-        &::after{scale: 0.6;top: -40%;}
-        .downArrow{position: unset;margin-top: 50px;}
+    @media screen and (max-width:1024px) {
+        &::before{scale: 0.6;}
+        &::after{scale: 0.6;}
     }
-    @media screen and (max-width:820px) {margin: 120px 0px 90px;overflow: hidden;
+    @media screen and (max-width:820px) {margin: 0px 0px 90px;overflow: hidden;
         &::before{left: -53px;}
         &::after{right: -130px;}
         .bannerInner{width: 85%;
@@ -89,7 +88,7 @@
                         span{background: #A7B0CA;border-radius: 50%;display: block;height: 20px;width: 20px;}
                     }
                     h4{@include font24;font-family: $fonthelveticaneuebold;color:$colorGray;line-height: normal;margin-top: 20px;}
-                    &:nth-last-child(2){margin-right: -12px;}
+                    &:nth-last-child(2){margin-right: 0;}
                     &:nth-last-child(2){
                         .progressSvg{display: none;}
                     }
@@ -107,7 +106,9 @@
                         .circle{border: 1px solid $colorBlue;background: #fff;position: relative;z-index: 3;
                         }
                     }
-                    .progressSvg{position: absolute;bottom: 57px;left: 62px;line{transition: 1s all ease-out;}}
+                    .progressSvg{position: absolute;bottom: 57px;left: 28px;
+                        line{transition: 1s all ease-out;}
+                    }
 
                 }
 
@@ -119,6 +120,21 @@
         }
         .idfyDesc{margin-top: 32px;
             h4{@include font22;font-family: $fonthelveticaneuelight;font-weight: 400;color: #4B505E;letter-spacing: 0px;text-transform: capitalize;line-height: 218%;font-style: italic;text-align: center;}
+        }
+    }
+
+    @media screen and (max-width:1920px) {
+        .timelineWrapper{
+            .timelineData{
+                .timeline {
+                    .timeline-year {
+                        .progressSvg{left: 62px;
+                            svg{line{&:nth-last-child(1),&:nth-last-child(2),&:nth-last-child(3),&:nth-last-child(4),&:nth-last-child(5){display: none;}}}
+                        }
+    
+                    }
+                }
+            }
         }
     }
     @media screen and (max-width:1600px) {margin-bottom: 250px;
@@ -152,6 +168,8 @@
                             span{height: 15px;width: 15px;}
                         }
                         h4{margin-top: 16px;}
+                        .progressSvg{bottom: 44px;left: 60px;
+                        }
                     }
                     .progress-container {bottom: 52px;
                         .progress-bar {height: 4px;}
@@ -164,7 +182,7 @@
         }
     }
 
-    @media screen and (max-width:1400px) {margin-bottom: 200px;
+    @media screen and (max-width:1440px) {margin-bottom: 200px;
         .timelineWrapper{
             .secHeading{margin-bottom: 72px;
                 &::before{width: 240px;bottom: -20px;}
@@ -192,6 +210,8 @@
                             span{height: 10px;width: 10px;}
                         }
                         h4{margin-top: 14px;}
+                        .progressSvg{bottom: 40px;left: 48px;
+                        }
                     }
                     .progress-container {bottom: 45px;
                         .progress-bar {height: 4px;}
@@ -200,6 +220,51 @@
             }
             .idfyDesc{margin-top: 28px;
                 h4{line-height: 160%;}
+            }
+        }
+    }
+
+
+    @media screen and (max-width:1366px) {
+        .timelineWrapper{
+            .timelineData{
+                .timeline {
+                    .timeline-year {
+                        .progressSvg{bottom: 39px;left: 44px;
+                        }
+    
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:1280px) {
+        .timelineWrapper{
+            .timelineData{
+                .timeline {
+                    .timeline-year {
+                        .circle{position: relative;z-index: 2;}
+                        .progressSvg{bottom: 38px;left: 20px;
+                        }
+    
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:1200px) {
+        .timelineWrapper{
+            .timelineData{
+                .timeline {
+                    .timeline-year {
+                        .circle{position: relative;z-index: 2;}
+                        .progressSvg{bottom: 38px;left: 15px;
+                        }
+    
+                    }
+                }
             }
         }
     }
@@ -232,6 +297,8 @@
                             span{height: 10px;width: 10px;}
                         }
                         h4{margin-top: 12px;}
+                        .progressSvg{bottom: 37px;left: 11px;
+                        }
                     }
                     .progress-container {bottom: 44px;
                         .progress-bar {height: 3px;}
@@ -272,7 +339,11 @@
                         &::-webkit-scrollbar {display: none; /* for Chrome, Safari, and Opera */}
                 }
                 .timeline{margin: 0px;overflow: unset;
-                    .timeline-year{margin-right: 150px;}
+                    .timeline-year{margin-right: 150px;
+                        .progressSvg{left: 20px;bottom: 37px;
+                            svg{line{&:nth-last-child(1),&:nth-last-child(2),&:nth-last-child(3),&:nth-last-child(4),&:nth-last-child(5){display: block;}}}
+                        }
+                    }
                     .progress-container {background: transparent;
                         
                     }
@@ -300,7 +371,11 @@
                     }
                 }
                 .timeline{
-                    .timeline-year{margin-right: 100px;}
+                    .timeline-year{margin-right: 100px;
+                        .progressSvg{left: 11px;bottom: 38px;
+                            svg{line{&:nth-last-child(1),&:nth-last-child(2),&:nth-last-child(3),&:nth-last-child(4),&:nth-last-child(5){display: none;}}}
+                        }
+                    }
                 }
             }
         }

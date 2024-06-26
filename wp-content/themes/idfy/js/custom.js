@@ -1,3 +1,89 @@
+// ----------------------------------------Shamal's Code-----------------------------------------//
+// ------------------Header Dropdown JS--------------------- //
+$(document).ready(function () {
+    const dropdowns = document.querySelectorAll('.dropdown');
+
+    dropdowns.forEach(dropdown => {
+        const dropbtn = dropdown.querySelector('.dropbtn');
+        dropbtn.addEventListener('click', function (event) {
+            // Prevent default behavior for the dropdown button
+            event.preventDefault();
+            // Close other open dropdowns
+            dropdowns.forEach(dd => {
+                if (dd !== dropdown) {
+                    dd.classList.remove('active');
+                }
+            });
+            // Toggle the current dropdown
+            dropdown.classList.toggle('active');
+        });
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function (event) {
+        if (!event.target.closest('.dropdown')) {
+            dropdowns.forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+        }
+    });
+});
+// ------------------Header Dropdown JS--------------------- //
+
+// -----------------Mobile Header Menu----------------------//
+$(document).ready(function () {
+    if ($(window).width() <= 1024) {
+        $("#toggle").click(function () {
+            $(this).toggleClass("active");
+            $("#overlay").toggleClass("open");
+            if ($("#overlay").hasClass("open")) {
+                menuOpen = true; // Menu is open
+                $('body').css("overflow", "hidden");
+                $('html').css("overflow", "hidden");
+            } else {
+                menuOpen = false; // Menu is closed
+                $('body').css("overflow", "visible");
+                $('html').css("overflow", "visible");
+            }
+        });
+    }
+});
+
+$(document).ready(function () {
+    const mainNavs = document.querySelectorAll('.main-nav');
+
+    mainNavs.forEach(mainNav => {
+        mainNav.addEventListener('click', function (event) {
+            // Prevent default behavior
+            event.preventDefault();
+            // Toggle the current dropdown
+            const parentLi = this.closest('.main-list');
+            parentLi.classList.toggle('active');
+            // Close other open dropdowns
+            mainNavs.forEach(nav => {
+                if (nav !== this) {
+                    nav.closest('.main-list').classList.remove('active');
+                }
+            });
+        });
+    });
+
+    // Close dropdowns when clicking outside
+    document.addEventListener('click', function (event) {
+        if (!event.target.closest('.main-list')) {
+            mainNavs.forEach(mainNav => {
+                mainNav.closest('.main-list').classList.remove('active');
+            });
+        }
+    });
+});
+// -----------------Mobile Header Menu----------------------//
+// ----------------------------------------Shamal's Code-----------------------------------------//
+
+
+
+
+
 // Timeline JS starts
 document.addEventListener("DOMContentLoaded", function () {
     const years = document.querySelectorAll('.timeline-year');
@@ -124,87 +210,7 @@ $(document).ready(function () {
     });
 });
 
-// ----------------------------------------Shamal's Code-----------------------------------------//
-// ------------------Header Dropdown JS--------------------- //
-$(document).ready(function() {
-    const dropdowns = document.querySelectorAll('.dropdown');
 
-    dropdowns.forEach(dropdown => {
-        const dropbtn = dropdown.querySelector('.dropbtn');
-        dropbtn.addEventListener('click', function (event) {
-            // Prevent default behavior for the dropdown button
-            event.preventDefault();
-            // Close other open dropdowns
-            dropdowns.forEach(dd => {
-                if (dd !== dropdown) {
-                    dd.classList.remove('active');
-                }
-            });
-            // Toggle the current dropdown
-            dropdown.classList.toggle('active');
-        });
-    });
-
-    // Close dropdowns when clicking outside
-    document.addEventListener('click', function(event) {
-        if (!event.target.closest('.dropdown')) {
-            dropdowns.forEach(dropdown => {
-                dropdown.classList.remove('active');
-            });
-        }
-    });
-});
-// ------------------Header Dropdown JS--------------------- //
-
-// -----------------Mobile Header Menu----------------------//
-$(document).ready(function () {
-    if ($(window).width() <= 1024) {
-      $("#toggle").click(function () {
-        $(this).toggleClass("active");
-        $("#overlay").toggleClass("open");
-        if ($("#overlay").hasClass("open")) {
-          menuOpen = true; // Menu is open
-          $('body').css("overflow", "hidden");
-          $('html').css("overflow", "hidden");
-        } else {
-          menuOpen = false; // Menu is closed
-          $('body').css("overflow", "visible");
-          $('html').css("overflow", "visible");
-        }
-      });
-    }
-});
-
-$(document).ready(function() {
-    const mainNavs = document.querySelectorAll('.main-nav');
-
-    mainNavs.forEach(mainNav => {
-        mainNav.addEventListener('click', function (event) {
-            // Prevent default behavior
-            event.preventDefault();
-            // Toggle the current dropdown
-            const parentLi = this.closest('.main-list');
-            parentLi.classList.toggle('active');
-            // Close other open dropdowns
-            mainNavs.forEach(nav => {
-                if (nav !== this) {
-                    nav.closest('.main-list').classList.remove('active');
-                }
-            });
-        });
-    });
-
-    // Close dropdowns when clicking outside
-    document.addEventListener('click', function(event) {
-        if (!event.target.closest('.main-list')) {
-            mainNavs.forEach(mainNav => {
-                mainNav.closest('.main-list').classList.remove('active');
-            });
-        }
-    });
-});
-// -----------------Mobile Header Menu----------------------//
-// ----------------------------------------Shamal's Code-----------------------------------------//
 
 
 
@@ -212,27 +218,155 @@ $(document).ready(function() {
 // slider js starts
 if ($(".pioneerSlidersec").length) {
     $(".pioneerSlider").slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: true,
-      dots: true,
-      infinite: false,
-      responsive: [
-        {
-          breakpoint: 1025,
-          settings: {
-            arrows: false,
-            slidesToShow: 1,
-          },
-        },
-        {
-          breakpoint: 720,
-          settings: {
-            arrows: false,
-            slidesToShow: 1,
-          },
-        },
-      ],
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: true,
+        infinite: false,
+        autoplay: true,
+        speed: 1000,
+        autoplaySpeed: 2000,
+        fade: true,
+        cssEase: 'linear',
+        responsive: [
+            {
+                breakpoint: 1025,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 1,
+                },
+            },
+            {
+                breakpoint: 720,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 1,
+                },
+            },
+        ],
     });
-  }
+}
+
+if ($(".clientsSection").length) {
+    $(".clientSlider").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        infinite: false,
+        autoplay: true,
+        speed: 2000,
+        autoplaySpeed: 3000,
+        responsive: [
+            {
+                breakpoint: 1025,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 1,
+                },
+            },
+            {
+                breakpoint: 720,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 1,
+                },
+            },
+        ],
+    });
+}
 // slider js ends
+
+
+// on scroll sticky section fraud stories js starts
+gsap.registerPlugin(ScrollTrigger);
+
+// Pin the section
+ScrollTrigger.create({
+  trigger: ".fixed-section",
+  start: "top top",
+  end: "+=300%", // Adjust based on the desired scroll length
+  pin: true
+});
+
+// Create a timeline for the first box container
+const tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".fixed-section",
+    start: "top top",
+    end: "+=300%", // Adjust based on the desired scroll length
+    scrub: true
+  }
+});
+
+// Select the first set of boxes
+const boxes = document.querySelectorAll(".fixed-section .box-container .box");
+
+// Add animations to the timeline for the first set of boxes
+boxes.forEach((box, index) => {
+  tl.to(box, {
+    className: "+=activeBoxes",
+    duration: 1,
+    onStart: () => {
+      if (index > 0) boxes[index - 1].classList.remove("activeBoxes");
+    }
+  });
+});
+
+// Create a timeline for the second box container
+const tl2 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".fixed-section",
+    start: "top top",
+    end: "+=300%", // Adjust based on the desired scroll length
+    scrub: true
+  }
+});
+
+// Select the second set of boxes
+const boxesTwo = document.querySelectorAll(".fixed-section .box-container-two .box");
+
+// Add animations to the timeline for the second set of boxes
+boxesTwo.forEach((box, index) => {
+  tl2.to(box, {
+    className: "+=active-two",
+    duration: 1,
+    onStart: () => {
+      if (index > 0) boxesTwo[index - 1].classList.remove("active-two");
+    }
+  });
+});
+
+// on scroll sticky section fraud stories js starts
+
+
+
+// product families js starts
+$(document).ready(function() {
+    function updateSlides(slideIndex) {
+        var slides = $('.slider .slide');
+        slideIndex--; // Adjust slideIndex to match zero-based index
+        slides.each(function(index) {
+            $(this).removeClass('visible hidden hidden-behind');
+            if (index === slideIndex) {
+                $(this).addClass('visible');
+            } else if (index === (slideIndex + 1) % slides.length) {
+                $(this).addClass('hidden-behind');
+            } else if (index === (slideIndex + 2) % slides.length) {
+                $(this).addClass('hidden');
+            }
+        });
+    }
+
+    $('.tab').on('click', function() {
+        var slideIndex = $(this).data('slide');
+        updateSlides(slideIndex);
+        $('.tab').removeClass('active');
+        $(this).addClass('active');
+    });
+
+    // Initialize the first slide as visible and the first tab as active
+    updateSlides(1);
+    $('.tab').first().addClass('active');
+});
+// product families js ends

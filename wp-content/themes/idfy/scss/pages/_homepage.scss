@@ -24,7 +24,7 @@
 .enterpriseSection{margin-bottom: 190px;
     .enterpriseWrapper{@include wrapper;
         .secHeading{margin-bottom: 134px;position: relative;
-            h2{@include font32;font-family: $fonthelveticaneuelight;line-height: 102%;color: $colorBlack;letter-spacing: 1px;text-transform: capitalize;text-align: center;}
+            h2{@include font48;font-family: $fonthelveticaneuelight;line-height: 100%;letter-spacing: 0px;color: $colorBlack;letter-spacing: 1px;text-transform: capitalize;text-align: center;}
             &::before{content: "";position: absolute;width: 260px;background: rgba(0, 0, 0, 0.80);height: 1px;left: 0;right: 0;margin: 0 auto;bottom: -30px;}
         }
         .enterpriseLogos{
@@ -40,19 +40,257 @@
 
 
 .pioneerSlidersec{margin-bottom: 400px;
-    .pionnerwrapper{padding: 0px 230px;
-        .secHeading{margin-bottom: -120px;position: relative;z-index: 2;
+    .pionnerwrapper{
+        .secHeading{margin-bottom: -150px;position: relative;z-index: 2;width: 45%;padding-left:  230px;
             h3{@include font48;font-family: $fonthelveticaneuemedium;letter-spacing: 0px;line-height: normal;color: $colorGray;}
             h2{@include font160;font-family: $fonthelveticaneuebold;text-transform: capitalize;letter-spacing: -4px;line-height: normal;color: $colorGray;}
         }
         .pioneerSlider{margin-bottom: 0px;
-            .innerSlides{display: flex;align-items: center;justify-content: space-between;
+            .innerSlides{display: flex;align-items: center;justify-content: space-between;padding: 0px 230px;
                 .contentDiv{width: 42%;text-align: left;
                     h3{@include font48;font-family: $fonthelveticaneuebold;letter-spacing: -1px;line-height: 66%;color: $colorGray;}
                     p{@include font24;font-family: $fonthelveticaneuelight;line-height: normal;color: $colorGray;margin-top: 24px;width: 60%;}
                 }
-                .imageDiv{width: 46%;}
+                .imageDiv{width: 46%;position: relative;
+                    .mainImg{border-radius: 50%;overflow: hidden;position: relative;}
+                    .dots{position: absolute;bottom: 10px;right: -50px;}
+                }
+            }
+            .slick-dots{bottom: 32px;left: 230px;width: unset;
+                li{width: 10px;height:10px;border-radius:90px;margin: 0px 6px;transition: 0.5s all ease-in-out;
+                    button{width: 100%;height: 100%;border-radius:90px;background: transparent;padding: 0;background: #343434;
+                        &::before{font-size: 0;}
+                    }
+                    &:hover{background: #343434;}
+                }
+                .slick-active{width: 65px;height:10px;transition: 0.5s all ease-in-out;
+                    button{width: 100%;height: 100%;
+                        background: #343434;
+                        &::before{
+                            opacity: unset;
+                            color: #343434;
+                        }
+                    }
+                }
+            }
+            .slick-prev,
+            .slick-next {position: absolute;top: 50%;transform: translateY(-50%);width: 40px;height: 40px;cursor: pointer;z-index: 2;border: 1px solid #000;border-radius: 50%;
+                &.slick-next {right: 80px;
+                &::before {display: block;scale: 0.8;
+                        content: url(../images/timeline-next-arrow.svg);
+                    }
+                }
+                &.slick-prev {left: 80px;
+                    &::before {display: block;scale: 0.8;
+                        content: url(../images/timeline-prev-arrow.svg);
+                    }
+                }
             }
         }
     }
 }
+
+
+.onboardingJourneysec{margin-bottom: 284px;
+    .innerWrapper{@include wrapper;
+        .secHeading{text-align: center;
+            h2{@include font48;font-family: $fonthelveticaneuelight;text-transform: capitalize;line-height: 100%;letter-spacing: 0px;color: $colorGray;text-align: center;position: relative;
+                &::before{content: "";position: absolute;bottom: -22px;left: 0;right: 0;height: 1px;width: 154px;background: rgba(0, 0, 0, 0.80);margin: 0 auto}
+            }
+            p{@include font24;line-height: 141%;font-family: $fonthelveticaneuelight;line-height: normal;margin: 40px auto 48px;color: $colorGray;text-align: center;width: 50%;}
+        }
+        .journeyData{display: flex;margin-top: 72px;
+            .contentDiv{width: 35%;padding-right: 20px;
+                &:last-child{padding-left: 80px;padding-right: 0px;
+                    .innerBoxes{
+                        &:nth-child(1) h3::after{background: url("../images/journey-line-4.svg") no-repeat;}
+                        &:nth-child(2) h3::after{background: url("../images/journey-line-5.svg") no-repeat;}
+                        &:nth-child(3) h3::after{background: url("../images/journey-line-6.svg") no-repeat;bottom: -32px;height: 60px;}
+                    }
+                }
+                .innerBoxes{margin-bottom: 40px;
+                    &:last-child{margin-bottom: 0px;
+                    }
+                    &:nth-child(1) h3::after{background: url("../images/journey-line-1.svg") no-repeat;}
+                    &:nth-child(2) h3::after{background: url("../images/journey-line-2.svg") no-repeat;}
+                    &:nth-child(3) h3::after{background: url("../images/journey-line-3.svg") no-repeat;bottom: -32px;height: 70px;}
+                   
+                    h3{@include font40;font-family: $fonthelveticaneuebold;color: $colorBlue;line-height: normal;margin-bottom: 28px;position: relative;
+                        &::after{content: "";position: absolute;left: 0;width: 100%;height: 100%;bottom: -56px}
+                    }
+                    h4{@include font24;font-family: $fonthelveticaneuebold;color: #4D4D4D;line-height: 133%;margin-bottom: 14px;}
+                    ul{
+                        li{@include font20;font-family: $fonthelveticaneuelight;color: #4D4D4D;line-height: 160%;position: relative;padding-left: 20px;
+                            &::before{content: "";position: absolute;top:14px;left: 0;width: 6px;height: 6px;background: #4D4D4D;border-radius: 50%;}
+                        }
+                    }
+
+                }
+            }
+            .centerCirclediv{width: 30%;
+                .outerborderDiv{position: relative;border-radius: 50%;border: 3px solid #1C43B9;padding: 80px;
+                    .mainImg{border-radius: 50%;overflow: hidden;}
+                    .journeyIcons{position: absolute;background: #1C43B9;height: 80px;width: 80px;border-radius: 50%;display: flex;align-items: center;justify-content: center;
+                        &::before{content: "";position: absolute;border-radius: 50%;border: 1px solid #8BA8FF;width: 105px;height: 105px;left: -13px;}
+                        &::after{content: "";position: absolute;border-radius: 50%;border: 1px solid #8BA8FF;width: 90px;height: 90px;left: -6px;}
+                        &:nth-child(2){top: 8%;left: 5%;}
+                        &:nth-child(3){top: 44%;left: -8%;}
+                        &:nth-child(4){top: 78%;left: 7%;}
+                        &:nth-child(5){top: 8%;right: 5%;}
+                        &:nth-child(6){top: 44%;right: -8%;}
+                        &:nth-child(7){top: 78%;right: 7%;}
+                    }
+                }
+            }
+        }
+    }
+}
+
+.productfamSection{margin-bottom: 180px;
+    .innerWrapper{@include wrapper;
+        .secHeading{margin-bottom: 60px;text-align: center;position: relative;
+            h2{@include font48;font-family: $fonthelveticaneuelight;text-transform: capitalize;line-height: 100%;letter-spacing: 0px;color: $colorGray;text-align: center;}
+            &::before{content: "";position: absolute;bottom: -22px;left: 0;right: 0;height: 1px;width: 154px;background: rgba(0, 0, 0, 0.80);margin: 0 auto}
+        }
+        .prodfamSlides{
+            .tabs{text-align: center;margin-bottom: 30px;
+                .tab{background: transparent !important;outline: none;cursor: pointer;margin-right: 50px;text-align: center;
+                    &:last-child{margin-right: 0px}
+                    h3{@include font20;font-family: $fonthelveticaneuebold;line-height: 120%;color: $colorGray;text-align: center;}
+                    &.active{position: relative;
+                        &::after{content: "";position: absolute;width: 100%;height: 3px;background: $colorRed;left: 0;right: 0;}
+                    }
+                }
+            }
+            .slider{height: 640px;position: relative;perspective: 1000px; 
+                .slide {position: absolute;width: 100%;transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;transform: translateY(112px);opacity: 0;border-radius: 34.359px;border: 0.687px solid rgba(0, 0, 0, 0.20);background: #FFF;box-shadow: 13.744px 13.744px 20.615px 0px rgba(0, 0, 0, 0.20);display: flex;align-items: center;justify-content: space-between;padding: 35px;
+                    .dataImg{border-radius: 28px;overflow: hidden;width: 52%;}
+                    .dataContent{width: 40%;
+                        h4{@include font20;font-family: $fonthelveticaneuebold;color: $colorGray;line-height: 100%;letter-spacing: 0px;text-transform: uppercase;}
+                        h3{@include font40;font-family: $fonthelveticaneuebold;color: $colorGray;line-height: 125%;letter-spacing: -1px;margin: 30px 0px;width: 75%;}
+                        p{@include font20;font-family: $fonthelveticaneuelight;color: $colorGray;line-height: 150%;margin-bottom: 30px;width: 65%;}
+                    }
+                }
+                .hidden {transform: translateY(112px) scale(0.8) perspective(1000px);opacity: 1;z-index: -1;}
+                .hidden-behind {transform: translateY(58px) scale(0.9) perspective(1000px);opacity:1;z-index: 0;}
+                .visible {transform: translateY(0) scale(1) perspective(1000px);opacity: 1;z-index: 1;}
+            }
+        }
+    }
+}
+
+.pin-spacer{margin: 0px 0px 150px !important;}
+.fraudstoriesSec{height: 100vh;display: flex;justify-content: center;align-items: center; position: relative;width: 100%; 
+    .innerWrapper{@include wrapper;
+        .secHeading{
+            h2{@include font48;font-family: $fonthelveticaneuelight;text-transform: capitalize;line-height: 100%;letter-spacing: 0px;color: $colorGray;text-align: center;position: relative;
+                &::before{content: "";position: absolute;bottom: -22px;left: 0;right: 0;height: 1px;width: 154px;background: rgba(0, 0, 0, 0.80);margin: 0 auto}
+            }
+            p{@include font24;line-height: 141%;font-family: $fonthelveticaneuelight;line-height: normal;margin: 40px auto 0px;color: $colorGray;text-align: center;width: 50%;}
+        }
+        .boxContent{position: relative;margin-top: 40px;
+            .box-container{
+                #boxesData{position: absolute;top: 8%;left: -6%;width: 66%;border-radius: 20px;border: 0.685px solid rgba(0, 0, 0, 0.20);background: #FFF;box-shadow: 13.705px 13.705px 20.557px 0px rgba(0, 0, 0, 0.20);padding: 35px 45px;transition: 0.7s all ease-in-out;
+                    &:nth-child(2){top: 40%;right: -40%;left: unset;}
+                    &:nth-child(3){top: 60%;left: -37%}
+                    p{@include font24;font-family: $fonthelveticaneuelight;line-height: 133%;color: #080808;}
+                    a{margin-top: 20px;display: none;}
+                }
+                .activeBoxes{border-radius: 20px;border: 0.685px solid rgba(0, 0, 0, 0.20); background: #1C43B9 !important;box-shadow: 13.705px 13.705px 20.557px 0px rgba(0, 0, 0, 0.20);transition: 0.7s all ease-in-out;width: 88% !important;left: -46% !important;
+                    &:nth-child(2){left: unset !important;}
+                    p{font-size: 30px !important;color: $colorWhite !important;}
+                    a{display: inline-flex !important;}
+                }
+            }
+            .box-container-two{
+                #boxesImg{border-radius: 50%;overflow: hidden;margin: 0 auto;
+                    .dotsInner{position: absolute;top: 22%;right: 11%;}
+                }
+               #boxesImg{display: none;width: 72%;}
+                .active-two{display: block !important;}
+            }
+        }
+    }
+}
+ 
+
+
+
+.clientsSection{margin-bottom: 150px;
+    .innerWrapper{@include wrapper;
+        .secHeading{margin-bottom: 60px;text-align: center;position: relative;
+            h2{@include font48;font-family: $fonthelveticaneuelight;text-transform: capitalize;line-height: 100%;letter-spacing: 0px;color: $colorGray;text-align: center;}
+            &::before{content: "";position: absolute;bottom: -22px;left: 0;right: 0;height: 1px;width: 154px;background: rgba(0, 0, 0, 0.80);margin: 0 auto}
+        }
+        .clientSlider{border-radius: 50px;border: 1px solid rgba(0, 0, 0, 0.20);
+            .clientsliderSlides{display: flex;align-items: center;justify-content: space-between;padding: 80px 90px 60px;
+                .imgnameDiv{width: 28%;position: relative;
+                    .imgBox{border-radius: 50%;overflow: hidden;border: 6px solid #1C43B9;
+                        img{border: 6px solid #fff;border-radius: 50%;}
+                        .dotsInner{position: absolute;top: -18px;left: -65px;img{border: none;border-radius: unset;}}
+                    }
+                    .nameDiv{margin-top: 32px;
+                        h4{@include font24;font-family: $fonthelveticaneuebold;line-height: 141%;color: $colorGray;text-align: center;}
+                        h5{@include font20;font-family: $fonthelveticaneuelight;line-height: normal;color: $colorGray;text-align: center;margin-top: 8px;}
+                    }
+                }
+                .contentDiv{width: 65%;padding-right: 110px;
+                    h3{@include font48;font-family: $fonthelveticaneuelight;line-height:  normal;color: $colorGray;text-align: left;}
+                }
+            }
+            .slick-dots{bottom: 72px;right: 84px;width: unset;
+                li{width: 10px;height:10px;border-radius:90px;margin: 0px 6px;transition: 0.5s all ease-in-out;
+                    button{width: 100%;height: 100%;border-radius:90px;background: transparent;padding: 0;background: #343434;
+                        &::before{font-size: 0;}
+                    }
+                    &:hover{background: #343434;}
+                }
+                .slick-active{width: 128px;height:10px;transition: 0.5s all ease-in-out;
+                    button{width: 100%;height: 100%;
+                        background: #343434;
+                        &::before{
+                            opacity: unset;
+                            color: #343434;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.awardscertificateSec{margin-bottom: 140px;
+    .innerWrapper{padding: 0px 110px;
+        .secHeading{margin-bottom: 60px;text-align: center;position: relative;
+            h2{@include font48;font-family: $fonthelveticaneuelight;text-transform: capitalize;line-height: 100%;letter-spacing: 0px;color: $colorGray;text-align: center;}
+            &::before{content: "";position: absolute;bottom: -22px;left: 0;right: 0;height: 1px;width: 154px;background: rgba(0, 0, 0, 0.80);margin: 0 auto}
+        }
+        .awardCertiInner{display: flex;align-items: flex-start;justify-content: space-between;
+            .awardDiv{width: 29%;display: flex;align-items: flex-start;position: relative;
+                &::before{content: "";position: absolute;top: 60px;right: -13%;background: rgba(0, 0, 0, 0.20);width: 1px;height: 50%;}
+                .imgBox{margin-right: 52px;
+                    .imgDiv{width: 220px;height: 220px;border-radius: 50%;background: #EEEEEE;display: flex;justify-content: center;align-items: center;}
+                    &:last-child{margin-right: 0px;}
+                    .contentDiv{margin-top: 32px;
+                        h3{@include font20;font-family: $fonthelveticaneuelight;line-height: 140%;color: #080808;text-align: center;}
+                    }
+                }
+            }
+            .certificateDiv{width: 62%;display: flex;align-items: flex-start;
+                .imgBox{margin-right: 52px;
+                    .imgDiv{width: 220px;height: 220px;border-radius: 50%;background: #EEEEEE;display: flex;justify-content: center;align-items: center;}
+                    &:last-child{margin-right: 0px;}
+                    .contentDiv{margin-top: 32px;
+                        h3{@include font20;font-family: $fonthelveticaneuelight;line-height: 140%;color: #080808;text-align: center;}
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
