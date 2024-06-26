@@ -3749,6 +3749,242 @@ footer .footerWrapper .copyright h3 {
   }
 }
 
+.ag-format-container {
+  width: 1142px;
+  margin: 0 auto;
+}
+
+.ag-timeline-block {
+  padding: 50px 0;
+}
+
+.ag-timeline_box {
+  position: relative;
+}
+
+.ag-timeline-carousel-arrow_box {
+  z-index: 9999;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ag-timeline-carousel-arrow {
+  display: block;
+  height: 52px;
+  width: 52px;
+  border: 1px solid #000;
+  background-color: #000;
+  cursor: pointer;
+  stroke: #FFF;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transition: all 0.2s ease-out 0s;
+  -moz-transition: all 0.2s ease-out 0s;
+  -o-transition: all 0.2s ease-out 0s;
+  transition: all 0.2s ease-out 0s;
+  position: relative;
+}
+
+.ag-timeline-carousel-arrow:hover {
+  border: 1px solid #000;
+  background-color: transparent;
+}
+
+.js-ag-timeline-carousel-arrow_prev {
+  margin: 0 0 10px;
+}
+
+.js-ag-timeline-carousel-arrow_prev:hover,
+.js-ag-timeline-carousel-arrow_next:hover {
+  stroke: #000;
+}
+
+.svg-arrow-left,
+.svg-arrow-right {
+  height: 18px;
+  width: 10px;
+  margin: -8px 0 0 -5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.ag-timeline-carousel_list {
+  padding: 0 0 0 100px;
+}
+
+.ag-timeline_year {
+  line-height: 1;
+  margin: 0 0 40px;
+  font-weight: 500;
+  font-size: 90px;
+  color: #041C2C;
+}
+
+.ag-timeline_text p {
+  line-height: 1.36;
+  margin: 0 0 15px;
+  font-size: 16px;
+  color: #041C2C;
+}
+
+.ag-timeline_text a {
+  text-decoration: underline;
+  color: #1646D0;
+}
+
+.ag-timeline_text a:hover {
+  text-decoration: none;
+}
+
+.ag-timeline-carousel-nav_box {
+  position: relative;
+}
+
+.ag-timeline-carousel-nav_box:before,
+.ag-timeline-carousel-nav_box:after {
+  content: "";
+  height: 150px;
+  width: 20%;
+  margin: 0 0;
+  z-index: 9999;
+  position: absolute;
+  bottom: 0;
+}
+
+.ag-timeline-carousel-nav_list {
+  position: relative;
+}
+
+.ag-timeline-carousel-nav_list:after {
+  content: "";
+  height: 1px;
+  background-color: #1646D0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+}
+
+.ag-timeline-carousel-nav_item {
+  display: inline-block;
+  line-height: 1;
+  width: 50px;
+  padding: 130px 15px 0;
+  cursor: pointer;
+  vertical-align: bottom;
+  text-align: center;
+  font-size: 16px;
+  color: #041C2C;
+  position: relative;
+}
+
+.ag-timeline-carousel-nav_item:before {
+  content: "";
+  height: 5px;
+  width: 5px;
+  margin: 0 auto;
+  background-color: #B1C0E9;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 102px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.ag-timeline-carousel-nav_item:after {
+  content: "";
+  height: 40px;
+  width: 1px;
+  margin: 0 auto;
+  background-color: #1646D0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 52px;
+}
+
+.ag-timeline-carousel-nav_item.slick-current {
+  margin: -5px 0 0;
+  font-weight: 700;
+  font-size: 22px;
+  color: #1646D0;
+}
+
+.ag-timeline-carousel-nav_item.slick-current:before {
+  height: 16px;
+  width: 16px;
+  background-color: #1646D0;
+  bottom: 110px;
+}
+
+.ag-timeline-carousel-nav_item.slick-current:after {
+  bottom: 59px;
+}
+
+@media only screen and (max-width: 767px) {
+  .ag-format-container {
+    width: 96%;
+  }
+  .ag-timeline-carousel_list {
+    padding: 0;
+  }
+  .ag-timeline-carousel-arrow_box {
+    padding: 12px 0 12px 12px;
+    background-color: #F4F4F4;
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 0;
+  }
+  .ag-timeline-carousel-arrow {
+    display: inline-block;
+    height: 33px;
+    width: 33px;
+  }
+  .js-ag-timeline-carousel-arrow_prev {
+    margin: 0 8px 0 0;
+  }
+  .js-ag-timeline-carousel-arrow_prev:before,
+  .js-ag-timeline-carousel-arrow_next:before {
+    height: 12px;
+    width: 8px;
+    margin: -6px auto 0;
+  }
+  .ag-timeline_year {
+    font-size: 60px;
+  }
+  .ag-timeline-carousel-nav_box:before,
+  .ag-timeline-carousel-nav_box:after {
+    display: none;
+    background: none;
+    position: static;
+  }
+  .svg-arrow-left, .svg-arrow-right {
+    height: 12px;
+    width: 8px;
+    margin: -6px 0 0 -4px;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  .ag-format-container {
+    width: 750px;
+  }
+}
+@media (min-width: 980px) and (max-width: 1161px) {
+  .ag-format-container {
+    width: 960px;
+  }
+}
 .bannerSectionhp {
   height: 100vh;
   margin-bottom: 260px;
@@ -3845,11 +4081,13 @@ footer .footerWrapper .copyright h3 {
 .bannerSectionhp .bannerWrapper .bannerbtmLinks {
   position: absolute;
   right: 230px;
+  margin-left: 100px;
   bottom: 90px;
 }
 .bannerSectionhp .bannerWrapper .bannerbtmLinks ul {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 .bannerSectionhp .bannerWrapper .bannerbtmLinks ul li {
   padding-right: 76px;
@@ -3860,6 +4098,7 @@ footer .footerWrapper .copyright h3 {
   letter-spacing: 0.2px;
   line-height: normal;
   text-align: center;
+  margin-bottom: 10px;
 }
 @media screen and (max-width: 1600px) {
   .bannerSectionhp .bannerWrapper .bannerbtmLinks ul li {
@@ -3887,6 +4126,125 @@ footer .footerWrapper .copyright h3 {
 }
 .bannerSectionhp .bannerWrapper .bannerbtmLinks ul li:last-child::before {
   content: none;
+}
+@media screen and (max-width: 1600px) {
+  .bannerSectionhp {
+    margin-bottom: 220px;
+  }
+  .bannerSectionhp .bannerWrapper .bannerContent {
+    left: 70px;
+  }
+  .bannerSectionhp .bannerWrapper .bannerContent h1 {
+    letter-spacing: 0px;
+  }
+  .bannerSectionhp .bannerWrapper .bannerContent h2 {
+    margin-top: 40px;
+    letter-spacing: 2px;
+  }
+  .bannerSectionhp .bannerWrapper .bannerbtmLinks {
+    right: 140px;
+    bottom: 70px;
+    margin-left: 50px;
+  }
+  .bannerSectionhp .bannerWrapper .bannerbtmLinks ul li {
+    padding-right: 50px;
+    letter-spacing: 1px;
+  }
+  .bannerSectionhp .bannerWrapper .bannerbtmLinks ul li::before {
+    width: 10px;
+    height: 10px;
+    right: 22px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .bannerSectionhp {
+    margin-bottom: 180px;
+  }
+  .bannerSectionhp .bannerWrapper .bannerContent {
+    left: 60px;
+  }
+  .bannerSectionhp .bannerWrapper .bannerContent h2 {
+    margin-top: 30px;
+  }
+  .bannerSectionhp .bannerWrapper .bannerbtmLinks {
+    right: 100px;
+    bottom: 60px;
+    margin-left: 40px;
+  }
+  .bannerSectionhp .bannerWrapper .bannerbtmLinks ul li {
+    padding-right: 40px;
+  }
+  .bannerSectionhp .bannerWrapper .bannerbtmLinks ul li::before {
+    width: 9px;
+    height: 9px;
+    right: 18px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .bannerSectionhp {
+    margin-bottom: 150px;
+  }
+  .bannerSectionhp .bannerWrapper .bannerContent {
+    left: 50px;
+  }
+  .bannerSectionhp .bannerWrapper .bannerContent h2 {
+    margin-top: 24px;
+  }
+  .bannerSectionhp .bannerWrapper .bannerbtmLinks {
+    right: 70px;
+    bottom: 50px;
+    margin-left: 40px;
+  }
+  .bannerSectionhp .bannerWrapper .bannerbtmLinks ul li {
+    padding-right: 30px;
+  }
+  .bannerSectionhp .bannerWrapper .bannerbtmLinks ul li::before {
+    right: 12px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .bannerSectionhp {
+    margin-bottom: 120px;
+  }
+  .bannerSectionhp .bannerWrapper .bannerContent {
+    left: 0;
+    right: 0;
+    top: 200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0px 50px;
+  }
+  .bannerSectionhp .bannerWrapper .bannerbtmLinks {
+    right: 0px;
+    bottom: 40px;
+    margin: 0px 40px 0px;
+  }
+  .bannerSectionhp .bannerWrapper .bannerbtmLinks ul li {
+    padding-right: 60px;
+  }
+  .bannerSectionhp .bannerWrapper .bannerbtmLinks ul li::before {
+    right: 26px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .bannerSectionhp .bannerWrapper .bannerContent {
+    top: 180px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0px 20px;
+  }
+  .bannerSectionhp .bannerWrapper .bannerbtmLinks {
+    right: 0px;
+    bottom: 24px;
+    margin: 0px 20px 0px;
+  }
+  .bannerSectionhp .bannerWrapper .bannerbtmLinks ul li {
+    padding-right: 50px;
+    font-size: 14px;
+  }
+  .bannerSectionhp .bannerWrapper .bannerbtmLinks ul li::before {
+    right: 26px;
+  }
 }
 
 .enterpriseSection {
@@ -3962,17 +4320,101 @@ footer .footerWrapper .copyright h3 {
 }
 .enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv .innerBoxes {
   width: 20%;
-  border-top: 1px solid #343434;
+  border-bottom: 1px solid #343434;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 50px 0px;
 }
-.enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv .innerBoxes:nth-child(1), .enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv .innerBoxes:nth-child(2), .enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv .innerBoxes:nth-child(3), .enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv .innerBoxes:nth-child(4), .enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv .innerBoxes:nth-child(5) {
-  border-top: none;
+.enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv .innerBoxes:nth-last-child(1), .enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv .innerBoxes:nth-last-child(2), .enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv .innerBoxes:nth-last-child(3), .enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv .innerBoxes:nth-last-child(4), .enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv .innerBoxes:nth-last-child(5) {
+  border-bottom: none;
 }
 .enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv .innerBoxes img {
   margin: 0 auto;
+}
+@media screen and (max-width: 1600px) {
+  .enterpriseSection {
+    margin-bottom: 150px;
+  }
+  .enterpriseSection .enterpriseWrapper .secHeading {
+    margin-bottom: 120px;
+  }
+  .enterpriseSection .enterpriseWrapper .secHeading h2 {
+    letter-spacing: 1px;
+  }
+  .enterpriseSection .enterpriseWrapper .secHeading::before {
+    width: 250px;
+    bottom: -26px;
+  }
+  .enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv .innerBoxes {
+    padding: 40px 0px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .enterpriseSection {
+    margin-bottom: 120px;
+  }
+  .enterpriseSection .enterpriseWrapper .secHeading {
+    margin-bottom: 100px;
+  }
+  .enterpriseSection .enterpriseWrapper .secHeading::before {
+    width: 240px;
+    bottom: -24px;
+  }
+  .enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv .innerBoxes {
+    padding: 35px 0px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .enterpriseSection {
+    margin-bottom: 100px;
+  }
+  .enterpriseSection .enterpriseWrapper .secHeading {
+    margin-bottom: 80px;
+  }
+  .enterpriseSection .enterpriseWrapper .secHeading::before {
+    width: 230px;
+    bottom: -22px;
+  }
+  .enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv .innerBoxes {
+    padding: 35px 0px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .enterpriseSection {
+    margin-bottom: 150px;
+  }
+  .enterpriseSection .enterpriseWrapper .secHeading {
+    margin-bottom: 75px;
+  }
+  .enterpriseSection .enterpriseWrapper .secHeading::before {
+    width: 200px;
+    bottom: -22px;
+  }
+  .enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv .innerBoxes {
+    padding: 35px 0px;
+    width: 33.33%;
+  }
+  .enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv .innerBoxes:nth-last-child(1), .enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv .innerBoxes:nth-last-child(2), .enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv .innerBoxes:nth-last-child(3) {
+    border-bottom: none;
+  }
+  .enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv .innerBoxes:nth-last-child(4), .enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv .innerBoxes:nth-last-child(5) {
+    border-bottom: 1px solid #343434;
+  }
+}
+@media screen and (max-width: 720px) {
+  .enterpriseSection {
+    margin-bottom: 150px;
+  }
+  .enterpriseSection .enterpriseWrapper .secHeading::before {
+    width: 200px;
+    bottom: -16px;
+  }
+  .enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv .innerBoxes {
+    padding: 50px 0px;
+    width: 50%;
+    border-bottom: none !important;
+  }
 }
 
 .pioneerSlidersec {
@@ -4248,14 +4690,20 @@ footer .footerWrapper .copyright h3 {
 .onboardingJourneysec .innerWrapper .journeyData {
   display: flex;
   margin-top: 72px;
+  align-items: center;
 }
 .onboardingJourneysec .innerWrapper .journeyData .contentDiv {
-  width: 35%;
-  padding-right: 20px;
+  width: 42%;
 }
 .onboardingJourneysec .innerWrapper .journeyData .contentDiv:last-child {
   padding-left: 80px;
   padding-right: 0px;
+}
+.onboardingJourneysec .innerWrapper .journeyData .contentDiv:last-child .innerBoxes .journeyinnerData {
+  padding-left: 200px;
+}
+.onboardingJourneysec .innerWrapper .journeyData .contentDiv:last-child .innerBoxes h3 {
+  padding-left: 200px;
 }
 .onboardingJourneysec .innerWrapper .journeyData .contentDiv:last-child .innerBoxes:nth-child(1) h3::after {
   background: url("../images/journey-line-4.svg") no-repeat;
@@ -4265,25 +4713,27 @@ footer .footerWrapper .copyright h3 {
 }
 .onboardingJourneysec .innerWrapper .journeyData .contentDiv:last-child .innerBoxes:nth-child(3) h3::after {
   background: url("../images/journey-line-6.svg") no-repeat;
-  bottom: -32px;
-  height: 60px;
+  bottom: -16px;
+  height: 65px;
 }
 .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes {
-  margin-bottom: 40px;
+  margin-bottom: 70px;
 }
 .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes:last-child {
   margin-bottom: 0px;
 }
 .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes:nth-child(1) h3::after {
   background: url("../images/journey-line-1.svg") no-repeat;
+  bottom: -50px;
+  height: 40px;
 }
 .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes:nth-child(2) h3::after {
   background: url("../images/journey-line-2.svg") no-repeat;
 }
 .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes:nth-child(3) h3::after {
   background: url("../images/journey-line-3.svg") no-repeat;
-  bottom: -32px;
-  height: 70px;
+  bottom: -21px;
+  height: 86px;
 }
 .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes h3 {
   font-size: 40px;
@@ -4313,10 +4763,11 @@ footer .footerWrapper .copyright h3 {
   position: absolute;
   left: 0;
   width: 100%;
-  height: 100%;
-  bottom: -56px;
+  height: 3px;
+  bottom: -19px;
+  background-size: cover !important;
 }
-.onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes h4 {
+.onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes .journeyinnerData h4 {
   font-size: 24px;
   font-family: "HelveticaNeueBold";
   color: #4D4D4D;
@@ -4324,16 +4775,16 @@ footer .footerWrapper .copyright h3 {
   margin-bottom: 14px;
 }
 @media screen and (max-width: 1600px) {
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes h4 {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes .journeyinnerData h4 {
     font-size: 20px;
   }
 }
 @media screen and (max-width: 1400px) {
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes h4 {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes .journeyinnerData h4 {
     font-size: 18px;
   }
 }
-.onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes ul li {
+.onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes .journeyinnerData ul li {
   font-size: 20px;
   font-family: "HelveticaNeueLight";
   color: #4D4D4D;
@@ -4342,16 +4793,16 @@ footer .footerWrapper .copyright h3 {
   padding-left: 20px;
 }
 @media screen and (max-width: 1600px) {
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes ul li {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes .journeyinnerData ul li {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 720px) {
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes ul li {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes .journeyinnerData ul li {
     font-size: 16px;
   }
 }
-.onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes ul li::before {
+.onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes .journeyinnerData ul li::before {
   content: "";
   position: absolute;
   top: 14px;
@@ -4403,28 +4854,107 @@ footer .footerWrapper .copyright h3 {
   left: -6px;
 }
 .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv .outerborderDiv .journeyIcons:nth-child(2) {
-  top: 8%;
-  left: 5%;
+  top: 9%;
+  left: 6%;
 }
 .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv .outerborderDiv .journeyIcons:nth-child(3) {
-  top: 44%;
-  left: -8%;
+  top: 36%;
+  left: -6%;
 }
 .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv .outerborderDiv .journeyIcons:nth-child(4) {
-  top: 78%;
-  left: 7%;
+  top: 67%;
+  left: -1%;
 }
 .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv .outerborderDiv .journeyIcons:nth-child(5) {
   top: 8%;
-  right: 5%;
+  right: 9%;
 }
 .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv .outerborderDiv .journeyIcons:nth-child(6) {
-  top: 44%;
-  right: -8%;
+  top: 38%;
+  right: -6%;
 }
 .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv .outerborderDiv .journeyIcons:nth-child(7) {
-  top: 78%;
-  right: 7%;
+  top: 68%;
+  right: 0%;
+}
+@media screen and (max-width: 1920px) {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDiv {
+    width: 35%;
+  }
+  .onboardingJourneysec .innerWrapper .journeyData .contentDiv:last-child {
+    padding-left: 0px;
+  }
+  .onboardingJourneysec .innerWrapper .journeyData .contentDiv:last-child .innerBoxes .journeyinnerData {
+    padding-left: 135px;
+  }
+  .onboardingJourneysec .innerWrapper .journeyData .contentDiv:last-child .innerBoxes h3 {
+    padding-left: 135px;
+  }
+  .onboardingJourneysec .innerWrapper .journeyData .contentDiv:last-child .innerBoxes:nth-child(3) h3::after {
+    bottom: -16px;
+    height: 65px;
+  }
+  .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes {
+    margin-bottom: 40px;
+  }
+  .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes:nth-child(1) h3::after {
+    bottom: -50px;
+    height: 40px;
+  }
+  .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes:nth-child(3) h3::after {
+    bottom: -21px;
+    height: 71px;
+  }
+  .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes h3::after {
+    height: 3px;
+    bottom: -19px;
+    background-size: unset !important;
+  }
+  .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv {
+    width: 30%;
+  }
+  .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv .outerborderDiv .journeyIcons::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid #8BA8FF;
+    width: 105px;
+    height: 105px;
+    left: -13px;
+  }
+  .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv .outerborderDiv .journeyIcons::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid #8BA8FF;
+    width: 90px;
+    height: 90px;
+    left: -6px;
+  }
+  .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv .outerborderDiv .journeyIcons:nth-child(2) {
+    top: 3%;
+    left: 9%;
+  }
+  .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv .outerborderDiv .journeyIcons:nth-child(3) {
+    top: 36%;
+    left: -6%;
+  }
+  .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv .outerborderDiv .journeyIcons:nth-child(4) {
+    top: 71%;
+    left: 3%;
+  }
+  .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv .outerborderDiv .journeyIcons:nth-child(5) {
+    top: 3%;
+    right: 9%;
+  }
+  .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv .outerborderDiv .journeyIcons:nth-child(6) {
+    top: 34%;
+    right: -5%;
+  }
+  .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv .outerborderDiv .journeyIcons:nth-child(7) {
+    top: 69%;
+    right: 0%;
+  }
 }
 
 .productfamSection {

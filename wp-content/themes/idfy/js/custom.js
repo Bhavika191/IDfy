@@ -370,3 +370,50 @@ $(document).ready(function() {
     $('.tab').first().addClass('active');
 });
 // product families js ends
+
+
+// slider js starts
+
+(function ($) {
+    $(function () {
+  
+  
+      $('.js-timeline-carousel_nav').slick({
+        infinite: false,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        slidesToScroll: 8,
+        slidesToShow: 8,
+        arrows: false,
+  
+  
+        asNavFor: '.js-timeline-carousel',
+        focusOnSelect: true,
+        
+      });
+  
+      $('.js-timeline-carousel').slick({
+        autoplay: true,
+        autoplaySpeed: 3000,
+  
+        slidesToShow: 1,
+        slidesToScroll: 1,
+  
+        prevArrow: '.js-ag-timeline-carousel-arrow_prev',
+        nextArrow: '.js-ag-timeline-carousel-arrow_next',
+  
+        asNavFor: '.js-timeline-carousel_nav',
+        speed: 500,
+        responsive: [
+          {
+            breakpoint: 0,
+            settings: {
+              centerMode: false
+            }
+          }
+        ]
+      });
+  
+  
+    });
+  })(jQuery);

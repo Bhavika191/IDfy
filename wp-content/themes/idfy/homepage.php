@@ -147,27 +147,33 @@
             <div class="contentDiv">
                 <div class="innerBoxes">
                     <h3>Plug & Play:</h3>
-                    <h4>Bring your own Stack</h4>
-                    <ul>
-                        <li>Integrate with your own systems easily</li>
-                        <li>Go-live in a jiffy</li>
-                    </ul>
+                    <div class="journeyinnerData">
+                        <h4>Bring your own Stack</h4>
+                        <ul>
+                            <li>Integrate with your own systems easily</li>
+                            <li>Go-live in a jiffy</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="innerBoxes">
                     <h3>Comprehensive:</h3>
-                    <h4>End to End Solutions</h4>
-                    <ul>
-                        <li>Choose from our suite of 140+ onboarding and risk APIs</li>
-                        <li>Or bring your own APIs</li>
-                    </ul>
+                    <div class="journeyinnerData">
+                        <h4>End to End Solutions</h4>
+                        <ul>
+                            <li>Choose from our suite of 140+ onboarding and risk APIs</li>
+                            <li>Or bring your own APIs</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="innerBoxes">
                     <h3>Customize:</h3>
-                    <h4>Build your journey from scratch</h4>
-                    <ul>
-                        <li>No-code; Drag & drop workflows></li>
-                        <li>White label the user experience</li>
-                    </ul>
+                    <div class="journeyinnerData">
+                        <h4>Build your journey from scratch</h4>
+                        <ul>
+                            <li>No-code; Drag & drop workflows></li>
+                            <li>White label the user experience</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="centerCirclediv">
@@ -198,27 +204,33 @@
             <div class="contentDiv">
                 <div class="innerBoxes">
                     <h3>Insights:</h3>
-                    <h4>Outsmart your competition</h4>
-                    <ul>
-                        <li>Gather Intel with real-time data dashboards</li>
-                        <li>Track and optimize your journeys</li>
-                    </ul>
+                    <div class="journeyinnerData">
+                        <h4>Outsmart your competition</h4>
+                        <ul>
+                            <li>Gather Intel with real-time data dashboards</li>
+                            <li>Track and optimize your journeys</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="innerBoxes">
                     <h3>Mitigate Risk:</h3>
-                    <h4>The latest fraud-busting tech</h4>
-                    <ul>
-                        <li>Detect document tampering, impersonation and more</li>
-                        <li>Proprietary and predictive risk-modeling</li>
-                    </ul>
+                    <div class="journeyinnerData">
+                        <h4>The latest fraud-busting tech</h4>
+                        <ul>
+                            <li>Detect document tampering, impersonation and more</li>
+                            <li>Proprietary and predictive risk-modeling</li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="innerBoxes">
                     <h3>Enterprise Ready:</h3>
-                    <h4>Grow with confidence</h4>
-                    <ul>
-                        <li>ISO and SOC 2, Type 2 certified platforms</li>
-                        <li> Highly resilient and highly scalable across process and tech</li>
-                    </ul>
+                    <div class="journeyinnerData">
+                        <h4>Grow with confidence</h4>
+                        <ul>
+                            <li>ISO and SOC 2, Type 2 certified platforms</li>
+                            <li> Highly resilient and highly scalable across process and tech</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
