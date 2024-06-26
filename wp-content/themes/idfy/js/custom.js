@@ -6,35 +6,35 @@ var delta = 5;
 var navbarHeight = $("header").outerHeight();
 
 $(window).scroll(function (event) {
-  didScroll = true;
+    didScroll = true;
 });
 
 setInterval(function () {
-  if (didScroll) {
-    hasScrolled();
-    didScroll = false;
-  }
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
 }, 250);
 let menuOpen = false;
 
 function hasScrolled() {
-  if (menuOpen) return; // Disable hasScrolled when menu is open
+    if (menuOpen) return; // Disable hasScrolled when menu is open
 
-  var st = $(this).scrollTop();
-  // Make sure they scroll more than delta
-  if (Math.abs(lastScrollTop - st) <= delta) return;
-  // If they scrolled down and are past the navbar, add class .nav-up.
-  // This is necessary so you never see what is "behind" the navbar.
-  if (st > lastScrollTop && st > navbarHeight) {
-    $("header").removeClass("nav-down").addClass("nav-up");
-  } else {
-    // Scroll Up
-    if (st + $(window).height() < $(document).height()) {
-      $("header").removeClass("nav-up").addClass("nav-down");
+    var st = $(this).scrollTop();
+    // Make sure they scroll more than delta
+    if (Math.abs(lastScrollTop - st) <= delta) return;
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop && st > navbarHeight) {
+        $("header").removeClass("nav-down").addClass("nav-up");
+    } else {
+        // Scroll Up
+        if (st + $(window).height() < $(document).height()) {
+            $("header").removeClass("nav-up").addClass("nav-down");
+        }
     }
-  }
 
-  lastScrollTop = st;
+    lastScrollTop = st;
 }
 
 var lastScrollTop = 0;
@@ -42,7 +42,7 @@ var delta = 5;
 var navbarHeight = $('header').outerHeight();
 
 $(window).scroll(function (event) {
-  hasScrolled();
+    hasScrolled();
 });
 // ------------------Header Dropdown JS--------------------- //
 $(document).ready(function () {
@@ -275,20 +275,13 @@ if ($(".pioneerSlidersec").length) {
         cssEase: 'linear',
         responsive: [
             {
-                breakpoint: 1025,
-                settings: {
-                    arrows: false,
-                    slidesToShow: 1,
-                },
-            },
-            {
                 breakpoint: 720,
                 settings: {
                     arrows: false,
                     slidesToShow: 1,
-                },
-            },
-        ],
+                }
+            }
+        ]
     });
 }
 
@@ -298,7 +291,7 @@ if ($(".clientsSection").length) {
         slidesToScroll: 1,
         arrows: false,
         dots: true,
-        infinite: false,
+        infinite: true,
         autoplay: true,
         speed: 2000,
         autoplaySpeed: 3000,
@@ -320,78 +313,98 @@ if ($(".clientsSection").length) {
         ],
     });
 }
+
+
+
+if ($(".fraudstoriesSec").length) {
+    $(".fraudStoryslider").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        infinite: true,
+        autoplay: true,
+        speed: 1000,
+        autoplaySpeed: 3000,
+    });
+}
+
 // slider js ends
 
 
-// on scroll sticky section fraud stories js starts
-gsap.registerPlugin(ScrollTrigger);
+if (window.innerWidth > 820) {
+    // on scroll sticky section fraud stories js starts
+    gsap.registerPlugin(ScrollTrigger);
 
-// Pin the section
-ScrollTrigger.create({
-  trigger: ".fixed-section",
-  start: "top top",
-  end: "+=300%", // Adjust based on the desired scroll length
-  pin: true
-});
+    // Pin the section
+    ScrollTrigger.create({
+        trigger: ".fixed-section",
+        start: "top top",
+        end: "+=300%", // Adjust based on the desired scroll length
+        pin: true
+    });
 
-// Create a timeline for the first box container
-const tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".fixed-section",
-    start: "top top",
-    end: "+=300%", // Adjust based on the desired scroll length
-    scrub: true
-  }
-});
+    // Create a timeline for the first box container
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".fixed-section",
+            start: "top top",
+            end: "+=300%", // Adjust based on the desired scroll length
+            scrub: true
+        }
+    });
 
-// Select the first set of boxes
-const boxes = document.querySelectorAll(".fixed-section .box-container .box");
+    // Select the first set of boxes
+    const boxes = document.querySelectorAll(".fixed-section .box-container .box");
 
-// Add animations to the timeline for the first set of boxes
-boxes.forEach((box, index) => {
-  tl.to(box, {
-    className: "+=activeBoxes",
-    duration: 1,
-    onStart: () => {
-      if (index > 0) boxes[index - 1].classList.remove("activeBoxes");
-    }
-  });
-});
+    // Add animations to the timeline for the first set of boxes
+    boxes.forEach((box, index) => {
+        tl.to(box, {
+            className: "+=activeBoxes",
+            duration: 1,
+            onStart: () => {
+                if (index > 0) boxes[index - 1].classList.remove("activeBoxes");
+            }
+        });
+    });
 
-// Create a timeline for the second box container
-const tl2 = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".fixed-section",
-    start: "top top",
-    end: "+=300%", // Adjust based on the desired scroll length
-    scrub: true
-  }
-});
+    // Create a timeline for the second box container
+    const tl2 = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".fixed-section",
+            start: "top top",
+            end: "+=300%", // Adjust based on the desired scroll length
+            scrub: true
+        }
+    });
 
-// Select the second set of boxes
-const boxesTwo = document.querySelectorAll(".fixed-section .box-container-two .box");
+    // Select the second set of boxes
+    const boxesTwo = document.querySelectorAll(".fixed-section .box-container-two .box");
 
-// Add animations to the timeline for the second set of boxes
-boxesTwo.forEach((box, index) => {
-  tl2.to(box, {
-    className: "+=active-two",
-    duration: 1,
-    onStart: () => {
-      if (index > 0) boxesTwo[index - 1].classList.remove("active-two");
-    }
-  });
-});
+    // Add animations to the timeline for the second set of boxes
+    boxesTwo.forEach((box, index) => {
+        tl2.to(box, {
+            className: "+=active-two",
+            duration: 1,
+            onStart: () => {
+                if (index > 0) boxesTwo[index - 1].classList.remove("active-two");
+            }
+        });
+    });
 
-// on scroll sticky section fraud stories js starts
+    // on scroll sticky section fraud stories js starts
+}
+
+
 
 
 
 // product families js starts
-$(document).ready(function() {
+$(document).ready(function () {
     function updateSlides(slideIndex) {
         var slides = $('.slider .slide');
         slideIndex--; // Adjust slideIndex to match zero-based index
-        slides.each(function(index) {
+        slides.each(function (index) {
             $(this).removeClass('visible hidden hidden-behind');
             if (index === slideIndex) {
                 $(this).addClass('visible');
@@ -403,7 +416,7 @@ $(document).ready(function() {
         });
     }
 
-    $('.tab').on('click', function() {
+    $('.tab').on('click', function () {
         var slideIndex = $(this).data('slide');
         updateSlides(slideIndex);
         $('.tab').removeClass('active');
@@ -419,46 +432,46 @@ $(document).ready(function() {
 
 // slider js starts
 
-(function ($) {
-    $(function () {
-  
-  
-      $('.js-timeline-carousel_nav').slick({
-        infinite: false,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        slidesToScroll: 8,
-        slidesToShow: 8,
-        arrows: false,
-  
-  
-        asNavFor: '.js-timeline-carousel',
-        focusOnSelect: true,
-        
-      });
-  
-      $('.js-timeline-carousel').slick({
-        autoplay: true,
-        autoplaySpeed: 3000,
-  
-        slidesToShow: 1,
-        slidesToScroll: 1,
-  
-        prevArrow: '.js-ag-timeline-carousel-arrow_prev',
-        nextArrow: '.js-ag-timeline-carousel-arrow_next',
-  
-        asNavFor: '.js-timeline-carousel_nav',
-        speed: 500,
-        responsive: [
-          {
-            breakpoint: 0,
-            settings: {
-              centerMode: false
-            }
-          }
-        ]
-      });
-  
-  
-    });
-  })(jQuery);
+// (function ($) {
+//     $(function () {
+
+
+//         $('.js-timeline-carousel_nav').slick({
+//             infinite: false,
+//             autoplay: true,
+//             autoplaySpeed: 3000,
+//             slidesToScroll: 8,
+//             slidesToShow: 8,
+//             arrows: false,
+
+
+//             asNavFor: '.js-timeline-carousel',
+//             focusOnSelect: true,
+
+//         });
+
+//         $('.js-timeline-carousel').slick({
+//             autoplay: true,
+//             autoplaySpeed: 3000,
+
+//             slidesToShow: 1,
+//             slidesToScroll: 1,
+
+//             prevArrow: '.js-ag-timeline-carousel-arrow_prev',
+//             nextArrow: '.js-ag-timeline-carousel-arrow_next',
+
+//             asNavFor: '.js-timeline-carousel_nav',
+//             speed: 500,
+//             responsive: [
+//                 {
+//                     breakpoint: 0,
+//                     settings: {
+//                         centerMode: false
+//                     }
+//                 }
+//             ]
+//         });
+
+
+//     });
+// })(jQuery);
