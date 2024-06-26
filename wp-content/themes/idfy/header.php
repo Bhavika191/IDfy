@@ -28,7 +28,7 @@
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
 	<div id="page" class="site">
-		<header>
+		<header class="nav-down">
 			<nav class="navbar">
 				<div class="logo">
 					<a href="">
@@ -62,31 +62,31 @@
 									<div class="dropdown-section-menu">
 										<div class="menu-wrapper">
 											<a href="" class="dropdown-menu">
-												<h4>KYC API Suite</h3>
+												<h4>KYC API Suite</h4>
 													<p>Trust with Every Inquiry</p>
 											</a>
 											<a href="" class="dropdown-menu">
-												<h4>Background Verification</h3>
+												<h4>Background Verification</h4>
 													<p>Streamline Identity Verification Effortlessly</p>
 											</a>
 											<a href="" class="dropdown-menu">
-												<h4>Risk and Fraud</h3>
+												<h4>Risk and Fraud</h4>
 													<p>Safeguard Against Deception</p>
 											</a>
 											<a href="" class="dropdown-menu">
-												<h4>Video Solutions</h3>
+												<h4>Video Solutions</h4>
 													<p>Seamless Visual Communication Solutions</p>
 											</a>
 											<a href="" class="dropdown-menu">
-												<h4>KYC API Suite</h3>
+												<h4>KYC API Suite</h4>
 													<p>Streamline Identity Verification Effortlessly</p>
 											</a>
 											<a href="" class="dropdown-menu">
-												<h4>CrimeCheck</h3>
+												<h4>CrimeCheck</h4>
 													<p>Your Shield Against Criminal Activity</p>
 											</a>
 											<a href="" class="dropdown-menu">
-												<h4>Privy Suite</h3>
+												<h4>Privy Suite</h4>
 													<p>Elevate Privacy Standards Today</p>
 											</a>
 										</div>
@@ -110,59 +110,59 @@
 									<div class="dropdown-section-menu2">
 										<div class="menu-wrapper">
 											<a href="" class="dropdown-menu">
-												<h4>Banking</h3>
+												<h4>Banking</h4>
 													<p>Secure Identity Solutions for Banks</p>
 											</a>
 											<a href="" class="dropdown-menu">
-												<h4>Gig Workers</h3>
+												<h4>Gig Workers</h4>
 													<p>Identity Solutions for Freelancers</p>
 											</a>
 											<a href="" class="dropdown-menu">
-												<h4>eCom & Payments</h3>
+												<h4>eCom & Payments</h4>
 													<p>Simplifying Online Transactions</p>
 											</a>
 											<a href="" class="dropdown-menu">
-												<h4>Payment Aggregators and Payment Gateways</h3>
+												<h4>Payment Aggregators and Payment Gateways</h4>
 													<p>Reliable Identity Verification for Shipping</p>
 											</a>
 											<a href="" class="dropdown-menu">
-												<h4>KYC API Suite</h3>
+												<h4>KYC API Suite</h4>
 													<p>Streamline Identity Verification Effortlessly</p>
 											</a>
 											<a href="" class="dropdown-menu">
-												<h4>Capital Markets & Wealth</h3>
+												<h4>Capital Markets & Wealth</h4>
 													<p>Identity Solutions for Financial Markets</p>
 											</a>
 											<a href="" class="dropdown-menu">
-												<h4>Digital Natives</h3>
+												<h4>Digital Natives</h4>
 													<p>Identity Solutions for the Digital Generation</p>
 											</a>
 											<a href="" class="dropdown-menu">
-												<h4>Insurance</h3>
+												<h4>Insurance</h4>
 													<p>Trustworthy Identity Verification for Insurers</p>
 											</a>
 											<a href="" class="dropdown-menu">
-												<h4>FMCG</h3>
+												<h4>FMCG</h4>
 													<p>Identity Solutions for Fast-Moving Consumer Goods</p>
 											</a>
 											<a href="" class="dropdown-menu">
-												<h4>Gaming</h3>
+												<h4>Gaming</h4>
 													<p>Identity Solutions for Fast-Moving Consumer Goods</p>
 											</a>
 											<a href="" class="dropdown-menu">
-												<h4>IT</h3>
+												<h4>IT</h4>
 													<p>Secure Identity Solutions for the Tech Industry</p>
 											</a>
 											<a href="" class="dropdown-menu">
-												<h4>Fintech</h3>
+												<h4>Fintech</h4>
 													<p>Your Shield Against Criminal Activity</p>
 											</a>
 											<a href="" class="dropdown-menu">
-												<h4>Logistics</h3>
+												<h4>Logistics</h4>
 													<p>Elevate Privacy Standards Today</p>
 											</a>
 											<a href="" class="dropdown-menu">
-												<h4>HR & Recruitment</h3>
+												<h4>HR & Recruitment</h4>
 													<p>Streamlined Identity Verification for Hiring</p>
 											</a>
 										</div>
@@ -177,39 +177,39 @@
 									<div class="dropdown-section-menu2">
 										<div class="menu-wrapper">
 											<a href="" class="dropdown-menu">
-												<h4>Digital Onboarding</h3>
+												<h4>Digital Onboarding</h4>
 													<p>Seamlessly Verify New Users</p>
 											</a>
 											<a href="" href="" class="dropdown-menu">
-												<h4>AML</h3>
+												<h4>AML</h4>
 													<p>Ensure Compliance Effortlessly</p>
 											</a>
 											<a href="" class="dropdown-menu">
-												<h4>ID Verification</h3>
+												<h4>ID Verification</h4>
 													<p>Verify Identities with Ease</p>
 											</a>
 											<a href="" class="dropdown-menu">
-												<h4>Legal History Checks</h3>
+												<h4>Legal History Checks</h4>
 													<p>Trustworthy Legal Background Checks</p>
 											</a>
 											<a href="" class="dropdown-menu">
-												<h4>KYC API Suite</h3>
+												<h4>KYC API Suite</h4>
 													<p>Streamline Identity Verification Effortlessly</p>
 											</a>
 											<a href="" class="dropdown-menu">
-												<h4>KYC</h3>
+												<h4>KYC</h4>
 													<p>Simplify Know Your Customer Processes</p>
 											</a>
 											<a href="" class="dropdown-menu">
-												<h4>KYB I Merchant Onboarding</h3>
+												<h4>KYB I Merchant Onboarding</h4>
 													<p>Streamlined Merchant Verification</p>
 											</a>
 											<a href="" class="dropdown-menu">
-												<h4>Background Verification</h3>
+												<h4>Background Verification</h4>
 													<p>Thorough and Reliable Checks</p>
 											</a>
 											<a href="" class="dropdown-menu">
-												<h4>Privacy & Data Protection</h3>
+												<h4>Privacy & Data Protection</h4>
 													<p>Safeguarding Data and Privacy</p>
 											</a>
 										</div>
