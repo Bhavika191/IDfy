@@ -329,6 +329,21 @@ if ($(".fraudstoriesSec").length) {
     });
 }
 
+if (window.innerWidth < 1025) {
+    if ($(".onboardingJourneysec").length) {
+        $(".onboardingSlider").slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true,
+            infinite: true,
+            autoplay: true,
+            speed: 1000,
+            autoplaySpeed: 3000,
+        });
+    }
+}
+
 // slider js ends
 
 
