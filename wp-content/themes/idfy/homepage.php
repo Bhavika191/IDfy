@@ -260,7 +260,7 @@
                 </div>
                 <div class="prodfamSlides">
                     <div class="innerDiv">
-                        <ul class="tabs">
+                        <ul class="tabs slider-nav ">
                             <?php if( have_rows('product_families_content') ): ?>
                                 <?php $counter=1; while( have_rows('product_families_content') ): the_row(); ?>
                                     <li class="tab" data-slide="<?php echo $counter; ?>">
@@ -270,7 +270,7 @@
                             <?php endif; ?>
                         </ul>
                     </div>
-                    <div class="slider">
+                    <div class="slider slider-for">
                         <?php if( have_rows('product_families_content') ): ?>
                             <?php while( have_rows('product_families_content') ): the_row(); ?>
                                 <div class="slide">
@@ -442,5 +442,7 @@
     <?php endif; ?>
     
 </section>
+
+
 
 <?php get_footer(); ?>
