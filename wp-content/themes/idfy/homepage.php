@@ -190,11 +190,45 @@
 </section>
 
 <section class="productfamSection">
-    <?php if( have_rows('banner') ): ?>
-        <?php while( have_rows('banner') ): the_row(); ?>
-            <div class="innerWrapper">
-                <div class="secHeading">
-                    <h2><?php echo get_sub_field('desk_banner'); ?></h2>
+    <div class="innerWrapper">
+        <div class="secHeading">
+            <h2>Product Families</h2>
+        </div>
+        <div class="prodfamSlides">
+            <div class="innerDiv">
+                <ul class="tabs">
+                    <li class="tab" data-slide="1">
+                        <h3>KYC API Suite</h3>
+                    </li>
+                    <li class="tab" data-slide="2">
+                        <h3>Privy</h3>
+                    </li>
+                    <li class="tab" data-slide="3">
+                        <h3>Background verifications</h3>
+                    </li>
+                    <li class="tab" data-slide="4">
+                        <h3>Video solutions</h3>
+                    </li>
+                    <li class="tab" data-slide="5">
+                        <h3>Crime Check</h3>
+                    </li>
+                    <li class="tab" data-slide="6">
+                        <h3>Risk & Fraud</h3>
+                    </li>
+                </ul>
+            </div>
+            <div class="slider">
+                <div class="slide">
+                    <div class="dataImg">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
+                    </div>
+                    <div class="dataContent">
+                        <h4>KYC API Suite</h4>
+                        <h3>150+ APIs to help you with onboarding </h3>
+                        <p>Come and explore our iBeta Certified,
+                            ML-powered,highly-scalable and secure API suite.</p>
+                        <a href="#" class="ctaRed">Explore API Documentation</a>
+                    </div>
                 </div>
                 <div class="prodfamSlides">
                     <div class="tabs">
@@ -280,6 +314,67 @@
     <?php endif; ?>
 </section>
 
+
+<section class="fraudStoryslidermbl">
+    <div class="fraudStoryslider">
+        <div class="boxSlides">
+            <div class="imgDiv">
+                <div class="innerImg">
+                    <img src="<?php bloginfo('template_directory'); ?>/images/pionner-slider-img.webp" alt="">
+                </div>
+                <div class="dotsInner">
+                    <img src="<?php bloginfo('template_directory'); ?>/images/fraud-stories-dots.svg" alt="">
+                </div>
+            </div>
+            <div class="contentDiv">
+                <p>Agni was enjoying his Sunday Agni was enjoying his Sunday morning cup of tea, morning cup of tea, when morning cup tea, when he got a call from the police...</p>
+                <a href="#" class="ctaBlue">Read More</a>
+            </div>
+        </div>
+        <div class="boxSlides">
+            <div class="imgDiv">
+                <div class="innerImg">
+                    <img src="<?php bloginfo('template_directory'); ?>/images/pionner-slider-img.webp" alt="">
+                </div>
+                <div class="dotsInner">
+                    <img src="<?php bloginfo('template_directory'); ?>/images/fraud-stories-dots.svg" alt="">
+                </div>
+            </div>
+            <div class="contentDiv">
+                <p>Agni was enjoying his Sunday Agni was enjoying his Sunday morning cup of tea, morning cup of tea, when morning cup tea, when he got a call from the police...</p>
+                <a href="#" class="ctaBlue">Read More</a>
+            </div>
+        </div>
+        <div class="boxSlides">
+            <div class="imgDiv">
+                <div class="innerImg">
+                    <img src="<?php bloginfo('template_directory'); ?>/images/pionner-slider-img.webp" alt="">
+                </div>
+                <div class="dotsInner">
+                    <img src="<?php bloginfo('template_directory'); ?>/images/fraud-stories-dots.svg" alt="">
+                </div>
+            </div>
+            <div class="contentDiv">
+                <p>Agni was enjoying his Sunday Agni was enjoying his Sunday morning cup of tea, morning cup of tea, when morning cup tea, when he got a call from the police...</p>
+                <a href="#" class="ctaBlue">Read More</a>
+            </div>
+        </div>
+        <div class="boxSlides">
+            <div class="imgDiv">
+                <div class="innerImg">
+                    <img src="<?php bloginfo('template_directory'); ?>/images/pionner-slider-img.webp" alt="">
+                </div>
+                <div class="dotsInner">
+                    <img src="<?php bloginfo('template_directory'); ?>/images/fraud-stories-dots.svg" alt="">
+                </div>
+            </div>
+            <div class="contentDiv">
+                <p>Agni was enjoying his Sunday Agni was enjoying his Sunday morning cup of tea, morning cup of tea, when morning cup tea, when he got a call from the police...</p>
+                <a href="#" class="ctaBlue">Read More</a>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 <section class="clientsSection">
