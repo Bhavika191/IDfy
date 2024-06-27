@@ -234,6 +234,66 @@
                 </div>
             </div>
         </div>
+        <div class="onboardingSliderData">
+            <div class="centerCirclediv">
+                <div class="outerborderDiv">
+                    <div class="mainImg">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/timeline-img.webp" alt="">
+                    </div>
+                    <div class="journeyIcons">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/journey-icon.svg" alt="">
+                    </div>
+                    <div class="journeyIcons">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/journey-icon.svg" alt="">
+                    </div>
+                    <div class="journeyIcons">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/journey-icon.svg" alt="">
+                    </div>
+                    <div class="journeyIcons">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/journey-icon.svg" alt="">
+                    </div>
+                    <div class="journeyIcons">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/journey-icon.svg" alt="">
+                    </div>
+                    <div class="journeyIcons">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/journey-icon.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="onboardingSlider">
+                <div class="innerBoxes">
+                    <h3>Insights:</h3>
+                    <div class="journeyinnerData">
+                        <h4>Outsmart your competition</h4>
+                        <ul>
+                            <li>Gather Intel with real-time data dashboards</li>
+                            <li>Track and optimize your journeys</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="innerBoxes">
+                    <h3>Mitigate Risk:</h3>
+                    <div class="journeyinnerData">
+                        <h4>The latest fraud-busting tech</h4>
+                        <ul>
+                            <li>Detect document tampering, impersonation and more</li>
+                            <li>Proprietary and predictive risk-modeling</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="innerBoxes">
+                    <h3>Enterprise Ready:</h3>
+                    <div class="journeyinnerData">
+                        <h4>Grow with confidence</h4>
+                        <ul>
+                            <li>ISO and SOC 2, Type 2 certified platforms</li>
+                            <li> Highly resilient and highly scalable across process and tech</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 </section>
 
