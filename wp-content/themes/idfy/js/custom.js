@@ -355,7 +355,7 @@ if (window.innerWidth > 820) {
     ScrollTrigger.create({
         trigger: ".fixed-section",
         start: "top top",
-        end: "+=300%", // Adjust based on the desired scroll length
+        end: "+=200%", // Adjust based on the desired scroll length
         pin: true
     });
 
@@ -364,7 +364,7 @@ if (window.innerWidth > 820) {
         scrollTrigger: {
             trigger: ".fixed-section",
             start: "top top",
-            end: "+=300%", // Adjust based on the desired scroll length
+            end: "+=200%", // Adjust based on the desired scroll length
             scrub: true
         }
     });
@@ -388,7 +388,7 @@ if (window.innerWidth > 820) {
         scrollTrigger: {
             trigger: ".fixed-section",
             start: "top top",
-            end: "+=300%", // Adjust based on the desired scroll length
+            end: "+=200%", // Adjust based on the desired scroll length
             scrub: true
         }
     });
@@ -443,6 +443,25 @@ $(document).ready(function () {
     $('.tab').first().addClass('active');
 });
 // product families js ends
+
+document.addEventListener('DOMContentLoaded', function () {
+    var header = document.getElementById('main-header');
+    var banner = document.querySelector('.bannerSectionhp');
+
+    // Function to add class to header when scrolled past the banner
+    function addClassOnScroll() {
+        if (window.scrollY > banner.clientHeight) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    }
+
+    // Event listener for scroll
+    window.onscroll = function () {
+        addClassOnScroll();
+    };
+});
 
 
 // slider js starts

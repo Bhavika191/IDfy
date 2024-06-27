@@ -842,6 +842,39 @@ header .navbar .headerContent .header-elements {
 header .navbar .hamburger-menu {
   display: none;
 }
+header.navColor, header.scrolled {
+  background: #fff;
+}
+header.navColor .navbar .logo .logoColor, header.scrolled .navbar .logo .logoColor {
+  fill: #606060;
+}
+header.navColor .navbar .logo .logoBG, header.scrolled .navbar .logo .logoBG {
+  fill: #CE1010;
+}
+header.navColor .navbar .logo .logoWord, header.scrolled .navbar .logo .logoWord {
+  fill: #fff;
+}
+header.navColor .navbar .logo .logowordInner, header.scrolled .navbar .logo .logowordInner {
+  fill: #CE1010;
+}
+header.navColor .navbar .headerContent .nav-links .dropdown a, header.scrolled .navbar .headerContent .nav-links .dropdown a {
+  color: #080808;
+}
+header.navColor .navbar .headerContent .nav-links .dropdown a::before, header.scrolled .navbar .headerContent .nav-links .dropdown a::before {
+  background: url("../images/header-dropdown-iconblack.svg") no-repeat;
+}
+header.navColor .navbar .headerContent .nav-links .dropdown .dropdown-content .dropdown-wrapper, header.scrolled .navbar .headerContent .nav-links .dropdown .dropdown-content .dropdown-wrapper {
+  box-shadow: 0px 6px 25px 0px rgba(0, 0, 0, 0.2);
+}
+header.navColor .navbar .hamburger-menu .button_toggle span, header.scrolled .navbar .hamburger-menu .button_toggle span {
+  background: #343434;
+}
+header.navColor .navbar .hamburger-menu .button_toggle span:nth-of-type(1), header.scrolled .navbar .hamburger-menu .button_toggle span:nth-of-type(1) {
+  background: #343434;
+}
+header.navColor .navbar .hamburger-menu .button_toggle span:nth-of-type(2), header.scrolled .navbar .hamburger-menu .button_toggle span:nth-of-type(2) {
+  background: #343434;
+}
 @media all and (max-width: 1800px) {
   header .navbar .logo {
     width: 109px;
@@ -1116,7 +1149,7 @@ header .navbar .hamburger-menu {
 }
 @media all and (max-width: 1440px) {
   header .navbar .logo {
-    width: 100px;
+    width: 120px;
     padding: 18px 0px;
   }
   header .navbar .headerContent .nav-links {
@@ -1207,8 +1240,11 @@ header .navbar .hamburger-menu {
     top: -70px;
   }
   header .navbar .logo {
-    width: 100px;
+    width: 120px;
     padding: 15px 0px;
+  }
+  header .navbar .logo svg {
+    width: 80px;
   }
   header .navbar .headerContent .nav-links {
     gap: 50px;
@@ -1295,7 +1331,7 @@ header .navbar .hamburger-menu {
 }
 @media all and (max-width: 1180px) {
   header .navbar .logo {
-    width: 80px;
+    width: 120px;
     padding: 15px 0px;
   }
   header .navbar .headerContent .nav-links {
@@ -1390,7 +1426,7 @@ header .navbar .hamburger-menu {
     align-items: center;
   }
   header .navbar .logo {
-    width: 54px;
+    width: 120px;
     padding: 15px 0px;
     z-index: 9;
   }
@@ -1584,6 +1620,11 @@ header .navbar .hamburger-menu {
   }
   header .navbar .hamburger-menu .overlay .overlay-wrapper .fixCta a {
     width: 100%;
+  }
+}
+@media all and (max-width: 720px) {
+  header .navbar .logo svg {
+    width: 60px;
   }
 }
 
