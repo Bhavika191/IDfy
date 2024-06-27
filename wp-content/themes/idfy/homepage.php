@@ -336,62 +336,26 @@
 
 <section class="fraudStoryslidermbl">
     <div class="fraudStoryslider">
-        <div class="boxSlides">
-            <div class="imgDiv">
-                <div class="innerImg">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/pionner-slider-img.webp" alt="">
+        <?php if( have_rows('fraud_stories_content') ): ?>
+            <?php while( have_rows('fraud_stories_content') ): the_row(); ?>
+                <div class="boxSlides">
+                    <div class="imgDiv">
+                        <div class="innerImg">
+                            <?php $fraudimg = get_sub_field('card_image'); if( !empty( $fraudimg ) ): ?>
+                                <img src="<?php echo esc_url($fraudimg['url']); ?>" loading="lazy" alt="<?php echo esc_attr($fraudimg['alt']); ?>" />
+                            <?php endif; ?>
+                        </div>
+                        <div class="dotsInner">
+                            <img src="<?php bloginfo('template_directory'); ?>/images/fraud-stories-dots.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="contentDiv">
+                        <p><?php echo get_sub_field('card_description'); ?></p>
+                        <a href="<?php echo get_sub_field('cta_link'); ?>" class="ctaBlue"><?php echo get_sub_field('cta_text'); ?></a>
+                    </div>
                 </div>
-                <div class="dotsInner">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/fraud-stories-dots.svg" alt="">
-                </div>
-            </div>
-            <div class="contentDiv">
-                <p>Agni was enjoying his Sunday Agni was enjoying his Sunday morning cup of tea, morning cup of tea, when morning cup tea, when he got a call from the police...</p>
-                <a href="#" class="ctaBlue">Read More</a>
-            </div>
-        </div>
-        <div class="boxSlides">
-            <div class="imgDiv">
-                <div class="innerImg">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/pionner-slider-img.webp" alt="">
-                </div>
-                <div class="dotsInner">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/fraud-stories-dots.svg" alt="">
-                </div>
-            </div>
-            <div class="contentDiv">
-                <p>Agni was enjoying his Sunday Agni was enjoying his Sunday morning cup of tea, morning cup of tea, when morning cup tea, when he got a call from the police...</p>
-                <a href="#" class="ctaBlue">Read More</a>
-            </div>
-        </div>
-        <div class="boxSlides">
-            <div class="imgDiv">
-                <div class="innerImg">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/pionner-slider-img.webp" alt="">
-                </div>
-                <div class="dotsInner">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/fraud-stories-dots.svg" alt="">
-                </div>
-            </div>
-            <div class="contentDiv">
-                <p>Agni was enjoying his Sunday Agni was enjoying his Sunday morning cup of tea, morning cup of tea, when morning cup tea, when he got a call from the police...</p>
-                <a href="#" class="ctaBlue">Read More</a>
-            </div>
-        </div>
-        <div class="boxSlides">
-            <div class="imgDiv">
-                <div class="innerImg">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/pionner-slider-img.webp" alt="">
-                </div>
-                <div class="dotsInner">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/fraud-stories-dots.svg" alt="">
-                </div>
-            </div>
-            <div class="contentDiv">
-                <p>Agni was enjoying his Sunday Agni was enjoying his Sunday morning cup of tea, morning cup of tea, when morning cup tea, when he got a call from the police...</p>
-                <a href="#" class="ctaBlue">Read More</a>
-            </div>
-        </div>
+            <?php endwhile; ?>
+        <?php endif; ?>
     </div>
 </section>
 
