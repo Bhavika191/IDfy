@@ -3971,6 +3971,32 @@ footer .footerWrapper .copyright h3 {
 .bannerSectionhp .bannerWrapper {
   height: 100%;
   position: relative;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+@media screen and (max-width: 1600px) {
+  .bannerSectionhp .bannerWrapper {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .bannerSectionhp .bannerWrapper {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .bannerSectionhp .bannerWrapper {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media screen and (max-width: 680px) {
+  .bannerSectionhp .bannerWrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 .bannerSectionhp .bannerWrapper .bannerBg {
   width: 100%;
@@ -3992,7 +4018,6 @@ footer .footerWrapper .copyright h3 {
 }
 .bannerSectionhp .bannerWrapper .bannerContent {
   position: absolute;
-  left: 80px;
   top: 50%;
   transform: translateY(-50%);
   width: 50%;
@@ -4059,9 +4084,8 @@ footer .footerWrapper .copyright h3 {
 }
 .bannerSectionhp .bannerWrapper .bannerbtmLinks {
   position: absolute;
-  right: 230px;
-  margin-left: 100px;
-  bottom: 90px;
+  padding: 0px 230px;
+  bottom: 50px;
 }
 .bannerSectionhp .bannerWrapper .bannerbtmLinks ul {
   display: flex;
@@ -4110,9 +4134,6 @@ footer .footerWrapper .copyright h3 {
   .bannerSectionhp {
     margin-bottom: 220px;
   }
-  .bannerSectionhp .bannerWrapper .bannerContent {
-    left: 70px;
-  }
   .bannerSectionhp .bannerWrapper .bannerContent h1 {
     letter-spacing: 0px;
   }
@@ -4121,9 +4142,8 @@ footer .footerWrapper .copyright h3 {
     letter-spacing: 2px;
   }
   .bannerSectionhp .bannerWrapper .bannerbtmLinks {
-    right: 140px;
-    bottom: 70px;
-    margin-left: 50px;
+    padding: 0px 190px;
+    bottom: 40px;
   }
   .bannerSectionhp .bannerWrapper .bannerbtmLinks ul li {
     padding-right: 50px;
@@ -4139,16 +4159,12 @@ footer .footerWrapper .copyright h3 {
   .bannerSectionhp {
     margin-bottom: 180px;
   }
-  .bannerSectionhp .bannerWrapper .bannerContent {
-    left: 60px;
-  }
   .bannerSectionhp .bannerWrapper .bannerContent h2 {
     margin-top: 30px;
   }
   .bannerSectionhp .bannerWrapper .bannerbtmLinks {
-    right: 100px;
-    bottom: 60px;
-    margin-left: 40px;
+    padding: 0px 150px;
+    bottom: 35px;
   }
   .bannerSectionhp .bannerWrapper .bannerbtmLinks ul li {
     padding-right: 40px;
@@ -4163,16 +4179,12 @@ footer .footerWrapper .copyright h3 {
   .bannerSectionhp {
     margin-bottom: 150px;
   }
-  .bannerSectionhp .bannerWrapper .bannerContent {
-    left: 50px;
-  }
   .bannerSectionhp .bannerWrapper .bannerContent h2 {
     margin-top: 24px;
   }
   .bannerSectionhp .bannerWrapper .bannerbtmLinks {
-    right: 70px;
-    bottom: 50px;
-    margin-left: 40px;
+    padding: 0px 120px;
+    bottom: 30px;
   }
   .bannerSectionhp .bannerWrapper .bannerbtmLinks ul li {
     padding-right: 30px;
@@ -4191,12 +4203,10 @@ footer .footerWrapper .copyright h3 {
     top: 200px;
     margin: 0 auto;
     width: 100%;
-    padding: 0px 50px;
   }
   .bannerSectionhp .bannerWrapper .bannerbtmLinks {
-    right: 0px;
-    bottom: 40px;
-    margin: 0px 40px 0px;
+    padding: 0px 40px;
+    bottom: 25px;
   }
   .bannerSectionhp .bannerWrapper .bannerbtmLinks ul li {
     padding-right: 60px;
@@ -4210,12 +4220,9 @@ footer .footerWrapper .copyright h3 {
     top: 180px;
     margin: 0 auto;
     width: 100%;
-    padding: 0px 20px;
   }
   .bannerSectionhp .bannerWrapper .bannerbtmLinks {
-    right: 0px;
-    bottom: 24px;
-    margin: 0px 20px 0px;
+    padding: 0px 20px 0px;
   }
   .bannerSectionhp .bannerWrapper .bannerbtmLinks ul li {
     padding-right: 50px;
@@ -5894,28 +5901,28 @@ footer .footerWrapper .copyright h3 {
   .productfamSection .innerWrapper .prodfamSlides .tabs {
     margin-bottom: 34px;
   }
-  .productfamSection .innerWrapper .prodfamSlides .tabs .tab {
+  .productfamSection .innerWrapper .prodfamSlides .tabs .tab, .productfamSection .innerWrapper .prodfamSlides .tabs #tabDiv {
     margin-right: 40px;
   }
   .productfamSection .innerWrapper .prodfamSlides .slider {
     height: 620px;
   }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide, .productfamSection .innerWrapper .prodfamSlides .slider #slideId {
     transform: translateY(106px) scale(0.7) perspective(1000px);
     padding: 30px;
   }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataImg {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataImg, .productfamSection .innerWrapper .prodfamSlides .slider #slideId .dataImg {
     width: 50%;
   }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent, .productfamSection .innerWrapper .prodfamSlides .slider #slideId .dataContent {
     width: 42%;
   }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent h3 {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent h3, .productfamSection .innerWrapper .prodfamSlides .slider #slideId .dataContent h3 {
     letter-spacing: 0px;
     margin: 26px 0px;
     width: 78%;
   }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p, .productfamSection .innerWrapper .prodfamSlides .slider #slideId .dataContent p {
     margin-bottom: 26px;
     width: 68%;
   }
@@ -5940,23 +5947,23 @@ footer .footerWrapper .copyright h3 {
   .productfamSection .innerWrapper .prodfamSlides .tabs {
     margin-bottom: 32px;
   }
-  .productfamSection .innerWrapper .prodfamSlides .tabs .tab {
+  .productfamSection .innerWrapper .prodfamSlides .tabs .tab, .productfamSection .innerWrapper .prodfamSlides .tabs #tabDiv {
     margin-right: 35px;
   }
   .productfamSection .innerWrapper .prodfamSlides .slider {
     height: 500px;
   }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide, .productfamSection .innerWrapper .prodfamSlides .slider #slideId {
     padding: 28px;
   }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent, .productfamSection .innerWrapper .prodfamSlides .slider #slideId .dataContent {
     width: 43%;
   }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent h3 {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent h3, .productfamSection .innerWrapper .prodfamSlides .slider #slideId .dataContent h3 {
     margin: 22px 0px;
     width: 80%;
   }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p, .productfamSection .innerWrapper .prodfamSlides .slider #slideId .dataContent p {
     margin-bottom: 24px;
     width: 70%;
   }
@@ -5977,23 +5984,23 @@ footer .footerWrapper .copyright h3 {
   .productfamSection .innerWrapper .prodfamSlides .tabs {
     margin-bottom: 30px;
   }
-  .productfamSection .innerWrapper .prodfamSlides .tabs .tab {
+  .productfamSection .innerWrapper .prodfamSlides .tabs .tab, .productfamSection .innerWrapper .prodfamSlides .tabs #tabDiv {
     margin-right: 30px;
   }
   .productfamSection .innerWrapper .prodfamSlides .slider {
     height: 490px;
   }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide, .productfamSection .innerWrapper .prodfamSlides .slider #slideId {
     padding: 26px;
   }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent, .productfamSection .innerWrapper .prodfamSlides .slider #slideId .dataContent {
     width: 45%;
   }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent h3 {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent h3, .productfamSection .innerWrapper .prodfamSlides .slider #slideId .dataContent h3 {
     margin: 18px 0px;
     width: 100%;
   }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p, .productfamSection .innerWrapper .prodfamSlides .slider #slideId .dataContent p {
     margin-bottom: 24px;
     width: 100%;
   }
@@ -6014,14 +6021,14 @@ footer .footerWrapper .copyright h3 {
   .productfamSection .innerWrapper .prodfamSlides .slider {
     height: 400px;
   }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent, .productfamSection .innerWrapper .prodfamSlides .slider #slideId .dataContent {
     width: 47%;
   }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent h3 {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent h3, .productfamSection .innerWrapper .prodfamSlides .slider #slideId .dataContent h3 {
     margin: 14px 0px;
     line-height: 112%;
   }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p, .productfamSection .innerWrapper .prodfamSlides .slider #slideId .dataContent p {
     margin-bottom: 20px;
     line-height: 132%;
   }
@@ -6052,29 +6059,29 @@ footer .footerWrapper .copyright h3 {
     justify-content: flex-start;
     width: max-content;
   }
-  .productfamSection .innerWrapper .prodfamSlides .tabs .tab {
+  .productfamSection .innerWrapper .prodfamSlides .tabs .tab, .productfamSection .innerWrapper .prodfamSlides .tabs #tabDiv {
     margin-right: 40px;
     text-align: left;
   }
   .productfamSection .innerWrapper .prodfamSlides .slider {
     height: 800px;
   }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide, .productfamSection .innerWrapper .prodfamSlides .slider #slideId {
     display: block;
     padding: 24px;
   }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataImg {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataImg, .productfamSection .innerWrapper .prodfamSlides .slider #slideId .dataImg {
     width: 100%;
   }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent, .productfamSection .innerWrapper .prodfamSlides .slider #slideId .dataContent {
     width: 100%;
     margin-top: 24px;
   }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent h3 {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent h3, .productfamSection .innerWrapper .prodfamSlides .slider #slideId .dataContent h3 {
     margin: 12px 0px;
     line-height: 112%;
   }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p, .productfamSection .innerWrapper .prodfamSlides .slider #slideId .dataContent p {
     margin-bottom: 21px;
     line-height: 132%;
   }
@@ -6092,10 +6099,10 @@ footer .footerWrapper .copyright h3 {
   .productfamSection .innerWrapper .prodfamSlides .slider {
     height: 650px;
   }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide, .productfamSection .innerWrapper .prodfamSlides .slider #slideId {
     padding: 20px;
   }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent a {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent a, .productfamSection .innerWrapper .prodfamSlides .slider #slideId .dataContent a {
     width: 100%;
   }
   .productfamSection .innerWrapper .prodfamSlides .slider .hidden {
@@ -6481,6 +6488,7 @@ footer .footerWrapper .copyright h3 {
 @media screen and (max-width: 820px) {
   .fraudstoriesSec {
     height: auto;
+    margin-bottom: 0px;
   }
   .fraudstoriesSec .innerWrapper .secHeading p {
     color: #000;
