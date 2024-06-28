@@ -842,6 +842,39 @@ header .navbar .headerContent .header-elements {
 header .navbar .hamburger-menu {
   display: none;
 }
+header.navColor, header.scrolled {
+  background: #fff;
+}
+header.navColor .navbar .logo .logoColor, header.scrolled .navbar .logo .logoColor {
+  fill: #606060;
+}
+header.navColor .navbar .logo .logoBG, header.scrolled .navbar .logo .logoBG {
+  fill: #CE1010;
+}
+header.navColor .navbar .logo .logoWord, header.scrolled .navbar .logo .logoWord {
+  fill: #fff;
+}
+header.navColor .navbar .logo .logowordInner, header.scrolled .navbar .logo .logowordInner {
+  fill: #CE1010;
+}
+header.navColor .navbar .headerContent .nav-links .dropdown a, header.scrolled .navbar .headerContent .nav-links .dropdown a {
+  color: #080808;
+}
+header.navColor .navbar .headerContent .nav-links .dropdown a::before, header.scrolled .navbar .headerContent .nav-links .dropdown a::before {
+  background: url("../images/header-dropdown-iconblack.svg") no-repeat;
+}
+header.navColor .navbar .headerContent .nav-links .dropdown .dropdown-content .dropdown-wrapper, header.scrolled .navbar .headerContent .nav-links .dropdown .dropdown-content .dropdown-wrapper {
+  box-shadow: 0px 6px 25px 0px rgba(0, 0, 0, 0.2);
+}
+header.navColor .navbar .hamburger-menu .button_toggle span, header.scrolled .navbar .hamburger-menu .button_toggle span {
+  background: #343434;
+}
+header.navColor .navbar .hamburger-menu .button_toggle span:nth-of-type(1), header.scrolled .navbar .hamburger-menu .button_toggle span:nth-of-type(1) {
+  background: #343434;
+}
+header.navColor .navbar .hamburger-menu .button_toggle span:nth-of-type(2), header.scrolled .navbar .hamburger-menu .button_toggle span:nth-of-type(2) {
+  background: #343434;
+}
 @media all and (max-width: 1800px) {
   header .navbar .logo {
     width: 109px;
@@ -1116,7 +1149,7 @@ header .navbar .hamburger-menu {
 }
 @media all and (max-width: 1440px) {
   header .navbar .logo {
-    width: 100px;
+    width: 120px;
     padding: 18px 0px;
   }
   header .navbar .headerContent .nav-links {
@@ -1207,8 +1240,11 @@ header .navbar .hamburger-menu {
     top: -70px;
   }
   header .navbar .logo {
-    width: 100px;
+    width: 120px;
     padding: 15px 0px;
+  }
+  header .navbar .logo svg {
+    width: 80px;
   }
   header .navbar .headerContent .nav-links {
     gap: 50px;
@@ -1295,7 +1331,7 @@ header .navbar .hamburger-menu {
 }
 @media all and (max-width: 1180px) {
   header .navbar .logo {
-    width: 80px;
+    width: 120px;
     padding: 15px 0px;
   }
   header .navbar .headerContent .nav-links {
@@ -1390,7 +1426,7 @@ header .navbar .hamburger-menu {
     align-items: center;
   }
   header .navbar .logo {
-    width: 54px;
+    width: 120px;
     padding: 15px 0px;
     z-index: 9;
   }
@@ -1584,6 +1620,11 @@ header .navbar .hamburger-menu {
   }
   header .navbar .hamburger-menu .overlay .overlay-wrapper .fixCta a {
     width: 100%;
+  }
+}
+@media all and (max-width: 720px) {
+  header .navbar .logo svg {
+    width: 60px;
   }
 }
 
@@ -5626,6 +5667,9 @@ footer .footerWrapper .copyright h3 {
   }
 }
 
+.productfamSection {
+  margin-top: 100px !important;
+}
 .productfamSection .innerWrapper {
   padding-left: 80px;
   padding-right: 80px;
@@ -5696,17 +5740,17 @@ footer .footerWrapper .copyright h3 {
   align-items: center;
   justify-content: center;
 }
-.productfamSection .innerWrapper .prodfamSlides .tabs .tab {
+.productfamSection .innerWrapper .prodfamSlides .tabs .tab, .productfamSection .innerWrapper .prodfamSlides .tabs #tabDiv {
   background: transparent !important;
   outline: none;
   cursor: pointer;
   margin-right: 50px;
   text-align: center;
 }
-.productfamSection .innerWrapper .prodfamSlides .tabs .tab:last-child {
+.productfamSection .innerWrapper .prodfamSlides .tabs .tab:last-child, .productfamSection .innerWrapper .prodfamSlides .tabs #tabDiv:last-child {
   margin-right: 0px;
 }
-.productfamSection .innerWrapper .prodfamSlides .tabs .tab h3 {
+.productfamSection .innerWrapper .prodfamSlides .tabs .tab h3, .productfamSection .innerWrapper .prodfamSlides .tabs #tabDiv h3 {
   font-size: 20px;
   font-family: "HelveticaNeueBold";
   line-height: 120%;
@@ -5714,19 +5758,19 @@ footer .footerWrapper .copyright h3 {
   text-align: center;
 }
 @media screen and (max-width: 1600px) {
-  .productfamSection .innerWrapper .prodfamSlides .tabs .tab h3 {
+  .productfamSection .innerWrapper .prodfamSlides .tabs .tab h3, .productfamSection .innerWrapper .prodfamSlides .tabs #tabDiv h3 {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 720px) {
-  .productfamSection .innerWrapper .prodfamSlides .tabs .tab h3 {
+  .productfamSection .innerWrapper .prodfamSlides .tabs .tab h3, .productfamSection .innerWrapper .prodfamSlides .tabs #tabDiv h3 {
     font-size: 16px;
   }
 }
-.productfamSection .innerWrapper .prodfamSlides .tabs .tab.active {
+.productfamSection .innerWrapper .prodfamSlides .tabs .tab.active, .productfamSection .innerWrapper .prodfamSlides .tabs #tabDiv.active {
   position: relative;
 }
-.productfamSection .innerWrapper .prodfamSlides .tabs .tab.active::after {
+.productfamSection .innerWrapper .prodfamSlides .tabs .tab.active::after, .productfamSection .innerWrapper .prodfamSlides .tabs #tabDiv.active::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -5740,13 +5784,13 @@ footer .footerWrapper .copyright h3 {
   position: relative;
   perspective: 1000px;
 }
-.productfamSection .innerWrapper .prodfamSlides .slider .slide {
+.productfamSection .innerWrapper .prodfamSlides .slider .slide, .productfamSection .innerWrapper .prodfamSlides .slider #slideId {
   position: absolute;
   width: 100%;
-  transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out, opacity 0.1s ease-in-out;
   transform: translateY(112px) scale(0.7) perspective(1000px);
   opacity: 0;
-  z-index: -4;
+  z-index: 3;
   border-radius: 34.359px;
   border: 0.687px solid rgba(0, 0, 0, 0.2);
   background: #FFF;
@@ -5756,15 +5800,15 @@ footer .footerWrapper .copyright h3 {
   justify-content: space-between;
   padding: 35px;
 }
-.productfamSection .innerWrapper .prodfamSlides .slider .slide .dataImg {
+.productfamSection .innerWrapper .prodfamSlides .slider .slide .dataImg, .productfamSection .innerWrapper .prodfamSlides .slider #slideId .dataImg {
   border-radius: 28px;
   overflow: hidden;
   width: 52%;
 }
-.productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent {
+.productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent, .productfamSection .innerWrapper .prodfamSlides .slider #slideId .dataContent {
   width: 40%;
 }
-.productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent h4 {
+.productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent h4, .productfamSection .innerWrapper .prodfamSlides .slider #slideId .dataContent h4 {
   font-size: 20px;
   font-family: "HelveticaNeueBold";
   color: #343434;
@@ -5773,16 +5817,16 @@ footer .footerWrapper .copyright h3 {
   text-transform: uppercase;
 }
 @media screen and (max-width: 1600px) {
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent h4 {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent h4, .productfamSection .innerWrapper .prodfamSlides .slider #slideId .dataContent h4 {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 720px) {
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent h4 {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent h4, .productfamSection .innerWrapper .prodfamSlides .slider #slideId .dataContent h4 {
     font-size: 16px;
   }
 }
-.productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent h3 {
+.productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent h3, .productfamSection .innerWrapper .prodfamSlides .slider #slideId .dataContent h3 {
   font-size: 40px;
   font-family: "HelveticaNeueBold";
   color: #343434;
@@ -5792,21 +5836,21 @@ footer .footerWrapper .copyright h3 {
   width: 75%;
 }
 @media screen and (max-width: 1600px) {
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent h3 {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent h3, .productfamSection .innerWrapper .prodfamSlides .slider #slideId .dataContent h3 {
     font-size: 32px;
   }
 }
 @media screen and (max-width: 1400px) {
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent h3 {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent h3, .productfamSection .innerWrapper .prodfamSlides .slider #slideId .dataContent h3 {
     font-size: 28px;
   }
 }
 @media screen and (max-width: 1280px) {
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent h3 {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent h3, .productfamSection .innerWrapper .prodfamSlides .slider #slideId .dataContent h3 {
     font-size: 24px;
   }
 }
-.productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
+.productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p, .productfamSection .innerWrapper .prodfamSlides .slider #slideId .dataContent p {
   font-size: 20px;
   font-family: "HelveticaNeueLight";
   color: #343434;
@@ -5815,29 +5859,29 @@ footer .footerWrapper .copyright h3 {
   width: 65%;
 }
 @media screen and (max-width: 1600px) {
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p, .productfamSection .innerWrapper .prodfamSlides .slider #slideId .dataContent p {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 720px) {
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p, .productfamSection .innerWrapper .prodfamSlides .slider #slideId .dataContent p {
     font-size: 16px;
   }
 }
-.productfamSection .innerWrapper .prodfamSlides .slider .hidden {
-  transform: translateY(112px) scale(0.8) perspective(1000px);
-  opacity: 1;
-  z-index: -1;
+.productfamSection .innerWrapper .prodfamSlides .slider .active-two {
+  transform: translateY(0px) scale(1) perspective(1000px) !important;
+  opacity: 1 !important;
+  z-index: 3 !important;
 }
-.productfamSection .innerWrapper .prodfamSlides .slider .hidden-behind {
-  transform: translateY(58px) scale(0.9) perspective(1000px);
-  opacity: 1;
-  z-index: 0;
+.productfamSection .innerWrapper .prodfamSlides .slider .next-next-active-two {
+  transform: translateY(117px) scale(0.8) perspective(1000px) !important;
+  opacity: 1 !important;
+  z-index: 0 !important;
 }
-.productfamSection .innerWrapper .prodfamSlides .slider .visible {
-  transform: translateY(0) scale(1) perspective(1000px);
-  opacity: 1;
-  z-index: 1;
+.productfamSection .innerWrapper .prodfamSlides .slider .next-active-two {
+  transform: translateY(61px) scale(0.9) perspective(1000px) !important;
+  opacity: 1 !important;
+  z-index: 1 !important;
 }
 @media screen and (max-width: 1600px) {
   .productfamSection .innerWrapper .secHeading {
@@ -6076,6 +6120,7 @@ footer .footerWrapper .copyright h3 {
   align-items: center;
   position: relative;
   width: 100%;
+  margin-bottom: 140px;
 }
 .fraudstoriesSec .innerWrapper {
   padding-left: 80px;
@@ -6201,7 +6246,7 @@ footer .footerWrapper .copyright h3 {
   margin-top: 20px;
   display: none;
 }
-.fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes {
+.fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover {
   border-radius: 20px;
   border: 0.685px solid rgba(0, 0, 0, 0.2);
   background: #1C43B9 !important;
@@ -6210,14 +6255,14 @@ footer .footerWrapper .copyright h3 {
   width: 88% !important;
   left: -46% !important;
 }
-.fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes:nth-child(2) {
+.fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover:nth-child(2) {
   left: unset !important;
 }
-.fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes p {
+.fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover p {
   font-size: 30px !important;
   color: #FFFFFF !important;
 }
-.fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes a {
+.fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover a {
   display: inline-flex !important;
 }
 .fraudstoriesSec .innerWrapper .boxContent .box-container-two #boxesImg {
@@ -6254,7 +6299,7 @@ footer .footerWrapper .copyright h3 {
     top: 64%;
     left: -30%;
   }
-  .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes {
+  .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover {
     width: 70% !important;
     left: -30% !important;
   }
@@ -6289,11 +6334,11 @@ footer .footerWrapper .copyright h3 {
   .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData a {
     margin-top: 18px;
   }
-  .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes {
+  .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover {
     width: 70% !important;
     left: -25% !important;
   }
-  .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes p {
+  .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover p {
     font-size: 24px !important;
   }
   .fraudstoriesSec .innerWrapper .boxContent .box-container-two #boxesImg .dotsInner {
@@ -6331,11 +6376,11 @@ footer .footerWrapper .copyright h3 {
   .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData a {
     margin-top: 16px;
   }
-  .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes {
+  .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover {
     width: 62% !important;
     left: -11% !important;
   }
-  .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes p {
+  .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover p {
     font-size: 22px !important;
   }
   .fraudstoriesSec .innerWrapper .boxContent .box-container-two #boxesImg .dotsInner {
@@ -6373,11 +6418,11 @@ footer .footerWrapper .copyright h3 {
   .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData p {
     font-size: 16px;
   }
-  .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes {
+  .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover {
     width: 56% !important;
     left: -8% !important;
   }
-  .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes p {
+  .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover p {
     font-size: 20px !important;
   }
   .fraudstoriesSec .innerWrapper .boxContent .box-container-two #boxesImg .dotsInner {
@@ -6418,11 +6463,11 @@ footer .footerWrapper .copyright h3 {
   .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData p {
     font-size: 14px;
   }
-  .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes {
+  .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover {
     width: 43% !important;
     left: 0% !important;
   }
-  .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes p {
+  .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover p {
     font-size: 18px !important;
   }
   .fraudstoriesSec .innerWrapper .boxContent .box-container-two #boxesImg .dotsInner {
