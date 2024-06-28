@@ -348,65 +348,130 @@ if (window.innerWidth < 1025) {
 
 
 if (window.innerWidth > 820) {
-    // on scroll sticky section fraud stories js starts
+
     gsap.registerPlugin(ScrollTrigger);
 
     // Pin the section
     ScrollTrigger.create({
+      trigger: ".fixed-section",
+      start: "top top",
+      end: "+=200%", // Adjust based on the desired scroll length
+      pin: true
+    });
+  
+    // Create a timeline for the first box container
+    const tl = gsap.timeline({
+      scrollTrigger: {
         trigger: ".fixed-section",
         start: "top top",
         end: "+=200%", // Adjust based on the desired scroll length
-        pin: true
+        scrub: true
+      }
     });
-
-    // Create a timeline for the first box container
-    const tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".fixed-section",
-            start: "top top",
-            end: "+=200%", // Adjust based on the desired scroll length
-            scrub: true
-        }
-    });
-
+  
     // Select the first set of boxes
-    const boxes = document.querySelectorAll(".fixed-section .box-container .box");
-
+    const boxes = document.querySelectorAll(".fixed-section .tab");
+  
     // Add animations to the timeline for the first set of boxes
     boxes.forEach((box, index) => {
-        tl.to(box, {
-            className: "+=activeBoxes",
-            duration: 1,
-            onStart: () => {
-                if (index > 0) boxes[index - 1].classList.remove("activeBoxes");
-            }
-        });
+      tl.to(box, {
+        className: "+=active",
+        duration: 1,
+        onStart: () => {
+          if (index > 0) boxes[index - 1].classList.remove("active");
+        }
+      });
     });
 
+    // Initialize active-two class on the first box
+  const initialActiveTwo = document.querySelector(".fixed-section .slide");
+  initialActiveTwo.classList.add("active-two");
+  
     // Create a timeline for the second box container
     const tl2 = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".fixed-section",
-            start: "top top",
-            end: "+=200%", // Adjust based on the desired scroll length
-            scrub: true
-        }
+      scrollTrigger: {
+        trigger: ".fixed-section",
+        start: "top top",
+        end: "+=200%", // Adjust based on the desired scroll length
+        scrub: true
+      }
     });
-
+  
     // Select the second set of boxes
-    const boxesTwo = document.querySelectorAll(".fixed-section .box-container-two .box");
+    const boxesTwo = document.querySelectorAll(".fixed-section .slide:not(:first-child)");
 
     // Add animations to the timeline for the second set of boxes
     boxesTwo.forEach((box, index) => {
         tl2.to(box, {
-            className: "+=active-two",
-            duration: 1,
-            onStart: () => {
-                if (index > 0) boxesTwo[index - 1].classList.remove("active-two");
+          className: "+=active-two",
+          duration: 1,
+          onStart: () => {
+            if (index > 0) {
+              boxesTwo[index - 1].classList.remove("active-two");
             }
+            if (index < boxesTwo.length - 1) {
+              boxesTwo[index + 1].classList.add("next-active-two");
+            }
+            if (index < boxesTwo.length - 2) {
+              boxesTwo[index + 2].classList.add("next-next-active-two");
+            }
+          },
+          onReverseComplete: () => {
+            if (index > 0) {
+              boxesTwo[index - 1].classList.add("next-active-two");
+              if (index > 1) {
+                boxesTwo[index - 2].classList.add("next-next-active-two");
+              }
+            }
+            if (index < boxesTwo.length - 1) {
+              boxesTwo[index + 1].classList.remove("next-active-two");
+            }
+            if (index < boxesTwo.length - 2) {
+              boxesTwo[index + 2].classList.remove("next-next-active-two");
+            }
+          }
         });
-    });
+      });
+    
+      // Additional logic to add next-active-two and next-next-active-two classes based on scroll
+      ScrollTrigger.addEventListener("scroll", () => {
+        boxesTwo.forEach((box, index) => {
+          const rect = box.getBoundingClientRect();
+          const isFullyVisible = (rect.top >= 0 && rect.bottom <= window.innerHeight);
+    
+          if (box.classList.contains("active-two")) {
+            if (index < boxesTwo.length - 1) {
+              boxesTwo[index + 1].classList.add("next-active-two");
+            }
+            if (index < boxesTwo.length - 2) {
+              boxesTwo[index + 2].classList.add("next-next-active-two");
+            }
+          } else if (box.classList.contains("next-active-two")) {
+            if (!isFullyVisible) {
+              if (index > 0) {
+                boxesTwo[index - 1].classList.add("next-active-two");
+              }
+              boxesTwo[index].classList.remove("next-active-two");
+              if (index < boxesTwo.length - 2) {
+                boxesTwo[index + 2].classList.remove("next-next-active-two");
+              }
+            }
+          } else if (box.classList.contains("next-next-active-two")) {
+            if (!isFullyVisible) {
+              if (index > 1) {
+                boxesTwo[index - 2].classList.add("next-next-active-two");
+              }
+              if (index > 0) {
+                boxesTwo[index - 1].classList.remove("next-active-two");
+              }
+              boxesTwo[index].classList.remove("next-next-active-two");
+            }
+          }
+        });
+      });
+   
 
+    
     // on scroll sticky section fraud stories js starts
 }
 

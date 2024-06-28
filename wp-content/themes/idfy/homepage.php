@@ -251,7 +251,7 @@
     </div>
 </section>
 
-<section class="productfamSection">
+<section class="productfamSection fixed-section" id="fixedSection">
     <?php if( have_rows('product_families_section') ): ?>
         <?php while( have_rows('product_families_section') ): the_row(); ?>
             <div class="innerWrapper">
@@ -263,7 +263,7 @@
                         <ul class="tabs slider-nav ">
                             <?php if( have_rows('product_families_content') ): ?>
                                 <?php $counter=1; while( have_rows('product_families_content') ): the_row(); ?>
-                                    <li class="tab" data-slide="<?php echo $counter; ?>">
+                                    <li class="tab"   id="tabDiv" data-slide="<?php echo $counter; ?>">
                                         <h3><?php echo get_sub_field('card_heading'); ?></h3>
                                     </li>
                                 <?php $counter=$counter+1; endwhile; ?>
@@ -273,7 +273,7 @@
                     <div class="slider slider-for">
                         <?php if( have_rows('product_families_content') ): ?>
                             <?php while( have_rows('product_families_content') ): the_row(); ?>
-                                <div class="slide">
+                                <div class="slide" id="slideId">
                                     <div class="dataImg">
                                         <?php $profamimg = get_sub_field('card_image'); if( !empty( $profamimg ) ): ?>
                                             <img src="<?php echo esc_url($profamimg['url']); ?>" loading="lazy" alt="<?php echo esc_attr($profamimg['alt']); ?>" />
@@ -295,7 +295,7 @@
     <?php endif; ?>
 </section>
 
-<section class="fraudstoriesSec fixed-section" id="fixedSection">
+<section class="fraudstoriesSec" >
     <?php if( have_rows('fraud_stories_section') ): ?>
         <?php while( have_rows('fraud_stories_section') ): the_row(); ?>
             <div class="innerWrapper">
