@@ -347,7 +347,7 @@ if (window.innerWidth < 1025) {
 // slider js ends
 
 
-if (window.innerWidth > 820) {
+
 
     gsap.registerPlugin(ScrollTrigger);
 
@@ -355,7 +355,7 @@ if (window.innerWidth > 820) {
     ScrollTrigger.create({
       trigger: ".fixed-section",
       start: "top top",
-      end: "+=200%", // Adjust based on the desired scroll length
+      end: "+=300%", // Adjust based on the desired scroll length
       pin: true
     });
   
@@ -364,7 +364,7 @@ if (window.innerWidth > 820) {
       scrollTrigger: {
         trigger: ".fixed-section",
         start: "top top",
-        end: "+=200%", // Adjust based on the desired scroll length
+        end: "+=300%", // Adjust based on the desired scroll length
         scrub: true
       }
     });
@@ -392,7 +392,7 @@ if (window.innerWidth > 820) {
       scrollTrigger: {
         trigger: ".fixed-section",
         start: "top top",
-        end: "+=200%", // Adjust based on the desired scroll length
+        end: "+=300%", // Adjust based on the desired scroll length
         scrub: true
       }
     });
@@ -473,7 +473,7 @@ if (window.innerWidth > 820) {
 
     
     // on scroll sticky section fraud stories js starts
-}
+
 
 
 
