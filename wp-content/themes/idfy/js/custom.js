@@ -1,4 +1,4 @@
-// ----------------------------------------Shamal's Code-----------------------------------------//
+// --------------------------------------------------------Shamal's Code------------------------------------------------------//
 // Hide Header on on scroll down
 var didScroll;
 var lastScrollTop = 0;
@@ -85,15 +85,22 @@ $(document).ready(function () {
                 menuOpen = true; // Menu is open
                 $('body').css("overflow", "hidden");
                 $('html').css("overflow", "hidden");
+                $('.search-icon-mobile').css("opacity","1");
+                $('.logo .mobile-logo').css({"opacity":"1",'height':"auto"});
+                $('.logo .desktop-logo').css({"opacity":"0",'height':"0"});
             } else {
                 menuOpen = false; // Menu is closed
                 $('body').css("overflow", "visible");
                 $('html').css("overflow", "visible");
+                $('.search-icon-mobile').css("opacity","0");
+                $('.logo .mobile-logo').css({"opacity":"0",'height':"0"});
+                $('.logo .desktop-logo').css({"opacity":"1",'height':"auto"});
             }
         });
     }
 });
 
+//-------------------Mobile dropdown -------------------//
 $(document).ready(function () {
     const mainNavs = document.querySelectorAll('.main-nav');
 
@@ -122,6 +129,7 @@ $(document).ready(function () {
         }
     });
 });
+//-------------------Mobile dropdown -------------------//
 // -----------------Mobile Header Menu----------------------//
 
 // ---------------------Header Country Select Dropdown-----------------//
@@ -132,16 +140,42 @@ $(document).ready(function() {
     
     selected.on('click', function() {
         items.toggle();
+        $(this).toggleClass('active-arrow');
     });
     
     items.on('click', 'li', function() {
         selected.text($(this).text());
         items.hide();
+        selected.removeClass('active-arrow');
     });
 
     $(document).on('click', function(e) {
         if (!select.is(e.target) && select.has(e.target).length === 0) {
             items.hide();
+            selected.removeClass('active-arrow');
+        }
+    });
+});
+$(document).ready(function() {
+    var select = $('.custom-select-mobile');
+    var selected = select.find('.select-selected-mobile');
+    var items = select.find('.select-items-mobile');
+    
+    selected.on('click', function() {
+        items.toggle();
+        $(this).toggleClass('active-arrow');
+    });
+    
+    items.on('click', 'li', function() {
+        selected.text($(this).text());
+        items.hide();
+        selected.removeClass('active-arrow');
+    });
+
+    $(document).on('click', function(e) {
+        if (!select.is(e.target) && select.has(e.target).length === 0) {
+            items.hide();
+            selected.removeClass('active-arrow');
         }
     });
 });
@@ -163,9 +197,23 @@ function searchToggle() {
     $('html').css("overflow", "visible");
     $('body').removeClass("overlay");
   }
+  function searchToggleMobile() {
+    let searchModalMobile = document.getElementById('search-modal-mobile')
+    searchModalMobile.classList.add('active');
+    $('body').css("overflow", "hidden");
+    $('html').css("overflow", "hidden");
+    $('body').addClass("overlay");
+  }
+  function closeSearchMobile() {
+    let searchModalMobile = document.getElementById('search-modal-mobile')
+    searchModalMobile.classList.remove('active');
+    $('body').css("overflow", "visible");
+    $('html').css("overflow", "visible");
+    $('body').removeClass("overlay");
+  }
 // ---------------------------Search Modal---------------------------------//
 
-// ----------------------------------------Shamal's Code-----------------------------------------//
+// ----------------------------------------------------Shamal's Code-------------------------------------------------//
 
 
 

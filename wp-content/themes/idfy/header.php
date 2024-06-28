@@ -32,7 +32,8 @@
 			<nav class="navbar">
 				<div class="logo">
 					<a href="">
-						<img src="<?php bloginfo('template_directory'); ?>/images/header-logo.svg" alt="IDfy Logo">
+						<img src="<?php bloginfo('template_directory'); ?>/images/header-logo.svg" alt="IDfy Logo" class="desktop-logo">
+						<img src="<?php bloginfo('template_directory'); ?>/images/idfy-logo-mobile.png" alt="IDfy Logo" class="mobile-logo">
 					</a>
 				</div>
 				<div class="headerContent">
@@ -287,13 +288,16 @@
 							<div class="select-selected">IND</div>
 							<ul class="select-items">
 								<li>IND</li>
-								<li>Philippines</li>
+								<li>PH</li>
 							</ul>
 						</div>
 						<a href="#" class="btn ctaRed">Contact Us</a>
 					</div>
 				</div>
 				<div class="hamburger-menu">
+					<div class="search-icon-mobile" onclick="searchToggleMobile();">
+						<img src="<?php bloginfo('template_directory'); ?>/images/search-icon-mobile.svg" alt="">
+					</div>
 					<div class="button_toggle" id="toggle">
 						<span class="top"></span>
 						<span class="bottom"></span>
@@ -307,11 +311,9 @@
 											<a href="#" class="main-nav">Solutions</a>
 											<ul class="sub-menu">
 												<a href="" class="idfy360">
-													<img src="<?php bloginfo('template_directory'); ?>/images/mobile-360.svg"
-														alt="" class="image360">
+													<img src="<?php bloginfo('template_directory'); ?>/images/mobile-360.svg" alt="" class="image360">
 													<h4>IDfy</h4>
-													<img src="<?php bloginfo('template_directory'); ?>/images/mobile-redirect-arrow.svg"
-														alt="" class="redirectArrow">
+													<img src="<?php bloginfo('template_directory'); ?>/images/mobile-redirect-arrow.svg" alt="" class="redirectArrow">
 												</a>
 												<li class="sub-list">
 													<a href="" class="sub-nav">KYC API Suite</a>
@@ -365,8 +367,7 @@
 													<a href="" class="sub-nav">HR & Recruitment</a>
 												</li>
 												<li class="sub-list">
-													<a href="" class="sub-nav">Payment Aggregators and Payment
-														Gateways</a>
+													<a href="" class="sub-nav">Payment Aggregators and Payment Gateways</a>
 												</li>
 												<li class="sub-list">
 													<a href="" class="sub-nav">Gig Workers</a>
@@ -454,176 +455,19 @@
 												</li>
 											</ul>
 										</li>
+										<div class="custom-select-mobile">
+											<p>Global</p>
+											<div class="select-selected-mobile">India</div>
+											<ul class="select-items-mobile">
+												<li>India</li>
+												<li>Philippines</li>
+											</ul>
+										</div>
 									</ul>
 								</nav>
 							</div>
-							<a href="#" class="btn ctaRed">Contact Us</a>
-						</div>
-					</div>
-					<div class="hamburger-menu">
-						<div class="button_toggle" id="toggle">
-							<span class="top"></span>
-							<span class="bottom"></span>
-						</div>
-						<div class="overlay" id="overlay">
-							<div class="overlay-wrapper">
-								<div class="scrollDiv">
-									<nav class="overlay-menu">
-										<ul class="main-menu">
-											<li class="main-list">
-												<a href="#" class="main-nav">Solutions</a>
-												<ul class="sub-menu">
-													<a href="" class="idfy360">
-														<img src="<?php bloginfo('template_directory'); ?>/images/mobile-360.svg" alt="" class="image360">
-														<h4>IDfy</h4>
-														<img src="<?php bloginfo('template_directory'); ?>/images/mobile-redirect-arrow.svg" alt="" class="redirectArrow">
-													</a>
-													<li class="sub-list">
-														<a href="" class="sub-nav">KYC API Suite</a>
-													</li>
-													<li class="sub-list">
-														<a href="" class="sub-nav">Video Solutions</a>
-													</li>
-													<li class="sub-list">
-														<a href="" class="sub-nav">CrimeCheck</a>
-													</li>
-													<li class="sub-list">
-														<a href="" class="sub-nav">Risk and Fraud</a>
-													</li>
-													<li class="sub-list">
-														<a href="" class="sub-nav">Privy Suite</a>
-													</li>
-													<li class="sub-list">
-														<a href="" class="sub-nav">Bank Statement Analysis</a>
-													</li>
-													<div class="mobilePortal">
-														<h5>Self Serve Portal</h5>
-														<ul class="portalHeading">
-															<li class="portalMenu"><a href="">API Central</a></li>
-															<li class="portalMenu"><a href="">BGV Self Serve</a></li>
-														</ul>
-													</div>
-												</ul>
-											</li>
-											<li class="main-list">
-												<a href="#" class="main-nav">Industries</a>
-												<ul class="sub-menu">
-													<li class="sub-list">
-														<a href="" class="sub-nav">Banking</a>
-													</li>
-													<li class="sub-list">
-														<a href="" class="sub-nav">eCom & Payments</a>
-													</li>
-													<li class="sub-list">
-														<a href="" class="sub-nav">Capital Markets & Wealth</a>
-													</li>
-													<li class="sub-list">
-														<a href="" class="sub-nav">Insurance</a>
-													</li>
-													<li class="sub-list">
-														<a href="" class="sub-nav">Gaming</a>
-													</li>
-													<li class="sub-list">
-														<a href="" class="sub-nav">Fintech</a>
-													</li>
-													<li class="sub-list">
-														<a href="" class="sub-nav">HR & Recruitment</a>
-													</li>
-													<li class="sub-list">
-														<a href="" class="sub-nav">Payment Aggregators and Payment Gateways</a>
-													</li>
-													<li class="sub-list">
-														<a href="" class="sub-nav">Gig Workers</a>
-													</li>
-													<li class="sub-list">
-														<a href="" class="sub-nav">Logistics</a>
-													</li>
-													<li class="sub-list">
-														<a href="" class="sub-nav">Digital Natives</a>
-													</li>
-												</ul>
-											</li>
-											<li class="main-list">
-												<a href="#" class="main-nav">Use Cases</a>
-												<ul class="sub-menu">
-													<li class="sub-list">
-														<a href="" class="sub-nav">Digital Onboarding</a>
-													</li>
-													<li class="sub-list">
-														<a href="" class="sub-nav">AML</a>
-													</li>
-													<li class="sub-list">
-														<a href="" class="sub-nav">ID Verification</a>
-													</li>
-													<li class="sub-list">
-														<a href="" class="sub-nav">Legal History Checks</a>
-													</li>
-													<li class="sub-list">
-														<a href="" class="sub-nav">KYC</a>
-													</li>
-													<li class="sub-list">
-														<a href="" class="sub-nav">KYB I Merchant Onboarding</a>
-													</li>
-													<li class="sub-list">
-														<a href="" class="sub-nav">Background Verification</a>
-													</li>
-													<li class="sub-list">
-														<a href="" class="sub-nav">Privacy & Data Protection</a>
-													</li>
-												</ul>
-											</li>
-											<li class="main-list">
-												<a href="#" class="main-nav">About Us</a>
-												<ul class="sub-menu">
-													<li class="sub-list">
-														<a href="" class="sub-nav">Company</a>
-													</li>
-													<li class="sub-list">
-														<a href="" class="sub-nav">Life at IDfy</a>
-													</li>
-													<li class="sub-list">
-														<a href="" class="sub-nav">Clients</a>
-													</li>
-													<li class="sub-list">
-														<a href="" class="sub-nav">Our Team</a>
-													</li>
-													<li class="sub-list">
-														<a href="" class="sub-nav">IDfy in the news</a>
-													</li>
-													<li class="sub-list">
-														<a href="" class="sub-nav">Careers</a>
-													</li>
-												</ul>
-											</li>
-											<li class="main-list">
-												<a href="#" class="main-nav">Resources</a>
-												<ul class="sub-menu">
-													<li class="sub-list">
-														<a href="" class="sub-nav">Blogs</a>
-													</li>
-													<li class="sub-list">
-														<a href="" class="sub-nav">Testimonials</a>
-													</li>
-													<li class="sub-list">
-														<a href="" class="sub-nav">Casestudies</a>
-													</li>
-													<li class="sub-list">
-														<a href="" class="sub-nav">Webinars</a>
-													</li>
-													<li class="sub-list">
-														<a href="" class="sub-nav">Industry Insights</a>
-													</li>
-													<li class="sub-list">
-														<a href="" class="sub-nav">BGV Cost Calculator</a>
-													</li>
-												</ul>
-											</li>
-										</ul>
-									</nav>
-								</div>
-								<div class="fixCta">
-									<a href="" class="ctaRed">Contact Us</a>
-								</div>
+							<div class="fixCta">
+								<a href="" class="ctaRed">Contact Us</a>
 							</div>
 						</div>
 					</div>
@@ -671,6 +515,29 @@
 							</a>
 						</li>
 					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="search-modal-mobile" id="search-modal-mobile">
+			<div class="search-container">
+				<div class="search-wrapper">
+					<div class="logo">
+						<a href="">
+							<img src="<?php bloginfo('template_directory'); ?>/images/idfy-logo-mobile.png" alt="IDfy Logo">
+						</a>
+					</div>
+					<div class="search-modal-elements">
+						<div class="search-icon">
+							<img src="<?php bloginfo('template_directory'); ?>/images/search-icon-mobile.svg" alt="">
+						</div>
+						<div class="search-close-button" onclick="closeSearchMobile();">
+							<img src="<?php bloginfo('template_directory'); ?>/images/close-logo.svg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="search-input">
+					<input type="text" placeholder="Solutions, APIs, industries" name="" id="">
 				</div>
 			</div>
 		</div>
