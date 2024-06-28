@@ -72,6 +72,11 @@
                                 <div class="contentDiv">
                                     <h3><?php echo get_sub_field('card_heading'); ?></h3>
                                     <p><?php echo get_sub_field('card_description'); ?></p>
+                                    <?php $value = get_sub_field("card_cta_text");
+                                    if ($value) { ?>
+                                         <a href="<?php echo get_sub_field('card_cta_link'); ?>" class="ctaRed"><?php echo get_sub_field('card_cta_text'); ?></a>
+                                    <?php } ?>
+
                                 </div>
                                 <div class="imageDiv">
                                     <div class="mainImg">
@@ -94,8 +99,8 @@
 </section>
 
 <section class="onboardingJourneysec">
-    <?php if( have_rows('idfy_platform_section') ): ?>
-        <?php while( have_rows('idfy_platform_section') ): the_row(); ?>
+    <?php if (have_rows('idfy_platform_section')) : ?>
+        <?php while (have_rows('idfy_platform_section')) : the_row(); ?>
             <div class="innerWrapper">
                 <div class="secHeading">
                     <h2><?php echo get_sub_field('section_heading'); ?></h2>
@@ -104,15 +109,15 @@
                 </div>
                 <div class="journeyData">
                     <div class="contentDiv">
-                        <?php if( have_rows('left_pointers') ): ?>
-                            <?php while( have_rows('left_pointers') ): the_row(); ?>
+                        <?php if (have_rows('left_pointers')) : ?>
+                            <?php while (have_rows('left_pointers')) : the_row(); ?>
                                 <div class="innerBoxes">
                                     <h3><?php echo get_sub_field('card_heading'); ?></h3>
                                     <div class="journeyinnerData">
                                         <h4><?php echo get_sub_field('card_pointers_heading'); ?></h4>
                                         <ul>
-                                            <?php if( have_rows('card_pointers') ): ?>
-                                                <?php while( have_rows('card_pointers') ): the_row(); ?>
+                                            <?php if (have_rows('card_pointers')) : ?>
+                                                <?php while (have_rows('card_pointers')) : the_row(); ?>
                                                     <li><?php echo get_sub_field('pointers_text'); ?></li>
                                                 <?php endwhile; ?>
                                             <?php endif; ?>
@@ -125,14 +130,16 @@
                     <div class="centerCirclediv">
                         <div class="outerborderDiv">
                             <div class="mainImg">
-                                <?php $circleimg = get_sub_field('circle_image'); if( !empty( $circleimg ) ): ?>
+                                <?php $circleimg = get_sub_field('circle_image');
+                                if (!empty($circleimg)) : ?>
                                     <img src="<?php echo esc_url($circleimg['url']); ?>" loading="lazy" alt="<?php echo esc_attr($circleimg['alt']); ?>" />
                                 <?php endif; ?>
                             </div>
-                            <?php if( have_rows('pointers_icon') ): ?>
-                                <?php while( have_rows('pointers_icon') ): the_row(); ?>
+                            <?php if (have_rows('pointers_icon')) : ?>
+                                <?php while (have_rows('pointers_icon')) : the_row(); ?>
                                     <div class="journeyIcons">
-                                        <?php $iconfield = get_sub_field('icon_field'); if( !empty( $iconfield ) ): ?>
+                                        <?php $iconfield = get_sub_field('icon_field');
+                                        if (!empty($iconfield)) : ?>
                                             <img src="<?php echo esc_url($iconfield['url']); ?>" loading="lazy" alt="<?php echo esc_attr($iconfield['alt']); ?>" />
                                         <?php endif; ?>
                                     </div>
@@ -141,15 +148,15 @@
                         </div>
                     </div>
                     <div class="contentDiv">
-                        <?php if( have_rows('right_pointers') ): ?>
-                            <?php while( have_rows('right_pointers') ): the_row(); ?>
+                        <?php if (have_rows('right_pointers')) : ?>
+                            <?php while (have_rows('right_pointers')) : the_row(); ?>
                                 <div class="innerBoxes">
                                     <h3><?php echo get_sub_field('card_heading'); ?></h3>
                                     <div class="journeyinnerData">
                                         <h4><?php echo get_sub_field('card_pointers_heading'); ?></h4>
                                         <ul>
-                                            <?php if( have_rows('card_pointers') ): ?>
-                                                <?php while( have_rows('card_pointers') ): the_row(); ?>
+                                            <?php if (have_rows('card_pointers')) : ?>
+                                                <?php while (have_rows('card_pointers')) : the_row(); ?>
                                                     <li><?php echo get_sub_field('pointers_text'); ?></li>
                                                 <?php endwhile; ?>
                                             <?php endif; ?>
@@ -166,10 +173,11 @@
                             <div class="mainImg">
                                 <img src="<?php bloginfo('template_directory'); ?>/images/timeline-img.webp" alt="">
                             </div>
-                            <?php if( have_rows('pointers_icon') ): ?>
-                                <?php while( have_rows('pointers_icon') ): the_row(); ?>
+                            <?php if (have_rows('pointers_icon')) : ?>
+                                <?php while (have_rows('pointers_icon')) : the_row(); ?>
                                     <div class="journeyIcons">
-                                        <?php $iconfield = get_sub_field('icon_field'); if( !empty( $iconfield ) ): ?>
+                                        <?php $iconfield = get_sub_field('icon_field');
+                                        if (!empty($iconfield)) : ?>
                                             <img src="<?php echo esc_url($iconfield['url']); ?>" loading="lazy" alt="<?php echo esc_attr($iconfield['alt']); ?>" />
                                         <?php endif; ?>
                                     </div>
@@ -178,15 +186,15 @@
                         </div>
                     </div>
                     <div class="onboardingSlider">
-                        <?php if( have_rows('left_pointers') ): ?>
-                            <?php while( have_rows('left_pointers') ): the_row(); ?>
+                        <?php if (have_rows('left_pointers')) : ?>
+                            <?php while (have_rows('left_pointers')) : the_row(); ?>
                                 <div class="innerBoxes">
                                     <h3><?php echo get_sub_field('card_heading'); ?></h3>
                                     <div class="journeyinnerData">
                                         <h4><?php echo get_sub_field('card_pointers_heading'); ?></h4>
                                         <ul>
-                                            <?php if( have_rows('card_pointers') ): ?>
-                                                <?php while( have_rows('card_pointers') ): the_row(); ?>
+                                            <?php if (have_rows('card_pointers')) : ?>
+                                                <?php while (have_rows('card_pointers')) : the_row(); ?>
                                                     <li><?php echo get_sub_field('pointers_text'); ?></li>
                                                 <?php endwhile; ?>
                                             <?php endif; ?>
@@ -195,15 +203,15 @@
                                 </div>
                             <?php endwhile; ?>
                         <?php endif; ?>
-                        <?php if( have_rows('right_pointers') ): ?>
-                            <?php while( have_rows('right_pointers') ): the_row(); ?>
+                        <?php if (have_rows('right_pointers')) : ?>
+                            <?php while (have_rows('right_pointers')) : the_row(); ?>
                                 <div class="innerBoxes">
                                     <h3><?php echo get_sub_field('card_heading'); ?></h3>
                                     <div class="journeyinnerData">
                                         <h4><?php echo get_sub_field('card_pointers_heading'); ?></h4>
                                         <ul>
-                                            <?php if( have_rows('card_pointers') ): ?>
-                                                <?php while( have_rows('card_pointers') ): the_row(); ?>
+                                            <?php if (have_rows('card_pointers')) : ?>
+                                                <?php while (have_rows('card_pointers')) : the_row(); ?>
                                                     <li><?php echo get_sub_field('pointers_text'); ?></li>
                                                 <?php endwhile; ?>
                                             <?php endif; ?>
@@ -219,7 +227,7 @@
     <?php endif; ?>
 </section>
 
-<section class="productfamSection fixed-section" id="fixedSection">
+<section class="productfamSection">
     <?php if (have_rows('product_families_section')) : ?>
         <?php while (have_rows('product_families_section')) : the_row(); ?>
             <div class="innerWrapper">
@@ -266,7 +274,7 @@
     <?php endif; ?>
 </section>
 
-<section class="fraudstoriesSec">
+<section class="fraudstoriesSec fixed-section" id="fixedSection">
     <?php if (have_rows('fraud_stories_section')) : ?>
         <?php while (have_rows('fraud_stories_section')) : the_row(); ?>
             <div class="innerWrapper">
