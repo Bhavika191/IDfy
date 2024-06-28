@@ -1,539 +1,438 @@
 <?php get_header(); /* Template Name: Homepage */ ?>
 
 <section class="bannerSectionhp">
-    <div class="bannerWrapper">
-        <div class="bannerBg">
-            <video autoplay muted loop playsinline preload="metadata">
-                <source src="<?php bloginfo('template_directory'); ?>/images/banner-video.mp4" type="video/mp4">
-            </video>
-            <img src="<?php bloginfo('template_directory'); ?>/images/banner-img-hp.webp" alt="">
-        </div>
-        <div class="bannerContent">
-            <h1>Eliminate fraud.
-                establish Trust.</h1>
-            <h2>Asia’s leading Integrated Identity Platform.</h2>
-        </div>
-        <div class="bannerbtmLinks">
-            <ul>
-                <li>KYC</li>
-                <li>Background Verification</li>
-                <li>Risk & Fraud</li>
-                <li>Digital Onboarding</li>
-                <li>Privacy & Consent</li>
-                <li>Video Solutions</li>
-                <li>CrimeCheck</li>
-            </ul>
-        </div>
-    </div>
+    <?php if (have_rows('banner_section')) : ?>
+        <?php while (have_rows('banner_section')) : the_row(); ?>
+            <div class="bannerWrapper">
+                <div class="bannerBg">
+                    <video autoplay muted loop playsinline preload="metadata">
+                        <source src="<?php echo get_sub_field('banner_video'); ?>" type="video/mp4">
+                    </video>
+                    <?php $bannerimage = get_sub_field('banner_image_placeholder');
+                    if (!empty($bannerimage)) : ?>
+                        <img src="<?php echo esc_url($bannerimage['url']); ?>" loading="lazy" alt="<?php echo esc_attr($bannerimage['alt']); ?>" />
+                    <?php endif; ?>
+                </div>
+                <div class="bannerContent">
+                    <h1><?php echo get_sub_field('banner_heading'); ?></h1>
+                    <h2><?php echo get_sub_field('banner_description'); ?></h2>
+                </div>
+                <div class="bannerbtmLinks">
+                    <ul>
+                        <?php if (have_rows('key_pointers')) : ?>
+                            <?php while (have_rows('key_pointers')) : the_row(); ?>
+                                <li><?php echo get_sub_field('pointers_text'); ?></li>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                    </ul>
+                </div>
+            </div>
+        <?php endwhile; ?>
+    <?php endif; ?>
 </section>
 
 <section class="enterpriseSection">
-    <div class="enterpriseWrapper">
-        <div class="secHeading">
-            <h2>Elevating Enterprise Excellence</h2>
-        </div>
-        <div class="enterpriseLogos">
-            <div class="logoDiv">
-                <div class="innerBoxes">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/amex-logo.webp" alt="">
+    <?php if (have_rows('elevating_enterprise')) : ?>
+        <?php while (have_rows('elevating_enterprise')) : the_row(); ?>
+            <div class="enterpriseWrapper">
+                <div class="secHeading">
+                    <h2><?php echo get_sub_field('section_heading'); ?></h2>
                 </div>
-                <div class="innerBoxes">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/paypal-logo.webp" alt="">
-                </div>
-                <div class="innerBoxes">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/unilever-logo.webp" alt="">
-                </div>
-                <div class="innerBoxes">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/uno-bank-logo.webp" alt="">
-                </div>
-                <div class="innerBoxes">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/phonepe-logo.webp" alt="">
-                </div>
-                <div class="innerBoxes">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/julo-logo.webp" alt="">
-                </div>
-                <div class="innerBoxes">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/hdfc-bank-logo.webp" alt="">
-                </div>
-                <div class="innerBoxes">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/bajaj-logo.webp" alt="">
-                </div>
-                <div class="innerBoxes">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/britannia-logo.webp" alt="">
-                </div>
-                <div class="innerBoxes">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/zomato-logo.webp" alt="">
+                <div class="enterpriseLogos">
+                    <div class="logoDiv">
+                        <?php if (have_rows('enterprise_logos')) : ?>
+                            <?php while (have_rows('enterprise_logos')) : the_row(); ?>
+                                <div class="innerBoxes">
+                                    <?php $companylogo = get_sub_field('company_logos');
+                                    if (!empty($companylogo)) : ?>
+                                        <img src="<?php echo esc_url($companylogo['url']); ?>" loading="lazy" alt="<?php echo esc_attr($companylogo['alt']); ?>" />
+                                    <?php endif; ?>
+                                </div>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+        <?php endwhile; ?>
+    <?php endif; ?>
 </section>
 
 <section class="pioneerSlidersec">
-    <div class="pionnerwrapper">
-        <div class="secHeading">
-            <h3>IDfy is a </h3>
-            <h2>Pioneer</h2>
-        </div>
-        <div class="pioneerSlider">
-            <div class="innerSlides">
-                <div class="contentDiv">
-                    <h3>No-code onboarding</h3>
-                    <p>Onboard users, employees or gig workers with a simple QR code</p>
+    <?php if (have_rows('pioneer_section')) : ?>
+        <?php while (have_rows('pioneer_section')) : the_row(); ?>
+            <div class="pionnerwrapper">
+                <div class="secHeading">
+                    <h3><?php echo get_sub_field('section_sub_heading'); ?></h3>
+                    <h2><?php echo get_sub_field('section_heading'); ?></h2>
                 </div>
-                <div class="imageDiv">
-                    <div class="mainImg">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/pionner-slider-img.webp" alt="">
-                    </div>
-                    <div class="dots">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/hp-pioneer-slide-dots.svg" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="innerSlides">
-                <div class="contentDiv">
-                    <h3>No-code onboarding</h3>
-                    <p>Onboard users, employees or gig workers with a simple QR code</p>
-                </div>
-                <div class="imageDiv">
-                    <div class="mainImg">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/pionner-slider-img.webp" alt="">
-                    </div>
-                    <div class="dots">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/hp-pioneer-slide-dots.svg" alt="">
-                    </div>
+                <div class="pioneerSlider">
+                    <?php if (have_rows('pioneer_content')) : ?>
+                        <?php while (have_rows('pioneer_content')) : the_row(); ?>
+                            <div class="innerSlides">
+                                <div class="contentDiv">
+                                    <h3><?php echo get_sub_field('card_heading'); ?></h3>
+                                    <p><?php echo get_sub_field('card_description'); ?></p>
+                                </div>
+                                <div class="imageDiv">
+                                    <div class="mainImg">
+                                        <?php $pioneerimg = get_sub_field('card_image');
+                                        if (!empty($pioneerimg)) : ?>
+                                            <img src="<?php echo esc_url($pioneerimg['url']); ?>" loading="lazy" alt="<?php echo esc_attr($pioneerimg['alt']); ?>" />
+                                        <?php endif; ?>
+                                    </div>
+                                    <div class="dots">
+                                        <img src="<?php bloginfo('template_directory'); ?>/images/hp-pioneer-slide-dots.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
                 </div>
             </div>
-            <div class="innerSlides">
-                <div class="contentDiv">
-                    <h3>No-code onboarding</h3>
-                    <p>Onboard users, employees or gig workers with a simple QR code</p>
-                </div>
-                <div class="imageDiv">
-                    <div class="mainImg">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/pionner-slider-img.webp" alt="">
-                    </div>
-                    <div class="dots">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/hp-pioneer-slide-dots.svg" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="innerSlides">
-                <div class="contentDiv">
-                    <h3>No-code onboarding</h3>
-                    <p>Onboard users, employees or gig workers with a simple QR code</p>
-                </div>
-                <div class="imageDiv">
-                    <div class="mainImg">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/pionner-slider-img.webp" alt="">
-                    </div>
-                    <div class="dots">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/hp-pioneer-slide-dots.svg" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        <?php endwhile; ?>
+    <?php endif; ?>
 </section>
 
 <section class="onboardingJourneysec">
-    <div class="innerWrapper">
-        <div class="secHeading">
-            <h2>IDfy as a Platform</h2>
-            <p>Fighting Fraud at Scale with the Least Possible Friction</p>
-            <a href="#" class="ctaRed">Explore IDfy 360</a>
-        </div>
-        <div class="journeyData">
-            <div class="contentDiv">
-                <div class="innerBoxes">
-                    <h3>Plug & Play:</h3>
-                    <h4>Bring your own Stack</h4>
-                    <ul>
-                        <li>Integrate with your own systems easily</li>
-                        <li>Go-live in a jiffy</li>
-                    </ul>
+    <?php if( have_rows('idfy_platform_section') ): ?>
+        <?php while( have_rows('idfy_platform_section') ): the_row(); ?>
+            <div class="innerWrapper">
+                <div class="secHeading">
+                    <h2><?php echo get_sub_field('section_heading'); ?></h2>
+                    <p><?php echo get_sub_field('section_description'); ?></p>
+                    <a href="<?php echo get_sub_field('cta_link'); ?>" class="ctaRed"><?php echo get_sub_field('cta_text'); ?></a>
                 </div>
-                <div class="innerBoxes">
-                    <h3>Comprehensive:</h3>
-                    <h4>End to End Solutions</h4>
-                    <ul>
-                        <li>Choose from our suite of 140+ onboarding and risk APIs</li>
-                        <li>Or bring your own APIs</li>
-                    </ul>
+                <div class="journeyData">
+                    <div class="contentDiv">
+                        <?php if( have_rows('left_pointers') ): ?>
+                            <?php while( have_rows('left_pointers') ): the_row(); ?>
+                                <div class="innerBoxes">
+                                    <h3><?php echo get_sub_field('card_heading'); ?></h3>
+                                    <div class="journeyinnerData">
+                                        <h4><?php echo get_sub_field('card_pointers_heading'); ?></h4>
+                                        <ul>
+                                            <?php if( have_rows('card_pointers') ): ?>
+                                                <?php while( have_rows('card_pointers') ): the_row(); ?>
+                                                    <li><?php echo get_sub_field('pointers_text'); ?></li>
+                                                <?php endwhile; ?>
+                                            <?php endif; ?>
+                                        </ul>
+                                    </div>
+                                </div>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                    </div>
+                    <div class="centerCirclediv">
+                        <div class="outerborderDiv">
+                            <div class="mainImg">
+                                <?php $circleimg = get_sub_field('circle_image'); if( !empty( $circleimg ) ): ?>
+                                    <img src="<?php echo esc_url($circleimg['url']); ?>" loading="lazy" alt="<?php echo esc_attr($circleimg['alt']); ?>" />
+                                <?php endif; ?>
+                            </div>
+                            <?php if( have_rows('pointers_icon') ): ?>
+                                <?php while( have_rows('pointers_icon') ): the_row(); ?>
+                                    <div class="journeyIcons">
+                                        <?php $iconfield = get_sub_field('icon_field'); if( !empty( $iconfield ) ): ?>
+                                            <img src="<?php echo esc_url($iconfield['url']); ?>" loading="lazy" alt="<?php echo esc_attr($iconfield['alt']); ?>" />
+                                        <?php endif; ?>
+                                    </div>
+                                <?php endwhile; ?>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                    <div class="contentDiv">
+                        <?php if( have_rows('right_pointers') ): ?>
+                            <?php while( have_rows('right_pointers') ): the_row(); ?>
+                                <div class="innerBoxes">
+                                    <h3><?php echo get_sub_field('card_heading'); ?></h3>
+                                    <div class="journeyinnerData">
+                                        <h4><?php echo get_sub_field('card_pointers_heading'); ?></h4>
+                                        <ul>
+                                            <?php if( have_rows('card_pointers') ): ?>
+                                                <?php while( have_rows('card_pointers') ): the_row(); ?>
+                                                    <li><?php echo get_sub_field('pointers_text'); ?></li>
+                                                <?php endwhile; ?>
+                                            <?php endif; ?>
+                                        </ul>
+                                    </div>
+                                </div>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                    </div>
                 </div>
-                <div class="innerBoxes">
-                    <h3>Customize:</h3>
-                    <h4>Build your journey from scratch</h4>
-                    <ul>
-                        <li>No-code; Drag & drop workflows></li>
-                        <li>White label the user experience</li>
-                    </ul>
+                <div class="onboardingSliderData">
+                    <div class="centerCirclediv">
+                        <div class="outerborderDiv">
+                            <div class="mainImg">
+                                <?php $circleimg = get_sub_field('circle_image'); if( !empty( $circleimg ) ): ?>
+                                    <img src="<?php echo esc_url($circleimg['url']); ?>" loading="lazy" alt="<?php echo esc_attr($circleimg['alt']); ?>" />
+                                <?php endif; ?>
+                            </div>
+                            <?php if( have_rows('pointers_icon') ): ?>
+                                <?php while( have_rows('pointers_icon') ): the_row(); ?>
+                                    <div class="journeyIcons">
+                                        <?php $iconfield = get_sub_field('icon_field'); if( !empty( $iconfield ) ): ?>
+                                            <img src="<?php echo esc_url($iconfield['url']); ?>" loading="lazy" alt="<?php echo esc_attr($iconfield['alt']); ?>" />
+                                        <?php endif; ?>
+                                    </div>
+                                <?php endwhile; ?>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                    <div class="onboardingSlider">
+                        <?php if( have_rows('left_pointers') ): ?>
+                            <?php while( have_rows('left_pointers') ): the_row(); ?>
+                                <div class="innerBoxes">
+                                    <h3><?php echo get_sub_field('card_heading'); ?></h3>
+                                    <div class="journeyinnerData">
+                                        <h4><?php echo get_sub_field('card_pointers_heading'); ?></h4>
+                                        <ul>
+                                            <?php if( have_rows('card_pointers') ): ?>
+                                                <?php while( have_rows('card_pointers') ): the_row(); ?>
+                                                    <li><?php echo get_sub_field('pointers_text'); ?></li>
+                                                <?php endwhile; ?>
+                                            <?php endif; ?>
+                                        </ul>
+                                    </div>
+                                </div>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                        <?php if( have_rows('right_pointers') ): ?>
+                            <?php while( have_rows('right_pointers') ): the_row(); ?>
+                                <div class="innerBoxes">
+                                    <h3><?php echo get_sub_field('card_heading'); ?></h3>
+                                    <div class="journeyinnerData">
+                                        <h4><?php echo get_sub_field('card_pointers_heading'); ?></h4>
+                                        <ul>
+                                            <?php if( have_rows('card_pointers') ): ?>
+                                                <?php while( have_rows('card_pointers') ): the_row(); ?>
+                                                    <li><?php echo get_sub_field('pointers_text'); ?></li>
+                                                <?php endwhile; ?>
+                                            <?php endif; ?>
+                                        </ul>
+                                    </div>
+                                </div>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                    </div>
                 </div>
             </div>
-            <div class="centerCirclediv">
-                <div class="outerborderDiv">
-                    <div class="mainImg">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/timeline-img.webp" alt="">
-                    </div>
-                    <div class="journeyIcons">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/journey-icon.svg" alt="">
-                    </div>
-                    <div class="journeyIcons">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/journey-icon.svg" alt="">
-                    </div>
-                    <div class="journeyIcons">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/journey-icon.svg" alt="">
-                    </div>
-                    <div class="journeyIcons">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/journey-icon.svg" alt="">
-                    </div>
-                    <div class="journeyIcons">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/journey-icon.svg" alt="">
-                    </div>
-                    <div class="journeyIcons">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/journey-icon.svg" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="contentDiv">
-                <div class="innerBoxes">
-                    <h3>Insights:</h3>
-                    <h4>Outsmart your competition</h4>
-                    <ul>
-                        <li>Gather Intel with real-time data dashboards</li>
-                        <li>Track and optimize your journeys</li>
-                    </ul>
-                </div>
-                <div class="innerBoxes">
-                    <h3>Mitigate Risk:</h3>
-                    <h4>The latest fraud-busting tech</h4>
-                    <ul>
-                        <li>Detect document tampering, impersonation and more</li>
-                        <li>Proprietary and predictive risk-modeling</li>
-                    </ul>
-                </div>
-                <div class="innerBoxes">
-                    <h3>Enterprise Ready:</h3>
-                    <h4>Grow with confidence</h4>
-                    <ul>
-                        <li>ISO and SOC 2, Type 2 certified platforms</li>
-                        <li> Highly resilient and highly scalable across process and tech</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+        <?php endwhile; ?>
+    <?php endif; ?>
 </section>
 
-<section class="productfamSection">
-    <div class="innerWrapper">
-        <div class="secHeading">
-            <h2>Product Families</h2>
-        </div>
-        <div class="prodfamSlides">
-            <div class="tabs">
-                <button class="tab" data-slide="1">
-                    <h3>KYC API Suite</h3>
-                </button>
-                <button class="tab" data-slide="2">
-                    <h3>Privy</h3>
-                </button>
-                <button class="tab" data-slide="3">
-                    <h3>Background verifications</h3>
-                </button>
-                <button class="tab" data-slide="4">
-                    <h3>Video solutions</h3>
-                </button>
-                <button class="tab" data-slide="5">
-                    <h3>Crime Check</h3>
-                </button>
-                <button class="tab" data-slide="6">
-                    <h3>Risk & Fraud</h3>
-                </button>
-            </div>
-            <div class="slider">
-                <div class="slide">
-                    <div class="dataImg">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
-                    </div>
-                    <div class="dataContent">
-                        <h4>KYC API Suite</h4>
-                        <h3>150+ APIs to help you with onboarding </h3>
-                        <p>Come and explore our iBeta Certified,
-                            ML-powered,highly-scalable and secure API suite.</p>
-                        <a href="#" class="ctaRed">Explore API Documentation</a>
-                    </div>
+<section class="productfamSection fixed-section" id="fixedSection">
+    <?php if (have_rows('product_families_section')) : ?>
+        <?php while (have_rows('product_families_section')) : the_row(); ?>
+            <div class="innerWrapper">
+                <div class="secHeading">
+                    <h2><?php echo get_sub_field('section_heading'); ?></h2>
                 </div>
-                <div class="slide">
-                    <div class="dataImg">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
+                <div class="prodfamSlides">
+                    <div class="innerDiv">
+                        <ul class="tabs slider-nav ">
+                            <?php if (have_rows('product_families_content')) : ?>
+                                <?php $counter = 1;
+                                while (have_rows('product_families_content')) : the_row(); ?>
+                                    <li class="tab" id="tabDiv" data-slide="<?php echo $counter; ?>">
+                                        <h3><?php echo get_sub_field('card_heading'); ?></h3>
+                                    </li>
+                                <?php $counter = $counter + 1;
+                                endwhile; ?>
+                            <?php endif; ?>
+                        </ul>
                     </div>
-                    <div class="dataContent">
-                        <h4>Privy</h4>
-                        <h3>150+ APIs to help you with onboarding </h3>
-                        <p>Come and explore our iBeta Certified,
-                            ML-powered,highly-scalable and secure API suite.</p>
-                        <a href="#" class="ctaRed">Explore API Documentation</a>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="dataImg">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
-                    </div>
-                    <div class="dataContent">
-                        <h4>Background verifications</h4>
-                        <h3>150+ APIs to help you with onboarding </h3>
-                        <p>Come and explore our iBeta Certified,
-                            ML-powered,highly-scalable and secure API suite.</p>
-                        <a href="#" class="ctaRed">Explore API Documentation</a>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="dataImg">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
-                    </div>
-                    <div class="dataContent">
-                        <h4>Video solutions</h4>
-                        <h3>150+ APIs to help you with onboarding </h3>
-                        <p>Come and explore our iBeta Certified,
-                            ML-powered,highly-scalable and secure API suite.</p>
-                        <a href="#" class="ctaRed">Explore API Documentation</a>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="dataImg">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
-                    </div>
-                    <div class="dataContent">
-                        <h4>Crime Check</h4>
-                        <h3>150+ APIs to help you with onboarding </h3>
-                        <p>Come and explore our iBeta Certified,
-                            ML-powered,highly-scalable and secure API suite.</p>
-                        <a href="#" class="ctaRed">Explore API Documentation</a>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="dataImg">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
-                    </div>
-                    <div class="dataContent">
-                        <h4>Risk & Fraud</h4>
-                        <h3>150+ APIs to help you with onboarding </h3>
-                        <p>Come and explore our iBeta Certified,
-                            ML-powered,highly-scalable and secure API suite.</p>
-                        <a href="#" class="ctaRed">Explore API Documentation</a>
+                    <div class="slider slider-for">
+                        <?php if (have_rows('product_families_content')) : ?>
+                            <?php while (have_rows('product_families_content')) : the_row(); ?>
+                                <div class="slide" id="slideId">
+                                    <div class="dataImg">
+                                        <?php $profamimg = get_sub_field('card_image');
+                                        if (!empty($profamimg)) : ?>
+                                            <img src="<?php echo esc_url($profamimg['url']); ?>" loading="lazy" alt="<?php echo esc_attr($profamimg['alt']); ?>" />
+                                        <?php endif; ?>
+                                    </div>
+                                    <div class="dataContent">
+                                        <h4><?php echo get_sub_field('card_heading'); ?></h4>
+                                        <h3><?php echo get_sub_field('card_intro_heading'); ?></h3>
+                                        <p><?php echo get_sub_field('card_description'); ?></p>
+                                        <a href="<?php echo get_sub_field('cta_link'); ?>" class="ctaRed"><?php echo get_sub_field('cta_text'); ?></a>
+                                    </div>
+                                </div>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        <?php endwhile; ?>
+    <?php endif; ?>
 </section>
 
-
-
-<section class="fraudstoriesSec fixed-section" id="fixedSection">
-    <div class="innerWrapper">
-        <div class="secHeading">
-            <h2>#fraudstories</h2>
-            <p>Explore how we are working towards eliminating fraud and establishing trust.</p>
-        </div>
-        <div class="boxContent">
-            <div class="box-container">
-                <div class="box activeBoxes" id="boxesData">
-                    <p>Agni was enjoying his Sunday Agni was enjoying his Sunday morning cup of tea, morning cup of tea, when morning cup tea, when he got a call from the police...</p>
-                    <a href="#" class="ctaBlue">Read More</a>
+<section class="fraudstoriesSec">
+    <?php if (have_rows('fraud_stories_section')) : ?>
+        <?php while (have_rows('fraud_stories_section')) : the_row(); ?>
+            <div class="innerWrapper">
+                <div class="secHeading">
+                    <h2><?php echo get_sub_field('section_heading'); ?></h2>
+                    <p><?php echo get_sub_field('section_description'); ?></p>
                 </div>
-                <div class="box" id="boxesData">
-                    <p>Agni was enjoying his Sunday Agni was enjoying his Sunday morning cup of tea, morning cup of tea, when morning cup tea, when he got a call from the police...</p>
-                    <a href="#" class="ctaBlue">Read More</a>
-                </div>
-                <div class="box" id="boxesData">
-                    <p>Agni was enjoying his Sunday Agni was enjoying his Sunday morning cup of tea, morning cup of tea, when morning cup tea, when he got a call from the police...</p>
-                    <a href="#" class="ctaBlue">Read More</a>
+                <div class="boxContent">
+                    <div class="box-container">
+                        <?php if (have_rows('fraud_stories_content')) : ?>
+                            <?php $counter = 1;
+                            while (have_rows('fraud_stories_content')) : the_row(); ?>
+                                <div class="box <?php if ($counter == 1) {
+                                                    echo 'activeBoxes';
+                                                } ?>" id="boxesData">
+                                    <p><?php echo get_sub_field('card_description'); ?></p>
+                                    <a href="<?php echo get_sub_field('cta_link'); ?>" class="ctaBlue"><?php echo get_sub_field('cta_text'); ?></a>
+                                </div>
+                            <?php $counter = $counter + 1;
+                            endwhile; ?>
+                        <?php endif; ?>
+                    </div>
+                    <div class="box-container-two">
+                        <?php if (have_rows('fraud_stories_content')) : ?>
+                            <?php $counter = 1;
+                            while (have_rows('fraud_stories_content')) : the_row(); ?>
+                                <div class="box <?php if ($counter == 1) {
+                                                    echo 'active-two';
+                                                } ?>" id="boxesImg">
+                                    <?php $fraudimg = get_sub_field('card_image');
+                                    if (!empty($fraudimg)) : ?>
+                                        <img src="<?php echo esc_url($fraudimg['url']); ?>" loading="lazy" alt="<?php echo esc_attr($fraudimg['alt']); ?>" />
+                                    <?php endif; ?>
+                                    <div class="dotsInner">
+                                        <img src="<?php bloginfo('template_directory'); ?>/images/fraud-stories-dots.svg" alt="">
+                                    </div>
+                                </div>
+                            <?php $counter = $counter + 1;
+                            endwhile; ?>
+                        <?php endif; ?>
+                    </div>
                 </div>
             </div>
-            <div class="box-container-two">
-                <div class="box active-two" id="boxesImg">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/pionner-slider-img.webp" alt="">
-                    <div class="dotsInner">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/fraud-stories-dots.svg" alt="">
-                    </div>
-                </div>
-                <div class="box" id="boxesImg">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/pionner-slider-img.webp" alt="">
-                    <div class="dotsInner">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/fraud-stories-dots.svg" alt="">
-                    </div>
-                </div>
-                <div class="box" id="boxesImg">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/pionner-slider-img.webp" alt="">
-                    <div class="dotsInner">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/fraud-stories-dots.svg" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        <?php endwhile; ?>
+    <?php endif; ?>
 </section>
 
-
+<section class="fraudStoryslidermbl">
+    <div class="fraudStoryslider">
+        <?php if (have_rows('fraud_stories_section')) : ?>
+            <?php while (have_rows('fraud_stories_section')) : the_row(); ?>
+                <?php if (have_rows('fraud_stories_content')) : ?>
+                    <?php while (have_rows('fraud_stories_content')) : the_row(); ?>
+                        <div class="boxSlides">
+                            <div class="imgDiv">
+                                <div class="innerImg">
+                                    <?php $fraudimg = get_sub_field('card_image');
+                                    if (!empty($fraudimg)) : ?>
+                                        <img src="<?php echo esc_url($fraudimg['url']); ?>" loading="lazy" alt="<?php echo esc_attr($fraudimg['alt']); ?>" />
+                                    <?php endif; ?>
+                                </div>
+                                <div class="dotsInner">
+                                    <img src="<?php bloginfo('template_directory'); ?>/images/fraud-stories-dots.svg" alt="">
+                                </div>
+                            </div>
+                            <div class="contentDiv">
+                                <p><?php echo get_sub_field('card_description'); ?></p>
+                                <a href="<?php echo get_sub_field('cta_link'); ?>" class="ctaBlue"><?php echo get_sub_field('cta_text'); ?></a>
+                            </div>
+                        </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
+            <?php endwhile; ?>
+        <?php endif; ?>
+    </div>
+</section>
 
 <section class="clientsSection">
-    <div class="innerWrapper">
-        <div class="secHeading">
-            <h2>Hear from our clients</h2>
-        </div>
-        <div class="clientSlider">
-            <div class="clientsliderSlides">
-                <div class="imgnameDiv">
-                    <div class="imgBox">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/timeline-img.webp" alt="">
-                        <div class="dotsInner">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/client-slider-dots.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="nameDiv">
-                        <h4>Priyanka Krishnan</h4>
-                        <h5>Founder, Vahan</h5>
-                    </div>
+    <?php if (have_rows('clients_section')) : ?>
+        <?php while (have_rows('clients_section')) : the_row(); ?>
+            <div class="innerWrapper">
+                <div class="secHeading">
+                    <h2><?php echo get_sub_field('section_heading'); ?></h2>
                 </div>
-                <div class="contentDiv">
-                    <h3>" Digital onboarding from companies like IDfy has helped e-commerce players onboard people in huge numbers even in the difficult year of the pandemic. "</h3>
-                </div>
-            </div>
-            <div class="clientsliderSlides">
-                <div class="imgnameDiv">
-                    <div class="imgBox">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/timeline-img.webp" alt="">
-                        <div class="dotsInner">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/client-slider-dots.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="nameDiv">
-                        <h4>Priyanka Krishnan</h4>
-                        <h5>Founder, Vahan</h5>
-                    </div>
-                </div>
-                <div class="contentDiv">
-                    <h3>" Digital onboarding from companies like IDfy has helped e-commerce players onboard people in huge numbers even in the difficult year of the pandemic. "</h3>
+                <div class="clientSlider">
+                    <?php if (have_rows('clients_reviews')) : ?>
+                        <?php while (have_rows('clients_reviews')) : the_row(); ?>
+                            <div class="clientsliderSlides">
+                                <div class="imgnameDiv">
+                                    <div class="imgBox">
+                                        <?php $clientimg = get_sub_field('client_image');
+                                        if (!empty($clientimg)) : ?>
+                                            <img src="<?php echo esc_url($clientimg['url']); ?>" loading="lazy" alt="<?php echo esc_attr($clientimg['alt']); ?>" />
+                                        <?php endif; ?>
+                                        <div class="dotsInner">
+                                            <img src="<?php bloginfo('template_directory'); ?>/images/client-slider-dots.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="nameDiv">
+                                        <h4><?php echo get_sub_field('clients_name'); ?></h4>
+                                        <h5><?php echo get_sub_field('clients_designation'); ?></h5>
+                                    </div>
+                                </div>
+                                <div class="contentDiv">
+                                    <h3>"<?php echo get_sub_field('clients_review_text'); ?>"</h3>
+                                </div>
+                            </div>
+                        <?php endwhile; ?>
+                    <?php endif; ?>
                 </div>
             </div>
-            <div class="clientsliderSlides">
-                <div class="imgnameDiv">
-                    <div class="imgBox">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/timeline-img.webp" alt="">
-                        <div class="dotsInner">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/client-slider-dots.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="nameDiv">
-                        <h4>Priyanka Krishnan</h4>
-                        <h5>Founder, Vahan</h5>
-                    </div>
-                </div>
-                <div class="contentDiv">
-                    <h3>" Digital onboarding from companies like IDfy has helped e-commerce players onboard people in huge numbers even in the difficult year of the pandemic. "</h3>
-                </div>
-            </div>
-            <div class="clientsliderSlides">
-                <div class="imgnameDiv">
-                    <div class="imgBox">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/timeline-img.webp" alt="">
-                        <div class="dotsInner">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/client-slider-dots.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="nameDiv">
-                        <h4>Priyanka Krishnan</h4>
-                        <h5>Founder, Vahan</h5>
-                    </div>
-                </div>
-                <div class="contentDiv">
-                    <h3>" Digital onboarding from companies like IDfy has helped e-commerce players onboard people in huge numbers even in the difficult year of the pandemic. "</h3>
-                </div>
-            </div>
-            <div class="clientsliderSlides">
-                <div class="imgnameDiv">
-                    <div class="imgBox">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/timeline-img.webp" alt="">
-                        <div class="dotsInner">
-                            <img src="<?php bloginfo('template_directory'); ?>/images/client-slider-dots.svg" alt="">
-                        </div>
-                    </div>
-                    <div class="nameDiv">
-                        <h4>Priyanka Krishnan</h4>
-                        <h5>Founder, Vahan</h5>
-                    </div>
-                </div>
-                <div class="contentDiv">
-                    <h3>" Digital onboarding from companies like IDfy has helped e-commerce players onboard people in huge numbers even in the difficult year of the pandemic. "</h3>
-                </div>
-            </div>
-        </div>
-    </div>
+        <?php endwhile; ?>
+    <?php endif; ?>
 </section>
 
 <section class="awardscertificateSec">
-    <div class="innerWrapper">
-        <div class="secHeading">
-            <h2>Awards & Certificates</h2>
-        </div>
-        <div class="awardCertiInner">
-            <div class="awardDiv">
-                <div class="imgBox">
-                    <div class="imgDiv">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/technofast-awards.png" alt="">
-                    </div>
-                    <div class="contentDiv">
-                        <h3>Technology Fast 50 2023 India</h3>
-                    </div>
+    <?php if (have_rows('awards_certificates_section')) : ?>
+        <?php while (have_rows('awards_certificates_section')) : the_row(); ?>
+            <div class="innerWrapper">
+                <div class="secHeading">
+                    <h2><?php echo get_sub_field('section_heading'); ?></h2>
                 </div>
-                <div class="imgBox">
-                    <div class="imgDiv">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/technofast-awards.png" alt="">
+                <div class="awardCertiInner">
+                    <div class="awardDiv">
+                        <?php if (have_rows('awards_content')) : ?>
+                            <?php while (have_rows('awards_content')) : the_row(); ?>
+                                <div class="imgBox">
+                                    <div class="imgDiv">
+                                        <?php $awardlogo = get_sub_field('award_logo');
+                                        if (!empty($awardlogo)) : ?>
+                                            <img src="<?php echo esc_url($awardlogo['url']); ?>" loading="lazy" alt="<?php echo esc_attr($awardlogo['alt']); ?>" />
+                                        <?php endif; ?>
+                                    </div>
+                                    <div class="contentDiv">
+                                        <h3><?php echo get_sub_field('award_name'); ?></h3>
+                                    </div>
+                                </div>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
                     </div>
-                    <div class="contentDiv">
-                        <h3>Technology Fast 50 2023 India</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="certificateDiv">
-                <div class="imgBox">
-                    <div class="imgDiv">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/aicpa-certificate.png" alt="">
-                    </div>
-                    <div class="contentDiv">
-                        <h3>AICPA SOC 2</h3>
-                    </div>
-                </div>
-                <div class="imgBox">
-                    <div class="imgDiv">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/aicpa-certificate.png" alt="">
-                    </div>
-                    <div class="contentDiv">
-                        <h3>AICPA SOC 2</h3>
-                    </div>
-                </div>
-                <div class="imgBox">
-                    <div class="imgDiv">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/aicpa-certificate.png" alt="">
-                    </div>
-                    <div class="contentDiv">
-                        <h3>AICPA SOC 2</h3>
-                    </div>
-                </div>
-                <div class="imgBox">
-                    <div class="imgDiv">
-                        <img src="<?php bloginfo('template_directory'); ?>/images/aicpa-certificate.png" alt="">
-                    </div>
-                    <div class="contentDiv">
-                        <h3>AICPA SOC 2</h3>
+                    <div class="certificateDiv">
+                        <?php if (have_rows('certificates_content')) : ?>
+                            <?php while (have_rows('certificates_content')) : the_row(); ?>
+                                <div class="imgBox">
+                                    <div class="imgDiv">
+                                        <?php $certificateslogo = get_sub_field('certificates_logo');
+                                        if (!empty($certificateslogo)) : ?>
+                                            <img src="<?php echo esc_url($certificateslogo['url']); ?>" loading="lazy" alt="<?php echo esc_attr($certificateslogo['alt']); ?>" />
+                                        <?php endif; ?>
+                                    </div>
+                                    <div class="contentDiv">
+                                        <h3><?php echo get_sub_field('certificates_name'); ?></h3>
+                                    </div>
+                                </div>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        <?php endwhile; ?>
+    <?php endif; ?>
+
 </section>
+
 
 
 <?php get_footer(); ?>

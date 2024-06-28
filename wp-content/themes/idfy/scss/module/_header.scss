@@ -132,6 +132,40 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
         }
         .hamburger-menu{display: none;}
     }
+
+    &.navColor, &.scrolled{background: #fff;
+        .navbar{
+            .logo{
+                .logoColor{fill: #606060;}
+                .logoBG{fill: #CE1010;}
+                .logoWord{fill: #fff;}
+                .logowordInner{fill: #CE1010;}
+            }
+            .headerContent{
+                .nav-links{
+                    .dropdown {
+                        a{color: #080808;
+                            &::before{background: url("../images/header-dropdown-iconblack.svg") no-repeat;}
+                        }
+                        .dropdown-content{
+                            .dropdown-wrapper{box-shadow: 0px 6px 25px 0px #00000033;
+                            }
+                        }
+                    }
+                }
+               
+            }
+            .hamburger-menu {
+                .button_toggle {
+                  span {background: #343434;
+                    &:nth-of-type(1) {background: #343434;}
+                    &:nth-of-type(2) {background: #343434;}
+                  }
+                }
+              }
+        }
+    
+    }
     @media all and (max-width:1800px){
         .navbar{
             .logo{width: 109px;padding: 24px 0px;}
@@ -361,7 +395,7 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
     }
     @media all and (max-width:1440px){
         .navbar{
-            .logo{width: 100px;padding: 18px 0px;}
+            .logo{width: 120px;padding: 18px 0px;}
             .headerContent{
                 .nav-links{
                     .dropdown {padding: 18px 0px;
@@ -536,7 +570,7 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
     }
     @media all and (max-width:1180px){
         .navbar{
-            .logo{width: 80px;padding: 15px 0px;}
+            .logo{width: 120px;padding: 15px 0px;}
             .headerContent{
                 .nav-links{gap:50px;
                     .dropdown {padding: 16px 0px;
@@ -609,7 +643,7 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
     }
     @media all and (max-width:1024px){
         .navbar{align-items: center;
-            .logo{width: 54px;padding: 15px 0px;z-index: 9;}
+            .logo{width: 120px;padding: 15px 0px;z-index: 9;}
             .headerContent{display: none;}
             .hamburger-menu {display: block;
                 .button_toggle {position: relative;width: 24px;height: 6px;cursor: pointer;z-index: 1;transition: opacity 0.25s ease;
