@@ -171,7 +171,9 @@
                     <div class="centerCirclediv">
                         <div class="outerborderDiv">
                             <div class="mainImg">
-                                <img src="<?php bloginfo('template_directory'); ?>/images/timeline-img.webp" alt="">
+                                <?php $circleimg = get_sub_field('circle_image'); if( !empty( $circleimg ) ): ?>
+                                    <img src="<?php echo esc_url($circleimg['url']); ?>" loading="lazy" alt="<?php echo esc_attr($circleimg['alt']); ?>" />
+                                <?php endif; ?>
                             </div>
                             <?php if (have_rows('pointers_icon')) : ?>
                                 <?php while (have_rows('pointers_icon')) : the_row(); ?>
