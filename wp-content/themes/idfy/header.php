@@ -63,31 +63,31 @@
 										<div class="menu-wrapper">
 											<a href="" class="dropdown-menu">
 												<h4>KYC API Suite</h4>
-													<p>Trust with Every Inquiry</p>
+												<p>Trust with Every Inquiry</p>
 											</a>
 											<a href="" class="dropdown-menu">
 												<h4>Background Verification</h4>
-													<p>Streamline Identity Verification Effortlessly</p>
+												<p>Streamline Identity Verification Effortlessly</p>
 											</a>
 											<a href="" class="dropdown-menu">
 												<h4>Risk and Fraud</h4>
-													<p>Safeguard Against Deception</p>
+												<p>Safeguard Against Deception</p>
 											</a>
 											<a href="" class="dropdown-menu">
 												<h4>Video Solutions</h4>
-													<p>Seamless Visual Communication Solutions</p>
+												<p>Seamless Visual Communication Solutions</p>
 											</a>
 											<a href="" class="dropdown-menu">
 												<h4>KYC API Suite</h4>
-													<p>Streamline Identity Verification Effortlessly</p>
+												<p>Streamline Identity Verification Effortlessly</p>
 											</a>
 											<a href="" class="dropdown-menu">
 												<h4>CrimeCheck</h4>
-													<p>Your Shield Against Criminal Activity</p>
+												<p>Your Shield Against Criminal Activity</p>
 											</a>
 											<a href="" class="dropdown-menu">
 												<h4>Privy Suite</h4>
-													<p>Elevate Privacy Standards Today</p>
+												<p>Elevate Privacy Standards Today</p>
 											</a>
 										</div>
 									</div>
@@ -111,59 +111,59 @@
 										<div class="menu-wrapper">
 											<a href="" class="dropdown-menu">
 												<h4>Banking</h4>
-													<p>Secure Identity Solutions for Banks</p>
+												<p>Secure Identity Solutions for Banks</p>
 											</a>
 											<a href="" class="dropdown-menu">
 												<h4>Gig Workers</h4>
-													<p>Identity Solutions for Freelancers</p>
+												<p>Identity Solutions for Freelancers</p>
 											</a>
 											<a href="" class="dropdown-menu">
 												<h4>eCom & Payments</h4>
-													<p>Simplifying Online Transactions</p>
+												<p>Simplifying Online Transactions</p>
 											</a>
 											<a href="" class="dropdown-menu">
 												<h4>Payment Aggregators and Payment Gateways</h4>
-													<p>Reliable Identity Verification for Shipping</p>
+												<p>Reliable Identity Verification for Shipping</p>
 											</a>
 											<a href="" class="dropdown-menu">
 												<h4>KYC API Suite</h4>
-													<p>Streamline Identity Verification Effortlessly</p>
+												<p>Streamline Identity Verification Effortlessly</p>
 											</a>
 											<a href="" class="dropdown-menu">
 												<h4>Capital Markets & Wealth</h4>
-													<p>Identity Solutions for Financial Markets</p>
+												<p>Identity Solutions for Financial Markets</p>
 											</a>
 											<a href="" class="dropdown-menu">
 												<h4>Digital Natives</h4>
-													<p>Identity Solutions for the Digital Generation</p>
+												<p>Identity Solutions for the Digital Generation</p>
 											</a>
 											<a href="" class="dropdown-menu">
 												<h4>Insurance</h4>
-													<p>Trustworthy Identity Verification for Insurers</p>
+												<p>Trustworthy Identity Verification for Insurers</p>
 											</a>
 											<a href="" class="dropdown-menu">
 												<h4>FMCG</h4>
-													<p>Identity Solutions for Fast-Moving Consumer Goods</p>
+												<p>Identity Solutions for Fast-Moving Consumer Goods</p>
 											</a>
 											<a href="" class="dropdown-menu">
 												<h4>Gaming</h4>
-													<p>Identity Solutions for Fast-Moving Consumer Goods</p>
+												<p>Identity Solutions for Fast-Moving Consumer Goods</p>
 											</a>
 											<a href="" class="dropdown-menu">
 												<h4>IT</h4>
-													<p>Secure Identity Solutions for the Tech Industry</p>
+												<p>Secure Identity Solutions for the Tech Industry</p>
 											</a>
 											<a href="" class="dropdown-menu">
 												<h4>Fintech</h4>
-													<p>Your Shield Against Criminal Activity</p>
+												<p>Your Shield Against Criminal Activity</p>
 											</a>
 											<a href="" class="dropdown-menu">
 												<h4>Logistics</h4>
-													<p>Elevate Privacy Standards Today</p>
+												<p>Elevate Privacy Standards Today</p>
 											</a>
 											<a href="" class="dropdown-menu">
 												<h4>HR & Recruitment</h4>
-													<p>Streamlined Identity Verification for Hiring</p>
+												<p>Streamlined Identity Verification for Hiring</p>
 											</a>
 										</div>
 									</div>
@@ -178,39 +178,39 @@
 										<div class="menu-wrapper">
 											<a href="" class="dropdown-menu">
 												<h4>Digital Onboarding</h4>
-													<p>Seamlessly Verify New Users</p>
+												<p>Seamlessly Verify New Users</p>
 											</a>
 											<a href="" href="" class="dropdown-menu">
 												<h4>AML</h4>
-													<p>Ensure Compliance Effortlessly</p>
+												<p>Ensure Compliance Effortlessly</p>
 											</a>
 											<a href="" class="dropdown-menu">
 												<h4>ID Verification</h4>
-													<p>Verify Identities with Ease</p>
+												<p>Verify Identities with Ease</p>
 											</a>
 											<a href="" class="dropdown-menu">
 												<h4>Legal History Checks</h4>
-													<p>Trustworthy Legal Background Checks</p>
+												<p>Trustworthy Legal Background Checks</p>
 											</a>
 											<a href="" class="dropdown-menu">
 												<h4>KYC API Suite</h4>
-													<p>Streamline Identity Verification Effortlessly</p>
+												<p>Streamline Identity Verification Effortlessly</p>
 											</a>
 											<a href="" class="dropdown-menu">
 												<h4>KYC</h4>
-													<p>Simplify Know Your Customer Processes</p>
+												<p>Simplify Know Your Customer Processes</p>
 											</a>
 											<a href="" class="dropdown-menu">
 												<h4>KYB I Merchant Onboarding</h4>
-													<p>Streamlined Merchant Verification</p>
+												<p>Streamlined Merchant Verification</p>
 											</a>
 											<a href="" class="dropdown-menu">
 												<h4>Background Verification</h4>
-													<p>Thorough and Reliable Checks</p>
+												<p>Thorough and Reliable Checks</p>
 											</a>
 											<a href="" class="dropdown-menu">
 												<h4>Privacy & Data Protection</h4>
-													<p>Safeguarding Data and Privacy</p>
+												<p>Safeguarding Data and Privacy</p>
 											</a>
 										</div>
 									</div>
@@ -280,8 +280,15 @@
 						</li>
 					</ul>
 					<div class="header-elements">
-						<div class="search-icon">
+						<div class="search-icon" onclick="searchToggle();">
 							<img src="<?php bloginfo('template_directory'); ?>/images/search-icon.svg" alt="">
+						</div>
+						<div class="custom-select">
+							<div class="select-selected">IND</div>
+							<ul class="select-items">
+								<li>IND</li>
+								<li>Philippines</li>
+							</ul>
 						</div>
 						<a href="#" class="btn ctaRed">Contact Us</a>
 					</div>
@@ -300,9 +307,11 @@
 											<a href="#" class="main-nav">Solutions</a>
 											<ul class="sub-menu">
 												<a href="" class="idfy360">
-													<img src="<?php bloginfo('template_directory'); ?>/images/mobile-360.svg" alt="" class="image360">
+													<img src="<?php bloginfo('template_directory'); ?>/images/mobile-360.svg"
+														alt="" class="image360">
 													<h4>IDfy</h4>
-													<img src="<?php bloginfo('template_directory'); ?>/images/mobile-redirect-arrow.svg" alt="" class="redirectArrow">
+													<img src="<?php bloginfo('template_directory'); ?>/images/mobile-redirect-arrow.svg"
+														alt="" class="redirectArrow">
 												</a>
 												<li class="sub-list">
 													<a href="" class="sub-nav">KYC API Suite</a>
@@ -356,7 +365,8 @@
 													<a href="" class="sub-nav">HR & Recruitment</a>
 												</li>
 												<li class="sub-list">
-													<a href="" class="sub-nav">Payment Aggregators and Payment Gateways</a>
+													<a href="" class="sub-nav">Payment Aggregators and Payment
+														Gateways</a>
 												</li>
 												<li class="sub-list">
 													<a href="" class="sub-nav">Gig Workers</a>
@@ -455,3 +465,47 @@
 				</div>
 			</nav>
 		</header>
+
+		<div class="search-modal" id="search-modal">
+			<div class="modal-container">
+				<div class="search-input">
+					<div class="search-icon">
+						<img src="<?php bloginfo('template_directory'); ?>/images/search-icon-modal.svg" alt="">
+					</div>
+					<input type="text" placeholder="Solutions, APIs, Industries">
+					<div class="closeButton" onclick="closeSearch();">
+						<img src="<?php bloginfo('template_directory'); ?>/images/close-logo.svg" alt="">
+					</div>
+				</div>
+				<div class="relatedSearch">
+					<h2>Recent Search</h2>
+					<ul class="relatedMenu">
+						<li class="relatedTab">
+							<a href="">
+								<img src="<?php bloginfo('template_directory'); ?>/images/clock-svg.svg" alt=""> KYC
+							</a>
+						</li>
+						<li class="relatedTab">
+							<a href="">
+								<img src="<?php bloginfo('template_directory'); ?>/images/clock-svg.svg" alt=""> Verification
+							</a>
+						</li>
+						<li class="relatedTab">
+							<a href="">
+								<img src="<?php bloginfo('template_directory'); ?>/images/clock-svg.svg" alt=""> Crime
+							</a>
+						</li>
+						<li class="relatedTab">
+							<a href="">
+								<img src="<?php bloginfo('template_directory'); ?>/images/clock-svg.svg" alt=""> Onboarding
+							</a>
+						</li>
+						<li class="relatedTab">
+							<a href="">
+								<img src="<?php bloginfo('template_directory'); ?>/images/clock-svg.svg" alt=""> Risk
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>

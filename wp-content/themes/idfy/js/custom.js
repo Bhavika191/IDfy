@@ -123,6 +123,48 @@ $(document).ready(function () {
     });
 });
 // -----------------Mobile Header Menu----------------------//
+
+// ---------------------Header Country Select Dropdown-----------------//
+$(document).ready(function() {
+    var select = $('.custom-select');
+    var selected = select.find('.select-selected');
+    var items = select.find('.select-items');
+    
+    selected.on('click', function() {
+        items.toggle();
+    });
+    
+    items.on('click', 'li', function() {
+        selected.text($(this).text());
+        items.hide();
+    });
+
+    $(document).on('click', function(e) {
+        if (!select.is(e.target) && select.has(e.target).length === 0) {
+            items.hide();
+        }
+    });
+});
+// ---------------------Header Country Select Dropdown-----------------//
+
+// ---------------------------Search Modal---------------------------------//
+function searchToggle() {
+    let searchModal = document.getElementById('search-modal')
+    searchModal.classList.add('active');
+    $('body').css("overflow", "hidden");
+    $('html').css("overflow", "hidden");
+    $('body').addClass("overlay");
+  }
+  
+  function closeSearch() {
+    let searchModal = document.getElementById('search-modal')
+    searchModal.classList.remove('active');
+    $('body').css("overflow", "visible");
+    $('html').css("overflow", "visible");
+    $('body').removeClass("overlay");
+  }
+// ---------------------------Search Modal---------------------------------//
+
 // ----------------------------------------Shamal's Code-----------------------------------------//
 
 
