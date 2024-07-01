@@ -85,16 +85,16 @@ $(document).ready(function () {
                 menuOpen = true; // Menu is open
                 $('body').css("overflow", "hidden");
                 $('html').css("overflow", "hidden");
-                $('.search-icon-mobile').css("opacity","1");
-                $('.logo .mobile-logo').css({"opacity":"1",'height':"auto"});
-                $('.logo .desktop-logo').css({"opacity":"0",'height':"0"});
+                $('.search-icon-mobile').css("opacity", "1");
+                $('.logo .mobile-logo').css({ "opacity": "1", 'height': "auto" });
+                $('.logo .desktop-logo').css({ "opacity": "0", 'height': "0" });
             } else {
                 menuOpen = false; // Menu is closed
                 $('body').css("overflow", "visible");
                 $('html').css("overflow", "visible");
-                $('.search-icon-mobile').css("opacity","0");
-                $('.logo .mobile-logo').css({"opacity":"0",'height':"0"});
-                $('.logo .desktop-logo').css({"opacity":"1",'height':"auto"});
+                $('.search-icon-mobile').css("opacity", "0");
+                $('.logo .mobile-logo').css({ "opacity": "0", 'height': "0" });
+                $('.logo .desktop-logo').css({ "opacity": "1", 'height': "auto" });
             }
         });
     }
@@ -133,46 +133,46 @@ $(document).ready(function () {
 // -----------------Mobile Header Menu----------------------//
 
 // ---------------------Header Country Select Dropdown-----------------//
-$(document).ready(function() {
+$(document).ready(function () {
     var select = $('.custom-select');
     var selected = select.find('.select-selected');
     var items = select.find('.select-items');
-    
-    selected.on('click', function() {
+
+    selected.on('click', function () {
         items.toggle();
         $(this).toggleClass('active-arrow');
     });
-    
-    items.on('click', 'li', function() {
+
+    items.on('click', 'li', function () {
         selected.text($(this).text());
         items.hide();
         selected.removeClass('active-arrow');
     });
 
-    $(document).on('click', function(e) {
+    $(document).on('click', function (e) {
         if (!select.is(e.target) && select.has(e.target).length === 0) {
             items.hide();
             selected.removeClass('active-arrow');
         }
     });
 });
-$(document).ready(function() {
+$(document).ready(function () {
     var select = $('.custom-select-mobile');
     var selected = select.find('.select-selected-mobile');
     var items = select.find('.select-items-mobile');
-    
-    selected.on('click', function() {
+
+    selected.on('click', function () {
         items.toggle();
         $(this).toggleClass('active-arrow');
     });
-    
-    items.on('click', 'li', function() {
+
+    items.on('click', 'li', function () {
         selected.text($(this).text());
         items.hide();
         selected.removeClass('active-arrow');
     });
 
-    $(document).on('click', function(e) {
+    $(document).on('click', function (e) {
         if (!select.is(e.target) && select.has(e.target).length === 0) {
             items.hide();
             selected.removeClass('active-arrow');
@@ -188,140 +188,137 @@ function searchToggle() {
     $('body').css("overflow", "hidden");
     $('html').css("overflow", "hidden");
     $('body').addClass("overlay");
-  }
-  
-  function closeSearch() {
+}
+
+function closeSearch() {
     let searchModal = document.getElementById('search-modal')
     searchModal.classList.remove('active');
     $('body').css("overflow", "visible");
     $('html').css("overflow", "visible");
     $('body').removeClass("overlay");
-  }
-  function searchToggleMobile() {
+}
+function searchToggleMobile() {
     let searchModalMobile = document.getElementById('search-modal-mobile')
     searchModalMobile.classList.add('active');
     $('body').css("overflow", "hidden");
     $('html').css("overflow", "hidden");
     $('body').addClass("overlay");
-  }
-  function closeSearchMobile() {
+}
+function closeSearchMobile() {
     let searchModalMobile = document.getElementById('search-modal-mobile')
     searchModalMobile.classList.remove('active');
     $('body').css("overflow", "visible");
     $('html').css("overflow", "visible");
     $('body').removeClass("overlay");
-  }
+}
 // ---------------------------Search Modal---------------------------------//
 
 // ----------------------------------------------------Shamal's Code-------------------------------------------------//
 
 
+// // Timeline JS starts
+// document.addEventListener("DOMContentLoaded", function () {
+//     const years = document.querySelectorAll('.timeline-year');
+//     const progressBar = document.getElementById('progress-bar');
+//     const contentSections = document.querySelectorAll('.year-content');
+//     const leftArrow = document.getElementById('left-arrow');
+//     const rightArrow = document.getElementById('right-arrow');
+//     let currentYearIndex = 0;
+//     let autoProceedInterval;
 
 
+//     function showContent(year) {
+//         contentSections.forEach(section => {
+//             section.classList.remove('active');
+//         });
+//         document.querySelector(`.year-content[data-year="${year}"]`).classList.add('active');
+//     }
 
-// Timeline JS starts
-document.addEventListener("DOMContentLoaded", function () {
-    const years = document.querySelectorAll('.timeline-year');
-    const progressBar = document.getElementById('progress-bar');
-    const contentSections = document.querySelectorAll('.year-content');
-    const leftArrow = document.getElementById('left-arrow');
-    const rightArrow = document.getElementById('right-arrow');
-    let currentYearIndex = 0;
-    let autoProceedInterval;
+//     function updateProgressBar(toElement) {
+//         const toRect = toElement.getBoundingClientRect();
+//         const timelineRect = document.querySelector('.timeline').getBoundingClientRect();
+//         const width = toRect.right - timelineRect.left;
 
+//         progressBar.style.width = `${width}px`;
 
-    function showContent(year) {
-        contentSections.forEach(section => {
-            section.classList.remove('active');
-        });
-        document.querySelector(`.year-content[data-year="${year}"]`).classList.add('active');
-    }
+//         // Add processed class to timeline-years as progress bar passes through them
+//         years.forEach(year => {
+//             const yearRect = year.getBoundingClientRect();
+//             if (yearRect.left <= toRect.right) {
+//                 year.classList.add('processed');
+//             } else {
+//                 year.classList.remove('processed');
+//             }
+//         });
+//     }
 
-    function updateProgressBar(toElement) {
-        const toRect = toElement.getBoundingClientRect();
-        const timelineRect = document.querySelector('.timeline').getBoundingClientRect();
-        const width = toRect.right - timelineRect.left;
+//     function highlightYear(yearElement) {
+//         years.forEach(year => {
+//             year.classList.remove('active');
+//         });
 
-        progressBar.style.width = `${width}px`;
+//         yearElement.classList.add('active');
+//     }
 
-        // Add processed class to timeline-years as progress bar passes through them
-        years.forEach(year => {
-            const yearRect = year.getBoundingClientRect();
-            if (yearRect.left <= toRect.right) {
-                year.classList.add('processed');
-            } else {
-                year.classList.remove('processed');
-            }
-        });
-    }
+//     function navigateToYear(index) {
+//         if (index >= 0 && index < years.length) {
+//             const year = years[index];
+//             const selectedYear = year.dataset.year;
+//             showContent(selectedYear);
+//             updateProgressBar(year);
+//             highlightYear(year);
+//             currentYearIndex = index;
+//         }
+//     }
 
-    function highlightYear(yearElement) {
-        years.forEach(year => {
-            year.classList.remove('active');
-        });
+//     function startAutoProceed() {
+//         clearInterval(autoProceedInterval);
+//         autoProceedInterval = setInterval(() => {
+//             if (currentYearIndex < years.length - 1) {
+//                 navigateToYear(currentYearIndex + 1);
+//             } else {
+//                 currentYearIndex = 0;
+//                 years.forEach(year => year.classList.remove('processed')); // Reset all processed classes
+//                 navigateToYear(currentYearIndex);
+//             }
+//         }, 3000);
+//     }
 
-        yearElement.classList.add('active');
-    }
+//     years.forEach((year, index) => {
+//         year.addEventListener('click', () => {
+//             navigateToYear(index);
+//             startAutoProceed(); // Restart auto proceed when a year is clicked
+//         });
+//     });
 
-    function navigateToYear(index) {
-        if (index >= 0 && index < years.length) {
-            const year = years[index];
-            const selectedYear = year.dataset.year;
-            showContent(selectedYear);
-            updateProgressBar(year);
-            highlightYear(year);
-            currentYearIndex = index;
-        }
-    }
+//     leftArrow.addEventListener('click', () => {
+//         if (currentYearIndex > 0) {
+//             navigateToYear(currentYearIndex - 1);
+//             startAutoProceed(); // Restart auto proceed when left arrow is clicked
+//         }
+//     });
 
-    function startAutoProceed() {
-        clearInterval(autoProceedInterval);
-        autoProceedInterval = setInterval(() => {
-            if (currentYearIndex < years.length - 1) {
-                navigateToYear(currentYearIndex + 1);
-            } else {
-                currentYearIndex = 0;
-                years.forEach(year => year.classList.remove('processed')); // Reset all processed classes
-                navigateToYear(currentYearIndex);
-            }
-        }, 3000);
-    }
+//     rightArrow.addEventListener('click', () => {
+//         if (currentYearIndex < years.length - 1) {
+//             navigateToYear(currentYearIndex + 1);
+//             startAutoProceed(); // Restart auto proceed when right arrow is clicked
+//         }
 
-    years.forEach((year, index) => {
-        year.addEventListener('click', () => {
-            navigateToYear(index);
-            startAutoProceed(); // Restart auto proceed when a year is clicked
-        });
-    });
+//         // Remove crossed class when moving forward
+//         years.forEach((year, index) => {
+//             if (index > currentYearIndex) {
+//                 year.classList.remove('crossed');
+//             }
+//         });
+//     });
 
-    leftArrow.addEventListener('click', () => {
-        if (currentYearIndex > 0) {
-            navigateToYear(currentYearIndex - 1);
-            startAutoProceed(); // Restart auto proceed when left arrow is clicked
-        }
-    });
-
-    rightArrow.addEventListener('click', () => {
-        if (currentYearIndex < years.length - 1) {
-            navigateToYear(currentYearIndex + 1);
-            startAutoProceed(); // Restart auto proceed when right arrow is clicked
-        }
-
-        // Remove crossed class when moving forward
-        years.forEach((year, index) => {
-            if (index > currentYearIndex) {
-                year.classList.remove('crossed');
-            }
-        });
-    });
-
-    // Initialize with the first year's content and start auto proceed
-    if (years.length > 0) {
-        navigateToYear(0);
-        startAutoProceed();
-    }
-});
-// Timeline JS starts
+//     // Initialize with the first year's content and start auto proceed
+//     if (years.length > 0) {
+//         navigateToYear(0);
+//         startAutoProceed();
+//     }
+// });
+// // Timeline JS starts
 
 // Show more footer js starts
 var more = false;
@@ -344,10 +341,6 @@ $(document).ready(function () {
         $('.dropdownsolution').toggleClass("activeDropdown");
     });
 });
-
-
-
-
 
 
 // slider js starts
@@ -501,8 +494,8 @@ if (window.innerWidth > 820) {
 
     // on scroll sticky section fraud stories js starts
 }
-    
-    // on scroll sticky section fraud stories js starts
+
+// on scroll sticky section fraud stories js starts
 
 
 
@@ -561,48 +554,119 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // slider js starts
 
-(function ($) {
-    $(function () {
+// ----------------------Timeline code--------------------------//
+document.addEventListener("DOMContentLoaded", function () {
+    const years = document.querySelectorAll('.timeline-year');
+    const progressBar = document.getElementById('progress-bar');
+    const contentSections = document.querySelectorAll('.year-content');
+    let currentYearIndex = 0;
+    let autoProceedInterval;
+    const pauseDuration = 2000; // Pause duration before restarting from the beginning
 
+    function showContent(year) {
+        contentSections.forEach(section => {
+            section.classList.remove('active');
+        });
+        document.querySelector(`.year-content[data-year="${year}"]`).classList.add('active');
+    }
 
-        $('.js-timeline-carousel_nav').slick({
-            infinite: false,
-            autoplay: true,
-            autoplaySpeed: 3000,
-            slidesToScroll: 8,
-            slidesToShow: 8,
-            arrows: false,
+    function updateProgressBar(toElement) {
+        const toRect = toElement.getBoundingClientRect();
+        const timelineRect = document.querySelector('.timeline').getBoundingClientRect();
+        const width = toRect.right - timelineRect.left;
 
+        progressBar.style.width = `${width}px`;
 
-            asNavFor: '.js-timeline-carousel',
-            focusOnSelect: true,
+        // Add processed class to timeline-years as progress bar passes through them
+        years.forEach(year => {
+            const yearRect = year.getBoundingClientRect();
+            if (yearRect.left <= toRect.right) {
+                year.classList.add('processed');
+            } else {
+                year.classList.remove('processed');
+            }
+        });
+    }
 
+    function highlightYear(yearElement) {
+        years.forEach(year => {
+            year.classList.remove('active');
         });
 
-        $('.js-timeline-carousel').slick({
-            autoplay: true,
-            autoplaySpeed: 3000,
+        yearElement.classList.add('active');
+    }
 
-            slidesToShow: 1,
-            slidesToScroll: 1,
+    function navigateToYear(index) {
+        if (index >= 0 && index < years.length) {
+            const year = years[index];
+            const selectedYear = year.dataset.year;
+            showContent(selectedYear);
+            updateProgressBar(year);
+            highlightYear(year);
+            currentYearIndex = index;
+        }
+    }
 
-            prevArrow: '.js-ag-timeline-carousel-arrow_prev',
-            nextArrow: '.js-ag-timeline-carousel-arrow_next',
+    function startAutoProceed() {
+        clearInterval(autoProceedInterval);
+        autoProceedInterval = setInterval(() => {
+            if (currentYearIndex < years.length - 1) {
+                $('.timeline').slick('slickNext');
+            } else {
+                setTimeout(() => {
+                    currentYearIndex = 0;
+                    years.forEach(year => year.classList.remove('processed')); // Reset all processed classes
+                    $('.timeline').slick('slickGoTo', currentYearIndex);
+                }, pauseDuration); // Pause before resetting
+            }
+        }, 3000);
+    }
 
-            asNavFor: '.js-timeline-carousel_nav',
-            speed: 500,
-            responsive: [
-                {
-                    breakpoint: 0,
-                    settings: {
-                        centerMode: false
+    (function ($) {
+        $(function () {
+            $('.timeline').slick({
+                infinite: true,
+                autoplay: false,
+                slidesToShow: 8,
+                slidesToScroll: 1,
+                arrows: false,
+                centerMode: true,
+                asNavFor: '.yearContentdata',
+                focusOnSelect: true,
+                mobileFirst: true,
+            });
+
+            $('.yearContentdata').slick({
+                autoplay: false,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                prevArrow: '#left-arrow',
+                nextArrow: '#right-arrow',
+                asNavFor: '.timeline',
+                speed: 500,
+                responsive: [
+                    {
+                        breakpoint: 0,
+                        settings: {
+                            centerMode: false
+                        }
                     }
-                }
-            ]
+                ]
+            });
+
+            $('.timeline').on('afterChange', function(event, slick, currentSlide){
+                navigateToYear(currentSlide);
+                startAutoProceed(); // Restart auto proceed after navigation
+            });
+
+            // Initialize with the first year's content and start auto proceed
+            if (years.length > 0) {
+                navigateToYear(0);
+                startAutoProceed();
+            }
         });
-
-
-    });
-})(jQuery);
+    })(jQuery);
+});
+// ----------------------Timeline code--------------------------//
 
 
