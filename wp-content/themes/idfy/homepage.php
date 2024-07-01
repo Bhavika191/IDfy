@@ -289,26 +289,26 @@
                     <ul class="tabs slider-nav ">
 
                         <li class="tab" id="tabDiv" data-slide="1">
-                            <h3>KYC API Suite</h3>
+							<h3><a href="#slideId1">KYC API Suite</a></h3>
                         </li>
                         <li class="tab" id="tabDiv" data-slide="2">
-                            <h3>Privy</h3>
+							<h3><a href="#slideId2">Privy<span>NEW</span></a></h3>
                         </li>
                         <li class="tab" id="tabDiv" data-slide="3">
-                            <h3>Background verifications</h3>
+							<h3><a href="#slideId3">Background verifications</a></h3>
                         </li>
                         <li class="tab" id="tabDiv" data-slide="4">
-                            <h3>Video solutions</h3>
+							<h3><a href="#slideId4">Video solutions</a></h3>
                         </li>
                         <li class="tab" id="tabDiv" data-slide="5">
-                            <h3>Crime Check</h3>
+							<h3><a href="#slideId5">Crime Check</a></h3>
                         </li>
                         <li class="tab" id="tabDiv" data-slide="6">
-                            <h3>Risk & Fraud</h3>
+							<h3><a href="#slideId6">Risk & Fraud</a></h3>
                         </li>
                     </ul>
                 </div>
-                <div id="slideId" class="scroll-cards__item slide" aria-label="Wie - 1">
+                <div id="slideId1" class="scroll-cards__item slide" aria-label="Wie - 1">
                     <div class="dataImg">
 
                         <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
@@ -321,7 +321,7 @@
                         <a href="#" class="ctaRed">Read More</a>
                     </div>
                 </div>
-                <div id="slideId" class="scroll-cards__item slide" aria-label="Wie - 1">
+                <div id="slideId2" class="scroll-cards__item slide" aria-label="Wie - 1">
                     <div class="dataImg">
 
                         <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
@@ -334,7 +334,7 @@
                         <a href="#" class="ctaRed">Read More</a>
                     </div>
                 </div>
-                <div id="slideId" class="scroll-cards__item slide" aria-label="Wie - 1">
+                <div id="slideId3" class="scroll-cards__item slide" aria-label="Wie - 1">
                     <div class="dataImg">
 
                         <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
@@ -347,7 +347,7 @@
                         <a href="#" class="ctaRed">Read More</a>
                     </div>
                 </div>
-                <div id="slideId" class="scroll-cards__item slide" aria-label="Wie - 1">
+                <div id="slideId4" class="scroll-cards__item slide" aria-label="Wie - 1">
                     <div class="dataImg">
 
                         <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
@@ -360,7 +360,7 @@
                         <a href="#" class="ctaRed">Read More</a>
                     </div>
                 </div>
-                <div id="slideId" class="scroll-cards__item slide" aria-label="Wie - 1">
+                <div id="slideId5" class="scroll-cards__item slide" aria-label="Wie - 1">
                     <div class="dataImg">
 
                         <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
@@ -373,7 +373,7 @@
                         <a href="#" class="ctaRed">Read More</a>
                     </div>
                 </div>
-                <div id="slideId" class="scroll-cards__item slide" aria-label="Wie - 1">
+                <div id="slideId6" class="scroll-cards__item slide" aria-label="Wie - 1">
                     <div class="dataImg">
 
                         <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
@@ -413,6 +413,7 @@
         </div> -->
     </div>
 </section>
+
 
 <!-- <div class="wrapper">
   
