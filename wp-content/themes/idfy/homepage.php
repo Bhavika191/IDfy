@@ -547,7 +547,7 @@
                                     </div>
                                 </div>
                                 <div class="contentDiv">
-                                    <h3>"<?php echo get_sub_field('clients_review_text'); ?>"</h3>
+                                    <h3><?php echo get_sub_field('clients_review_text'); ?>"</h3>
                                 </div>
                             </div>
                         <?php endwhile; ?>

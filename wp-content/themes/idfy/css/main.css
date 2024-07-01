@@ -6946,6 +6946,7 @@ footer .footerWrapper .copyright h3 {
   line-height: normal;
   color: #343434;
   text-align: left;
+  position: relative;
 }
 @media screen and (max-width: 1600px) {
   .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDiv h3 {
@@ -6956,6 +6957,18 @@ footer .footerWrapper .copyright h3 {
   .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDiv h3 {
     font-size: 32px;
   }
+}
+.clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDiv h3::before {
+  content: url(../images/colon-up.svg);
+  position: absolute;
+  top: -22px;
+  left: -50px;
+}
+.clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDiv h3::after {
+  content: url(../images/colon-down.svg);
+  position: absolute;
+  bottom: -45px;
+  right: -40px;
 }
 .clientsSection .innerWrapper .clientSlider .slick-dots {
   bottom: 72px;

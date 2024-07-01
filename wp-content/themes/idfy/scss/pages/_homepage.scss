@@ -1115,7 +1115,10 @@
                     }
                 }
                 .contentDiv{width: 65%;padding-right: 110px;
-                    h3{@include font48;font-family: $fonthelveticaneuelight;line-height:  normal;color: $colorGray;text-align: left;}
+                    h3{@include font48;font-family: $fonthelveticaneuelight;line-height:  normal;color: $colorGray;text-align: left;position: relative;
+                        &::before{content:url(../images/colon-up.svg);position: absolute;top: -22px;left: -50px;}
+                        &::after{content:url(../images/colon-down.svg);position: absolute;bottom: -45px;right: -40px;}
+                    }
                 }
             }
             .slick-dots{bottom: 72px;right: 84px;width: unset;
