@@ -510,33 +510,33 @@ if (window.innerWidth > 820) {
 
 
 // product families js starts
-$(document).ready(function () {
-    function updateSlides(slideIndex) {
-        var slides = $('.slider .slide');
-        slideIndex--; // Adjust slideIndex to match zero-based index
-        slides.each(function (index) {
-            $(this).removeClass('visible hidden hidden-behind');
-            if (index === slideIndex) {
-                $(this).addClass('visible');
-            } else if (index === (slideIndex + 1) % slides.length) {
-                $(this).addClass('hidden-behind');
-            } else if (index === (slideIndex + 2) % slides.length) {
-                $(this).addClass('hidden');
-            }
-        });
-    }
+// $<(document).ready(function () {
+//     function updateSlides(slideIndex) {
+//         var slides = $('.slider .slide');
+//         slideIndex--; // Adjust slideIndex to match zero-based index
+//         slides.each(function (index) {
+//             $(this).removeClass('visible hidden hidden-behind');
+//             if (index === slideIndex) {
+//                 $(this).addClass('visible');
+//             } else if (index === (slideIndex + 1) % slides.length) {
+//                 $(this).addClass('hidden-behind');
+//             } else if (index === (slideIndex + 2) % slides.length) {
+//                 $(this).addClass('hidden');
+//             }
+//         });
+//     }
 
-    $('.tab').on('click', function () {
-        var slideIndex = $(this).data('slide');
-        updateSlides(slideIndex);
-        $('.tab').removeClass('active');
-        $(this).addClass('active');
-    });
+//     $('.tab').on('click', function () {
+//         var slideIndex = $(this).data('slide');
+//         updateSlides(slideIndex);
+//         $('.tab').removeClass('active');
+//         $(this).addClass('active');
+//     });
 
-    // Initialize the first slide as visible and the first tab as active
-    updateSlides(1);
-    $('.tab').first().addClass('active');
-});
+//     // Initialize the first slide as visible and the first tab as active
+//     updateSlides(1);
+//     $('.tab').first().addClass('active');
+// });>
 // product families js ends
 
 document.addEventListener('DOMContentLoaded', function () {

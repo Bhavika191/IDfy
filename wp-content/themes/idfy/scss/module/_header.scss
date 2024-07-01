@@ -124,7 +124,9 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                 }
             }
             .header-elements{display: flex;gap: 24px;align-items: center;
-                .search-icon{cursor: pointer;}
+                .search-icon{cursor: pointer;
+                    .searchWhite{stroke: #fff;}
+                }
                 .custom-select{position: relative;display: inline-block;
                     .select-selected{position: relative;background-color: transparent;padding: 15px 38px 15px 20px;border: 1px solid white;border-radius: 50px;cursor: pointer;text-align: center;@include font16;font-family: $fonthelveticaneuemedium;line-height: 100%;letter-spacing:  -0.32px;text-transform: uppercase;color: $colorWhite;
                         &::after{position: absolute;content: url("../images/select-arrow.svg");z-index: 2;top: 50%;transform: translateY(-50%);transition:all 0.3s ease-in-out;padding:0px 4px;}
@@ -147,6 +149,19 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                 .logowordInner{fill: #CE1010;}
             }
             .headerContent{
+                .header-elements {
+                    .search-icon{
+                        .searchWhite{stroke: #080808;}
+                    }
+                }
+                .custom-select{
+                    .select-selected{border: 1px solid #080808;color: #080808;
+                        &::after{content: url("../images/select-arrow-black.svg");}
+                    }
+                    .select-items{border: 1px solid #080808;background: #fff;
+                        li{&:not(:last-child){border-bottom: 1px solid #080808;}color: #080808;}
+                    }
+                }
                 .nav-links{
                     .dropdown {
                         a{color: #080808;
