@@ -736,7 +736,7 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
     }
     @media all and (max-width:1024px){
         .navbar{align-items: center;
-            .logo{width: 120px;padding: 15px 0px;z-index: 9;}
+            .logo{width: 53px;padding: 15px 0px;z-index: 9;}
             .headerContent{display: none;}
             .hamburger-menu {display: flex;align-items:center;gap:24px;
                 .search-icon-mobile{z-index: 9;opacity: 0;transition: 0.5s all ease-in-out;cursor: pointer;width: 0;height: 0;}
