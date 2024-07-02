@@ -670,3 +670,77 @@ document.addEventListener("DOMContentLoaded", function () {
 // ----------------------Timeline code--------------------------//
 
 
+document.addEventListener('DOMContentLoaded', () => {
+    const navItems = document.querySelectorAll('#navMenu li');
+    const slides = document.querySelectorAll('.slide');
+
+    const updateActiveState = (slideNumber) => {
+        // Remove active class from all nav items and slides
+        navItems.forEach(nav => nav.classList.remove('active'));
+        slides.forEach(slide => slide.classList.remove('active'));
+
+        // Add active class to the clicked nav item and corresponding slide
+        document.querySelector(`#navMenu li[data-slide="${slideNumber}"]`).classList.add('active');
+        document.querySelector(`.slide[data-slide="${slideNumber}"]`).classList.add('active');
+    };
+
+    navItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+            const slideNumber = item.getAttribute('data-slide');
+            const targetSlide = document.querySelector(`.slide[data-slide="${slideNumber}"]`);
+            targetSlide.scrollIntoView({ behavior: 'smooth' });
+
+            // Manually update the active state
+            updateActiveState(slideNumber);
+        });
+    });
+
+    window.addEventListener('scroll', () => {
+        let currentSlide = null;
+        slides.forEach(slide => {
+            const rect = slide.getBoundingClientRect();
+            if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
+                currentSlide = slide.getAttribute('data-slide');
+            }
+        });
+        if (currentSlide) {
+            updateActiveState(currentSlide);
+        }
+    });
+});
+
+
+
+
+
+
+
+$.fn.isInViewport = function () {
+    var elementTop = $(this).offset().top;
+    var elementBottom = elementTop + $(this).outerHeight();
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+  };
+  
+  if ($(".productfamSection").length) {
+    $(window).on('resize scroll', function () {
+      if ($('.productfamSection').length) {
+        if ($('.productfamSection').isInViewport()) {
+          setTimeout(() => {
+            $("header").addClass("productHeader")
+          }, 1000);
+        }
+        else {
+          setTimeout(() => {
+            $("header").removeClass("productHeader")
+          }, 1000);
+        }
+  
+      }
+    });
+  }
+
+
+
+  

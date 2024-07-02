@@ -286,104 +286,106 @@
 
             <div class="slider slider-for">
                 <div class="innerDiv">
-                    <ul class="tabs slider-nav ">
+                    <ul class="tabs slider-nav " id="navMenu">
 
                         <li class="tab" id="tabDiv" data-slide="1">
-							<h3><a href="#slideId1">KYC API Suite</a></h3>
+                            <h3><a href="#slideId1">KYC API Suite</a></h3>
                         </li>
                         <li class="tab" id="tabDiv" data-slide="2">
-							<h3><a href="#slideId2">Privy<span>NEW</span></a></h3>
+                            <h3><a href="#slideId2">Privy<span>NEW</span></a></h3>
                         </li>
                         <li class="tab" id="tabDiv" data-slide="3">
-							<h3><a href="#slideId3">Background verifications</a></h3>
+                            <h3><a href="#slideId3">Background verifications</a></h3>
                         </li>
                         <li class="tab" id="tabDiv" data-slide="4">
-							<h3><a href="#slideId4">Video solutions</a></h3>
+                            <h3><a href="#slideId4">Video solutions</a></h3>
                         </li>
                         <li class="tab" id="tabDiv" data-slide="5">
-							<h3><a href="#slideId5">Crime Check</a></h3>
+                            <h3><a href="#slideId5">Crime Check</a></h3>
                         </li>
                         <li class="tab" id="tabDiv" data-slide="6">
-							<h3><a href="#slideId6">Risk & Fraud</a></h3>
+                            <h3><a href="#slideId6">Risk & Fraud</a></h3>
                         </li>
                     </ul>
                 </div>
-                <div id="slideId1" class="scroll-cards__item slide" aria-label="Wie - 1">
-                    <div class="dataImg">
+                <div id="slides">
+                    <div class="scroll-cards__item slide" aria-label="Wie - 1" data-slide="1">
+                        <div class="dataImg">
 
-                        <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
+                            <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
 
+                        </div>
+                        <div class="dataContent">
+                            <h4>KYC API SUITE</h4>
+                            <h3>150+ APIs to help you with onboarding</h3>
+                            <p>Come and explore our iBeta Certified, ML-powered, highly-scalable and secure API suite.</p>
+                            <a href="#" class="ctaRed">Read More</a>
+                        </div>
                     </div>
-                    <div class="dataContent">
-                        <h4>KYC API SUITE</h4>
-                        <h3>150+ APIs to help you with onboarding</h3>
-                        <p>Come and explore our iBeta Certified, ML-powered, highly-scalable and secure API suite.</p>
-                        <a href="#" class="ctaRed">Read More</a>
-                    </div>
-                </div>
-                <div id="slideId2" class="scroll-cards__item slide" aria-label="Wie - 1">
-                    <div class="dataImg">
+                    <div class="scroll-cards__item slide" aria-label="Wie - 1" data-slide="2">
+                        <div class="dataImg">
 
-                        <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
+                            <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
 
+                        </div>
+                        <div class="dataContent">
+                            <h4>Privy</h4>
+                            <h3>150+ APIs to help you with onboarding</h3>
+                            <p>Come and explore our iBeta Certified, ML-powered, highly-scalable and secure API suite.</p>
+                            <a href="#" class="ctaRed">Read More</a>
+                        </div>
                     </div>
-                    <div class="dataContent">
-                        <h4>Privy</h4>
-                        <h3>150+ APIs to help you with onboarding</h3>
-                        <p>Come and explore our iBeta Certified, ML-powered, highly-scalable and secure API suite.</p>
-                        <a href="#" class="ctaRed">Read More</a>
-                    </div>
-                </div>
-                <div id="slideId3" class="scroll-cards__item slide" aria-label="Wie - 1">
-                    <div class="dataImg">
+                    <div class="scroll-cards__item slide" aria-label="Wie - 1" data-slide="3">
+                        <div class="dataImg">
 
-                        <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
+                            <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
 
+                        </div>
+                        <div class="dataContent">
+                            <h4>Background verifications</h4>
+                            <h3>150+ APIs to help you with onboarding</h3>
+                            <p>Come and explore our iBeta Certified, ML-powered, highly-scalable and secure API suite.</p>
+                            <a href="#" class="ctaRed">Read More</a>
+                        </div>
                     </div>
-                    <div class="dataContent">
-                        <h4>Background verifications</h4>
-                        <h3>150+ APIs to help you with onboarding</h3>
-                        <p>Come and explore our iBeta Certified, ML-powered, highly-scalable and secure API suite.</p>
-                        <a href="#" class="ctaRed">Read More</a>
-                    </div>
-                </div>
-                <div id="slideId4" class="scroll-cards__item slide" aria-label="Wie - 1">
-                    <div class="dataImg">
+                    <div class="scroll-cards__item slide" aria-label="Wie - 1" data-slide="4">
+                        <div class="dataImg">
 
-                        <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
+                            <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
 
+                        </div>
+                        <div class="dataContent">
+                            <h4>Video solutions</h4>
+                            <h3>150+ APIs to help you with onboarding</h3>
+                            <p>Come and explore our iBeta Certified, ML-powered, highly-scalable and secure API suite.</p>
+                            <a href="#" class="ctaRed">Read More</a>
+                        </div>
                     </div>
-                    <div class="dataContent">
-                        <h4>Video solutions</h4>
-                        <h3>150+ APIs to help you with onboarding</h3>
-                        <p>Come and explore our iBeta Certified, ML-powered, highly-scalable and secure API suite.</p>
-                        <a href="#" class="ctaRed">Read More</a>
-                    </div>
-                </div>
-                <div id="slideId5" class="scroll-cards__item slide" aria-label="Wie - 1">
-                    <div class="dataImg">
+                    <div class="scroll-cards__item slide" aria-label="Wie - 1" data-slide="5">
+                        <div class="dataImg">
 
-                        <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
+                            <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
 
+                        </div>
+                        <div class="dataContent">
+                            <h4>Crime Check</h4>
+                            <h3>150+ APIs to help you with onboarding</h3>
+                            <p>Come and explore our iBeta Certified, ML-powered, highly-scalable and secure API suite.</p>
+                            <a href="#" class="ctaRed">Read More</a>
+                        </div>
                     </div>
-                    <div class="dataContent">
-                        <h4>Crime Check</h4>
-                        <h3>150+ APIs to help you with onboarding</h3>
-                        <p>Come and explore our iBeta Certified, ML-powered, highly-scalable and secure API suite.</p>
-                        <a href="#" class="ctaRed">Read More</a>
-                    </div>
-                </div>
-                <div id="slideId6" class="scroll-cards__item slide" aria-label="Wie - 1">
-                    <div class="dataImg">
+                    <div class="scroll-cards__item slide" aria-label="Wie - 1" data-slide="6">
+                        <div class="dataImg">
 
-                        <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
+                            <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
 
-                    </div>
-                    <div class="dataContent">
-                        <h4>Risk & Fraud</h4>
-                        <h3>150+ APIs to help you with onboarding</h3>
-                        <p>Come and explore our iBeta Certified, ML-powered, highly-scalable and secure API suite.</p>
-                        <a href="#" class="ctaRed">Read More</a>
+                        </div>
+                        <div class="dataContent">
+                            <h4>Risk & Fraud</h4>
+                            <h3>150+ APIs to help you with onboarding</h3>
+                            <p>Come and explore our iBeta Certified, ML-powered, highly-scalable and secure API suite.</p>
+                            <a href="#" class="ctaRed">Read More</a>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -881,3 +881,5 @@ body{
         &::after {content: "";display: block;position: fixed;width: 100%;height: 100%;top: 0;left: 0;z-index: 8;background: linear-gradient(106deg, rgba(18, 18, 18, 0.29) 1.28%, rgba(45, 45, 45, 0.23) 52.63%, rgba(37, 37, 37, 0.17) 100%);backdrop-filter: blur(40px);transform: 0.5s ease-in-out;}
     }
 }
+
+.productHeader{display: none;}
