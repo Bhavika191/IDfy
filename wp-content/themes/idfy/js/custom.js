@@ -29,6 +29,8 @@ function hasScrolled() {
     if (st > lastScrollTop && st > navbarHeight) {
         $("header").removeClass("nav-down").addClass("nav-up");
         $('.dropdown').removeClass("active");
+        $('.select-items').hide();
+        $('.select-selected').removeClass("active-arrow");
     } else {
         // Scroll Up
         if (st + $(window).height() < $(document).height()) {
@@ -137,7 +139,7 @@ $(document).ready(function () {
 //-------------------Mobile dropdown Menu -------------------//
 
 // ---------------------Header Country Select Dropdown-----------------//
-// For Desktop
+// --------For Desktop--------//
 $(document).ready(function () {
     var select = $('.custom-select');
     var selected = select.find('.select-selected');
@@ -161,9 +163,9 @@ $(document).ready(function () {
         }
     });
 });
-// For Desktop
+// ---------For Desktop-------//
 
-// For Mobile
+// -------For Mobile--------//
 $(document).ready(function () {
     var select = $('.custom-select-mobile');
     var selected = select.find('.select-selected-mobile');
@@ -187,11 +189,11 @@ $(document).ready(function () {
         }
     });
 });
-// For Mobile
+// --------For Mobile------//
 // ---------------------Header Country Select Dropdown-----------------//
 
 // ---------------------------Search Modal---------------------------------//
-// For Desktop
+// -----For Desktop------//
 function searchToggle() {
     let searchModal = document.getElementById('search-modal')
     searchModal.classList.add('active');
@@ -206,9 +208,9 @@ function closeSearch() {
     $('html').css("overflow", "visible");
     $('body').removeClass("overlay");
 }
-// For Desktop
+// ------For Desktop----//
 
-// For Mobile
+// -------For Mobile--------//
 function searchToggleMobile() {
     let searchModalMobile = document.getElementById('search-modal-mobile')
     searchModalMobile.classList.add('active');
@@ -225,7 +227,7 @@ function closeSearchMobile() {
     $('body').removeClass("overlay");
     $('#overlay').removeClass('searchOverlay');
 }
-// For Mobile
+// -------For Mobile--------//
 // ---------------------------Search Modal---------------------------------//
 
 // ----------------------------------------------------Shamal's Code-------------------------------------------------//
