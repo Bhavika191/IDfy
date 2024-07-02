@@ -2160,6 +2160,10 @@ body.overlay::after {
   background: rgba(0, 0, 0, 0.5);
 }
 
+.productHeader {
+  display: none;
+}
+
 footer {
   background: #000;
 }
@@ -6085,6 +6089,7 @@ footer .footerWrapper .copyright h3 {
   background: #CE1010;
   left: 0;
   right: 0;
+  bottom: -10px;
 }
 .productfamSection .innerWrapper .prodfamSlides .slider .slide {
   width: 100%;
@@ -6123,6 +6128,14 @@ footer .footerWrapper .copyright h3 {
 }
 .productfamSection .innerWrapper .prodfamSlides .slider .slide:nth-of-type(7) {
   transform: translateY(calc((7 - 1) * var(--offset)));
+}
+.productfamSection .innerWrapper .prodfamSlides .slider .slide .slide {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  border-bottom: 1px solid #ccc;
 }
 .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataImg {
   border-radius: 28px;
