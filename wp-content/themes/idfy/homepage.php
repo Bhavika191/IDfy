@@ -74,7 +74,7 @@
                                     <p><?php echo get_sub_field('card_description'); ?></p>
                                     <?php $value = get_sub_field("card_cta_text");
                                     if ($value) { ?>
-                                        <a href="<?php echo get_sub_field('card_cta_link'); ?>" class="ctaRed"><?php echo get_sub_field('card_cta_text'); ?></a>
+                                        <a href="<?php echo get_sub_field('card_cta_link'); ?>" class="ctaRed" target="_blank"><?php echo get_sub_field('card_cta_text'); ?></a>
                                     <?php } ?>
 
                                 </div>

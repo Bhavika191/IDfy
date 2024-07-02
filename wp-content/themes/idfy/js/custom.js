@@ -570,118 +570,173 @@ document.addEventListener('DOMContentLoaded', function () {
 // slider js starts
 
 // ----------------------Timeline code--------------------------//
-document.addEventListener("DOMContentLoaded", function () {
-    const years = document.querySelectorAll('.timeline-year');
-    const progressBar = document.getElementById('progress-bar');
-    const contentSections = document.querySelectorAll('.year-content');
-    let currentYearIndex = 0;
-    let autoProceedInterval;
-    const pauseDuration = 2000; // Pause duration before restarting from the beginning
+// document.addEventListener("DOMContentLoaded", function () {
+//     const years = document.querySelectorAll('.timeline-year');
+//     const progressBar = document.getElementById('progress-bar');
+//     const contentSections = document.querySelectorAll('.year-content');
+//     let currentYearIndex = 0;
+//     let autoProceedInterval;
+//     const pauseDuration = 2000; // Pause duration before restarting from the beginning
 
-    function showContent(year) {
-        contentSections.forEach(section => {
-            section.classList.remove('active');
-        });
-        document.querySelector(`.year-content[data-year="${year}"]`).classList.add('active');
-    }
+//     function showContent(year) {
+//         contentSections.forEach(section => {
+//             section.classList.remove('active');
+//         });
+//         document.querySelector(`.year-content[data-year="${year}"]`).classList.add('active');
+//     }
 
-    function updateProgressBar(toElement) {
-        const toRect = toElement.getBoundingClientRect();
-        const timelineRect = document.querySelector('.timeline').getBoundingClientRect();
-        const width = toRect.right - timelineRect.left;
+//     function updateProgressBar(toElement) {
+//         const toRect = toElement.getBoundingClientRect();
+//         const timelineRect = document.querySelector('.timeline').getBoundingClientRect();
+//         const width = toRect.right - timelineRect.left;
 
-        progressBar.style.width = `${width}px`;
+//         progressBar.style.width = `${width}px`;
 
-        // Add processed class to timeline-years as progress bar passes through them
-        years.forEach(year => {
-            const yearRect = year.getBoundingClientRect();
-            if (yearRect.left <= toRect.right) {
-                year.classList.add('processed');
-            } else {
-                year.classList.remove('processed');
-            }
-        });
-    }
+//         // Add processed class to timeline-years as progress bar passes through them
+//         years.forEach(year => {
+//             const yearRect = year.getBoundingClientRect();
+//             if (yearRect.left <= toRect.right) {
+//                 year.classList.add('processed');
+//             } else {
+//                 year.classList.remove('processed');
+//             }
+//         });
+//     }
 
-    function highlightYear(yearElement) {
-        years.forEach(year => {
-            year.classList.remove('active');
-        });
+//     function highlightYear(yearElement) {
+//         years.forEach(year => {
+//             year.classList.remove('active');
+//         });
 
-        yearElement.classList.add('active');
-    }
+//         yearElement.classList.add('active');
+//     }
 
-    function navigateToYear(index) {
-        if (index >= 0 && index < years.length) {
-            const year = years[index];
-            const selectedYear = year.dataset.year;
-            showContent(selectedYear);
-            updateProgressBar(year);
-            highlightYear(year);
-            currentYearIndex = index;
-        }
-    }
+//     function navigateToYear(index) {
+//         if (index >= 0 && index < years.length) {
+//             const year = years[index];
+//             const selectedYear = year.dataset.year;
+//             showContent(selectedYear);
+//             updateProgressBar(year);
+//             highlightYear(year);
+//             currentYearIndex = index;
+//         }
+//     }
 
-    function startAutoProceed() {
-        clearInterval(autoProceedInterval);
-        autoProceedInterval = setInterval(() => {
-            if (currentYearIndex < years.length - 1) {
-                $('.timeline').slick('slickNext');
-            } else {
-                setTimeout(() => {
-                    currentYearIndex = 0;
-                    years.forEach(year => year.classList.remove('processed')); // Reset all processed classes
-                    $('.timeline').slick('slickGoTo', currentYearIndex);
-                }, pauseDuration); // Pause before resetting
-            }
-        }, 3000);
-    }
+//     function startAutoProceed() {
+//         clearInterval(autoProceedInterval);
+//         autoProceedInterval = setInterval(() => {
+//             if (currentYearIndex < years.length - 1) {
+//                 $('.timeline').slick('slickNext');
+//             } else {
+//                 setTimeout(() => {
+//                     currentYearIndex = 0;
+//                     years.forEach(year => year.classList.remove('processed')); // Reset all processed classes
+//                     $('.timeline').slick('slickGoTo', currentYearIndex);
+//                 }, pauseDuration); // Pause before resetting
+//             }
+//         }, 3000);
+//     }
 
-    (function ($) {
-        $(function () {
-            $('.timeline').slick({
-                infinite: true,
-                autoplay: false,
-                slidesToShow: 8,
-                slidesToScroll: 1,
-                arrows: false,
-                centerMode: true,
-                asNavFor: '.yearContentdata',
-                focusOnSelect: true,
-                mobileFirst: true,
-            });
+//     (function ($) {
+//         $(function () {
+//             $('.timeline').slick({
+//                 infinite: true,
+//                 autoplay: false,
+//                 slidesToShow: 8,
+//                 slidesToScroll: 1,
+//                 arrows: false,
+//                 centerMode: true,
+//                 asNavFor: '.yearContentdata',
+//                 focusOnSelect: true,
+//                 mobileFirst: true,
+//             });
 
-            $('.yearContentdata').slick({
-                autoplay: false,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                prevArrow: '#left-arrow',
-                nextArrow: '#right-arrow',
-                asNavFor: '.timeline',
-                speed: 500,
-                responsive: [
-                    {
-                        breakpoint: 0,
-                        settings: {
-                            centerMode: false
-                        }
+//             $('.yearContentdata').slick({
+//                 autoplay: false,
+//                 slidesToShow: 1,
+//                 slidesToScroll: 1,
+//                 prevArrow: '#left-arrow',
+//                 nextArrow: '#right-arrow',
+//                 asNavFor: '.timeline',
+//                 speed: 500,
+//                 responsive: [
+//                     {
+//                         breakpoint: 0,
+//                         settings: {
+//                             centerMode: false
+//                         }
+//                     }
+//                 ]
+//             });
+
+//             $('.timeline').on('afterChange', function(event, slick, currentSlide){
+//                 navigateToYear(currentSlide);
+//                 startAutoProceed(); // Restart auto proceed after navigation
+//             });
+
+//             // Initialize with the first year's content and start auto proceed
+//             if (years.length > 0) {
+//                 navigateToYear(0);
+//                 startAutoProceed();
+//             }
+//         });
+//     })(jQuery);
+// });
+
+(function ($) {
+    $(function () {
+
+
+        $('.timeline').slick({
+            infinite: false,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            slidesToScroll: 8,
+            slidesToShow: 8,
+            arrows: false,
+
+
+            asNavFor: '.yearContentdata',
+            focusOnSelect: true,
+            responsive: [
+                {
+                    breakpoint: 720,
+                    settings: {
+                        slidesToScroll: 1,
+                        slidesToShow: 3,
                     }
-                ]
-            });
+                }
+            ]
 
-            $('.timeline').on('afterChange', function(event, slick, currentSlide){
-                navigateToYear(currentSlide);
-                startAutoProceed(); // Restart auto proceed after navigation
-            });
-
-            // Initialize with the first year's content and start auto proceed
-            if (years.length > 0) {
-                navigateToYear(0);
-                startAutoProceed();
-            }
         });
-    })(jQuery);
-});
+
+        $('.yearContentdata').slick({
+            autoplay: true,
+            autoplaySpeed: 3000,
+            infinite: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+
+            prevArrow: '.left-arrow',
+            nextArrow: '.right-arrow',
+
+            asNavFor: '.timeline',
+            speed: 500,
+            responsive: [
+                {
+                    breakpoint: 0,
+                    settings: {
+                        centerMode: false
+                    }
+                }
+            ]
+        });
+
+
+    });
+})(jQuery);
+
+
 // ----------------------Timeline code--------------------------//
 
 
@@ -729,7 +784,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
 $.fn.isInViewport = function () {
     var elementTop = $(this).offset().top;
     var elementBottom = elementTop + $(this).outerHeight();
@@ -749,6 +803,25 @@ $.fn.isInViewport = function () {
         else {
           setTimeout(() => {
             $("header").removeClass("productHeader")
+          }, 1000);
+        }
+  
+      }
+    });
+  }
+
+
+  if ($(".onboardingJourneysec").length) {
+    $(window).on('resize scroll', function () {
+      if ($('.onboardingJourneysec').length) {
+        if ($('.onboardingJourneysec').isInViewport()) {
+          setTimeout(() => {
+            $(".onboardingJourneysec").addClass("onboardingJourneysecanime")
+          }, 1000);
+        }
+        else {
+          setTimeout(() => {
+            $(".onboardingJourneysec").removeClass("onboardingJourneysecanime")
           }, 1000);
         }
   

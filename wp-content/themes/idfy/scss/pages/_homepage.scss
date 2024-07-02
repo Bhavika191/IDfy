@@ -393,6 +393,37 @@
 
 
 .onboardingJourneysec{margin-bottom: 150px;
+    &.onboardingJourneysecanime{
+        .innerWrapper{
+            .journeyData{
+                .contentDiv {
+                    &:nth-child(1) .innerBoxes{
+                        h3{&::after{width: 56px;}}
+                    }
+                    &:nth-child(1) .innerBoxes:nth-child(3){
+                        h3{&::after{width: 56px;}}
+                    }
+                    &:last-child .innerBoxes:nth-child(3){
+                        h3{&::after{width: 56px;}}
+                    }
+                    .innerBoxes{
+                        h3{
+                            &::after{animation:  animBordertwo 2s linear;width: 50px;}
+                            &::before{animation:  animBorder 2s linear;width: 100%;}
+                        }
+                        @keyframes animBorder {
+                            0%{width: 0%;}
+                            100%{width: 100%;}
+                        }
+                        @keyframes animBordertwo {
+                            0%{width: 0;}
+                            100%{width: 56px;}
+                        }
+                    }
+                }
+            }
+        }
+    }
     .innerWrapper{@include wrapper;
         .secHeading{text-align: center;
             h2{@include font48;font-family: $fonthelveticaneuelight;text-transform: capitalize;line-height: 100%;letter-spacing: 0px;color: $colorGray;text-align: center;position: relative;
@@ -404,12 +435,14 @@
         .journeyData{display: flex;margin-top: 72px;align-items: flex-start;
             .contentDiv{width: 35%;
                 &:nth-child(1) .innerBoxes{
-                    h3{&::after{left: unset;right: -52px;width: 56px;height: 2px;bottom: -19px;transform: rotate(40deg);}}
+                    h3{&::after{left: unset;right: -52px;height: 2px;bottom: -19px;transform: rotate(40deg);}}
                 }
                 &:last-child{
                     .innerBoxes{
+                        h3:before {right: 0 !important;left: unset;}
                         .journeyinnerData{padding-left: 100px;}
-                        h3{padding-left: 100px;}
+                        h3{padding-left: 100px;
+                        }
                     }
                 }
                 &:nth-child(1) .innerBoxes:nth-child(2),  &:last-child .innerBoxes:nth-child(2){
@@ -424,8 +457,9 @@
                 .innerBoxes{margin-bottom: 150px;height: 164px;
                     &:last-child{margin-bottom: 0px;}
                     
-                    h3{@include font32;font-family: $fonthelveticaneuebold;color: $colorBlue;line-height: normal;margin-bottom: 24px;position: relative;border-bottom: 1px dashed #1C43B9;
-                        &::after{content: "";position: absolute;left: -46px;width: 50px;height: 2px;bottom: -19px;transform: rotate(-40deg);border-bottom: 1px dashed #1C43B9}
+                    h3{@include font32;font-family: $fonthelveticaneuebold;color: $colorBlue;line-height: normal;margin-bottom: 24px;position: relative;
+                        &::after{content: "";position: absolute;left: -46px;width: 0px;height: 2px;bottom: -19px;transform: rotate(-40deg);border-bottom: 1px dashed #1C43B9;}
+                        &:before { position:absolute;bottom:0;left: 0;;border-bottom: 1px dashed #1C43B9;  width: 0%;;height:2px;display:block; content:""; }
                     }
                     .journeyinnerData{
                         h4{@include font24;font-family: $fonthelveticaneuebold;color: #4D4D4D;line-height: 133%;margin-bottom: 16px;}
@@ -435,14 +469,15 @@
                             }
                         }
                     }
+                    
                 }
             }
             .centerCirclediv{width: 30%;
                 .outerborderDiv{position: relative;border-radius: 50%;border: 3px solid #1C43B9;padding: 80px;
                     .mainImg{border-radius: 50%;overflow: hidden;}
                     .journeyIcons{position: absolute;background: #1C43B9;height: 100px;width: 100px;border-radius: 50%;display: flex;align-items: center;justify-content: center;
-                        &::before{content: "";position: absolute;border-radius: 50%;border: 1px solid #8BA8FF;width: 125px;height: 125px;left: -13px;}
-                        &::after{content: "";position: absolute;border-radius: 50%;border: 1px solid #8BA8FF;width: 110px;height: 110px;left: -6px;}
+                        &::before{content: "";position: absolute;display: block;border-radius: 50%;border: 1px solid #8BA8FF;  animation: ripple 2s linear infinite;top: 0;left: 0;right: 0;bottom: 0;}
+                        &::after{content: "";position: absolute;display: block;border-radius: 50%;border: 1px solid #8BA8FF; animation: ripple 2s linear 1s infinite;top: 0;left: 0;right: 0;bottom: 0;}
                         &:nth-child(2){top: 7%;left: 5%;}
                         &:nth-child(3){top: 50%;left: -6%;transform: translateY(-50%);}
                         &:nth-child(4){top: 79%;left: 8%;}
@@ -450,6 +485,12 @@
                         &:nth-child(6){top: 50%;right: -6%;transform: translateY(-50%);}
                         &:nth-child(7){top: 79%;right: 8%;}
                     }
+                    @keyframes ripple{
+                        0% { transform: scale(1); }
+                        50% { transform: scale(1.3); opacity:1; }
+                        100% { transform: scale(1.6); opacity:0; }
+                    }
+                      
                 }
             }
         }
@@ -460,15 +501,13 @@
             .journeyData{
                 .contentDiv{width: 40%;
                     &:last-child .innerBoxes:nth-child(3){
-                        h3{&::after{left: -46px;right: unset;width: 50px;height: 2px;bottom: 15px;transform: rotate(40deg);}}
+                        h3{&::after{left: -46px;right: unset;height: 2px;bottom: 15px;transform: rotate(40deg);}}
                     }
                     .innerBoxes{margin-bottom: 60px;}
                 }
                 .centerCirclediv{width: 32%;
                     .outerborderDiv{
                         .journeyIcons{height: 80px;width: 80px;
-                            &::before{width: 105px;height: 105px;}
-                            &::after{width: 90px;height: 90px;}
                         }
                     }
                 }
@@ -481,7 +520,7 @@
             .journeyData{
                 .contentDiv{width: 36%;
                     &:last-child .innerBoxes:nth-child(3){
-                        h3{&::after{left: -46px;right: unset;width: 50px;height: 2px;bottom: 15px;transform: rotate(40deg);}}
+                        h3{&::after{left: -46px;right: unset;height: 2px;bottom: 15px;transform: rotate(40deg);}}
                     }
                     .innerBoxes{margin-bottom: 40px;height: 200px;h3{margin-bottom: 18px;}}
                 }
@@ -506,8 +545,6 @@
                .centerCirclediv{width: 38%;
                     .outerborderDiv{padding: 60px;
                         .journeyIcons{height: 70px;width: 70px;
-                            &::before{width: 95px;height: 95px;}
-                            &::after{width: 80px;height: 80px;}
                             &:nth-child(2){left: 8%;}
                             &:nth-child(5){right: 8%;}
                         }
@@ -537,8 +574,6 @@
                 .centerCirclediv{
                     .outerborderDiv{padding: 50px;
                         .journeyIcons{height: 60px;width: 60px;
-                            &::before{width: 85px;height: 85px;}
-                            &::after{width: 70px;height: 70px;}
                             &:nth-child(2){left: 8%;}
                             &:nth-child(5){right: 8%;}
                         }
@@ -572,8 +607,6 @@
                 .centerCirclediv{width: 34%;
                     .outerborderDiv{padding: 45px;
                         .journeyIcons{height: 50px;width: 50px;
-                            &::before{width: 75px;height: 75px;}
-                            &::after{width: 60px;height: 60px;}
                             &:nth-child(4){top: 83%;left: 11%;}
                             &:nth-child(7){top: 83%;right: 11%;}
                         }
@@ -599,8 +632,8 @@
                     .outerborderDiv{position: relative;border-radius: 50%;border: 3px solid #1C43B9;padding: 60px;
                         .mainImg{border-radius: 50%;overflow: hidden;}
                         .journeyIcons{position: absolute;background: #1C43B9;height: 80px;width: 80px;border-radius: 50%;display: flex;align-items: center;justify-content: center;
-                            &::before{content: "";position: absolute;border-radius: 50%;border: 1px solid #8BA8FF;width: 105px;height: 105px;left: -13px;}
-                            &::after{content: "";position: absolute;border-radius: 50%;border: 1px solid #8BA8FF;width: 90px;height: 90px;left: -6px;}
+                            &::before{content: "";position: absolute;display: block;border-radius: 50%;border: 1px solid #8BA8FF;  animation: ripple 2s linear infinite;top: 0;left: 0;right: 0;bottom: 0;}
+                            &::after{content: "";position: absolute;display: block;border-radius: 50%;border: 1px solid #8BA8FF; animation: ripple 2s linear 1s infinite;top: 0;left: 0;right: 0;bottom: 0;}
                             &:nth-child(2){top: 11%;left: 6%;}
                             &:nth-child(3){top: 43%;left: -5%;}
                             &:nth-child(4){top: 76%;left: 5%;}
@@ -608,6 +641,11 @@
                             &:nth-child(6){top: 43%;right: -5%;}
                             &:nth-child(7){top: 76%;right: 5%;}
                         }
+                        @keyframes ripple{
+                            0% { transform: scale(1); }
+                            50% { transform: scale(1.3); opacity:1; }
+                            100% { transform: scale(1.6); opacity:0; }
+                          }
                     }
                 }
                 .onboardingSlider{padding: 0px 50px;margin-top: 32px;
@@ -657,8 +695,6 @@
                 .centerCirclediv{padding: 0px 20px;
                     .outerborderDiv{padding: 50px;
                         .journeyIcons{height: 70px;width: 70px;
-                            &::before{width: 85px;height: 85px;left: -9px;}
-                            &::after{width: 75px;height: 75px;left: -3px;}
                         }
                     }
                 }
@@ -678,8 +714,6 @@
                 .centerCirclediv{padding: 0px 20px;width: 100%;
                     .outerborderDiv{padding: 30px;
                         .journeyIcons{height: 42px;width: 42px;img{width: 18px;}
-                            &::before{width: 50px;height: 50px;left: -5px;}
-                            &::after{width: 45px;height:45px;left: -3px;}
                             &:nth-child(2){top: 2%;left: 13%;}
                             &:nth-child(3){top: 45%;left: -7%;}
                             &:nth-child(4){top: 85%;left: 16%;}
@@ -728,7 +762,7 @@
                         }
                     }
                 }
-                .slide {width: 100%;border-radius: 34.359px;border: 0.687px solid rgba(0, 0, 0, 0.20);background: #FFF;box-shadow: 13.744px 13.744px 20.615px 0px rgba(0, 0, 0, 0.20);display: flex;padding: 35px;;align-items: center;justify-content: space-between; --offset: 1em;position: sticky;top: max(16vh, 10em);
+                .slide {width: 100%;border-radius: 34.359px;border: 0.687px solid rgba(0, 0, 0, 0.20);background: #FFF;box-shadow: 0.744px -0.256px 24.615px 0px rgba(0, 0, 0, 0.2);display: flex;padding: 35px;;align-items: center;justify-content: space-between; --offset: 1em;position: sticky;top: max(16vh, 10em);
                     @for $i from 0 through 7 {
                         &:nth-of-type(#{$i}) {
                           transform: translateY( calc((#{$i} - 1) * var(--offset)));
@@ -906,7 +940,8 @@
                     p{@include font24;font-family: $fonthelveticaneuelight;line-height: 133%;color: #080808;}
                     a{margin-top: 20px;display: none;}
                 }
-                .activeBoxes{border-radius: 20px;border: 0.685px solid rgba(0, 0, 0, 0.20); background: #1C43B9 !important;box-shadow: 13.705px 13.705px 20.557px 0px rgba(0, 0, 0, 0.20);transition: 0.7s all ease-in-out;width: 88% !important;left: -46% !important;
+                
+                .activeBoxes , #boxesData:hover{border-radius: 20px;border: 0.685px solid rgba(0, 0, 0, 0.20); background: #1C43B9 !important;box-shadow: 13.705px 13.705px 20.557px 0px rgba(0, 0, 0, 0.20);transition: 0.7s all ease-in-out;width: 88% !important;left: -46% !important;
                     &:nth-child(2){left: unset !important;}
                     p{font-size: 30px !important;color: $colorWhite !important;}
                     a{display: inline-flex !important;}
@@ -930,7 +965,7 @@
                         &:nth-child(2){top: 40%;right: -32%;left: unset;}
                         &:nth-child(3){top: 64%;left: -30%}
                     }
-                    .activeBoxes{width: 70% !important;left: -30% !important;
+                    .activeBoxes ,#boxesData:hover{width: 70% !important;left: -30% !important;
                     }
                 }
             }
@@ -952,7 +987,7 @@
                         &:nth-child(3){top: 64%;left: -24%}
                         a{margin-top: 18px;}
                     }
-                    .activeBoxes{width: 70% !important;left: -25% !important;
+                    .activeBoxes, #boxesData:hover{width: 70% !important;left: -25% !important;
                         p{font-size: 24px !important;}
                     }
                 }
@@ -979,7 +1014,7 @@
                         &:nth-child(3){top: 66%;left: -11%}
                         a{margin-top: 16px;}
                     }
-                    .activeBoxes{width: 62% !important;left: -11% !important;
+                    .activeBoxes , #boxesData:hover{width: 62% !important;left: -11% !important;
                         p{font-size: 22px !important;}
                     }
                 }
@@ -1005,7 +1040,7 @@
                         a{margin-top: 14px;}
                         p{font-size: 16px;}
                     }
-                    .activeBoxes{width: 56% !important;left: -8% !important;
+                    .activeBoxes, #boxesData:hover{width: 56% !important;left: -8% !important;
                         p{font-size: 20px !important;}
                     }
                 }
@@ -1033,7 +1068,7 @@
                         a{margin-top: 12px;}
                         p{font-size: 14px;}
                     }
-                    .activeBoxes{width: 43% !important;left: 0% !important;
+                    .activeBoxes, #boxesData:hover{width: 43% !important;left: 0% !important;
                         p{font-size: 18px !important;}
                     }
                 }

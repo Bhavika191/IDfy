@@ -3306,9 +3306,12 @@ footer .footerWrapper .copyright h3 {
   margin: 0px 130px;
   overflow: hidden;
 }
+.yearTimeline .timelineWrapper .timelineData .timeline .slick-track {
+  justify-content: space-between;
+}
 .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year {
   cursor: pointer;
-  margin-right: 60px;
+  margin-right: 160px;
   position: relative;
   z-index: 3;
   transition: background-color 0.3s, color 0.3s;
@@ -3323,7 +3326,6 @@ footer .footerWrapper .copyright h3 {
   border: none;
   width: 42px;
   height: 42px;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3353,11 +3355,19 @@ footer .footerWrapper .copyright h3 {
     font-size: 18px;
   }
 }
-.yearTimeline .timelineWrapper .timelineData .timeline .timeline-year:nth-last-child(2) {
+.yearTimeline .timelineWrapper .timelineData .timeline .timeline-year:nth-last-child(1) {
   margin-right: 0;
 }
-.yearTimeline .timelineWrapper .timelineData .timeline .timeline-year:nth-last-child(2) .progressSvg {
+.yearTimeline .timelineWrapper .timelineData .timeline .timeline-year:nth-last-child(1) .progressSvg {
   display: none;
+}
+.yearTimeline .timelineWrapper .timelineData .timeline .timeline-year.slick-current .circle span {
+  background: #1C43B9;
+}
+.yearTimeline .timelineWrapper .timelineData .timeline .timeline-year.slick-current .progressSvg line {
+  stroke: #1C43B9;
+  transition: 3s all ease-out;
+  stroke-width: 2px;
 }
 .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year.processed .circle span {
   background: #1C43B9;
@@ -5166,6 +5176,39 @@ footer .footerWrapper .copyright h3 {
 .onboardingJourneysec {
   margin-bottom: 150px;
 }
+.onboardingJourneysec.onboardingJourneysecanime .innerWrapper .journeyData .contentDiv:nth-child(1) .innerBoxes h3::after {
+  width: 56px;
+}
+.onboardingJourneysec.onboardingJourneysecanime .innerWrapper .journeyData .contentDiv:nth-child(1) .innerBoxes:nth-child(3) h3::after {
+  width: 56px;
+}
+.onboardingJourneysec.onboardingJourneysecanime .innerWrapper .journeyData .contentDiv:last-child .innerBoxes:nth-child(3) h3::after {
+  width: 56px;
+}
+.onboardingJourneysec.onboardingJourneysecanime .innerWrapper .journeyData .contentDiv .innerBoxes h3::after {
+  animation: animBordertwo 2s linear;
+  width: 50px;
+}
+.onboardingJourneysec.onboardingJourneysecanime .innerWrapper .journeyData .contentDiv .innerBoxes h3::before {
+  animation: animBorder 2s linear;
+  width: 100%;
+}
+@keyframes animBorder {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes animBordertwo {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 56px;
+  }
+}
 .onboardingJourneysec .innerWrapper {
   padding-left: 80px;
   padding-right: 80px;
@@ -5262,10 +5305,13 @@ footer .footerWrapper .copyright h3 {
 .onboardingJourneysec .innerWrapper .journeyData .contentDiv:nth-child(1) .innerBoxes h3::after {
   left: unset;
   right: -52px;
-  width: 56px;
   height: 2px;
   bottom: -19px;
   transform: rotate(40deg);
+}
+.onboardingJourneysec .innerWrapper .journeyData .contentDiv:last-child .innerBoxes h3:before {
+  right: 0 !important;
+  left: unset;
 }
 .onboardingJourneysec .innerWrapper .journeyData .contentDiv:last-child .innerBoxes .journeyinnerData {
   padding-left: 100px;
@@ -5306,7 +5352,6 @@ footer .footerWrapper .copyright h3 {
   line-height: normal;
   margin-bottom: 24px;
   position: relative;
-  border-bottom: 1px dashed #1C43B9;
 }
 @media screen and (max-width: 1600px) {
   .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes h3 {
@@ -5337,11 +5382,21 @@ footer .footerWrapper .copyright h3 {
   content: "";
   position: absolute;
   left: -46px;
-  width: 50px;
+  width: 0px;
   height: 2px;
   bottom: -19px;
   transform: rotate(-40deg);
   border-bottom: 1px dashed #1C43B9;
+}
+.onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes h3:before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px dashed #1C43B9;
+  width: 0%;
+  height: 2px;
+  display: block;
+  content: "";
 }
 .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes .journeyinnerData h4 {
   font-size: 24px;
@@ -5409,20 +5464,26 @@ footer .footerWrapper .copyright h3 {
 .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv .outerborderDiv .journeyIcons::before {
   content: "";
   position: absolute;
+  display: block;
   border-radius: 50%;
   border: 1px solid #8BA8FF;
-  width: 125px;
-  height: 125px;
-  left: -13px;
+  animation: ripple 2s linear infinite;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv .outerborderDiv .journeyIcons::after {
   content: "";
   position: absolute;
+  display: block;
   border-radius: 50%;
   border: 1px solid #8BA8FF;
-  width: 110px;
-  height: 110px;
-  left: -6px;
+  animation: ripple 2s linear 1s infinite;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv .outerborderDiv .journeyIcons:nth-child(2) {
   top: 7%;
@@ -5450,6 +5511,19 @@ footer .footerWrapper .copyright h3 {
   top: 79%;
   right: 8%;
 }
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
 @media screen and (max-width: 1920px) {
   .onboardingJourneysec .innerWrapper .journeyData .contentDiv {
     width: 40%;
@@ -5457,7 +5531,6 @@ footer .footerWrapper .copyright h3 {
   .onboardingJourneysec .innerWrapper .journeyData .contentDiv:last-child .innerBoxes:nth-child(3) h3::after {
     left: -46px;
     right: unset;
-    width: 50px;
     height: 2px;
     bottom: 15px;
     transform: rotate(40deg);
@@ -5472,14 +5545,6 @@ footer .footerWrapper .copyright h3 {
     height: 80px;
     width: 80px;
   }
-  .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv .outerborderDiv .journeyIcons::before {
-    width: 105px;
-    height: 105px;
-  }
-  .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv .outerborderDiv .journeyIcons::after {
-    width: 90px;
-    height: 90px;
-  }
 }
 @media screen and (max-width: 1800px) {
   .onboardingJourneysec .innerWrapper .journeyData .contentDiv {
@@ -5488,7 +5553,6 @@ footer .footerWrapper .copyright h3 {
   .onboardingJourneysec .innerWrapper .journeyData .contentDiv:last-child .innerBoxes:nth-child(3) h3::after {
     left: -46px;
     right: unset;
-    width: 50px;
     height: 2px;
     bottom: 15px;
     transform: rotate(40deg);
@@ -5529,14 +5593,6 @@ footer .footerWrapper .copyright h3 {
   .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv .outerborderDiv .journeyIcons {
     height: 70px;
     width: 70px;
-  }
-  .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv .outerborderDiv .journeyIcons::before {
-    width: 95px;
-    height: 95px;
-  }
-  .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv .outerborderDiv .journeyIcons::after {
-    width: 80px;
-    height: 80px;
   }
   .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv .outerborderDiv .journeyIcons:nth-child(2) {
     left: 8%;
@@ -5585,14 +5641,6 @@ footer .footerWrapper .copyright h3 {
   .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv .outerborderDiv .journeyIcons {
     height: 60px;
     width: 60px;
-  }
-  .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv .outerborderDiv .journeyIcons::before {
-    width: 85px;
-    height: 85px;
-  }
-  .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv .outerborderDiv .journeyIcons::after {
-    width: 70px;
-    height: 70px;
   }
   .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv .outerborderDiv .journeyIcons:nth-child(2) {
     left: 8%;
@@ -5646,14 +5694,6 @@ footer .footerWrapper .copyright h3 {
   .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv .outerborderDiv .journeyIcons {
     height: 50px;
     width: 50px;
-  }
-  .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv .outerborderDiv .journeyIcons::before {
-    width: 75px;
-    height: 75px;
-  }
-  .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv .outerborderDiv .journeyIcons::after {
-    width: 60px;
-    height: 60px;
   }
   .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv .outerborderDiv .journeyIcons:nth-child(4) {
     top: 83%;
@@ -5709,20 +5749,26 @@ footer .footerWrapper .copyright h3 {
   .onboardingJourneysec .innerWrapper .onboardingSliderData .centerCirclediv .outerborderDiv .journeyIcons::before {
     content: "";
     position: absolute;
+    display: block;
     border-radius: 50%;
     border: 1px solid #8BA8FF;
-    width: 105px;
-    height: 105px;
-    left: -13px;
+    animation: ripple 2s linear infinite;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
   .onboardingJourneysec .innerWrapper .onboardingSliderData .centerCirclediv .outerborderDiv .journeyIcons::after {
     content: "";
     position: absolute;
+    display: block;
     border-radius: 50%;
     border: 1px solid #8BA8FF;
-    width: 90px;
-    height: 90px;
-    left: -6px;
+    animation: ripple 2s linear 1s infinite;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
   .onboardingJourneysec .innerWrapper .onboardingSliderData .centerCirclediv .outerborderDiv .journeyIcons:nth-child(2) {
     top: 11%;
@@ -5747,6 +5793,19 @@ footer .footerWrapper .copyright h3 {
   .onboardingJourneysec .innerWrapper .onboardingSliderData .centerCirclediv .outerborderDiv .journeyIcons:nth-child(7) {
     top: 76%;
     right: 5%;
+  }
+  @keyframes ripple {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.3);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.6);
+      opacity: 0;
+    }
   }
   .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider {
     padding: 0px 50px;
@@ -5854,16 +5913,6 @@ footer .footerWrapper .copyright h3 {
     height: 70px;
     width: 70px;
   }
-  .onboardingJourneysec .innerWrapper .onboardingSliderData .centerCirclediv .outerborderDiv .journeyIcons::before {
-    width: 85px;
-    height: 85px;
-    left: -9px;
-  }
-  .onboardingJourneysec .innerWrapper .onboardingSliderData .centerCirclediv .outerborderDiv .journeyIcons::after {
-    width: 75px;
-    height: 75px;
-    left: -3px;
-  }
   .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider {
     padding: 0px 20px;
   }
@@ -5885,16 +5934,6 @@ footer .footerWrapper .copyright h3 {
   }
   .onboardingJourneysec .innerWrapper .onboardingSliderData .centerCirclediv .outerborderDiv .journeyIcons img {
     width: 18px;
-  }
-  .onboardingJourneysec .innerWrapper .onboardingSliderData .centerCirclediv .outerborderDiv .journeyIcons::before {
-    width: 50px;
-    height: 50px;
-    left: -5px;
-  }
-  .onboardingJourneysec .innerWrapper .onboardingSliderData .centerCirclediv .outerborderDiv .journeyIcons::after {
-    width: 45px;
-    height: 45px;
-    left: -3px;
   }
   .onboardingJourneysec .innerWrapper .onboardingSliderData .centerCirclediv .outerborderDiv .journeyIcons:nth-child(2) {
     top: 2%;
@@ -6079,7 +6118,7 @@ footer .footerWrapper .copyright h3 {
   border-radius: 34.359px;
   border: 0.687px solid rgba(0, 0, 0, 0.2);
   background: #FFF;
-  box-shadow: 13.744px 13.744px 20.615px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0.744px -0.256px 24.615px 0px rgba(0, 0, 0, 0.2);
   display: flex;
   padding: 35px;
   align-items: center;
@@ -6502,7 +6541,7 @@ footer .footerWrapper .copyright h3 {
   margin-top: 20px;
   display: none;
 }
-.fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes {
+.fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover {
   border-radius: 20px;
   border: 0.685px solid rgba(0, 0, 0, 0.2);
   background: #1C43B9 !important;
@@ -6511,14 +6550,14 @@ footer .footerWrapper .copyright h3 {
   width: 88% !important;
   left: -46% !important;
 }
-.fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes:nth-child(2) {
+.fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes:nth-child(2), .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover:nth-child(2) {
   left: unset !important;
 }
-.fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes p {
+.fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes p, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover p {
   font-size: 30px !important;
   color: #FFFFFF !important;
 }
-.fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes a {
+.fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes a, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover a {
   display: inline-flex !important;
 }
 .fraudstoriesSec .innerWrapper .boxContent .box-container-two #boxesImg {
@@ -6555,7 +6594,7 @@ footer .footerWrapper .copyright h3 {
     top: 64%;
     left: -30%;
   }
-  .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes {
+  .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover {
     width: 70% !important;
     left: -30% !important;
   }
@@ -6590,11 +6629,11 @@ footer .footerWrapper .copyright h3 {
   .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData a {
     margin-top: 18px;
   }
-  .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes {
+  .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover {
     width: 70% !important;
     left: -25% !important;
   }
-  .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes p {
+  .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes p, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover p {
     font-size: 24px !important;
   }
   .fraudstoriesSec .innerWrapper .boxContent .box-container-two #boxesImg .dotsInner {
@@ -6632,11 +6671,11 @@ footer .footerWrapper .copyright h3 {
   .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData a {
     margin-top: 16px;
   }
-  .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes {
+  .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover {
     width: 62% !important;
     left: -11% !important;
   }
-  .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes p {
+  .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes p, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover p {
     font-size: 22px !important;
   }
   .fraudstoriesSec .innerWrapper .boxContent .box-container-two #boxesImg .dotsInner {
@@ -6674,11 +6713,11 @@ footer .footerWrapper .copyright h3 {
   .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData p {
     font-size: 16px;
   }
-  .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes {
+  .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover {
     width: 56% !important;
     left: -8% !important;
   }
-  .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes p {
+  .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes p, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover p {
     font-size: 20px !important;
   }
   .fraudstoriesSec .innerWrapper .boxContent .box-container-two #boxesImg .dotsInner {
@@ -6719,11 +6758,11 @@ footer .footerWrapper .copyright h3 {
   .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData p {
     font-size: 14px;
   }
-  .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes {
+  .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover {
     width: 43% !important;
     left: 0% !important;
   }
-  .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes p {
+  .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes p, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover p {
     font-size: 18px !important;
   }
   .fraudstoriesSec .innerWrapper .boxContent .box-container-two #boxesImg .dotsInner {
@@ -7670,4 +7709,4 @@ footer .footerWrapper .copyright h3 {
   .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox .contentDiv {
     margin-top: 16px;
   }
-}
+}/*# sourceMappingURL=main.css.map */
