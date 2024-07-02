@@ -8,8 +8,24 @@
         h2{@include font38;font-family: $fonthelveticaneuelight;line-height: 126%;color: $colorGray;letter-spacing: 1px;text-align: center;margin: 64px 0px 56px;}
         h3{@include font34;font-family: $fonthelveticaneuelight;line-height: 137%;color: $colorGray;letter-spacing: 1px;text-transform: capitalize;text-align: center;}
     }
-    .downArrow{position: absolute;left: 0;right: 0;bottom: 30px;margin: 0 auto;
+    .downArrow{position: absolute;left: 0;right: 0;bottom: 30px;margin: 0 auto;-moz-animation: bounce 3s infinite; -webkit-animation: bounce 3s infinite;animation: bounce 3s infinite;
+        a{display: block;text-align: center;}
         img{margin: 0 auto;}
+        @-moz-keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);transform: translateY(0);}
+            40% {-moz-transform: translateY(-30px);transform: translateY(-30px);}
+            60% {-moz-transform: translateY(-15px);transform: translateY(-15px); }
+          }
+          @-webkit-keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);transform: translateY(0);}
+            40% {-moz-transform: translateY(-30px);transform: translateY(-30px);}
+            60% {-moz-transform: translateY(-15px);transform: translateY(-15px); }
+          }
+          @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);-ms-transform: translateY(0); -webkit-transform: translateY(0);transform: translateY(0);}
+            40% {-moz-transform: translateY(-30px);-ms-transform: translateY(-30px); -webkit-transform: translateY(-30px); transform: translateY(-30px); }
+            60% {-moz-transform: translateY(-15px); -ms-transform: translateY(-15px); -webkit-transform: translateY(-15px);transform: translateY(-15px);}
+          }
     }
     @media screen and (max-width:1600px) {margin: 0px 0px 90px;
         &::before{scale: 0.9;left: -8px;}
@@ -24,7 +40,7 @@
     @media screen and (max-width:1440px) {margin: 0px 0px 80px;
         &::before{scale: 0.8;left: -13px;}
         &::after{scale: 0.8;right: -20px;}
-        .bannerInner{width: 54%;
+        .bannerInner{width: 62%;
             h1{letter-spacing: 2px;
                 &::after{width:40px;bottom: -28px;}
             }
@@ -54,8 +70,12 @@
 .yearTimeline{margin-bottom: 290px;
     .timelineWrapper{@include wrapper;
         .secHeading{margin-bottom: 96px;position: relative;
-            h2{@include font48;font-family: $fonthelveticaneuemedium;line-height: 116%;color: $colorBlack;letter-spacing: 0px;text-transform: capitalize;text-align: center;}
-            &::before{content: "";position: absolute;width: 260px;background: rgba(0, 0, 0, 0.80);height: 1px;left: 0;right: 0;margin: 0 auto;bottom: -30px;}
+            h2{@include font48;font-family: $fonthelveticaneuemedium;line-height: 116%;color: $colorBlack;letter-spacing: 0px;text-transform: capitalize;text-align: center;position: relative;
+                &::before{content: "";position: absolute;width: 260px;background: rgba(0, 0, 0, 0.80);height: 1px;left: 0;right: 0;margin: 0 auto;bottom: -20px;}
+            }
+            .idfyDesc{margin-top: 32px;
+                h4{@include font22;font-family: $fonthelveticaneuelight;font-weight: 400;color: #4B505E;letter-spacing: 0px;text-transform: capitalize;line-height: 218%;font-style: italic;text-align: center;}
+            }
         }
         .timelineData{
             .contentDiv{margin-bottom: 64px;position: relative;
@@ -65,7 +85,7 @@
                 }
                 .yearContentdata{margin: 0px 150px;
                     .slick-track{gap: 2px;}
-                    .year-content{display: flex;align-items: center;justify-content: space-between;
+                    .year-content{display: flex;align-items: center;justify-content: space-between;padding: 0px 20px;
                         .innerContent{width: 52%;
                             h3{@include font100;font-family: $fonthelveticaneuebold;line-height: normal;color: $colorBlue;text-align: left;}
                             h4{@include font48;font-family: $fonthelveticaneuebold;line-height: normal;color: #101010;text-align: left;}
@@ -82,9 +102,14 @@
                     }
                 }
             }
-            .timeline {display: flex;align-items: center;position: relative;justify-content: space-between;margin: 0px 130px;overflow: hidden;
+            .timelineContainerdiv{position: relative;
+                .progress-container {position: absolute;bottom: 64px;left: 200px;width: 82%;background-color: #A7B0CA;
+                    .progress-bar {height: 5px;background-color: transparent;transition: width 1s;width: 0; /* Start with 0 width */}
+                }
+            }
+            .timeline {display: flex;align-items: center;position: relative;justify-content:center;margin: 0px 0px;overflow: hidden;z-index: 3;
                 .slick-track{justify-content: space-between;}
-                .timeline-year {cursor: pointer;margin-right: 160px;position: relative;z-index: 3;transition: background-color 0.3s, color 0.3s;
+                .timeline-year {cursor: pointer;margin-right: 230px;position: relative;z-index: 3;transition: background-color 0.3s, color 0.3s;
                     .dataTimeline{display: flex;align-items: center;flex-direction: column;}
                     .circle{border-radius: 50%;border:none;width: 42px;height: 42px;display: flex;align-items: center;justify-content: center;background: #fff;
                         span{background: #A7B0CA;border-radius: 50%;display: block;height: 20px;width: 20px;}
@@ -122,21 +147,18 @@
                 }
 
                 .progressSvg{display: flex;align-items: center;}
-                .progress-container {position: absolute;bottom: 64px;left: 0;width: 100%;background-color: transparent;
-                    .progress-bar {height: 5px;background-color: transparent;transition: width 1s;width: 0; /* Start with 0 width */}
-                }
             }
-        }
-        .idfyDesc{margin-top: 32px;
-            h4{@include font22;font-family: $fonthelveticaneuelight;font-weight: 400;color: #4B505E;letter-spacing: 0px;text-transform: capitalize;line-height: 218%;font-style: italic;text-align: center;}
         }
     }
 
     @media screen and (max-width:1920px) {
         .timelineWrapper{
             .timelineData{
+                .timelineContainerdiv{
+                    .progress-container {left: 156px;}
+                }
                 .timeline {
-                    .timeline-year {
+                    .timeline-year {margin-right: 160px;
                         .progressSvg{left: 62px;
                             svg{line{&:nth-last-child(1),&:nth-last-child(2),&:nth-last-child(3),&:nth-last-child(4),&:nth-last-child(5){display: none;}}}
                         }
@@ -146,10 +168,13 @@
             }
         }
     }
-    @media screen and (max-width:1600px) {margin-bottom: 250px;
+    @media screen and (max-width:1680px) {margin-bottom: 250px;
         .timelineWrapper{
             .secHeading{margin-bottom: 86px;
-                &::before{width: 250px;bottom: -28px;}
+                h2::before{width: 250px;bottom: -18px;}
+                .idfyDesc{margin-top: 30px;
+                    h4{line-height: 180%;}
+                }
             }
             .timelineData{
                 .contentDiv{margin-bottom: 54px;
@@ -171,8 +196,11 @@
                         }
                     }
                 }
-                .timeline {margin: 0px 110px;
-                    .timeline-year {margin-right: 50px;
+                .timelineContainerdiv{
+                    .progress-container {bottom: 57px;left: 180px;width: 76%;}
+                }
+                .timeline {
+                    .timeline-year {margin-right: 110px;
                         .circle{width: 32px;height: 32px;
                             span{height: 15px;width: 15px;}
                         }
@@ -185,8 +213,15 @@
                     }
                 }
             }
-            .idfyDesc{margin-top: 30px;
-                h4{line-height: 180%;}
+        }
+    }
+
+    @media screen and (max-width:1600px) {margin-bottom: 250px;
+        .timelineWrapper{
+            .timelineData{
+                .timelineContainerdiv{
+                    .progress-container {bottom: 50px;}
+                }
             }
         }
     }
@@ -194,7 +229,10 @@
     @media screen and (max-width:1440px) {margin-bottom: 200px;
         .timelineWrapper{
             .secHeading{margin-bottom: 72px;
-                &::before{width: 240px;bottom: -20px;}
+                h2::before{width: 240px;bottom: -18px;}
+                .idfyDesc{margin-top: 28px;
+                    h4{line-height: 160%;}
+                }
             }
             .timelineData{
                 .contentDiv{margin-bottom: 50px;
@@ -213,8 +251,11 @@
                         }
                     }
                 }
-                .timeline {margin: 0px 90px;
-                    .timeline-year {margin-right: 40px;
+                .timelineContainerdiv{
+                    .progress-container {bottom: 45px;left: 122px;width: 81%;;}
+                }
+                .timeline {
+                    .timeline-year {margin-right: 110px;
                         .circle{width: 28px;height: 28px;
                             span{height: 10px;width: 10px;}
                         }
@@ -227,9 +268,6 @@
                     }
                 }
             }
-            .idfyDesc{margin-top: 28px;
-                h4{line-height: 160%;}
-            }
         }
     }
 
@@ -238,7 +276,7 @@
         .timelineWrapper{
             .timelineData{
                 .timeline {
-                    .timeline-year {
+                    .timeline-year {margin-right: 100px;
                         .progressSvg{bottom: 39px;left: 44px;
                         }
     
@@ -251,8 +289,11 @@
     @media screen and (max-width:1280px) {
         .timelineWrapper{
             .timelineData{
+                .timelineContainerdiv{
+                    .progress-container {width: 78%;;}
+                }
                 .timeline {
-                    .timeline-year {
+                    .timeline-year {margin-right: 90px;
                         .circle{position: relative;z-index: 2;}
                         .progressSvg{bottom: 38px;left: 20px;
                         }
@@ -266,8 +307,11 @@
     @media screen and (max-width:1200px) {
         .timelineWrapper{
             .timelineData{
+                .timelineContainerdiv{
+                    .progress-container {height: 3px;left: 111px;}
+                }
                 .timeline {
-                    .timeline-year {
+                    .timeline-year {margin-right: 80px;
                         .circle{position: relative;z-index: 2;}
                         .progressSvg{bottom: 38px;left: 15px;
                         }
@@ -281,7 +325,10 @@
     @media screen and (max-width:1024px) {margin-bottom: 150px;
         .timelineWrapper{
             .secHeading{margin-bottom: 62px;
-                &::before{width: 230px;bottom: -18px;}
+                h2::before{width: 230px;bottom: -14px;}
+                .idfyDesc{margin-top: 26px;
+                    h4{line-height: 130%;}
+                }
             }
             .timelineData{
                 .contentDiv{margin-bottom: 44px;
@@ -301,7 +348,7 @@
                     }
                 }
                 .timeline {margin: 0px 60px;
-                    .timeline-year {margin-right: 30px;
+                    .timeline-year {margin-right: 70px;;
                         .circle{width: 30px;height: 30px;
                             span{height: 10px;width: 10px;}
                         }
@@ -314,21 +361,21 @@
                     }
                 }
             }
-            .idfyDesc{margin-top: 26px;
-                h4{line-height: 130%;}
-            }
         }
     }
     @media screen and (max-width:820px) {margin-bottom: 160px;
         .timelineWrapper{
             .secHeading{margin-bottom: 36px;
-                &::before{width: 190px;bottom: -16px;}
+                h2::before{width: 190px;bottom: -12px;}
+                .idfyDesc{margin-top: 26px;
+                    h4{line-height: 100%;}
+                }
             }
             .timelineData{
                 .contentDiv{margin-bottom: 40px;
                     .arrow{display: none;}
                     .yearContentdata{margin: 0px 0px;
-                        .year-content{flex-direction: column-reverse;
+                        .year-content{flex-direction: column-reverse;padding: 0px 0px;
                             .innerContent{width: 100%;margin-top: 24px;
                                 h3{font-size: 40px;line-height: normal;}
                                 h4{font-size: 24px;line-height: 133%;}
@@ -344,8 +391,10 @@
                         }
                     }
                 }
-                .timelineContainerdiv{overflow-x: scroll;-ms-overflow-style: none; /* for Internet Explorer, Edge */scrollbar-width: none; /* for Firefox */
+                
+                .timelineContainerdiv{overflow-x: scroll;-ms-overflow-style: none; /* for Internet Explorer, Edge */scrollbar-width: none; /* for Firefox */margin: 0px -20px;
                         &::-webkit-scrollbar {display: none; /* for Chrome, Safari, and Opera */}
+                        .progress-container {width: 95%;left: 20px;;}
                 }
                 .timeline{margin: 0px;overflow: unset;
                     .timeline-year{margin-right: 150px;
@@ -357,9 +406,6 @@
                         
                     }
                 }
-            }
-            .idfyDesc{margin-top: 20px;
-                h4{line-height: 100%;}
             }
         }
     }
@@ -398,14 +444,14 @@
             &::before{content: "";position: absolute;width: 260px;background: rgba(0, 0, 0, 0.80);height: 1px;left: 0;right: 0;margin: 0 auto;bottom: -30px;}
         }
         .innerDatadiv{
-            .innerDiv{display: flex;align-items: flex-start;justify-content: space-between;padding: 72px 0px;border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+            .innerDiv{display: flex;align-items: flex-start;justify-content: space-between;padding: 72px 85px;border-bottom: 1px solid rgba(0, 0, 0, 0.2);
                 &:first-child{padding-top: 0px;}
                 &:last-child{padding-bottom: 0px;border-bottom: none;}
                 &:nth-child(even){flex-direction: row-reverse;
-                    .contentDiv{padding-left: 114px;padding-right: 0px;}
+                    .contentDiv{padding-right: 0px;}
                 }
                 .imgDiv{width: 45%;border-radius: 40px;overflow: hidden;}
-                .contentDiv{width: 45%;margin-top: 30px;padding-right: 85px;
+                .contentDiv{width: 45%;margin-top: 30px;
                     h4{@include font20;font-family: $fonthelveticaneuebold;line-height: 100%;text-transform: uppercase;color: $colorGray;letter-spacing: -0.8px;}
                     h3{@include font40;font-family: $fonthelveticaneuebold;line-height: 125%;color: $colorGray;letter-spacing: -1.6px;margin: 10px 0px 24px;}
                     p{@include font20;font-family: $fonthelveticaneuemedium;line-height: 150%;color: $colorGray;}
@@ -424,12 +470,9 @@
                 &::before{width: 250px;bottom: -28px;}
             }
             .innerDatadiv{
-                .innerDiv{padding: 60px 0px;
-                    &:nth-child(even){
-                        .contentDiv{padding-left: 100px;}
-                    }
+                .innerDiv{padding: 60px 70px;
                     .imgDiv{width: 46%;}
-                    .contentDiv{width: 46%;margin-top: 26px;padding-right: 70px;
+                    .contentDiv{width: 46%;margin-top: 26px;
                         h4{letter-spacing: 0px;}
                         h3{letter-spacing: -1px;margin: 8px 0px 22px;}
                         .solutionList{margin: 20px 0px 50px;
@@ -446,12 +489,9 @@
                 &::before{width: 240px;bottom: -24px;}
             }
             .innerDatadiv{
-                .innerDiv{padding: 50px 0px;
-                    &:nth-child(even){
-                        .contentDiv{padding-left: 70px;}
-                    }
+                .innerDiv{padding: 50px;
                     
-                    .contentDiv{margin-top: 22px;padding-right: 50px;
+                    .contentDiv{margin-top: 22px;
                         h3{letter-spacing: 0px;margin: 8px 0px 20px;}
                         .solutionList{margin: 18px 0px 40px;
                             ul li{padding: 0px 0px 14px 32px;img{margin-right: 8px;width: 18px;height: 18px;}}
@@ -467,12 +507,9 @@
                 &::before{width: 230px;bottom: -22px;}
             }
             .innerDatadiv{
-                .innerDiv{padding: 40px 0px;
-                    &:nth-child(even){
-                        .contentDiv{padding-left: 50px;}
-                    }
+                .innerDiv{padding: 40px;
                     
-                    .contentDiv{margin-top: 20px;padding-right: 40px;
+                    .contentDiv{margin-top: 20px;
                         h3{margin: 8px 0px 18px;}
                         .solutionList{margin: 16px 0px 32px;
                             ul li{padding: 0px 0px 12px 32px;img{margin-right: 6px;}}
@@ -489,11 +526,8 @@
             }
             .innerDatadiv{
                 .innerDiv{padding: 40px 0px;display: block;
-                    &:nth-child(even){
-                        .contentDiv{padding-left: 0px;}
-                    }
                     .imgDiv{width: 100%;}
-                    .contentDiv{margin-top: 24px;padding-right: 0px;width: 100%;
+                    .contentDiv{margin-top: 24px;width: 100%;
                         h4{line-height: 112%;}
                         h3{margin: 12px 0px 24px;line-height: 87%;font-size: 32px;}
                         p{line-height: 150%;}

@@ -3010,9 +3010,64 @@ footer .footerWrapper .copyright h3 {
   right: 0;
   bottom: 30px;
   margin: 0 auto;
+  -moz-animation: bounce 3s infinite;
+  -webkit-animation: bounce 3s infinite;
+  animation: bounce 3s infinite;
+}
+.bannerSection .downArrow a {
+  display: block;
+  text-align: center;
 }
 .bannerSection .downArrow img {
   margin: 0 auto;
+}
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
 }
 @media screen and (max-width: 1600px) {
   .bannerSection {
@@ -3053,7 +3108,7 @@ footer .footerWrapper .copyright h3 {
     right: -20px;
   }
   .bannerSection .bannerInner {
-    width: 54%;
+    width: 62%;
   }
   .bannerSection .bannerInner h1 {
     letter-spacing: 2px;
@@ -3154,6 +3209,7 @@ footer .footerWrapper .copyright h3 {
   letter-spacing: 0px;
   text-transform: capitalize;
   text-align: center;
+  position: relative;
 }
 @media screen and (max-width: 1600px) {
   .yearTimeline .timelineWrapper .secHeading h2 {
@@ -3165,7 +3221,7 @@ footer .footerWrapper .copyright h3 {
     font-size: 32px;
   }
 }
-.yearTimeline .timelineWrapper .secHeading::before {
+.yearTimeline .timelineWrapper .secHeading h2::before {
   content: "";
   position: absolute;
   width: 260px;
@@ -3174,7 +3230,31 @@ footer .footerWrapper .copyright h3 {
   left: 0;
   right: 0;
   margin: 0 auto;
-  bottom: -30px;
+  bottom: -20px;
+}
+.yearTimeline .timelineWrapper .secHeading .idfyDesc {
+  margin-top: 32px;
+}
+.yearTimeline .timelineWrapper .secHeading .idfyDesc h4 {
+  font-size: 22px;
+  font-family: "HelveticaNeueLight";
+  font-weight: 400;
+  color: #4B505E;
+  letter-spacing: 0px;
+  text-transform: capitalize;
+  line-height: 218%;
+  font-style: italic;
+  text-align: center;
+}
+@media screen and (max-width: 1600px) {
+  .yearTimeline .timelineWrapper .secHeading .idfyDesc h4 {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .yearTimeline .timelineWrapper .secHeading .idfyDesc h4 {
+    font-size: 16px;
+  }
 }
 .yearTimeline .timelineWrapper .timelineData .contentDiv {
   margin-bottom: 64px;
@@ -3210,6 +3290,7 @@ footer .footerWrapper .copyright h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0px 20px;
 }
 .yearTimeline .timelineWrapper .timelineData .contentDiv .yearContentdata .year-content .innerContent {
   width: 52%;
@@ -3315,20 +3396,37 @@ footer .footerWrapper .copyright h3 {
   bottom: 37px;
   left: 37px;
 }
+.yearTimeline .timelineWrapper .timelineData .timelineContainerdiv {
+  position: relative;
+}
+.yearTimeline .timelineWrapper .timelineData .timelineContainerdiv .progress-container {
+  position: absolute;
+  bottom: 64px;
+  left: 200px;
+  width: 82%;
+  background-color: #A7B0CA;
+}
+.yearTimeline .timelineWrapper .timelineData .timelineContainerdiv .progress-container .progress-bar {
+  height: 5px;
+  background-color: transparent;
+  transition: width 1s;
+  width: 0; /* Start with 0 width */
+}
 .yearTimeline .timelineWrapper .timelineData .timeline {
   display: flex;
   align-items: center;
   position: relative;
-  justify-content: space-between;
-  margin: 0px 130px;
+  justify-content: center;
+  margin: 0px 0px;
   overflow: hidden;
+  z-index: 3;
 }
 .yearTimeline .timelineWrapper .timelineData .timeline .slick-track {
   justify-content: space-between;
 }
 .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year {
   cursor: pointer;
-  margin-right: 160px;
+  margin-right: 230px;
   position: relative;
   z-index: 3;
   transition: background-color 0.3s, color 0.3s;
@@ -3412,44 +3510,13 @@ footer .footerWrapper .copyright h3 {
   display: flex;
   align-items: center;
 }
-.yearTimeline .timelineWrapper .timelineData .timeline .progress-container {
-  position: absolute;
-  bottom: 64px;
-  left: 0;
-  width: 100%;
-  background-color: transparent;
-}
-.yearTimeline .timelineWrapper .timelineData .timeline .progress-container .progress-bar {
-  height: 5px;
-  background-color: transparent;
-  transition: width 1s;
-  width: 0; /* Start with 0 width */
-}
-.yearTimeline .timelineWrapper .idfyDesc {
-  margin-top: 32px;
-}
-.yearTimeline .timelineWrapper .idfyDesc h4 {
-  font-size: 22px;
-  font-family: "HelveticaNeueLight";
-  font-weight: 400;
-  color: #4B505E;
-  letter-spacing: 0px;
-  text-transform: capitalize;
-  line-height: 218%;
-  font-style: italic;
-  text-align: center;
-}
-@media screen and (max-width: 1600px) {
-  .yearTimeline .timelineWrapper .idfyDesc h4 {
-    font-size: 18px;
-  }
-}
-@media screen and (max-width: 1400px) {
-  .yearTimeline .timelineWrapper .idfyDesc h4 {
-    font-size: 16px;
-  }
-}
 @media screen and (max-width: 1920px) {
+  .yearTimeline .timelineWrapper .timelineData .timelineContainerdiv .progress-container {
+    left: 156px;
+  }
+  .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year {
+    margin-right: 160px;
+  }
   .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg {
     left: 62px;
   }
@@ -3457,16 +3524,22 @@ footer .footerWrapper .copyright h3 {
     display: none;
   }
 }
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1680px) {
   .yearTimeline {
     margin-bottom: 250px;
   }
   .yearTimeline .timelineWrapper .secHeading {
     margin-bottom: 86px;
   }
-  .yearTimeline .timelineWrapper .secHeading::before {
+  .yearTimeline .timelineWrapper .secHeading h2::before {
     width: 250px;
-    bottom: -28px;
+    bottom: -18px;
+  }
+  .yearTimeline .timelineWrapper .secHeading .idfyDesc {
+    margin-top: 30px;
+  }
+  .yearTimeline .timelineWrapper .secHeading .idfyDesc h4 {
+    line-height: 180%;
   }
   .yearTimeline .timelineWrapper .timelineData .contentDiv {
     margin-bottom: 54px;
@@ -3509,11 +3582,13 @@ footer .footerWrapper .copyright h3 {
     bottom: 32px;
     left: 15px;
   }
-  .yearTimeline .timelineWrapper .timelineData .timeline {
-    margin: 0px 110px;
+  .yearTimeline .timelineWrapper .timelineData .timelineContainerdiv .progress-container {
+    bottom: 57px;
+    left: 180px;
+    width: 76%;
   }
   .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year {
-    margin-right: 50px;
+    margin-right: 110px;
   }
   .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .circle {
     width: 32px;
@@ -3536,11 +3611,13 @@ footer .footerWrapper .copyright h3 {
   .yearTimeline .timelineWrapper .timelineData .timeline .progress-container .progress-bar {
     height: 4px;
   }
-  .yearTimeline .timelineWrapper .idfyDesc {
-    margin-top: 30px;
+}
+@media screen and (max-width: 1600px) {
+  .yearTimeline {
+    margin-bottom: 250px;
   }
-  .yearTimeline .timelineWrapper .idfyDesc h4 {
-    line-height: 180%;
+  .yearTimeline .timelineWrapper .timelineData .timelineContainerdiv .progress-container {
+    bottom: 50px;
   }
 }
 @media screen and (max-width: 1440px) {
@@ -3550,9 +3627,15 @@ footer .footerWrapper .copyright h3 {
   .yearTimeline .timelineWrapper .secHeading {
     margin-bottom: 72px;
   }
-  .yearTimeline .timelineWrapper .secHeading::before {
+  .yearTimeline .timelineWrapper .secHeading h2::before {
     width: 240px;
-    bottom: -20px;
+    bottom: -18px;
+  }
+  .yearTimeline .timelineWrapper .secHeading .idfyDesc {
+    margin-top: 28px;
+  }
+  .yearTimeline .timelineWrapper .secHeading .idfyDesc h4 {
+    line-height: 160%;
   }
   .yearTimeline .timelineWrapper .timelineData .contentDiv {
     margin-bottom: 50px;
@@ -3588,11 +3671,13 @@ footer .footerWrapper .copyright h3 {
     bottom: 24px;
     left: 21px;
   }
-  .yearTimeline .timelineWrapper .timelineData .timeline {
-    margin: 0px 90px;
+  .yearTimeline .timelineWrapper .timelineData .timelineContainerdiv .progress-container {
+    bottom: 45px;
+    left: 122px;
+    width: 81%;
   }
   .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year {
-    margin-right: 40px;
+    margin-right: 110px;
   }
   .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .circle {
     width: 28px;
@@ -3615,20 +3700,23 @@ footer .footerWrapper .copyright h3 {
   .yearTimeline .timelineWrapper .timelineData .timeline .progress-container .progress-bar {
     height: 4px;
   }
-  .yearTimeline .timelineWrapper .idfyDesc {
-    margin-top: 28px;
-  }
-  .yearTimeline .timelineWrapper .idfyDesc h4 {
-    line-height: 160%;
-  }
 }
 @media screen and (max-width: 1366px) {
+  .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year {
+    margin-right: 100px;
+  }
   .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg {
     bottom: 39px;
     left: 44px;
   }
 }
 @media screen and (max-width: 1280px) {
+  .yearTimeline .timelineWrapper .timelineData .timelineContainerdiv .progress-container {
+    width: 78%;
+  }
+  .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year {
+    margin-right: 90px;
+  }
   .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .circle {
     position: relative;
     z-index: 2;
@@ -3639,6 +3727,13 @@ footer .footerWrapper .copyright h3 {
   }
 }
 @media screen and (max-width: 1200px) {
+  .yearTimeline .timelineWrapper .timelineData .timelineContainerdiv .progress-container {
+    height: 3px;
+    left: 111px;
+  }
+  .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year {
+    margin-right: 80px;
+  }
   .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .circle {
     position: relative;
     z-index: 2;
@@ -3655,9 +3750,15 @@ footer .footerWrapper .copyright h3 {
   .yearTimeline .timelineWrapper .secHeading {
     margin-bottom: 62px;
   }
-  .yearTimeline .timelineWrapper .secHeading::before {
+  .yearTimeline .timelineWrapper .secHeading h2::before {
     width: 230px;
-    bottom: -18px;
+    bottom: -14px;
+  }
+  .yearTimeline .timelineWrapper .secHeading .idfyDesc {
+    margin-top: 26px;
+  }
+  .yearTimeline .timelineWrapper .secHeading .idfyDesc h4 {
+    line-height: 130%;
   }
   .yearTimeline .timelineWrapper .timelineData .contentDiv {
     margin-bottom: 44px;
@@ -3697,7 +3798,7 @@ footer .footerWrapper .copyright h3 {
     margin: 0px 60px;
   }
   .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year {
-    margin-right: 30px;
+    margin-right: 70px;
   }
   .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .circle {
     width: 30px;
@@ -3720,12 +3821,6 @@ footer .footerWrapper .copyright h3 {
   .yearTimeline .timelineWrapper .timelineData .timeline .progress-container .progress-bar {
     height: 3px;
   }
-  .yearTimeline .timelineWrapper .idfyDesc {
-    margin-top: 26px;
-  }
-  .yearTimeline .timelineWrapper .idfyDesc h4 {
-    line-height: 130%;
-  }
 }
 @media screen and (max-width: 820px) {
   .yearTimeline {
@@ -3734,9 +3829,15 @@ footer .footerWrapper .copyright h3 {
   .yearTimeline .timelineWrapper .secHeading {
     margin-bottom: 36px;
   }
-  .yearTimeline .timelineWrapper .secHeading::before {
+  .yearTimeline .timelineWrapper .secHeading h2::before {
     width: 190px;
-    bottom: -16px;
+    bottom: -12px;
+  }
+  .yearTimeline .timelineWrapper .secHeading .idfyDesc {
+    margin-top: 26px;
+  }
+  .yearTimeline .timelineWrapper .secHeading .idfyDesc h4 {
+    line-height: 100%;
   }
   .yearTimeline .timelineWrapper .timelineData .contentDiv {
     margin-bottom: 40px;
@@ -3749,6 +3850,7 @@ footer .footerWrapper .copyright h3 {
   }
   .yearTimeline .timelineWrapper .timelineData .contentDiv .yearContentdata .year-content {
     flex-direction: column-reverse;
+    padding: 0px 0px;
   }
   .yearTimeline .timelineWrapper .timelineData .contentDiv .yearContentdata .year-content .innerContent {
     width: 100%;
@@ -3794,9 +3896,14 @@ footer .footerWrapper .copyright h3 {
     overflow-x: scroll;
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
+    margin: 0px -20px;
   }
   .yearTimeline .timelineWrapper .timelineData .timelineContainerdiv::-webkit-scrollbar {
     display: none; /* for Chrome, Safari, and Opera */
+  }
+  .yearTimeline .timelineWrapper .timelineData .timelineContainerdiv .progress-container {
+    width: 95%;
+    left: 20px;
   }
   .yearTimeline .timelineWrapper .timelineData .timeline {
     margin: 0px;
@@ -3814,12 +3921,6 @@ footer .footerWrapper .copyright h3 {
   }
   .yearTimeline .timelineWrapper .timelineData .timeline .progress-container {
     background: transparent;
-  }
-  .yearTimeline .timelineWrapper .idfyDesc {
-    margin-top: 20px;
-  }
-  .yearTimeline .timelineWrapper .idfyDesc h4 {
-    line-height: 100%;
   }
 }
 @media screen and (max-width: 720px) {
@@ -3922,7 +4023,7 @@ footer .footerWrapper .copyright h3 {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 72px 0px;
+  padding: 72px 85px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 .ourSolutions .solutionWrapper .innerDatadiv .innerDiv:first-child {
@@ -3936,7 +4037,6 @@ footer .footerWrapper .copyright h3 {
   flex-direction: row-reverse;
 }
 .ourSolutions .solutionWrapper .innerDatadiv .innerDiv:nth-child(even) .contentDiv {
-  padding-left: 114px;
   padding-right: 0px;
 }
 .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .imgDiv {
@@ -3947,7 +4047,6 @@ footer .footerWrapper .copyright h3 {
 .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .contentDiv {
   width: 45%;
   margin-top: 30px;
-  padding-right: 85px;
 }
 .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .contentDiv h4 {
   font-size: 20px;
@@ -4046,10 +4145,7 @@ footer .footerWrapper .copyright h3 {
     bottom: -28px;
   }
   .ourSolutions .solutionWrapper .innerDatadiv .innerDiv {
-    padding: 60px 0px;
-  }
-  .ourSolutions .solutionWrapper .innerDatadiv .innerDiv:nth-child(even) .contentDiv {
-    padding-left: 100px;
+    padding: 60px 70px;
   }
   .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .imgDiv {
     width: 46%;
@@ -4057,7 +4153,6 @@ footer .footerWrapper .copyright h3 {
   .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .contentDiv {
     width: 46%;
     margin-top: 26px;
-    padding-right: 70px;
   }
   .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .contentDiv h4 {
     letter-spacing: 0px;
@@ -4090,14 +4185,10 @@ footer .footerWrapper .copyright h3 {
     bottom: -24px;
   }
   .ourSolutions .solutionWrapper .innerDatadiv .innerDiv {
-    padding: 50px 0px;
-  }
-  .ourSolutions .solutionWrapper .innerDatadiv .innerDiv:nth-child(even) .contentDiv {
-    padding-left: 70px;
+    padding: 50px;
   }
   .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .contentDiv {
     margin-top: 22px;
-    padding-right: 50px;
   }
   .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .contentDiv h3 {
     letter-spacing: 0px;
@@ -4127,14 +4218,10 @@ footer .footerWrapper .copyright h3 {
     bottom: -22px;
   }
   .ourSolutions .solutionWrapper .innerDatadiv .innerDiv {
-    padding: 40px 0px;
-  }
-  .ourSolutions .solutionWrapper .innerDatadiv .innerDiv:nth-child(even) .contentDiv {
-    padding-left: 50px;
+    padding: 40px;
   }
   .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .contentDiv {
     margin-top: 20px;
-    padding-right: 40px;
   }
   .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .contentDiv h3 {
     margin: 8px 0px 18px;
@@ -4164,15 +4251,11 @@ footer .footerWrapper .copyright h3 {
     padding: 40px 0px;
     display: block;
   }
-  .ourSolutions .solutionWrapper .innerDatadiv .innerDiv:nth-child(even) .contentDiv {
-    padding-left: 0px;
-  }
   .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .imgDiv {
     width: 100%;
   }
   .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .contentDiv {
     margin-top: 24px;
-    padding-right: 0px;
     width: 100%;
   }
   .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .contentDiv h4 {
@@ -4399,7 +4482,7 @@ footer .footerWrapper .copyright h3 {
 }
 .bannerSectionhp .bannerWrapper .bannerbtmLinks {
   position: absolute;
-  padding: 0px 100px;
+  padding: 0px 70px;
   bottom: 40px;
   right: 0;
   left: 0;
@@ -4445,7 +4528,7 @@ footer .footerWrapper .copyright h3 {
 }
 @media screen and (max-width: 1800px) {
   .bannerSectionhp .bannerWrapper .bannerbtmLinks {
-    padding: 0px 90px;
+    padding: 0px 60px;
   }
   .bannerSectionhp .bannerWrapper .bannerbtmLinks ul li {
     padding-right: 50px;
@@ -4463,7 +4546,7 @@ footer .footerWrapper .copyright h3 {
     letter-spacing: 2px;
   }
   .bannerSectionhp .bannerWrapper .bannerbtmLinks {
-    padding: 0px 80px;
+    padding: 0px 50px;
     bottom: 30px;
   }
   .bannerSectionhp .bannerWrapper .bannerbtmLinks ul li {
@@ -4485,7 +4568,7 @@ footer .footerWrapper .copyright h3 {
     margin-top: 30px;
   }
   .bannerSectionhp .bannerWrapper .bannerbtmLinks {
-    padding: 0px 60px;
+    padding: 0px 40px;
     bottom: 25px;
   }
   .bannerSectionhp .bannerWrapper .bannerbtmLinks ul li {
@@ -4506,7 +4589,7 @@ footer .footerWrapper .copyright h3 {
     margin-top: 24px;
   }
   .bannerSectionhp .bannerWrapper .bannerbtmLinks {
-    padding: 0px 40px;
+    padding: 0px 30px;
     bottom: 20px;
   }
   .bannerSectionhp .bannerWrapper .bannerbtmLinks ul li {
@@ -4529,8 +4612,11 @@ footer .footerWrapper .copyright h3 {
     width: 90%;
   }
   .bannerSectionhp .bannerWrapper .bannerbtmLinks {
-    padding: 0px;
+    padding: 0px 20px;
     bottom: 25px;
+  }
+  .bannerSectionhp .bannerWrapper .bannerbtmLinks ul {
+    justify-content: flex-start;
   }
   .bannerSectionhp .bannerWrapper .bannerbtmLinks ul li {
     padding-right: 60px;
@@ -4552,7 +4638,7 @@ footer .footerWrapper .copyright h3 {
     font-size: 14px;
   }
   .bannerSectionhp .bannerWrapper .bannerbtmLinks ul li::before {
-    right: 26px;
+    right: 20px;
   }
 }
 
@@ -4758,6 +4844,7 @@ footer .footerWrapper .copyright h3 {
   letter-spacing: -4px;
   line-height: normal;
   color: #343434;
+  margin-left: -10px;
 }
 @media screen and (max-width: 1600px) {
   .pioneerSlidersec .pionnerwrapper .secHeading h2 {
@@ -4987,6 +5074,7 @@ footer .footerWrapper .copyright h3 {
   }
   .pioneerSlidersec .pionnerwrapper .secHeading h2 {
     letter-spacing: -1px;
+    margin-left: -7px;
   }
   .pioneerSlidersec .pionnerwrapper .pioneerSlider .innerSlides {
     padding: 0px 160px;

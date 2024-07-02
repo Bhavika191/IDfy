@@ -29,7 +29,7 @@
 			</div>
 			<div class="footerLinks">
 				<div class="innerLinks">
-					<h3>IDfy</h3>
+					<h3>Corporate</h3>
 					<ul>
 						<li><a href="#">Privacy Policy</a></li>
 						<li><a href="#">Terms and Conditions</a></li>

@@ -371,8 +371,6 @@ if ($(".pioneerSlidersec").length) {
         autoplay: true,
         speed: 1000,
         autoplaySpeed: 2000,
-        fade: true,
-        cssEase: 'linear',
         responsive: [
             {
                 breakpoint: 720,
@@ -697,12 +695,19 @@ document.addEventListener('DOMContentLoaded', function () {
             slidesToShow: 8,
             arrows: false,
 
-
+            pauseOnHover: true,
             asNavFor: '.yearContentdata',
             focusOnSelect: true,
             responsive: [
                 {
-                    breakpoint: 720,
+                    breakpoint: 830,
+                    settings: {
+                        slidesToScroll: 1,
+                        slidesToShow: 4,
+                    }
+                },
+                {
+                    breakpoint: 730,
                     settings: {
                         slidesToScroll: 1,
                         slidesToShow: 3,
@@ -718,6 +723,7 @@ document.addEventListener('DOMContentLoaded', function () {
             infinite: false,
             slidesToShow: 1,
             slidesToScroll: 1,
+            pauseOnHover: true,
 
             prevArrow: '.left-arrow',
             nextArrow: '.right-arrow',
@@ -726,9 +732,9 @@ document.addEventListener('DOMContentLoaded', function () {
             speed: 500,
             responsive: [
                 {
-                    breakpoint: 0,
+                    breakpoint: 830,
                     settings: {
-                        centerMode: false
+                        arrows: false,
                     }
                 }
             ]
