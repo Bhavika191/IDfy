@@ -1,5 +1,6 @@
 // --------------------------------------------------------Shamal's Code------------------------------------------------------//
-// Hide Header on on scroll down
+
+// -----------------Hide Header on on scroll down---------------------//
 var didScroll;
 var lastScrollTop = 0;
 var delta = 5;
@@ -27,6 +28,7 @@ function hasScrolled() {
     // This is necessary so you never see what is "behind" the navbar.
     if (st > lastScrollTop && st > navbarHeight) {
         $("header").removeClass("nav-down").addClass("nav-up");
+        $('.dropdown').removeClass("active");
     } else {
         // Scroll Up
         if (st + $(window).height() < $(document).height()) {
@@ -44,7 +46,9 @@ var navbarHeight = $('header').outerHeight();
 $(window).scroll(function (event) {
     hasScrolled();
 });
-// ------------------Header Dropdown JS--------------------- //
+// -----------------Hide Header on on scroll down---------------------//
+
+// ------------------Header Desktop Dropdown JS--------------------- //
 $(document).ready(function () {
     const dropdowns = document.querySelectorAll('.dropdown');
 
@@ -73,9 +77,9 @@ $(document).ready(function () {
         }
     });
 });
-// ------------------Header Dropdown JS--------------------- //
+// ------------------Header Desktop Dropdown JS--------------------- //
 
-// -----------------Mobile Header Menu----------------------//
+// -----------------Mobile humberger Menu----------------------//
 $(document).ready(function () {
     if ($(window).width() <= 1024) {
         $("#toggle").click(function () {
@@ -85,22 +89,23 @@ $(document).ready(function () {
                 menuOpen = true; // Menu is open
                 $('body').css("overflow", "hidden");
                 $('html').css("overflow", "hidden");
-                $('.search-icon-mobile').css("opacity", "1");
+                $('.search-icon-mobile').css({"opacity": "1" ,"height":"20",'width':"20"});
                 $('.logo .mobile-logo').css({ "opacity": "1", 'height': "auto" });
                 $('.logo .desktop-logo').css({ "opacity": "0", 'height': "0" });
             } else {
                 menuOpen = false; // Menu is closed
                 $('body').css("overflow", "visible");
                 $('html').css("overflow", "visible");
-                $('.search-icon-mobile').css("opacity", "0");
+                $('.search-icon-mobile').css({"opacity": "0" ,"height":"0",'width':"0"});
                 $('.logo .mobile-logo').css({ "opacity": "0", 'height': "0" });
                 $('.logo .desktop-logo').css({ "opacity": "1", 'height': "auto" });
             }
         });
     }
 });
+// -----------------Mobile Humberger Menu----------------------//
 
-//-------------------Mobile dropdown -------------------//
+//-------------------Mobile dropdown Menu -------------------//
 $(document).ready(function () {
     const mainNavs = document.querySelectorAll('.main-nav');
 
@@ -129,10 +134,10 @@ $(document).ready(function () {
         }
     });
 });
-//-------------------Mobile dropdown -------------------//
-// -----------------Mobile Header Menu----------------------//
+//-------------------Mobile dropdown Menu -------------------//
 
 // ---------------------Header Country Select Dropdown-----------------//
+// For Desktop
 $(document).ready(function () {
     var select = $('.custom-select');
     var selected = select.find('.select-selected');
@@ -156,32 +161,37 @@ $(document).ready(function () {
         }
     });
 });
+// For Desktop
+
+// For Mobile
 $(document).ready(function () {
     var select = $('.custom-select-mobile');
     var selected = select.find('.select-selected-mobile');
     var items = select.find('.select-items-mobile');
 
     selected.on('click', function () {
-        items.toggle();
+        items.toggleClass('show');
         $(this).toggleClass('active-arrow');
     });
 
     items.on('click', 'li', function () {
         selected.text($(this).text());
-        items.hide();
+        items.removeClass('show');
         selected.removeClass('active-arrow');
     });
 
     $(document).on('click', function (e) {
         if (!select.is(e.target) && select.has(e.target).length === 0) {
-            items.hide();
+            items.removeClass('show');
             selected.removeClass('active-arrow');
         }
     });
 });
+// For Mobile
 // ---------------------Header Country Select Dropdown-----------------//
 
 // ---------------------------Search Modal---------------------------------//
+// For Desktop
 function searchToggle() {
     let searchModal = document.getElementById('search-modal')
     searchModal.classList.add('active');
@@ -189,7 +199,6 @@ function searchToggle() {
     $('html').css("overflow", "hidden");
     $('body').addClass("overlay");
 }
-
 function closeSearch() {
     let searchModal = document.getElementById('search-modal')
     searchModal.classList.remove('active');
@@ -197,12 +206,16 @@ function closeSearch() {
     $('html').css("overflow", "visible");
     $('body').removeClass("overlay");
 }
+// For Desktop
+
+// For Mobile
 function searchToggleMobile() {
     let searchModalMobile = document.getElementById('search-modal-mobile')
     searchModalMobile.classList.add('active');
     $('body').css("overflow", "hidden");
     $('html').css("overflow", "hidden");
     $('body').addClass("overlay");
+    $('#overlay').addClass('searchOverlay');
 }
 function closeSearchMobile() {
     let searchModalMobile = document.getElementById('search-modal-mobile')
@@ -210,7 +223,9 @@ function closeSearchMobile() {
     $('body').css("overflow", "visible");
     $('html').css("overflow", "visible");
     $('body').removeClass("overlay");
+    $('#overlay').removeClass('searchOverlay');
 }
+// For Mobile
 // ---------------------------Search Modal---------------------------------//
 
 // ----------------------------------------------------Shamal's Code-------------------------------------------------//
