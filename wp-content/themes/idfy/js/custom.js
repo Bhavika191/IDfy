@@ -56,6 +56,8 @@ $(document).ready(function () {
 
     dropdowns.forEach(dropdown => {
         const dropbtn = dropdown.querySelector('.dropbtn');
+
+        // Handle click event
         dropbtn.addEventListener('click', function (event) {
             // Prevent default behavior for the dropdown button
             event.preventDefault();
@@ -67,6 +69,16 @@ $(document).ready(function () {
             });
             // Toggle the current dropdown
             dropdown.classList.toggle('active');
+        });
+
+        // Handle mouseover event
+        dropdown.addEventListener('mouseover', function () {
+            dropdown.classList.add('active');
+        });
+
+        // Handle mouseout event to close dropdown when mouse leaves the entire dropdown
+        dropdown.addEventListener('mouseleave', function () {
+            dropdown.classList.remove('active');
         });
     });
 
