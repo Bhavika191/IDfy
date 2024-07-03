@@ -685,8 +685,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 (function ($) {
     $(function () {
-
-
         $('.timeline').slick({
             infinite: false,
             autoplay: true,
@@ -786,6 +784,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
 
 
 
