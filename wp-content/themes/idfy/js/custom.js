@@ -695,18 +695,22 @@ document.addEventListener('DOMContentLoaded', function () {
 //     })(jQuery);
 // });
 
+
+
 (function ($) {
     $(function () {
 
+        var $timeline = $('.timeline');
+        var $yearContentData = $('.yearContentdata');
+        var $timelineYears = $('.timeline-year');
 
-        $('.timeline').slick({
+        $timeline.slick({
             infinite: false,
             autoplay: true,
             autoplaySpeed: 3000,
             slidesToScroll: 8,
             slidesToShow: 8,
             arrows: false,
-
             pauseOnHover: true,
             asNavFor: '.yearContentdata',
             focusOnSelect: true,
@@ -726,20 +730,17 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 }
             ]
-
         });
 
-        $('.yearContentdata').slick({
+        $yearContentData.slick({
             autoplay: true,
             autoplaySpeed: 3000,
             infinite: false,
             slidesToShow: 1,
             slidesToScroll: 1,
             pauseOnHover: true,
-
             prevArrow: '.left-arrow',
             nextArrow: '.right-arrow',
-
             asNavFor: '.timeline',
             speed: 500,
             responsive: [
@@ -752,9 +753,86 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         });
 
+        function updateTimelineColor(nextSlide) {
+            $timelineYears.each(function(index) {
+                if (index < nextSlide) {
+                    $(this).css('background-color', 'red');
+                } else if (index === nextSlide) {
+                    $(this).css('background-color', 'blue'); 
+                } else {
+                    $(this).css('background-color', 'transparent');
+                }
+            });
+        }
 
+        $yearContentData.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+            updateTimelineColor(nextSlide);
+        });
+
+        updateTimelineColor($yearContentData.slick('slickCurrentSlide'));
     });
 })(jQuery);
+
+// (function ($) {
+//     $(function () {
+
+
+//         $('.timeline').slick({
+//             infinite: false,
+//             autoplay: true,
+//             autoplaySpeed: 3000,
+//             slidesToScroll: 8,
+//             slidesToShow: 8,
+//             arrows: false,
+
+//             pauseOnHover: true,
+//             asNavFor: '.yearContentdata',
+//             focusOnSelect: true,
+//             responsive: [
+//                 {
+//                     breakpoint: 830,
+//                     settings: {
+//                         slidesToScroll: 1,
+//                         slidesToShow: 4,
+//                     }
+//                 },
+//                 {
+//                     breakpoint: 730,
+//                     settings: {
+//                         slidesToScroll: 1,
+//                         slidesToShow: 3,
+//                     }
+//                 }
+//             ]
+
+//         });
+
+//         $('.yearContentdata').slick({
+//             autoplay: true,
+//             autoplaySpeed: 3000,
+//             infinite: false,
+//             slidesToShow: 1,
+//             slidesToScroll: 1,
+//             pauseOnHover: true,
+
+//             prevArrow: '.left-arrow',
+//             nextArrow: '.right-arrow',
+
+//             asNavFor: '.timeline',
+//             speed: 500,
+//             responsive: [
+//                 {
+//                     breakpoint: 830,
+//                     settings: {
+//                         arrows: false,
+//                     }
+//                 }
+//             ]
+//         });
+
+
+//     });
+// })(jQuery);
 
 
 // ----------------------Timeline code--------------------------//
