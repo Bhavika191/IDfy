@@ -706,6 +706,7 @@ document.addEventListener('DOMContentLoaded', function () {
             slidesToScroll: 8,
             slidesToShow: 8,
             arrows: false,
+
             pauseOnHover: true,
             asNavFor: '.yearContentdata',
             focusOnSelect: true,
@@ -725,17 +726,20 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 }
             ]
+
         });
 
-        $yearContentData.slick({
+        $('.yearContentdata').slick({
             autoplay: true,
             autoplaySpeed: 3000,
             infinite: false,
             slidesToShow: 1,
             slidesToScroll: 1,
             pauseOnHover: true,
+
             prevArrow: '.left-arrow',
             nextArrow: '.right-arrow',
+
             asNavFor: '.timeline',
             speed: 500,
             responsive: [
@@ -748,23 +752,7 @@ document.addEventListener('DOMContentLoaded', function () {
             ]
         });
 
-        function updateTimelineColor(nextSlide) {
-            $timelineYears.each(function(index) {
-                if (index < nextSlide) {
-                    $(this).css('background-color', 'red');
-                } else if (index === nextSlide) {
-                    $(this).css('background-color', 'blue'); 
-                } else {
-                    $(this).css('background-color', 'transparent');
-                }
-            });
-        }
 
-        $yearContentData.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-            updateTimelineColor(nextSlide);
-        });
-
-        updateTimelineColor($yearContentData.slick('slickCurrentSlide'));
     });
 })(jQuery);
 
