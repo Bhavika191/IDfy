@@ -421,7 +421,7 @@
 <style>
 
 .timeline-line.active line {
-    stroke: #FF0000; /* Replace with your desired active stroke color */
+    stroke: #FF0000; 
 }
 
 </style>
@@ -433,19 +433,19 @@
     const rightArrow = document.getElementById('right-arrow');
     let currentIndex = 0;
 
-    // Function to update the active timeline year and its corresponding SVG lines
+  
     function updateActiveYear(index) {
-        // Remove active class from all timeline years and SVG lines
+       
         timelineYears.forEach(year => year.classList.remove('active'));
         document.querySelectorAll('.timeline-line').forEach(line => line.classList.remove('active'));
 
-        // Add active class to the current timeline year and its SVG lines
+        
         const currentYear = timelineYears[index];
         currentYear.classList.add('active');
         currentYear.querySelectorAll('.timeline-line').forEach(line => line.classList.add('active'));
     }
 
-    // Event listener for clicking the left arrow
+  
     leftArrow.addEventListener('click', function () {
         if (currentIndex > 0) {
             currentIndex--;
@@ -453,7 +453,7 @@
         }
     });
 
-    // Event listener for clicking the right arrow
+    
     rightArrow.addEventListener('click', function () {
         if (currentIndex < timelineYears.length - 1) {
             currentIndex++;
@@ -461,7 +461,7 @@
         }
     });
 
-    // Initialize the first timeline year as active
+  
     updateActiveYear(currentIndex);
 });
 
