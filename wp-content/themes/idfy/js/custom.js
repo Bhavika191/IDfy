@@ -1,6 +1,6 @@
-// --------------------------------------------------------Shamal's Code------------------------------------------------------//
+//--------------------------------------------------------Shamal's Code------------------------------------------------------//
 
-// -----------------Hide Header on on scroll down---------------------//
+//-----------------Hide Header on on scroll down---------------------//
 var didScroll;
 var lastScrollTop = 0;
 var delta = 5;
@@ -48,9 +48,9 @@ var navbarHeight = $('header').outerHeight();
 $(window).scroll(function (event) {
     hasScrolled();
 });
-// -----------------Hide Header on on scroll down---------------------//
+//-----------------Hide Header on on scroll down---------------------//
 
-// ------------------Header Desktop Dropdown JS--------------------- //
+//-------------------Header Desktop Dropdown JS----------------------//
 $(document).ready(function () {
     const dropdowns = document.querySelectorAll('.dropdown');
 
@@ -91,9 +91,9 @@ $(document).ready(function () {
         }
     });
 });
-// ------------------Header Desktop Dropdown JS--------------------- //
+//-------------------Header Desktop Dropdown JS----------------------//
 
-// -----------------Mobile humberger Menu----------------------//
+//-------------------Mobile humberger Menu------------------------//
 $(document).ready(function () {
     if ($(window).width() <= 1024) {
         $("#toggle").click(function () {
@@ -117,9 +117,9 @@ $(document).ready(function () {
         });
     }
 });
-// -----------------Mobile Humberger Menu----------------------//
+//------------------Mobile Humberger Menu------------------------//
 
-//-------------------Mobile dropdown Menu -------------------//
+//---------------------Mobile dropdown Menu --------------------//
 $(document).ready(function () {
     const mainNavs = document.querySelectorAll('.main-nav');
 
@@ -148,10 +148,10 @@ $(document).ready(function () {
         }
     });
 });
-//-------------------Mobile dropdown Menu -------------------//
+//-------------------Mobile dropdown Menu ---------------------//
 
-// ---------------------Header Country Select Dropdown-----------------//
-// --------For Desktop--------//
+//----------------------Header Country Select Dropdown-----------------//
+//---------For Desktop--------//
 $(document).ready(function () {
     var select = $('.custom-select');
     var selected = select.find('.select-selected');
@@ -175,9 +175,9 @@ $(document).ready(function () {
         }
     });
 });
-// ---------For Desktop-------//
+//----------For Desktop-------//
 
-// -------For Mobile--------//
+//--------For Mobile--------//
 $(document).ready(function () {
     var select = $('.custom-select-mobile');
     var selected = select.find('.select-selected-mobile');
@@ -201,11 +201,11 @@ $(document).ready(function () {
         }
     });
 });
-// --------For Mobile------//
-// ---------------------Header Country Select Dropdown-----------------//
+//---------For Mobile------//
+//----------------------Header Country Select Dropdown-----------------//
 
-// ---------------------------Search Modal---------------------------------//
-// -----For Desktop------//
+//----------------------------Search Modal---------------------------------//
+//------For Desktop------//
 function searchToggle() {
     let searchModal = document.getElementById('search-modal')
     searchModal.classList.add('active');
@@ -220,9 +220,9 @@ function closeSearch() {
     $('html').css("overflow", "visible");
     $('body').removeClass("overlay");
 }
-// ------For Desktop----//
+//-------For Desktop-----//
 
-// -------For Mobile--------//
+//--------For Mobile--------//
 function searchToggleMobile() {
     let searchModalMobile = document.getElementById('search-modal-mobile')
     searchModalMobile.classList.add('active');
@@ -239,10 +239,10 @@ function closeSearchMobile() {
     $('body').removeClass("overlay");
     $('#overlay').removeClass('searchOverlay');
 }
-// -------For Mobile--------//
-// ---------------------------Search Modal---------------------------------//
+//--------For Mobile--------//
+//---------------------------Search Modal---------------------------------//
 
-// ----------------------------------------------------Shamal's Code-------------------------------------------------//
+//-----------------------------------------------------Shamal's Code-------------------------------------------------//
 
 
 // // Timeline JS starts
