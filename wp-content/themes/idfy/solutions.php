@@ -22,8 +22,8 @@
                 <div class="secHeading">
                     <h2><?php echo get_sub_field('section_heading'); ?></h2>
                     <div class="idfyDesc">
-                    <h4><?php echo get_sub_field('section_bottom_note'); ?></h4>
-                </div>
+                        <h4><?php echo get_sub_field('section_bottom_note'); ?></h4>
+                    </div>
                 </div>
                 <div class="timelineData">
                     <div class="contentDiv" id="contentDiv">
@@ -38,7 +38,7 @@
                                             <p><?php echo get_sub_field('card_description'); ?></p>
                                             <?php $valueCta = get_sub_field("cta_link");
                                             if ($valueCta) { ?>
-                                               <a href="<?php echo get_sub_field('cta_link'); ?>" class="ctaWhite"><?php echo get_sub_field('cta_text'); ?></a>
+                                                <a href="<?php echo get_sub_field('cta_link'); ?>" class="ctaWhite"><?php echo get_sub_field('cta_text'); ?></a>
                                             <?php } ?>
                                         </div>
                                         <div class="innerImg">
@@ -69,8 +69,8 @@
                                             <div class="circle"><span></span></div>
                                             <h4><?php echo get_sub_field('journey_year'); ?></h4>
                                         </div>
-                                        <!-- <div class="progressSvg">
-                                            <svg width="289" height="18" viewBox="0 0 289 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <div class="progressSvg">
+                                            <svg class="timeline-line" width="289" height="18" viewBox="0 0 289 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <line x1="0.5" y1="2.1857e-08" x2="0.499999" y2="18" stroke="#A7B0CA" />
                                                 <line x1="32.5" y1="2.1857e-08" x2="32.5" y2="18" stroke="#A7B0CA" />
                                                 <line x1="64.5" y1="2.1857e-08" x2="64.5" y2="18" stroke="#A7B0CA" />
@@ -82,13 +82,10 @@
                                                 <line x1="256.5" y1="2.1857e-08" x2="256.5" y2="18" stroke="#A7B0CA" />
                                                 <line x1="288.5" y1="2.1857e-08" x2="288.5" y2="18" stroke="#A7B0CA" />
                                             </svg>
-                                        </div> -->
+                                        </div>
                                     </div>
                                 <?php endwhile; ?>
                             <?php endif; ?>
-                        </div>
-                        <div class="progress-container">
-                            <div class="progress-bar" id="progress-bar"></div>
                         </div>
                     </div>
                 </div>
@@ -96,6 +93,10 @@
         <?php endwhile; ?>
     <?php endif; ?>
 </section>
+
+
+
+
 
 <section class="ourSolutions">
     <?php if (have_rows('our_solutions_section')) : ?>
@@ -155,3 +156,14 @@
 
 
 <?php get_footer(); ?>
+
+<style>
+
+.timeline-line.active line {
+    stroke: #FF0000; 
+}
+
+</style>
+
+
+
