@@ -153,7 +153,7 @@
                 }
                 .timeline {
                     .timeline-year {margin-right: 160px;
-                        .progressSvg{left: 62px;
+                        .progressSvg{left: 58px;
                             svg{line{&:nth-last-child(1),&:nth-last-child(2),&:nth-last-child(3),&:nth-last-child(4),&:nth-last-child(5){display: none;}}}
                         }
     
@@ -199,7 +199,7 @@
                             span{height: 15px;width: 15px;}
                         }
                         h4{margin-top: 16px;}
-                        .progressSvg{bottom: 44px;left: 60px;
+                        .progressSvg{bottom: 50px;left: 53px;
                         }
                     }
                     .progress-container {bottom: 52px;
@@ -215,6 +215,8 @@
             .timelineData{
                 .timelineContainerdiv{
                     .progress-container {bottom: 50px;}
+                }
+                .timeline .timeline-year  .progressSvg{bottom: 45px;left: 45px;
                 }
             }
         }
@@ -254,7 +256,7 @@
                             span{height: 10px;width: 10px;}
                         }
                         h4{margin-top: 14px;}
-                        .progressSvg{bottom: 40px;left: 48px;
+                        .progressSvg{bottom:38px;left: 43px;
                         }
                     }
                     .progress-container {bottom: 45px;
@@ -271,7 +273,7 @@
             .timelineData{
                 .timeline {
                     .timeline-year {margin-right: 100px;
-                        .progressSvg{bottom: 39px;left: 44px;
+                        .progressSvg{bottom: 39px;left: 36px;
                         }
     
                     }
@@ -289,7 +291,7 @@
                 .timeline {
                     .timeline-year {margin-right: 90px;
                         .circle{position: relative;z-index: 2;}
-                        .progressSvg{bottom: 38px;left: 20px;
+                        .progressSvg{bottom: 39px;left: 17px;
                         }
     
                     }
@@ -347,7 +349,7 @@
                             span{height: 10px;width: 10px;}
                         }
                         h4{margin-top: 12px;}
-                        .progressSvg{bottom: 37px;left: 11px;
+                        .progressSvg{bottom: 36px;left: 6px;
                         }
                     }
                     .progress-container {bottom: 44px;
@@ -392,12 +394,24 @@
                 }
                 .timeline{margin: 0px;overflow: unset;
                     .timeline-year{margin-right: 150px;
-                        .progressSvg{left: 20px;bottom: 37px;
-                            svg{line{&:nth-last-child(1),&:nth-last-child(2),&:nth-last-child(3),&:nth-last-child(4),&:nth-last-child(5){display: block;}}}
+                        .progressSvg{left: 28px;bottom: 36px;
+                            svg{line{&:nth-last-child(4),&:nth-last-child(5){display: block;}}}
                         }
                     }
                     .progress-container {background: transparent;
                         
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:768px) {margin-bottom: 160px;
+        .timelineWrapper{
+            .timelineData{
+                .timeline{
+                    .timeline-year{
+                        .progressSvg{left: 20px;bottom: 38px;}
                     }
                 }
             }
@@ -421,7 +435,7 @@
                 }
                 .timeline{
                     .timeline-year{margin-right: 100px;
-                        .progressSvg{left: 11px;bottom: 38px;
+                        .progressSvg{left: 16px;bottom: 36px;
                             svg{line{&:nth-last-child(1),&:nth-last-child(2),&:nth-last-child(3),&:nth-last-child(4),&:nth-last-child(5){display: none;}}}
                         }
                     }

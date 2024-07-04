@@ -3527,7 +3527,7 @@ footer .footerWrapper .copyright h3 {
     margin-right: 160px;
   }
   .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg {
-    left: 62px;
+    left: 58px;
   }
   .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg svg line:nth-last-child(1), .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg svg line:nth-last-child(2), .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg svg line:nth-last-child(3), .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg svg line:nth-last-child(4), .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg svg line:nth-last-child(5) {
     display: none;
@@ -3611,8 +3611,8 @@ footer .footerWrapper .copyright h3 {
     margin-top: 16px;
   }
   .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg {
-    bottom: 44px;
-    left: 60px;
+    bottom: 50px;
+    left: 53px;
   }
   .yearTimeline .timelineWrapper .timelineData .timeline .progress-container {
     bottom: 52px;
@@ -3627,6 +3627,10 @@ footer .footerWrapper .copyright h3 {
   }
   .yearTimeline .timelineWrapper .timelineData .timelineContainerdiv .progress-container {
     bottom: 50px;
+  }
+  .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg {
+    bottom: 45px;
+    left: 45px;
   }
 }
 @media screen and (max-width: 1440px) {
@@ -3700,8 +3704,8 @@ footer .footerWrapper .copyright h3 {
     margin-top: 14px;
   }
   .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg {
-    bottom: 40px;
-    left: 48px;
+    bottom: 38px;
+    left: 43px;
   }
   .yearTimeline .timelineWrapper .timelineData .timeline .progress-container {
     bottom: 45px;
@@ -3716,7 +3720,7 @@ footer .footerWrapper .copyright h3 {
   }
   .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg {
     bottom: 39px;
-    left: 44px;
+    left: 36px;
   }
 }
 @media screen and (max-width: 1280px) {
@@ -3731,8 +3735,8 @@ footer .footerWrapper .copyright h3 {
     z-index: 2;
   }
   .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg {
-    bottom: 38px;
-    left: 20px;
+    bottom: 39px;
+    left: 17px;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -3821,8 +3825,8 @@ footer .footerWrapper .copyright h3 {
     margin-top: 12px;
   }
   .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg {
-    bottom: 37px;
-    left: 11px;
+    bottom: 36px;
+    left: 6px;
   }
   .yearTimeline .timelineWrapper .timelineData .timeline .progress-container {
     bottom: 44px;
@@ -3922,14 +3926,23 @@ footer .footerWrapper .copyright h3 {
     margin-right: 150px;
   }
   .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg {
-    left: 20px;
-    bottom: 37px;
+    left: 28px;
+    bottom: 36px;
   }
-  .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg svg line:nth-last-child(1), .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg svg line:nth-last-child(2), .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg svg line:nth-last-child(3), .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg svg line:nth-last-child(4), .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg svg line:nth-last-child(5) {
+  .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg svg line:nth-last-child(4), .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg svg line:nth-last-child(5) {
     display: block;
   }
   .yearTimeline .timelineWrapper .timelineData .timeline .progress-container {
     background: transparent;
+  }
+}
+@media screen and (max-width: 768px) {
+  .yearTimeline {
+    margin-bottom: 160px;
+  }
+  .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg {
+    left: 20px;
+    bottom: 38px;
   }
 }
 @media screen and (max-width: 720px) {
@@ -3955,8 +3968,8 @@ footer .footerWrapper .copyright h3 {
     margin-right: 100px;
   }
   .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg {
-    left: 11px;
-    bottom: 38px;
+    left: 16px;
+    bottom: 36px;
   }
   .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg svg line:nth-last-child(1), .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg svg line:nth-last-child(2), .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg svg line:nth-last-child(3), .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg svg line:nth-last-child(4), .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg svg line:nth-last-child(5) {
     display: none;
@@ -5424,10 +5437,10 @@ footer .footerWrapper .copyright h3 {
   width: 35%;
 }
 .onboardingJourneysec .innerWrapper .journeyData .contentDiv:nth-child(1) .innerBoxes h3::after {
-  left: 100%;
+  left: 99%;
   right: unset;
   height: 2px;
-  bottom: -19px;
+  bottom: -18px;
   transform: rotate(40deg);
 }
 .onboardingJourneysec .innerWrapper .journeyData .contentDiv:last-child .innerBoxes h3:before {
@@ -5444,11 +5457,11 @@ footer .footerWrapper .copyright h3 {
   content: none;
 }
 .onboardingJourneysec .innerWrapper .journeyData .contentDiv:nth-child(1) .innerBoxes:nth-child(3) h3::after {
-  left: 100%;
+  left: 99%;
   right: unset;
   width: 56px;
   height: 2px;
-  bottom: 16px;
+  bottom: 18px;
   transform: rotate(-40deg);
 }
 .onboardingJourneysec .innerWrapper .journeyData .contentDiv:last-child .innerBoxes:nth-child(3) h3::after {
@@ -5502,11 +5515,11 @@ footer .footerWrapper .copyright h3 {
 .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes h3::after {
   content: "";
   position: absolute;
-  left: -46px;
+  left: -47px;
   width: 0px;
   height: 2px;
   opacity: 0;
-  bottom: -19px;
+  bottom: -17px;
   transform: rotate(-40deg);
   border-bottom: 1px dashed #1C43B9;
 }
@@ -5651,10 +5664,10 @@ footer .footerWrapper .copyright h3 {
     width: 40%;
   }
   .onboardingJourneysec .innerWrapper .journeyData .contentDiv:last-child .innerBoxes:nth-child(3) h3::after {
-    left: -46px;
+    left: -50px;
     right: unset;
     height: 2px;
-    bottom: 15px;
+    bottom: 18px;
     transform: rotate(40deg);
   }
   .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes {
@@ -5673,10 +5686,7 @@ footer .footerWrapper .copyright h3 {
     width: 36%;
   }
   .onboardingJourneysec .innerWrapper .journeyData .contentDiv:last-child .innerBoxes:nth-child(3) h3::after {
-    left: -46px;
-    right: unset;
     height: 2px;
-    bottom: 15px;
     transform: rotate(40deg);
   }
   .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes {
@@ -6177,6 +6187,12 @@ footer .footerWrapper .copyright h3 {
 .productfamSection .innerWrapper .prodfamSlides .slider .innerDiv {
   position: sticky;
   top: 5rem;
+  overflow-x: scroll;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+}
+.productfamSection .innerWrapper .prodfamSlides .slider .innerDiv::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
 }
 .productfamSection .innerWrapper .prodfamSlides .slider .tabs {
   text-align: center;
@@ -6184,6 +6200,9 @@ footer .footerWrapper .copyright h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
 }
 .productfamSection .innerWrapper .prodfamSlides .slider .tabs .tab {
   background: transparent !important;
@@ -6273,13 +6292,11 @@ footer .footerWrapper .copyright h3 {
 .productfamSection .innerWrapper .prodfamSlides .slider .slide:nth-of-type(7) {
   transform: translateY(calc((7 - 1) * var(--offset)));
 }
-.productfamSection .innerWrapper .prodfamSlides .slider .slide .slide {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  border-bottom: 1px solid #ccc;
+.productfamSection .innerWrapper .prodfamSlides .slider .slide:nth-of-type(8) {
+  transform: translateY(calc((8 - 1) * var(--offset)));
+}
+.productfamSection .innerWrapper .prodfamSlides .slider .slide:nth-of-type(9) {
+  transform: translateY(calc((9 - 1) * var(--offset)));
 }
 .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataImg {
   border-radius: 28px;
