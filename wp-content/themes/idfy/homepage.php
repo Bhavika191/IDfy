@@ -230,219 +230,62 @@
     <?php endif; ?>
 </section>
 
-<!-- <section class="productfamSection">
+
+
+<section class="productfamSection">
     <?php if (have_rows('product_families_section')) : ?>
         <?php while (have_rows('product_families_section')) : the_row(); ?>
             <div class="innerWrapper">
                 <div class="secHeading">
                     <h2><?php echo get_sub_field('section_heading'); ?></h2>
                 </div>
-                <div class="prodfamSlides">
-                    <div class="innerDiv">
-                        <ul class="tabs slider-nav ">
+                <div class="prodfamSlides scroll-cards">
+
+                    <div class="slider slider-for">
+                        <div class="innerDiv">
+                            <ul class="tabs slider-nav " id="navMenu">
+                                <?php if (have_rows('product_families_content')) : ?>
+                                    <?php $counter = 1;
+                                    while (have_rows('product_families_content')) : the_row(); ?>
+                                        <li class="tab" id="tabDiv" data-slide="<?php echo $counter; ?>">
+                                            <h3><?php echo get_sub_field('card_heading'); ?></h3>
+                                        </li>
+                                    <?php $counter = $counter + 1;
+                                    endwhile; ?>
+                                <?php endif; ?>
+                            </ul>
+                        </div>
+                        <div id="slides">
                             <?php if (have_rows('product_families_content')) : ?>
-                                <?php $counter = 1;
+                                <?php $counter = 1; 
                                 while (have_rows('product_families_content')) : the_row(); ?>
-                                    <li class="tab" id="tabDiv" data-slide="<?php echo $counter; ?>">
-                                        <h3><?php echo get_sub_field('card_heading'); ?></h3>
-                                    </li>
-                                <?php $counter = $counter + 1;
+                                    <div class="scroll-cards__item slide" aria-label="Wie - 1" data-slide="<?php echo $counter; ?>">
+                                        <div class="dataImg">
+                                            <?php $profamimg = get_sub_field('card_image');
+                                            if (!empty($profamimg)) : ?>
+                                                <img src="<?php echo esc_url($profamimg['url']); ?>" loading="lazy" alt="<?php echo esc_attr($profamimg['alt']); ?>" />
+                                            <?php endif; ?>
+                                        </div>
+                                        <div class="dataContent">
+                                            <h4><?php echo get_sub_field('card_heading'); ?></h4>
+                                            <h3><?php echo get_sub_field('card_intro_heading'); ?></h3>
+                                            <p><?php echo get_sub_field('card_description'); ?></p>
+                                            <a href="<?php echo get_sub_field('cta_link'); ?>" class="ctaRed"><?php echo get_sub_field('cta_text'); ?></a>
+                                        </div>
+                                    </div>
+                                    <?php $counter = $counter + 1;
                                 endwhile; ?>
                             <?php endif; ?>
-                        </ul>
-                    </div>
-                    <div class="slider slider-for">
-                        <?php if (have_rows('product_families_content')) : ?>
-                            <?php while (have_rows('product_families_content')) : the_row(); ?>
-                                <div class="slide" id="slideId">
-                                    <div class="dataImg">
-                                        <?php $profamimg = get_sub_field('card_image');
-                                        if (!empty($profamimg)) : ?>
-                                            <img src="<?php echo esc_url($profamimg['url']); ?>" loading="lazy" alt="<?php echo esc_attr($profamimg['alt']); ?>" />
-                                        <?php endif; ?>
-                                    </div>
-                                    <div class="dataContent">
-                                        <h4><?php echo get_sub_field('card_heading'); ?></h4>
-                                        <h3><?php echo get_sub_field('card_intro_heading'); ?></h3>
-                                        <p><?php echo get_sub_field('card_description'); ?></p>
-                                        <a href="<?php echo get_sub_field('cta_link'); ?>" class="ctaRed"><?php echo get_sub_field('cta_text'); ?></a>
-                                    </div>
-                                </div>
-                            <?php endwhile; ?>
-                        <?php endif; ?>
+                        </div>
                     </div>
                 </div>
             </div>
         <?php endwhile; ?>
     <?php endif; ?>
-</section> -->
-
-<section class="productfamSection">
-    <div class="innerWrapper">
-        <div class="secHeading">
-            <h2>Product Family</h2>
-        </div>
-        <div class="prodfamSlides scroll-cards">
-
-            <div class="slider slider-for">
-                <div class="innerDiv">
-                    <ul class="tabs slider-nav " id="navMenu">
-
-                        <li class="tab" id="tabDiv" data-slide="1">
-                            <h3><a href="#slideId1">KYC API Suite</a></h3>
-                        </li>
-                        <li class="tab" id="tabDiv" data-slide="2">
-                            <h3><a href="#slideId2">Privy<span>NEW</span></a></h3>
-                        </li>
-                        <li class="tab" id="tabDiv" data-slide="3">
-                            <h3><a href="#slideId3">Background verifications</a></h3>
-                        </li>
-                        <li class="tab" id="tabDiv" data-slide="4">
-                            <h3><a href="#slideId4">Video solutions</a></h3>
-                        </li>
-                        <li class="tab" id="tabDiv" data-slide="5">
-                            <h3><a href="#slideId5">Crime Check</a></h3>
-                        </li>
-                        <li class="tab" id="tabDiv" data-slide="6">
-                            <h3><a href="#slideId6">Risk & Fraud</a></h3>
-                        </li>
-                    </ul>
-                </div>
-                <div id="slides">
-                    <div class="scroll-cards__item slide" aria-label="Wie - 1" data-slide="1">
-                        <div class="dataImg">
-
-                            <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
-
-                        </div>
-                        <div class="dataContent">
-                            <h4>KYC API SUITE</h4>
-                            <h3>150+ APIs to help you with onboarding</h3>
-                            <p>Come and explore our iBeta Certified, ML-powered, highly-scalable and secure API suite.</p>
-                            <a href="#" class="ctaRed">Read More</a>
-                        </div>
-                    </div>
-                    <div class="scroll-cards__item slide" aria-label="Wie - 1" data-slide="2">
-                        <div class="dataImg">
-
-                            <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
-
-                        </div>
-                        <div class="dataContent">
-                            <h4>Privy</h4>
-                            <h3>150+ APIs to help you with onboarding</h3>
-                            <p>Come and explore our iBeta Certified, ML-powered, highly-scalable and secure API suite.</p>
-                            <a href="#" class="ctaRed">Read More</a>
-                        </div>
-                    </div>
-                    <div class="scroll-cards__item slide" aria-label="Wie - 1" data-slide="3">
-                        <div class="dataImg">
-
-                            <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
-
-                        </div>
-                        <div class="dataContent">
-                            <h4>Background verifications</h4>
-                            <h3>150+ APIs to help you with onboarding</h3>
-                            <p>Come and explore our iBeta Certified, ML-powered, highly-scalable and secure API suite.</p>
-                            <a href="#" class="ctaRed">Read More</a>
-                        </div>
-                    </div>
-                    <div class="scroll-cards__item slide" aria-label="Wie - 1" data-slide="4">
-                        <div class="dataImg">
-
-                            <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
-
-                        </div>
-                        <div class="dataContent">
-                            <h4>Video solutions</h4>
-                            <h3>150+ APIs to help you with onboarding</h3>
-                            <p>Come and explore our iBeta Certified, ML-powered, highly-scalable and secure API suite.</p>
-                            <a href="#" class="ctaRed">Read More</a>
-                        </div>
-                    </div>
-                    <div class="scroll-cards__item slide" aria-label="Wie - 1" data-slide="5">
-                        <div class="dataImg">
-
-                            <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
-
-                        </div>
-                        <div class="dataContent">
-                            <h4>Crime Check</h4>
-                            <h3>150+ APIs to help you with onboarding</h3>
-                            <p>Come and explore our iBeta Certified, ML-powered, highly-scalable and secure API suite.</p>
-                            <a href="#" class="ctaRed">Read More</a>
-                        </div>
-                    </div>
-                    <div class="scroll-cards__item slide" aria-label="Wie - 1" data-slide="6">
-                        <div class="dataImg">
-
-                            <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
-
-                        </div>
-                        <div class="dataContent">
-                            <h4>Risk & Fraud</h4>
-                            <h3>150+ APIs to help you with onboarding</h3>
-                            <p>Come and explore our iBeta Certified, ML-powered, highly-scalable and secure API suite.</p>
-                            <a href="#" class="ctaRed">Read More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- <div class="scroll-cards">
-            <h1>Some Sticky-Stacked Cards</h1>
-            <article class="scroll-cards__item" aria-label="Wie - 1">
-                <h2>Nice little headline</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, eveniet rem repudiandae quam illo, odio velit eius sunt architecto ratione iure deserunt magnam aut tenetur sint incidunt, ipsam id. Ab?</p>
-            </article>
-            <article class="scroll-cards__item" aria-label="Wie - 1">
-                <h2>Another Headline here</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, eveniet rem repudiandae quam illo, odio velit eius sunt architecto ratione iure deserunt magnam aut tenetur sint incidunt, ipsam id. Ab?</p>
-            </article>
-            <article class="scroll-cards__item" aria-label="Wie - 1">
-                <h2>Third Card follows</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, eveniet rem repudiandae quam illo, odio velit eius sunt architecto ratione iure deserunt magnam aut tenetur sint incidunt, ipsam id. Ab?</p>
-            </article>
-            <article class="scroll-cards__item" aria-label="Wie - 1">
-                <h2>Will there be another?</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, eveniet rem repudiandae quam illo, odio velit eius sunt architecto ratione iure deserunt magnam aut tenetur sint incidunt, ipsam id. Ab?</p>
-            </article>
-            <article class="scroll-cards__item" aria-label="Wie - 1">
-                <h2>Last one</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, eveniet rem repudiandae quam illo, odio velit eius sunt architecto ratione iure deserunt magnam aut tenetur sint incidunt, ipsam id. Ab?</p>
-            </article>
-        </div> -->
-    </div>
 </section>
 
 
-<!-- <div class="wrapper">
-  
-  <div class="scroll-cards">
-    <h1>Some Sticky-Stacked Cards</h1>
-    <article class="scroll-cards__item" aria-label="Wie - 1">
-      <h2>Nice little headline</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, eveniet rem repudiandae quam illo, odio velit eius sunt architecto ratione iure deserunt magnam aut tenetur sint incidunt, ipsam id. Ab?</p>
-    </article>
-    <article class="scroll-cards__item" aria-label="Wie - 1">
-      <h2>Another Headline here</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, eveniet rem repudiandae quam illo, odio velit eius sunt architecto ratione iure deserunt magnam aut tenetur sint incidunt, ipsam id. Ab?</p>
-    </article>
-    <article class="scroll-cards__item" aria-label="Wie - 1">
-      <h2>Third Card follows</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, eveniet rem repudiandae quam illo, odio velit eius sunt architecto ratione iure deserunt magnam aut tenetur sint incidunt, ipsam id. Ab?</p>
-    </article>
-    <article class="scroll-cards__item" aria-label="Wie - 1">
-      <h2>Will there be another?</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, eveniet rem repudiandae quam illo, odio velit eius sunt architecto ratione iure deserunt magnam aut tenetur sint incidunt, ipsam id. Ab?</p>
-    </article>
-    <article class="scroll-cards__item" aria-label="Wie - 1">
-      <h2>Last one</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, eveniet rem repudiandae quam illo, odio velit eius sunt architecto ratione iure deserunt magnam aut tenetur sint incidunt, ipsam id. Ab?</p>
-    </article>  
-  </div>
-</div> -->
+
 
 <section class="fraudstoriesSec fixed-section" id="fixedSection">
     <?php if (have_rows('fraud_stories_section')) : ?>

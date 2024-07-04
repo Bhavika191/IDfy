@@ -508,6 +508,11 @@ $colorWhite : #FFFFFF;
 img {max-width: 100%;}
 .slick-track {display: flex !important;}
 .slick-slide {height: inherit !important;}
+.slick-dots {
+    > li:only-child {
+        display: none;
+    }
+}
 
 .ctaRed {padding: 16px 30px;;@include font16;line-height: 16px;letter-spacing: 0px;font-family: $fonthelveticaneuebold;display: inline-flex;align-items: center;justify-content: center;cursor: pointer;border-radius: 40px;text-decoration: none;color: $colorWhite;text-transform: capitalize;transition: 0.3s all ease-in-out;background: $colorRed;
     &:hover{color: $colorWhite;box-shadow: 2px 2px 5px 1px #0000004D;transition: 0.3s all ease-in-out;}

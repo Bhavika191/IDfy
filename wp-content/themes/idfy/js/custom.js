@@ -649,57 +649,11 @@ document.addEventListener('DOMContentLoaded', function () {
 //         }, 3000);
 //     }
 
-//     (function ($) {
-//         $(function () {
-//             $('.timeline').slick({
-//                 infinite: true,
-//                 autoplay: false,
-//                 slidesToShow: 8,
-//                 slidesToScroll: 1,
-//                 arrows: false,
-//                 centerMode: true,
-//                 asNavFor: '.yearContentdata',
-//                 focusOnSelect: true,
-//                 mobileFirst: true,
-//             });
 
-//             $('.yearContentdata').slick({
-//                 autoplay: false,
-//                 slidesToShow: 1,
-//                 slidesToScroll: 1,
-//                 prevArrow: '#left-arrow',
-//                 nextArrow: '#right-arrow',
-//                 asNavFor: '.timeline',
-//                 speed: 500,
-//                 responsive: [
-//                     {
-//                         breakpoint: 0,
-//                         settings: {
-//                             centerMode: false
-//                         }
-//                     }
-//                 ]
-//             });
-
-//             $('.timeline').on('afterChange', function(event, slick, currentSlide){
-//                 navigateToYear(currentSlide);
-//                 startAutoProceed(); // Restart auto proceed after navigation
-//             });
-
-//             // Initialize with the first year's content and start auto proceed
-//             if (years.length > 0) {
-//                 navigateToYear(0);
-//                 startAutoProceed();
-//             }
-//         });
-//     })(jQuery);
-// });
-
-
+//* jyoti code*/
 
 (function ($) {
     $(function () {
-
         var $timeline = $('.timeline');
         var $yearContentData = $('.yearContentdata');
         var $timelineYears = $('.timeline-year');
@@ -754,13 +708,16 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         function updateTimelineColor(nextSlide) {
-            $timelineYears.each(function(index) {
+            $timelineYears.each(function (index) {
                 if (index < nextSlide) {
                     $(this).css('background-color', 'red');
+                    $(this).find('.timeline-line').addClass('active');
                 } else if (index === nextSlide) {
-                    $(this).css('background-color', 'blue'); 
+                    $(this).css('background-color', 'blue');
+                    $(this).find('.timeline-line').addClass('active');
                 } else {
                     $(this).css('background-color', 'transparent');
+                    $(this).find('.timeline-line').removeClass('active');
                 }
             });
         }
@@ -773,66 +730,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 })(jQuery);
 
-// (function ($) {
-//     $(function () {
+//* jyoti code*/
 
-
-//         $('.timeline').slick({
-//             infinite: false,
-//             autoplay: true,
-//             autoplaySpeed: 3000,
-//             slidesToScroll: 8,
-//             slidesToShow: 8,
-//             arrows: false,
-
-//             pauseOnHover: true,
-//             asNavFor: '.yearContentdata',
-//             focusOnSelect: true,
-//             responsive: [
-//                 {
-//                     breakpoint: 830,
-//                     settings: {
-//                         slidesToScroll: 1,
-//                         slidesToShow: 4,
-//                     }
-//                 },
-//                 {
-//                     breakpoint: 730,
-//                     settings: {
-//                         slidesToScroll: 1,
-//                         slidesToShow: 3,
-//                     }
-//                 }
-//             ]
-
-//         });
-
-//         $('.yearContentdata').slick({
-//             autoplay: true,
-//             autoplaySpeed: 3000,
-//             infinite: false,
-//             slidesToShow: 1,
-//             slidesToScroll: 1,
-//             pauseOnHover: true,
-
-//             prevArrow: '.left-arrow',
-//             nextArrow: '.right-arrow',
-
-//             asNavFor: '.timeline',
-//             speed: 500,
-//             responsive: [
-//                 {
-//                     breakpoint: 830,
-//                     settings: {
-//                         arrows: false,
-//                     }
-//                 }
-//             ]
-//         });
-
-
-//     });
-// })(jQuery);
 
 
 // ----------------------Timeline code--------------------------//
