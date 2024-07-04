@@ -5297,6 +5297,10 @@ footer .footerWrapper .copyright h3 {
 .onboardingJourneysec.onboardingJourneysecanime .innerWrapper .journeyData .contentDiv:last-child .innerBoxes:nth-child(3) h3::after {
   width: 56px;
 }
+.onboardingJourneysec.onboardingJourneysecanime .innerWrapper .journeyData .contentDiv .innerBoxesnew::after {
+  opacity: 1;
+  transition: 0.5s all ease-in-out;
+}
 .onboardingJourneysec.onboardingJourneysecanime .innerWrapper .journeyData .contentDiv .innerBoxes h3::after {
   animation: animBordertwo 2s linear;
   width: 50px;
@@ -5415,8 +5419,8 @@ footer .footerWrapper .copyright h3 {
   width: 35%;
 }
 .onboardingJourneysec .innerWrapper .journeyData .contentDiv:nth-child(1) .innerBoxes h3::after {
-  left: unset;
-  right: -52px;
+  left: 100%;
+  right: unset;
   height: 2px;
   bottom: -19px;
   transform: rotate(40deg);
@@ -5435,8 +5439,8 @@ footer .footerWrapper .copyright h3 {
   content: none;
 }
 .onboardingJourneysec .innerWrapper .journeyData .contentDiv:nth-child(1) .innerBoxes:nth-child(3) h3::after {
-  left: unset;
-  right: -52px;
+  left: 100%;
+  right: unset;
   width: 56px;
   height: 2px;
   bottom: 16px;
@@ -5496,6 +5500,7 @@ footer .footerWrapper .copyright h3 {
   left: -46px;
   width: 0px;
   height: 2px;
+  opacity: 0;
   bottom: -19px;
   transform: rotate(-40deg);
   border-bottom: 1px dashed #1C43B9;

@@ -658,11 +658,17 @@ if ($(".onboardingJourneysec").length) {
                 setTimeout(() => {
                     $(".onboardingJourneysec").addClass("onboardingJourneysecanime")
                 }, 1000);
+                setTimeout(() => {
+                    $(".innerBoxes h3").addClass("innerBoxesnew")
+                }, 2800);
             }
             else {
                 setTimeout(() => {
                     $(".onboardingJourneysec").removeClass("onboardingJourneysecanime")
                 }, 1000);
+                setTimeout(() => {
+                    $(".innerBoxes h3").removeClass("innerBoxesnew")
+                }, 2800);
             }
 
         }

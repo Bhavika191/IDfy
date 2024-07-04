@@ -406,6 +406,7 @@
                     &:last-child .innerBoxes:nth-child(3){
                         h3{&::after{width: 56px;}}
                     }
+                    .innerBoxesnew::after{opacity: 1;transition: 0.5s all ease-in-out;}
                     .innerBoxes{
                         h3{
                             &::after{animation:  animBordertwo 2s linear;width: 50px;}
@@ -435,7 +436,7 @@
         .journeyData{display: flex;margin-top: 72px;align-items: flex-start;
             .contentDiv{width: 35%;
                 &:nth-child(1) .innerBoxes{
-                    h3{&::after{left: unset;right: -52px;height: 2px;bottom: -19px;transform: rotate(40deg);}}
+                    h3{&::after{left: 100%;right: unset;height: 2px;bottom: -19px;transform: rotate(40deg);}}
                 }
                 &:last-child{
                     .innerBoxes{
@@ -449,7 +450,7 @@
                     h3{&::after{content: none;}}
                 }
                 &:nth-child(1) .innerBoxes:nth-child(3){
-                    h3{&::after{left: unset;right: -52px;width: 56px;height: 2px;bottom: 16px;transform: rotate(-40deg);}}
+                    h3{&::after{left: 100%;right: unset;width: 56px;height: 2px;bottom: 16px;transform: rotate(-40deg);}}
                 }
                 &:last-child .innerBoxes:nth-child(3){
                     h3{&::after{left: -52px;right: unset;width: 56px;height: 2px;bottom: 16px;transform: rotate(40deg);}}
@@ -458,7 +459,7 @@
                     &:last-child{margin-bottom: 0px;}
                     
                     h3{@include font32;font-family: $fonthelveticaneuebold;color: $colorBlue;line-height: normal;margin-bottom: 24px;position: relative;
-                        &::after{content: "";position: absolute;left: -46px;width: 0px;height: 2px;bottom: -19px;transform: rotate(-40deg);border-bottom: 1px dashed #1C43B9;}
+                        &::after{content: "";position: absolute;left: -46px;width: 0px;height: 2px;opacity: 0;;bottom: -19px;transform: rotate(-40deg);border-bottom: 1px dashed #1C43B9;}
                         &:before { position:absolute;bottom:0;left: 0;;border-bottom: 1px dashed #1C43B9;  width: 0%;;height:2px;display:block; content:""; }
                     }
                     .journeyinnerData{
