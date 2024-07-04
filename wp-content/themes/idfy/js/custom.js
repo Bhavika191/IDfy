@@ -787,7 +787,7 @@ if ($(".onboardingJourneysec").length) {
         $yearContentData.slick({
             autoplay: true,
             autoplaySpeed: 3000,
-            infinite: false,
+            infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,
             pauseOnHover: true,
@@ -808,13 +808,18 @@ if ($(".onboardingJourneysec").length) {
         function updateTimelineColor(nextSlide) {
             $timelineYears.each(function (index) {
                 if (index < nextSlide) {
-                    $(this).css('background-color', 'red');
+                    $(this).addClass('activeBlue');
                     $(this).find('.timeline-line').addClass('active');
                 } else if (index === nextSlide) {
-                    $(this).css('background-color', 'blue');
+                    $(this).addClass('activeMain');
+                    $(this).removeClass('activeBlue');
+                    // $(this).css('background-color', 'blue');
                     $(this).find('.timeline-line').addClass('active');
                 } else {
-                    $(this).css('background-color', 'transparent');
+                    $(this).addClass('activeGray');
+                    $(this).removeClass('activeMain');
+                    $(this).removeClass('activeBlue');
+                    // $(this).css('background-color', 'transparent');
                     $(this).find('.timeline-line').removeClass('active');
                 }
             });
@@ -827,6 +832,38 @@ if ($(".onboardingJourneysec").length) {
         updateTimelineColor($yearContentData.slick('slickCurrentSlide'));
     });
 })(jQuery);
+
+document.addEventListener('DOMContentLoaded', function () {
+    const timelineYears = document.querySelectorAll('.timeline-year');
+    const leftArrow = document.getElementById('left-arrow');
+    const rightArrow = document.getElementById('right-arrow');
+    let currentIndex = 0;
+
+    function updateActiveYear(index) {
+        timelineYears.forEach(year => year.classList.remove('active'));
+        document.querySelectorAll('.timeline-line').forEach(line => line.classList.remove('active'));
+
+        const currentYear = timelineYears[index];
+        currentYear.classList.add('active');
+        currentYear.querySelectorAll('.timeline-line').forEach(line => line.classList.add('active'));
+    }
+
+    leftArrow.addEventListener('click', function () {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateActiveYear(currentIndex);
+        }
+    });
+
+    rightArrow.addEventListener('click', function () {
+        if (currentIndex < timelineYears.length - 1) {
+            currentIndex++;
+            updateActiveYear(currentIndex);
+        }
+    });
+
+    updateActiveYear(currentIndex);
+});
 
 //* jyoti code*/
 

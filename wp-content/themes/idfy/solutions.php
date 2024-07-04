@@ -160,51 +160,7 @@
 
 <?php get_footer(); ?>
 
-<style>
 
-.timeline-line.active line {
-    stroke: #FF0000; 
-}
 
-.timeline-line.active {
-    stroke: red;
-}
 
-</style>
-
-<script>
-    /*jyoti code */
-document.addEventListener('DOMContentLoaded', function () {
-    const timelineYears = document.querySelectorAll('.timeline-year');
-    const leftArrow = document.getElementById('left-arrow');
-    const rightArrow = document.getElementById('right-arrow');
-    let currentIndex = 0;
-
-    function updateActiveYear(index) {
-        timelineYears.forEach(year => year.classList.remove('active'));
-        document.querySelectorAll('.timeline-line').forEach(line => line.classList.remove('active'));
-
-        const currentYear = timelineYears[index];
-        currentYear.classList.add('active');
-        currentYear.querySelectorAll('.timeline-line').forEach(line => line.classList.add('active'));
-    }
-
-    leftArrow.addEventListener('click', function () {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateActiveYear(currentIndex);
-        }
-    });
-
-    rightArrow.addEventListener('click', function () {
-        if (currentIndex < timelineYears.length - 1) {
-            currentIndex++;
-            updateActiveYear(currentIndex);
-        }
-    });
-
-    updateActiveYear(currentIndex);
-});
-
-</script>
 

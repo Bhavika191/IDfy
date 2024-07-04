@@ -3461,7 +3461,7 @@ footer .footerWrapper .copyright h3 {
 .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year h4 {
   font-size: 24px;
   font-family: "HelveticaNeueBold";
-  color: #343434;
+  color: #838EAE;
   line-height: normal;
   margin-top: 20px;
 }
@@ -3481,35 +3481,39 @@ footer .footerWrapper .copyright h3 {
 .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year:nth-last-child(1) .progressSvg {
   display: none;
 }
-.yearTimeline .timelineWrapper .timelineData .timeline .timeline-year.slick-current .circle span {
+.yearTimeline .timelineWrapper .timelineData .timeline .timeline-year.activeBlue .circle span {
   background: #1C43B9;
 }
-.yearTimeline .timelineWrapper .timelineData .timeline .timeline-year.slick-current .progressSvg line {
-  stroke: #1C43B9;
-  transition: 3s all ease-out;
-  stroke-width: 2px;
+.yearTimeline .timelineWrapper .timelineData .timeline .timeline-year.activeBlue h4 {
+  color: #3E3E3E;
 }
-.yearTimeline .timelineWrapper .timelineData .timeline .timeline-year.processed .circle span {
-  background: #1C43B9;
-}
-.yearTimeline .timelineWrapper .timelineData .timeline .timeline-year.processed .progressSvg line {
-  stroke: #1C43B9;
-  transition: 3s all ease-out;
-  stroke-width: 2px;
-}
-.yearTimeline .timelineWrapper .timelineData .timeline .timeline-year.active .circle {
+.yearTimeline .timelineWrapper .timelineData .timeline .timeline-year.slick-current .circle {
   border: 1px solid #1C43B9;
   background: #fff;
   position: relative;
   z-index: 3;
 }
+.yearTimeline .timelineWrapper .timelineData .timeline .timeline-year.slick-current .circle span {
+  background: #1C43B9;
+}
+.yearTimeline .timelineWrapper .timelineData .timeline .timeline-year.slick-current h4 {
+  color: #3E3E3E;
+}
+.yearTimeline .timelineWrapper .timelineData .timeline .timeline-year.slick-current .progressSvg line {
+  stroke: #1C43B9;
+  transition: 3s all ease-out;
+}
+.yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .timeline-line.active, .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .timeline-line.active line {
+  stroke: #1C43B9;
+}
 .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg {
   position: absolute;
   bottom: 57px;
-  left: 28px;
+  left: 10px;
 }
 .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg line {
   transition: 1s all ease-out;
+  stroke-width: 2px;
 }
 .yearTimeline .timelineWrapper .timelineData .timeline .progressSvg {
   display: flex;
