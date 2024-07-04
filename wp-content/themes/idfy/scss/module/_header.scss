@@ -5,17 +5,17 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
         }
         .headerContent{display: flex;gap:76px;
             .nav-links{display: flex;gap:76px;align-items: center;
-                .dropdown {padding: 24px 0px;position:relative;
+                .dropdown {padding: 24px 0px;position:relative;cursor: pointer;
                     .dropbtn{@include font14;font-family: $fonthelveticaneuebold;line-height: normal;text-transform: uppercase;color: $colorWhite;text-align: center;position: relative;
                         &::before{content: "";position: absolute;z-index: 2;background: url("../images/header-dropdown-icon.svg") no-repeat;top: 50%;transform: translateY(-50%);right: -20px;width: 12px;height: 10px;transition:all 0.3s ease-in-out;}
                     }
                     &.active{
                         .dropbtn{&::before{transform: rotate(180deg) translateY(50%);}}
-                        .dropdown-content{display: block;margin-top: 12px;}
+                        .dropdown-content{display: block;padding-top: 12px;}
                     }
                     .dropdown-content{display: none;position:absolute;top:100%;left:50%;transform:translateX(-50%);
                         .dropdown-wrapper{display: flex;background-color: #FFF;padding: 53px 50px;border-radius: 20px;gap:75px;
-                            &::before{position: absolute;bottom: 100%;left: 50%;transform: translateX(-50%);content: " ";width: 0;height: 0;border-left: 15px solid transparent;border-right: 15px solid transparent;border-bottom: 15px solid #fff;border-top: 15px solid transparent;}
+                            &::before{position: absolute;top: -15px;left: 50%;transform: translateX(-50%);content: " ";width: 0;height: 0;border-left: 15px solid transparent;border-right: 15px solid transparent;border-bottom: 15px solid #fff;border-top: 15px solid transparent;}
                             .dropdown-section-idfy{width: calc(28% - 75px);
                                 .idfy-wrapper{padding: 30px 40px;border-radius: 30px;border: 1px solid rgba(52, 52, 52, 0.50);
                                     .dropdown-image{margin-bottom: 14px;}
@@ -637,7 +637,7 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
     }
     @media all and (max-width:1180px){
         .navbar{
-            .logo{width: 120px;padding: 15px 0px;}
+            .logo{width: 85px;padding: 15px 0px;}
             .headerContent{
                 .nav-links{gap:50px;
                     .dropdown {padding: 16px 0px;

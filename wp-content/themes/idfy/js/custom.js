@@ -58,18 +58,18 @@ $(document).ready(function () {
         const dropbtn = dropdown.querySelector('.dropbtn');
 
         // Handle click event
-        dropbtn.addEventListener('click', function (event) {
-            // Prevent default behavior for the dropdown button
-            event.preventDefault();
-            // Close other open dropdowns
-            dropdowns.forEach(dd => {
-                if (dd !== dropdown) {
-                    dd.classList.remove('active');
-                }
-            });
-            // Toggle the current dropdown
-            dropdown.classList.toggle('active');
-        });
+        // dropbtn.addEventListener('click', function (event) {
+        //     // Prevent default behavior for the dropdown button
+        //     event.preventDefault();
+        //     // Close other open dropdowns
+        //     dropdowns.forEach(dd => {
+        //         if (dd !== dropdown) {
+        //             dd.classList.remove('active');
+        //         }
+        //     });
+        //     // Toggle the current dropdown
+        //     dropdown.classList.toggle('active');
+        // });
 
         // Handle mouseover event
         dropdown.addEventListener('mouseover', function () {
@@ -83,13 +83,13 @@ $(document).ready(function () {
     });
 
     // Close dropdowns when clicking outside
-    document.addEventListener('click', function (event) {
-        if (!event.target.closest('.dropdown')) {
-            dropdowns.forEach(dropdown => {
-                dropdown.classList.remove('active');
-            });
-        }
-    });
+    // document.addEventListener('click', function (event) {
+    //     if (!event.target.closest('.dropdown')) {
+    //         dropdowns.forEach(dropdown => {
+    //             dropdown.classList.remove('active');
+    //         });
+    //     }
+    // });
 });
 //-------------------Header Desktop Dropdown JS----------------------//
 
