@@ -173,6 +173,7 @@
 </style>
 
 <script>
+    /*jyoti code */
 document.addEventListener('DOMContentLoaded', function () {
     const timelineYears = document.querySelectorAll('.timeline-year');
     const leftArrow = document.getElementById('left-arrow');
