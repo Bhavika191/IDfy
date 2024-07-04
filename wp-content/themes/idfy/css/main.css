@@ -495,6 +495,7 @@ header .navbar .headerContent .nav-links {
 header .navbar .headerContent .nav-links .dropdown {
   padding: 24px 0px;
   position: relative;
+  cursor: pointer;
 }
 header .navbar .headerContent .nav-links .dropdown .dropbtn {
   font-size: 14px;
@@ -522,7 +523,7 @@ header .navbar .headerContent .nav-links .dropdown.active .dropbtn::before {
 }
 header .navbar .headerContent .nav-links .dropdown.active .dropdown-content {
   display: block;
-  margin-top: 12px;
+  padding-top: 12px;
 }
 header .navbar .headerContent .nav-links .dropdown .dropdown-content {
   display: none;
@@ -540,7 +541,7 @@ header .navbar .headerContent .nav-links .dropdown .dropdown-content .dropdown-w
 }
 header .navbar .headerContent .nav-links .dropdown .dropdown-content .dropdown-wrapper::before {
   position: absolute;
-  bottom: 100%;
+  top: -15px;
   left: 50%;
   transform: translateX(-50%);
   content: " ";
@@ -1529,7 +1530,7 @@ header.navColor .navbar .hamburger-menu .button_toggle span:nth-of-type(2), head
 }
 @media all and (max-width: 1180px) {
   header .navbar .logo {
-    width: 120px;
+    width: 85px;
     padding: 15px 0px;
   }
   header .navbar .headerContent .nav-links {
