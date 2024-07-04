@@ -650,7 +650,7 @@ document.addEventListener('DOMContentLoaded', function () {
 //     }
 
 
-//* jyoti code */
+//* jyoti code*/
 
 (function ($) {
     $(function () {
@@ -730,8 +730,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 })(jQuery);
 
+//* jyoti code*/
 
-//* jyoti code */
 
 
 // ----------------------Timeline code--------------------------//

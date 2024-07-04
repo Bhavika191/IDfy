@@ -266,6 +266,10 @@ img {
   height: inherit !important;
 }
 
+.slick-dots > li:only-child {
+  display: none;
+}
+
 .ctaRed {
   padding: 16px 30px;
   font-size: 16px;
@@ -4630,7 +4634,7 @@ footer .footerWrapper .copyright h3 {
 }
 @media screen and (max-width: 768px) {
   .bannerSectionhp .bannerWrapper .bannerContent {
-    top: 180px;
+    top: 200px;
     margin: 0 auto;
   }
   .bannerSectionhp .bannerWrapper .bannerbtmLinks ul li {
@@ -4710,7 +4714,7 @@ footer .footerWrapper .copyright h3 {
 }
 .enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 .enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv .innerBoxes {
@@ -5189,6 +5193,9 @@ footer .footerWrapper .copyright h3 {
   }
 }
 @media screen and (max-width: 820px) {
+  .pioneerSlidersec {
+    margin-bottom: 180px;
+  }
   .pioneerSlidersec .pionnerwrapper .secHeading {
     margin-bottom: 50px;
     padding: 0px 50px;
@@ -5196,7 +5203,7 @@ footer .footerWrapper .copyright h3 {
     text-align: center;
   }
   .pioneerSlidersec .pionnerwrapper .pioneerSlider .innerSlides {
-    padding: 0px 50px;
+    padding: 12px 50px;
     flex-direction: column-reverse;
   }
   .pioneerSlidersec .pionnerwrapper .pioneerSlider .innerSlides .contentDiv {
@@ -5252,7 +5259,7 @@ footer .footerWrapper .copyright h3 {
     font-size: 90px;
   }
   .pioneerSlidersec .pionnerwrapper .pioneerSlider .innerSlides {
-    padding: 0px 20px;
+    padding: 12px 20px;
   }
   .pioneerSlidersec .pionnerwrapper .pioneerSlider .innerSlides .contentDiv {
     margin-top: 32px;
@@ -6340,10 +6347,10 @@ footer .footerWrapper .copyright h3 {
     bottom: -20px;
     width: 144px;
   }
-  .productfamSection .innerWrapper .prodfamSlides .tabs {
+  .productfamSection .innerWrapper .prodfamSlides .slider .tabs {
     margin-bottom: 34px;
   }
-  .productfamSection .innerWrapper .prodfamSlides .tabs .tab {
+  .productfamSection .innerWrapper .prodfamSlides .slider .tabs .tab {
     margin-right: 40px;
   }
   .productfamSection .innerWrapper .prodfamSlides .slider .slide {
@@ -6373,10 +6380,10 @@ footer .footerWrapper .copyright h3 {
     bottom: -18px;
     width: 134px;
   }
-  .productfamSection .innerWrapper .prodfamSlides .tabs {
+  .productfamSection .innerWrapper .prodfamSlides .slider .tabs {
     margin-bottom: 32px;
   }
-  .productfamSection .innerWrapper .prodfamSlides .tabs .tab {
+  .productfamSection .innerWrapper .prodfamSlides .slider .tabs .tab {
     margin-right: 35px;
   }
   .productfamSection .innerWrapper .prodfamSlides .slider .slide {
@@ -6398,10 +6405,10 @@ footer .footerWrapper .copyright h3 {
   .productfamSection .innerWrapper .secHeading {
     margin-bottom: 42px;
   }
-  .productfamSection .innerWrapper .prodfamSlides .tabs {
+  .productfamSection .innerWrapper .prodfamSlides .slider .tabs {
     margin-bottom: 30px;
   }
-  .productfamSection .innerWrapper .prodfamSlides .tabs .tab {
+  .productfamSection .innerWrapper .prodfamSlides .slider .tabs .tab {
     margin-right: 30px;
   }
   .productfamSection .innerWrapper .prodfamSlides .slider .slide {
@@ -6447,21 +6454,24 @@ footer .footerWrapper .copyright h3 {
   .productfamSection .innerWrapper .prodfamSlides .innerDiv::-webkit-scrollbar {
     display: none; /* for Chrome, Safari, and Opera */
   }
-  .productfamSection .innerWrapper .prodfamSlides .tabs {
+  .productfamSection .innerWrapper .prodfamSlides .slider .tabs {
     margin-bottom: 24px;
     justify-content: flex-start;
     width: max-content;
   }
-  .productfamSection .innerWrapper .prodfamSlides .tabs .tab {
+  .productfamSection .innerWrapper .prodfamSlides .slider .tabs .tab {
     margin-right: 40px;
     text-align: left;
   }
   .productfamSection .innerWrapper .prodfamSlides .slider .slide {
     display: block;
     padding: 24px;
+    border-radius: 20px;
+    top: max(16vh, 8em);
   }
   .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataImg {
     width: 100%;
+    border-radius: 20px;
   }
   .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent {
     width: 100%;
@@ -6936,7 +6946,7 @@ footer .footerWrapper .copyright h3 {
   width: 100%;
 }
 .fraudStoryslidermbl .slick-dots {
-  bottom: 40px;
+  bottom: 10px;
   right: 0;
   left: 0;
   width: unset;
@@ -7254,7 +7264,7 @@ footer .footerWrapper .copyright h3 {
     height: 9px;
   }
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1440px) {
   .clientsSection {
     margin-bottom: 100px;
   }
@@ -7285,6 +7295,16 @@ footer .footerWrapper .copyright h3 {
   .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDiv {
     width: 65%;
     padding-right: 70px;
+  }
+  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDiv h3::before {
+    top: -18px;
+    left: -40px;
+    scale: 0.8;
+  }
+  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDiv h3::after {
+    bottom: -38px;
+    right: -30px;
+    scale: 0.8;
   }
   .clientsSection .innerWrapper .clientSlider .slick-dots {
     bottom: 30px;
@@ -7332,6 +7352,16 @@ footer .footerWrapper .copyright h3 {
     width: 68%;
     padding-right: 40px;
   }
+  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDiv h3::before {
+    top: -20px;
+    left: -38px;
+    scale: 0.7;
+  }
+  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDiv h3::after {
+    bottom: -30px;
+    right: -20px;
+    scale: 0.7;
+  }
   .clientsSection .innerWrapper .clientSlider .slick-dots {
     bottom: 10px;
     right: 40px;
@@ -7351,9 +7381,10 @@ footer .footerWrapper .copyright h3 {
     margin-bottom: 240px;
   }
   .clientsSection .innerWrapper .clientSlider {
-    border: none;
+    border: 0.5px solid rgba(0, 0, 0, 0.2);
     box-shadow: none;
     margin-top: 60px;
+    padding: 10px 20px;
   }
   .clientsSection .innerWrapper .clientSlider .clientsliderSlides {
     padding: 0px;
@@ -7380,10 +7411,20 @@ footer .footerWrapper .copyright h3 {
   .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDiv {
     width: 90%;
     padding-right: 0px;
-    margin: 30px auto 0px;
+    margin: 70px auto 30px;
   }
   .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDiv h3 {
     text-align: center;
+  }
+  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDiv h3::before {
+    top: -50px;
+    left: 0px;
+    scale: 1;
+  }
+  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDiv h3::after {
+    bottom: -30px;
+    right: 0px;
+    scale: 1;
   }
   .clientsSection .innerWrapper .clientSlider .slick-dots {
     bottom: -90px;
@@ -7495,6 +7536,10 @@ footer .footerWrapper .copyright h3 {
 }
 .awardscertificateSec .innerWrapper .awardCertiInner .awardDiv .imgBox {
   width: 45%;
+  margin-top: 40px;
+}
+.awardscertificateSec .innerWrapper .awardCertiInner .awardDiv .imgBox:nth-child(1), .awardscertificateSec .innerWrapper .awardCertiInner .awardDiv .imgBox:nth-child(2) {
+  margin-top: 0px;
 }
 .awardscertificateSec .innerWrapper .awardCertiInner .awardDiv .imgBox .imgDiv {
   width: 220px;
@@ -7536,6 +7581,10 @@ footer .footerWrapper .copyright h3 {
 }
 .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox {
   width: 22%;
+  margin-top: 40px;
+}
+.awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox:nth-child(1), .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox:nth-child(2), .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox:nth-child(3), .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox:nth-child(4) {
+  margin-top: 0px;
 }
 .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox .imgDiv {
   width: 220px;
@@ -7758,6 +7807,9 @@ footer .footerWrapper .copyright h3 {
   .awardscertificateSec .innerWrapper .awardCertiInner .awardDiv .imgBox:nth-last-child(1), .awardscertificateSec .innerWrapper .awardCertiInner .awardDiv .imgBox:nth-last-child(2) {
     margin-bottom: 0;
   }
+  .awardscertificateSec .innerWrapper .awardCertiInner .awardDiv .imgBox:nth-child(1), .awardscertificateSec .innerWrapper .awardCertiInner .awardDiv .imgBox:nth-child(2) {
+    margin-top: 40px;
+  }
   .awardscertificateSec .innerWrapper .awardCertiInner .awardDiv .imgBox:nth-child(2n+2) {
     margin-right: 0px;
   }
@@ -7778,6 +7830,9 @@ footer .footerWrapper .copyright h3 {
   }
   .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox:nth-last-child(1), .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox:nth-last-child(2) {
     margin-bottom: 0;
+  }
+  .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox:nth-child(1), .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox:nth-child(2), .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox:nth-child(3), .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox:nth-child(4) {
+    margin-top: 40px;
   }
   .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox:nth-child(2n+2) {
     margin-right: 0px;
@@ -7814,4 +7869,4 @@ footer .footerWrapper .copyright h3 {
   .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox .contentDiv {
     margin-top: 16px;
   }
-}
+}/*# sourceMappingURL=main.css.map */
