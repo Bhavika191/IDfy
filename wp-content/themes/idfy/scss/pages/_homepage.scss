@@ -749,9 +749,9 @@
             h2{@include font48;font-family: $fonthelveticaneuelight;text-transform: capitalize;line-height: 100%;letter-spacing: 0px;color: $colorGray;text-align: center;}
             &::before{content: "";position: absolute;bottom: -22px;left: 0;right: 0;height: 1px;width: 154px;background: rgba(0, 0, 0, 0.80);margin: 0 auto}
         }
-        .prodfamSlides{  counter-reset: card;position: relative; display: block;padding-bottom: 200px;
+        .prodfamSlides{  counter-reset: card;position: relative; display: block;padding-bottom: 300px;
             .slider{ 
-                .innerDiv{position: sticky;top: 5rem;overflow-x: scroll;-ms-overflow-style: none; /* for Internet Explorer, Edge */scrollbar-width: none; /* for Firefox */
+                .innerDiv{position: sticky;top: 4rem;overflow-x: scroll;-ms-overflow-style: none; /* for Internet Explorer, Edge */scrollbar-width: none; /* for Firefox */
                     &::-webkit-scrollbar {display: none; /* for Chrome, Safari, and Opera */}}
                 .tabs{text-align: center;margin-bottom: 30px;display: flex;align-items: center;justify-content: center;width: max-content;margin-left: auto;margin-right: auto;
                     .tab{background: transparent !important;outline: none;cursor: pointer;margin-right: 50px;text-align: center;
@@ -764,7 +764,7 @@
                         }
                     }
                 }
-                .slide {width: 100%;border-radius: 34.359px;border: 0.687px solid rgba(0, 0, 0, 0.20);background: #FFF;box-shadow: 0.744px -0.256px 24.615px 0px rgba(0, 0, 0, 0.2);display: flex;padding: 35px;;align-items: center;justify-content: space-between; --offset: 1em;position: sticky;top: max(16vh, 10em);
+                .slide {width: 100%;border-radius: 34.359px;border: 0.687px solid rgba(0, 0, 0, 0.20);background: #FFF;box-shadow: 0.744px -0.256px 24.615px 0px rgba(0, 0, 0, 0.2);display: flex;padding: 35px;;align-items: center;justify-content: space-between; --offset: 1em;position: sticky;top: max(10vh, 9em);height: 751px;;
                     @for $i from 0 through 9 {
                         &:nth-of-type(#{$i}) {
                           transform: translateY( calc((#{$i} - 1) * var(--offset)));
@@ -775,29 +775,55 @@
                     .dataContent{width: 40%;
                         h4{@include font20;font-family: $fonthelveticaneuebold;color: $colorGray;line-height: 100%;letter-spacing: 0px;text-transform: uppercase;}
                         h3{@include font40;font-family: $fonthelveticaneuebold;color: $colorGray;line-height: 125%;letter-spacing: -1px;margin: 30px 0px;width: 75%;}
-                        p{@include font20;font-family: $fonthelveticaneuelight;color: $colorGray;line-height: 150%;margin-bottom: 30px;width: 65%;}
+                        ul li, p{@include font20;font-family: $fonthelveticaneuelight;color: $colorGray;line-height: 150%;margin-bottom: 30px;width: 65%;}
                     }
                     
                 }
             }
         }
     }
+
+    @media screen and (max-width:1920px) {
+        .innerWrapper{
+            .prodfamSlides{
+                .slider{
+                    .innerDiv{top: 3rem;}
+                    .slide {height: 650px;top: max(10vh, 7em);
+                        .dataContent ul li , p {width: 80%;}
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:1800px) {
+        .innerWrapper{
+            .prodfamSlides{
+                .slider{
+                    .slide {height: 690px;
+                        .dataContent ul li , p {width: 82%;}
+                    }
+                }
+            }
+        }
+    }
+
     @media screen and (max-width:1600px) {
         .innerWrapper{
             .secHeading{margin-bottom: 50px;
                 &::before{bottom: -20px;width: 144px;}
             }
-            .prodfamSlides{
+            .prodfamSlides{padding-bottom: 250px;
                 .slider{
                     .tabs{margin-bottom: 34px;
                         .tab{margin-right: 40px;
                         }
                     }
-                    .slide {padding: 30px;
+                    .slide {padding: 30px;height: 650px;top: max(9vh, 6em);
                         .dataImg{width: 50%;}
-                        .dataContent{width: 42%;
+                        .dataContent{
                             h3{letter-spacing: 0px;margin: 26px 0px;width: 78%;}
-                            p{margin-bottom: 26px;width: 68%;}
+                            ul li, p{margin-bottom: 26px;width: 68%;}
                         }
                     }
                 }
@@ -805,6 +831,16 @@
         }
     }
 
+    @media screen and (max-width:1440px) {
+        .innerWrapper{
+            .prodfamSlides{
+                .slider{
+                    .slide {height: 570px;
+                    }
+                }
+            }
+        }
+    }
     @media screen and (max-width:1400px) {
         .innerWrapper{
             .secHeading{margin-bottom: 46px;
@@ -816,10 +852,10 @@
                         .tab{margin-right: 35px;
                         }
                     }
-                    .slide {padding: 28px;
+                    .slide {padding: 28px;height: 540px;
                        .dataContent{width: 43%;
                             h3{margin: 22px 0px;width: 80%;}
-                            p{margin-bottom: 24px;width: 70%;}
+                            ul li, p{margin-bottom: 24px;}
                         }
                     }
                 }
@@ -831,16 +867,16 @@
         .innerWrapper{
             .secHeading{margin-bottom: 42px;
             }
-            .prodfamSlides{
+            .prodfamSlides{padding-bottom: 200px;
                 .slider{
                     .tabs{margin-bottom: 30px;
                         .tab{margin-right: 30px;
                         }
                     }
-                    .slide {padding: 26px;
+                    .slide {padding: 26px;height: 500px;
                        .dataContent{width: 45%;
                             h3{margin: 18px 0px;width: 100%;}
-                            p{margin-bottom: 24px;width: 100%;}
+                            ul li, p{margin-bottom: 24px;width: 100%;}
                         }
                     }
                 }
@@ -852,12 +888,13 @@
         .innerWrapper{
             .secHeading{margin-bottom: 38px;
             }
-            .prodfamSlides{
+            .prodfamSlides{padding-bottom: 250px;
                 .slider{
                     .slide {
-                       .dataContent{width: 47%;
+                        .dataImg{width: 48%;}
+                       .dataContent{width: 48%;
                             h3{margin: 14px 0px;line-height: 112%;}
-                            p{margin-bottom: 20px;line-height: 132%;}
+                            ul li, p{margin-bottom: 20px;line-height: 132%;}
                         }
                     }
                 }
@@ -875,12 +912,22 @@
                         .tab{margin-right: 40px;text-align: left;
                         }
                     }
-                    .slide {display: block;padding: 24px;border-radius: 20px;top: max(16vh, 8em);
+                    .slide {display: block;padding: 24px;border-radius: 20px;height: 750px;;
                         .dataImg{width: 100%;border-radius: 20px;}
                        .dataContent{width: 100%;margin-top: 24px;
                             h3{margin: 12px 0px;line-height: 112%;}
-                            p{margin-bottom: 21px;line-height: 132%;}
+                            ul li, p{margin-bottom: 21px;line-height: 132%;}
                         }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width:768px) {
+        .innerWrapper{
+            .prodfamSlides{
+                .slider{
+                    .slide {height: 730px;
                     }
                 }
             }
@@ -891,7 +938,7 @@
             .prodfamSlides{
                 
                 .slider{
-                    .slide {padding: 20px;
+                    .slide {padding: 20px;height: 650px;
                         .dataContent a{width: 100%;}
                     }
                 }
@@ -901,24 +948,8 @@
 }
  
 
-.pin-spacer{margin: 0px 0px 150px !important;
-    @media screen and (max-width:1600px) {
-        margin: 0px 0px 120px !important;
-    }
-    @media screen and (max-width:1400px) {
-        margin: 0px 0px 100px !important;
-    }
-    @media screen and (max-width:1280px) {
-        margin: 0px 0px 80px !important;
-    }
-    @media screen and (max-width:1024px) {
-        margin: 0px 0px 120px !important;
-    }
-    @media screen and (max-width:820px) {
-        margin: 0px !important;
-    }
-}
-.fraudstoriesSec{height: 100vh;display: flex;justify-content: center;align-items: center; position: relative;width: 100%; 
+
+.fraudstoriesSec{margin-bottom: 150px;display: flex;justify-content: center;align-items: center; position: relative;width: 100%; 
     .innerWrapper{@include wrapper;
         .secHeading{
             h2{@include font48;font-family: $fonthelveticaneuelight;text-transform: capitalize;line-height: 100%;letter-spacing: 0px;color: $colorGray;text-align: center;position: relative;
@@ -931,13 +962,14 @@
                 #boxesData{position: absolute;top: 8%;left: -45%;width: 74%;border-radius: 20px;border: 0.685px solid rgba(0, 0, 0, 0.20);background: #FFF;box-shadow: 13.705px 13.705px 20.557px 0px rgba(0, 0, 0, 0.20);padding: 35px 45px;transition: 0.7s all ease-in-out;
                     &:nth-child(2){top: 40%;right: -40%;left: unset;}
                     &:nth-child(3){top: 60%;left: -45%}
-                    p{@include font24;font-family: $fonthelveticaneuelight;line-height: 133%;color: #080808;}
+                    p, ul li{@include font24;font-family: $fonthelveticaneuelight;line-height: 133%;color: #080808;}
+                    ul li{list-style: disc;}
                     a{margin-top: 20px;display: none;}
                 }
                 
                 .activeBoxes , #boxesData:hover{border-radius: 20px;border: 0.685px solid rgba(0, 0, 0, 0.20); background: #1C43B9 !important;box-shadow: 13.705px 13.705px 20.557px 0px rgba(0, 0, 0, 0.20);transition: 0.7s all ease-in-out;width: 88% !important;left: -46% !important;
                     &:nth-child(2){left: unset !important;}
-                    p{font-size: 30px !important;color: $colorWhite !important;}
+                    p, ul li{font-size: 30px !important;color: $colorWhite !important;}
                     a{display: inline-flex !important;}
                 }
             }
@@ -966,7 +998,7 @@
         }
     }
 
-    @media screen and (max-width:1600px) {
+    @media screen and (max-width:1600px) {margin-bottom: 120px;
         .innerWrapper{
             .secHeading{
                 h2{
@@ -982,7 +1014,7 @@
                         a{margin-top: 18px;}
                     }
                     .activeBoxes, #boxesData:hover{width: 70% !important;left: -25% !important;
-                        p{font-size: 24px !important;}
+                        p, ul li{font-size: 24px !important;}
                     }
                 }
                 .box-container-two{
@@ -995,7 +1027,7 @@
         }
     }
 
-    @media screen and (max-width:1440px) {
+    @media screen and (max-width:1440px) {margin-bottom: 100px;
         .innerWrapper{
             .secHeading{
                 h2:before{bottom: -17px;}
@@ -1009,7 +1041,7 @@
                         a{margin-top: 16px;}
                     }
                     .activeBoxes , #boxesData:hover{width: 62% !important;left: -11% !important;
-                        p{font-size: 22px !important;}
+                        p, ul li{font-size: 22px !important;}
                     }
                 }
                 .box-container-two{
@@ -1032,10 +1064,10 @@
                         &:nth-child(2){top: 37%;right: -9%;}
                         &:nth-child(3){top: 62%;left: -8%}
                         a{margin-top: 14px;}
-                        p{font-size: 16px;}
+                        p, ul li{font-size: 16px;}
                     }
                     .activeBoxes, #boxesData:hover{width: 56% !important;left: -8% !important;
-                        p{font-size: 20px !important;}
+                        p, ul li{font-size: 20px !important;}
                     }
                 }
                 .box-container-two{
@@ -1048,7 +1080,7 @@
         }
     }
 
-    @media screen and (max-width:1024px) {
+    @media screen and (max-width:1024px) {margin-bottom: 80px;
         .innerWrapper{
             .secHeading{
                 h2:before{bottom: -13px;}
@@ -1060,10 +1092,10 @@
                         &:nth-child(2){top: 34%;right: 0%;}
                         &:nth-child(3){top: 63%;left: 0%}
                         a{margin-top: 12px;}
-                        p{font-size: 14px;}
+                        p, ul li{font-size: 14px;}
                     }
                     .activeBoxes, #boxesData:hover{width: 43% !important;left: 0% !important;
-                        p{font-size: 18px !important;}
+                        p, ul li{font-size: 18px !important;}
                     }
                 }
                 .box-container-two{
@@ -1076,7 +1108,7 @@
         }
     }
 
-    @media screen and (max-width:820px) {height: auto;
+    @media screen and (max-width:820px) {height: auto;margin-bottom:0px;
         .innerWrapper{
             .secHeading{
                 p{color: #000;;width: 100%;}
@@ -1095,7 +1127,7 @@
                 .dotsInner{position: absolute;top: 5%;right: 0%;img{width: 170px;}}
             }
             .contentDiv{border-radius: 20px;background: #1C43B9;padding: 24px 32px;box-shadow: 20px 20px 30px 0px rgba(0, 0, 0, 0.20);transform: translateY(-44%);
-                p{font-size: 24px;font-family: $fonthelveticaneuelight;letter-spacing: 1.7px;line-height: normal;color: $colorWhite;margin-bottom: 23px;}
+                p, ul li{font-size: 24px;font-family: $fonthelveticaneuelight;letter-spacing: 1.7px;line-height: normal;color: $colorWhite;margin-bottom: 23px;}
                 a{width: 100%;}
             }
         }
@@ -1125,7 +1157,7 @@
                     .dotsInner{top: 2%;right: 0%;img{width: 100px;}}
                 }
                 .contentDiv{transform: translateY(-23%);
-                    p{font-size: 20px;letter-spacing: 1px;}
+                    p,  ul li{font-size: 20px;letter-spacing: 1px;}
                 }
             }
         }

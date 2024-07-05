@@ -300,7 +300,7 @@
                         <?php if (have_rows('fraud_stories_content')) : ?>
                             <?php $counter = 1;
                             while (have_rows('fraud_stories_content')) : the_row(); ?>
-                                <div class="box <?php if ($counter == 1) {
+                                <div class="box boxContent <?php if ($counter == 1) {
                                                     echo 'activeBoxes';
                                                 } ?>" id="boxesData">
                                     <p><?php echo get_sub_field('card_description'); ?></p>

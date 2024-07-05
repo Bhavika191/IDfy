@@ -103,14 +103,14 @@ $(document).ready(function () {
                 menuOpen = true; // Menu is open
                 $('body').css("overflow", "hidden");
                 $('html').css("overflow", "hidden");
-                $('.search-icon-mobile').css({"opacity": "1" ,"height":"20",'width':"20"});
+                $('.search-icon-mobile').css({ "opacity": "1", "height": "20", 'width': "20" });
                 $('.logo .mobile-logo').css({ "opacity": "1", 'height': "auto" });
                 $('.logo .desktop-logo').css({ "opacity": "0", 'height': "0" });
             } else {
                 menuOpen = false; // Menu is closed
                 $('body').css("overflow", "visible");
                 $('html').css("overflow", "visible");
-                $('.search-icon-mobile').css({"opacity": "0" ,"height":"0",'width':"0"});
+                $('.search-icon-mobile').css({ "opacity": "0", "height": "0", 'width': "0" });
                 $('.logo .mobile-logo').css({ "opacity": "0", 'height': "0" });
                 $('.logo .desktop-logo').css({ "opacity": "1", 'height': "auto" });
             }
@@ -459,68 +459,78 @@ if (window.innerWidth < 1025) {
 
 
 
-if (window.innerWidth > 820) {
-    // on scroll sticky section fraud stories js starts
-    gsap.registerPlugin(ScrollTrigger);
+// if (window.innerWidth > 820) {
+//     // on scroll sticky section fraud stories js starts
+//     gsap.registerPlugin(ScrollTrigger);
 
-    // Pin the section
-    ScrollTrigger.create({
-        trigger: ".fixed-section",
-        start: "top top",
-        end: "+=200%", // Adjust based on the desired scroll length
-        pin: true
+//     // Pin the section
+//     ScrollTrigger.create({
+//         trigger: ".fixed-section",
+//         start: "top top",
+//         end: "+=200%", // Adjust based on the desired scroll length
+//         pin: true
+//     });
+
+//     // Create a timeline for the first box container
+//     const tl = gsap.timeline({
+//         scrollTrigger: {
+//             trigger: ".fixed-section",
+//             start: "top top",
+//             end: "+=200%", // Adjust based on the desired scroll length
+//             scrub: true
+//         }
+//     });
+
+//     // Select the first set of boxes
+//     const boxes = document.querySelectorAll(".fixed-section .box-container .box");
+
+//     // Add animations to the timeline for the first set of boxes
+//     boxes.forEach((box, index) => {
+//         tl.to(box, {
+//             className: "+=activeBoxes",
+//             duration: 1,
+//             onStart: () => {
+//                 if (index > 0) boxes[index - 1].classList.remove("activeBoxes");
+//             }
+//         });
+//     });
+
+//     // Create a timeline for the second box container
+//     const tl2 = gsap.timeline({
+//         scrollTrigger: {
+//             trigger: ".fixed-section",
+//             start: "top top",
+//             end: "+=200%", // Adjust based on the desired scroll length
+//             scrub: true
+//         }
+//     });
+
+//     // Select the second set of boxes
+//     const boxesTwo = document.querySelectorAll(".fixed-section .box-container-two .box");
+
+//     // Add animations to the timeline for the second set of boxes
+//     boxesTwo.forEach((box, index) => {
+//         tl2.to(box, {
+//             className: "+=active-two",
+//             duration: 1,
+//             onStart: () => {
+//                 if (index > 0) boxesTwo[index - 1].classList.remove("active-two");
+//             }
+//         });
+//     });
+
+//     // on scroll sticky section fraud stories js starts
+// }
+
+
+document.querySelectorAll('.boxContent').forEach(item => {
+    item.addEventListener('mouseover', () => {
+        item.classList.add('activeBoxes');
     });
-
-    // Create a timeline for the first box container
-    const tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".fixed-section",
-            start: "top top",
-            end: "+=200%", // Adjust based on the desired scroll length
-            scrub: true
-        }
+    item.addEventListener('mouseout', () => {
+        item.classList.remove('activeBoxes');
     });
-
-    // Select the first set of boxes
-    const boxes = document.querySelectorAll(".fixed-section .box-container .box");
-
-    // Add animations to the timeline for the first set of boxes
-    boxes.forEach((box, index) => {
-        tl.to(box, {
-            className: "+=activeBoxes",
-            duration: 1,
-            onStart: () => {
-                if (index > 0) boxes[index - 1].classList.remove("activeBoxes");
-            }
-        });
-    });
-
-    // Create a timeline for the second box container
-    const tl2 = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".fixed-section",
-            start: "top top",
-            end: "+=200%", // Adjust based on the desired scroll length
-            scrub: true
-        }
-    });
-
-    // Select the second set of boxes
-    const boxesTwo = document.querySelectorAll(".fixed-section .box-container-two .box");
-
-    // Add animations to the timeline for the second set of boxes
-    boxesTwo.forEach((box, index) => {
-        tl2.to(box, {
-            className: "+=active-two",
-            duration: 1,
-            onStart: () => {
-                if (index > 0) boxesTwo[index - 1].classList.remove("active-two");
-            }
-        });
-    });
-
-    // on scroll sticky section fraud stories js starts
-}
+});
 
 // on scroll sticky section fraud stories js starts
 
@@ -922,45 +932,44 @@ $.fn.isInViewport = function () {
     var viewportTop = $(window).scrollTop();
     var viewportBottom = viewportTop + $(window).height();
     return elementBottom > viewportTop && elementTop < viewportBottom;
-  };
-  
-  if ($(".productfamSection").length) {
+};
+
+if ($(".productfamSection").length) {
     $(window).on('resize scroll', function () {
-      if ($('.productfamSection').length) {
-        if ($('.productfamSection').isInViewport()) {
-          setTimeout(() => {
-            $("header").addClass("productHeader")
-          }, 1000);
+        if ($('.productfamSection').length) {
+            if ($('.productfamSection').isInViewport()) {
+                setTimeout(() => {
+                    $("header").addClass("productHeader")
+                }, 1000);
+            }
+            else {
+                setTimeout(() => {
+                    $("header").removeClass("productHeader")
+                }, 1000);
+            }
+
         }
-        else {
-          setTimeout(() => {
-            $("header").removeClass("productHeader")
-          }, 1000);
-        }
-  
-      }
     });
-  }
+}
 
 
-  if ($(".onboardingJourneysec").length) {
+if ($(".onboardingJourneysec").length) {
     $(window).on('resize scroll', function () {
-      if ($('.onboardingJourneysec').length) {
-        if ($('.onboardingJourneysec').isInViewport()) {
-          setTimeout(() => {
-            $(".onboardingJourneysec").addClass("onboardingJourneysecanime")
-          }, 1000);
+        if ($('.onboardingJourneysec').length) {
+            if ($('.onboardingJourneysec').isInViewport()) {
+                setTimeout(() => {
+                    $(".onboardingJourneysec").addClass("onboardingJourneysecanime")
+                }, 1000);
+            }
+            else {
+                setTimeout(() => {
+                    $(".onboardingJourneysec").removeClass("onboardingJourneysecanime")
+                }, 1000);
+            }
+
         }
-        else {
-          setTimeout(() => {
-            $(".onboardingJourneysec").removeClass("onboardingJourneysecanime")
-          }, 1000);
-        }
-  
-      }
     });
-  }
+}
 
 
 
-  
