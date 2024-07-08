@@ -6182,11 +6182,11 @@ footer .footerWrapper .copyright h3 {
   counter-reset: card;
   position: relative;
   display: block;
-  padding-bottom: 200px;
+  padding-bottom: 300px;
 }
 .productfamSection .innerWrapper .prodfamSlides .slider .innerDiv {
   position: sticky;
-  top: 5rem;
+  top: 4rem;
   overflow-x: scroll;
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
@@ -6266,7 +6266,8 @@ footer .footerWrapper .copyright h3 {
   justify-content: space-between;
   --offset: 1em;
   position: sticky;
-  top: max(16vh, 10em);
+  top: max(10vh, 9em);
+  height: 751px;
 }
 .productfamSection .innerWrapper .prodfamSlides .slider .slide:nth-of-type(0) {
   transform: translateY(calc((0 - 1) * var(--offset)));
@@ -6348,7 +6349,7 @@ footer .footerWrapper .copyright h3 {
     font-size: 24px;
   }
 }
-.productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
+.productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ul li, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
   font-size: 20px;
   font-family: "HelveticaNeueLight";
   color: #343434;
@@ -6357,13 +6358,33 @@ footer .footerWrapper .copyright h3 {
   width: 65%;
 }
 @media screen and (max-width: 1600px) {
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ul li, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 720px) {
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ul li, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
     font-size: 16px;
+  }
+}
+@media screen and (max-width: 1920px) {
+  .productfamSection .innerWrapper .prodfamSlides .slider .innerDiv {
+    top: 3rem;
+  }
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide {
+    height: 650px;
+    top: max(10vh, 7em);
+  }
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ul li, .productfamSection .innerWrapper .prodfamSlides .slider .slide p {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1800px) {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide {
+    height: 690px;
+  }
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ul li, .productfamSection .innerWrapper .prodfamSlides .slider .slide p {
+    width: 82%;
   }
 }
 @media screen and (max-width: 1600px) {
@@ -6374,6 +6395,9 @@ footer .footerWrapper .copyright h3 {
     bottom: -20px;
     width: 144px;
   }
+  .productfamSection .innerWrapper .prodfamSlides {
+    padding-bottom: 250px;
+  }
   .productfamSection .innerWrapper .prodfamSlides .slider .tabs {
     margin-bottom: 34px;
   }
@@ -6382,21 +6406,25 @@ footer .footerWrapper .copyright h3 {
   }
   .productfamSection .innerWrapper .prodfamSlides .slider .slide {
     padding: 30px;
+    height: 650px;
+    top: max(9vh, 6em);
   }
   .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataImg {
     width: 50%;
-  }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent {
-    width: 42%;
   }
   .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent h3 {
     letter-spacing: 0px;
     margin: 26px 0px;
     width: 78%;
   }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ul li, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
     margin-bottom: 26px;
     width: 68%;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide {
+    height: 570px;
   }
 }
 @media screen and (max-width: 1400px) {
@@ -6415,6 +6443,7 @@ footer .footerWrapper .copyright h3 {
   }
   .productfamSection .innerWrapper .prodfamSlides .slider .slide {
     padding: 28px;
+    height: 540px;
   }
   .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent {
     width: 43%;
@@ -6423,14 +6452,16 @@ footer .footerWrapper .copyright h3 {
     margin: 22px 0px;
     width: 80%;
   }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ul li, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
     margin-bottom: 24px;
-    width: 70%;
   }
 }
 @media screen and (max-width: 1280px) {
   .productfamSection .innerWrapper .secHeading {
     margin-bottom: 42px;
+  }
+  .productfamSection .innerWrapper .prodfamSlides {
+    padding-bottom: 200px;
   }
   .productfamSection .innerWrapper .prodfamSlides .slider .tabs {
     margin-bottom: 30px;
@@ -6440,6 +6471,7 @@ footer .footerWrapper .copyright h3 {
   }
   .productfamSection .innerWrapper .prodfamSlides .slider .slide {
     padding: 26px;
+    height: 500px;
   }
   .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent {
     width: 45%;
@@ -6448,7 +6480,7 @@ footer .footerWrapper .copyright h3 {
     margin: 18px 0px;
     width: 100%;
   }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ul li, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
     margin-bottom: 24px;
     width: 100%;
   }
@@ -6457,14 +6489,20 @@ footer .footerWrapper .copyright h3 {
   .productfamSection .innerWrapper .secHeading {
     margin-bottom: 38px;
   }
+  .productfamSection .innerWrapper .prodfamSlides {
+    padding-bottom: 250px;
+  }
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataImg {
+    width: 48%;
+  }
   .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent {
-    width: 47%;
+    width: 48%;
   }
   .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent h3 {
     margin: 14px 0px;
     line-height: 112%;
   }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ul li, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
     margin-bottom: 20px;
     line-height: 132%;
   }
@@ -6494,7 +6532,7 @@ footer .footerWrapper .copyright h3 {
     display: block;
     padding: 24px;
     border-radius: 20px;
-    top: max(16vh, 8em);
+    height: 750px;
   }
   .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataImg {
     width: 100%;
@@ -6508,51 +6546,28 @@ footer .footerWrapper .copyright h3 {
     margin: 12px 0px;
     line-height: 112%;
   }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ul li, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
     margin-bottom: 21px;
     line-height: 132%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide {
+    height: 730px;
   }
 }
 @media screen and (max-width: 720px) {
   .productfamSection .innerWrapper .prodfamSlides .slider .slide {
     padding: 20px;
+    height: 650px;
   }
   .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent a {
     width: 100%;
   }
 }
 
-.pin-spacer {
-  margin: 0px 0px 150px !important;
-}
-@media screen and (max-width: 1600px) {
-  .pin-spacer {
-    margin: 0px 0px 120px !important;
-  }
-}
-@media screen and (max-width: 1400px) {
-  .pin-spacer {
-    margin: 0px 0px 100px !important;
-  }
-}
-@media screen and (max-width: 1280px) {
-  .pin-spacer {
-    margin: 0px 0px 80px !important;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .pin-spacer {
-    margin: 0px 0px 120px !important;
-  }
-}
-@media screen and (max-width: 820px) {
-  .pin-spacer {
-    margin: 0px !important;
-  }
-}
-
 .fraudstoriesSec {
-  height: 100vh;
+  margin-bottom: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6663,21 +6678,24 @@ footer .footerWrapper .copyright h3 {
   top: 60%;
   left: -45%;
 }
-.fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData p {
+.fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData p, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData ul li {
   font-size: 24px;
   font-family: "HelveticaNeueLight";
   line-height: 133%;
   color: #080808;
 }
 @media screen and (max-width: 1600px) {
-  .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData p {
+  .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData p, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData ul li {
     font-size: 20px;
   }
 }
 @media screen and (max-width: 1400px) {
-  .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData p {
+  .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData p, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData ul li {
     font-size: 18px;
   }
+}
+.fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData ul li {
+  list-style: disc;
 }
 .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData a {
   margin-top: 20px;
@@ -6695,7 +6713,7 @@ footer .footerWrapper .copyright h3 {
 .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes:nth-child(2), .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover:nth-child(2) {
   left: unset !important;
 }
-.fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes p, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover p {
+.fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes p, .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes ul li, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover p, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover ul li {
   font-size: 30px !important;
   color: #FFFFFF !important;
 }
@@ -6742,6 +6760,9 @@ footer .footerWrapper .copyright h3 {
   }
 }
 @media screen and (max-width: 1600px) {
+  .fraudstoriesSec {
+    margin-bottom: 120px;
+  }
   .fraudstoriesSec .innerWrapper .secHeading h2::before {
     bottom: -20px;
     width: 164px;
@@ -6775,7 +6796,7 @@ footer .footerWrapper .copyright h3 {
     width: 70% !important;
     left: -25% !important;
   }
-  .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes p, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover p {
+  .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes p, .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes ul li, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover p, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover ul li {
     font-size: 24px !important;
   }
   .fraudstoriesSec .innerWrapper .boxContent .box-container-two #boxesImg .dotsInner {
@@ -6787,6 +6808,9 @@ footer .footerWrapper .copyright h3 {
   }
 }
 @media screen and (max-width: 1440px) {
+  .fraudstoriesSec {
+    margin-bottom: 100px;
+  }
   .fraudstoriesSec .innerWrapper .secHeading h2:before {
     bottom: -17px;
   }
@@ -6817,7 +6841,7 @@ footer .footerWrapper .copyright h3 {
     width: 62% !important;
     left: -11% !important;
   }
-  .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes p, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover p {
+  .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes p, .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes ul li, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover p, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover ul li {
     font-size: 22px !important;
   }
   .fraudstoriesSec .innerWrapper .boxContent .box-container-two #boxesImg .dotsInner {
@@ -6852,14 +6876,14 @@ footer .footerWrapper .copyright h3 {
   .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData a {
     margin-top: 14px;
   }
-  .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData p {
+  .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData p, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData ul li {
     font-size: 16px;
   }
   .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover {
     width: 56% !important;
     left: -8% !important;
   }
-  .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes p, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover p {
+  .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes p, .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes ul li, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover p, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover ul li {
     font-size: 20px !important;
   }
   .fraudstoriesSec .innerWrapper .boxContent .box-container-two #boxesImg .dotsInner {
@@ -6871,6 +6895,9 @@ footer .footerWrapper .copyright h3 {
   }
 }
 @media screen and (max-width: 1024px) {
+  .fraudstoriesSec {
+    margin-bottom: 80px;
+  }
   .fraudstoriesSec .innerWrapper .secHeading h2:before {
     bottom: -13px;
   }
@@ -6897,14 +6924,14 @@ footer .footerWrapper .copyright h3 {
   .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData a {
     margin-top: 12px;
   }
-  .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData p {
+  .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData p, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData ul li {
     font-size: 14px;
   }
   .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover {
     width: 43% !important;
     left: 0% !important;
   }
-  .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes p, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover p {
+  .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes p, .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes ul li, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover p, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover ul li {
     font-size: 18px !important;
   }
   .fraudstoriesSec .innerWrapper .boxContent .box-container-two #boxesImg .dotsInner {
@@ -6918,6 +6945,7 @@ footer .footerWrapper .copyright h3 {
 @media screen and (max-width: 820px) {
   .fraudstoriesSec {
     height: auto;
+    margin-bottom: 0px;
   }
   .fraudstoriesSec .innerWrapper .secHeading p {
     color: #000;
@@ -6961,7 +6989,7 @@ footer .footerWrapper .copyright h3 {
   box-shadow: 20px 20px 30px 0px rgba(0, 0, 0, 0.2);
   transform: translateY(-44%);
 }
-.fraudStoryslidermbl .fraudStoryslider .boxSlides .contentDiv p {
+.fraudStoryslidermbl .fraudStoryslider .boxSlides .contentDiv p, .fraudStoryslidermbl .fraudStoryslider .boxSlides .contentDiv ul li {
   font-size: 24px;
   font-family: "HelveticaNeueLight";
   letter-spacing: 1.7px;
@@ -7032,7 +7060,7 @@ footer .footerWrapper .copyright h3 {
   .fraudStoryslidermbl .fraudStoryslider .boxSlides .contentDiv {
     transform: translateY(-23%);
   }
-  .fraudStoryslidermbl .fraudStoryslider .boxSlides .contentDiv p {
+  .fraudStoryslidermbl .fraudStoryslider .boxSlides .contentDiv p, .fraudStoryslidermbl .fraudStoryslider .boxSlides .contentDiv ul li {
     font-size: 20px;
     letter-spacing: 1px;
   }
