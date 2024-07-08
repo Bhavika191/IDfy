@@ -538,6 +538,7 @@ header .navbar .headerContent .nav-links .dropdown .dropdown-content .dropdown-w
   padding: 53px 50px;
   border-radius: 20px;
   gap: 75px;
+  box-shadow: 0px 6px 25px 0px rgba(0, 0, 0, 0.2) !important;
 }
 header .navbar .headerContent .nav-links .dropdown .dropdown-content .dropdown-wrapper::before {
   position: absolute;

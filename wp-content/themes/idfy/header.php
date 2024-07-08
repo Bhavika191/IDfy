@@ -304,6 +304,7 @@
 								<div class="select-selected">IND</div>
 								<ul class="select-items">
 									<li>IND</li>
+									<li>ID</li>
 									<li>PH</li>
 								</ul>
 							</div>
@@ -473,10 +474,11 @@
 											</li>
 											<div class="custom-select-mobile">
 												<p>Global</p>
-												<div class="select-selected-mobile">India</div>
+												<div class="select-selected-mobile">IND</div>
 												<ul class="select-items-mobile">
-													<li>India</li>
-													<li>Philippines</li>
+													<li>IND</li>
+													<li>ID</li>
+													<li>PH</li>
 												</ul>
 											</div>
 										</ul>
