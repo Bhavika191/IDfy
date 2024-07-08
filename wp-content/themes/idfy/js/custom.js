@@ -157,17 +157,35 @@ $(document).ready(function () {
     var selected = select.find('.select-selected');
     var items = select.find('.select-items');
 
-    selected.on('click', function () {
-        items.toggle();
-        $(this).toggleClass('active-arrow');
-    });
+    // Initially hide the selected option from the items list
+    updateItems();
 
-    items.on('click', 'li', function () {
-        selected.text($(this).text());
+    // Show items on mouseover and hide on mouseout
+    select.on('mouseover', function () {
+        items.show();
+        selected.addClass('active-arrow');
+    }).on('mouseout', function () {
         items.hide();
         selected.removeClass('active-arrow');
     });
 
+    // Handle item selection
+    items.on('click', 'li', function () {
+        var selectedHTML = $(this).html();
+        selected.html(selectedHTML);
+        items.hide();
+        selected.removeClass('active-arrow');
+        updateItems();
+    });
+
+    function updateItems() {
+        var selectedText = selected.text().trim();
+        items.find('li').show().filter(function () {
+            return $(this).text().trim() === selectedText;
+        }).hide();
+    }
+
+    // Handle clicking outside the dropdown
     $(document).on('click', function (e) {
         if (!select.is(e.target) && select.has(e.target).length === 0) {
             items.hide();
@@ -183,17 +201,32 @@ $(document).ready(function () {
     var selected = select.find('.select-selected-mobile');
     var items = select.find('.select-items-mobile');
 
+    // Initially hide the selected option from the items list
+    updateItems();
+
+    // Show items on click and hide on outside click
     selected.on('click', function () {
         items.toggleClass('show');
         $(this).toggleClass('active-arrow');
     });
 
+    // Handle item selection
     items.on('click', 'li', function () {
-        selected.text($(this).text());
+        var selectedHTML = $(this).html();
+        selected.html(selectedHTML);
         items.removeClass('show');
         selected.removeClass('active-arrow');
+        updateItems();
     });
 
+    function updateItems() {
+        var selectedText = selected.text().trim();
+        items.find('li').show().filter(function () {
+            return $(this).text().trim() === selectedText;
+        }).hide();
+    }
+
+    // Handle clicking outside the dropdown
     $(document).on('click', function (e) {
         if (!select.is(e.target) && select.has(e.target).length === 0) {
             items.removeClass('show');

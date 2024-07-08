@@ -301,11 +301,11 @@
 
 							</div>
 							<div class="custom-select">
-								<div class="select-selected">IND</div>
+								<div class="select-selected"><img src="<?php bloginfo('template_directory'); ?>/images/india-flag.svg" alt=""> IND</div>
 								<ul class="select-items">
-									<li>IND</li>
-									<li>ID</li>
-									<li>PH</li>
+									<li><img src="<?php bloginfo('template_directory'); ?>/images/india-flag.svg" alt=""> IND</li>
+									<li><img src="<?php bloginfo('template_directory'); ?>/images/indonesia-flag.svg" alt=""> ID</li>
+									<li><img src="<?php bloginfo('template_directory'); ?>/images/philippines-flag.svg" alt=""> PH</li>
 								</ul>
 							</div>
 							<a href="#" class="btn ctaRed">Contact Us</a>
@@ -474,11 +474,11 @@
 											</li>
 											<div class="custom-select-mobile">
 												<p>Global</p>
-												<div class="select-selected-mobile">IND</div>
+												<div class="select-selected-mobile"><img src="<?php bloginfo('template_directory'); ?>/images/india-flag.svg" alt=""> IND</div>
 												<ul class="select-items-mobile">
-													<li>IND</li>
-													<li>ID</li>
-													<li>PH</li>
+													<li><img src="<?php bloginfo('template_directory'); ?>/images/india-flag.svg" alt=""> IND</li>
+													<li><img src="<?php bloginfo('template_directory'); ?>/images/indonesia-flag.svg" alt=""> ID</li>
+													<li><img src="<?php bloginfo('template_directory'); ?>/images/philippines-flag.svg" alt=""> PH</li>
 												</ul>
 											</div>
 										</ul>
