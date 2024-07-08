@@ -1,13 +1,13 @@
 header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;background: transparent;width: 100%;z-index: 4;
-    &.nav-up{top: -120px;}
+    &.nav-up{top: -150px;}
     .navbar{@include wrapper;display: flex;justify-content: space-between;align-items: center;
         .logo{width: 109px;overflow: hidden;padding: 24px 0px;
         }
         .headerContent{display: flex;gap:76px;
             .nav-links{display: flex;gap:76px;align-items: center;
                 .dropdown {padding: 24px 0px;position:relative;cursor: pointer;
-                    .dropbtn{@include font14;font-family: $fonthelveticaneuebold;line-height: normal;text-transform: capitalize;color: $colorWhite;text-align: center;position: relative;
-                        &::before{content: "";position: absolute;z-index: 2;background: url("../images/header-dropdown-icon.svg") no-repeat;top: 50%;transform: translateY(-50%);right: -20px;width: 12px;height: 10px;transition:all 0.3s ease-in-out;}
+                    .dropbtn{@include font14;font-family: $fonthelveticaneuebold;line-height: normal;text-transform: uppercase;color: $colorWhite;text-align: center;position: relative;padding-right:20px;
+                        &::before{content: "";position: absolute;z-index: 2;background: url("../images/header-dropdown-icon.svg") no-repeat;top: 50%;transform: translateY(-50%);right: 0px;width: 12px;height: 10px;transition:all 0.3s ease-in-out;}
                     }
                     &.active{
                         .dropbtn{&::before{transform: rotate(180deg) translateY(50%);}}
@@ -63,7 +63,7 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                 }
                 .dropdown1{
                     .dropdown-content{min-width: 1690px;left: 275%;
-                        .dropdown-wrapper{&::before{left: 39%;}}
+                        .dropdown-wrapper{&::before{left: 36%;}}
                     }
                 }
                 .dropdown2{
@@ -126,19 +126,22 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                     .searchWhite{stroke: #fff;}
                 }
                 .custom-select{position: relative;display: inline-block;
-                    .select-selected{position: relative;background-color: transparent;padding: 15px 38px 15px 20px;border: 1px solid white;border-radius: 50px;cursor: pointer;text-align: center;@include font16;font-family: $fonthelveticaneuemedium;line-height: 100%;letter-spacing:  -0.32px;text-transform: uppercase;color: $colorWhite;
+                    .select-selected{position: relative;background-color: transparent;padding: 15px 38px 15px 20px;border: 1px solid white;border-radius: 50px;cursor: pointer;text-align: center;@include font16;font-family: $fonthelveticaneuemedium;letter-spacing:  -0.32px;text-transform: uppercase;color: $colorWhite;
+                        img{display: inline;margin-right: 4px;vertical-align: middle;}
                         &::after{position: absolute;content: url("../images/select-arrow.svg");z-index: 2;top: 50%;transform: translateY(-50%);transition:all 0.3s ease-in-out;padding:0px 4px;}
                         &.active-arrow{&::after{transform: rotate(180deg) translateY(50%);}}
                     }
-                    .select-items{margin-top: 10px;position: absolute;display: none;border: 1px solid white;cursor: pointer;border-radius:10px;width: 100%;text-align:center;
-                        li{@include font16;font-family: $fonthelveticaneuemedium;line-height: 100%;letter-spacing:  -0.32px;text-transform: uppercase;color: $colorWhite;padding: 15px 20px;cursor: pointer;&:not(:last-child){border-bottom: 1px solid #fff;}}
+                    .select-items{padding-top: 10px;position: absolute;display: none;cursor: pointer;width: 100%;text-align:center;
+                        li{@include font16;font-family: $fonthelveticaneuemedium;line-height: 100%;letter-spacing:  -0.32px;text-transform: uppercase;color: $colorWhite;padding: 15px 20px;cursor: pointer;border: 1px solid white;border-radius:50px;
+                            img{display: inline;margin-right: 4px;vertical-align: middle;}
+                        }
                     }
                 }
             }
         }
         .hamburger-menu{display: none;}
     }
-    &.navColor, &.scrolled{background: #fff;
+    &.navColor, &.scrolled{background: #fff;box-shadow: 0px 6px 25px 0px #00000033;
         .navbar{
             .logo{
                 .logoColor{fill: #606060;}
@@ -204,7 +207,7 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                 .nav-links{
                     .dropdown {padding: 24px 0px;
                         .dropbtn{
-                            &::before{right: -20px;width: 12px;height: 10px;}
+                            &::before{width: 12px;height: 10px;}
                         }
                         .dropdown-content{
                             .dropdown-wrapper{padding: 50px 45px;gap:70px;
@@ -245,12 +248,12 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                     }
                     .dropdown1{
                         .dropdown-content{min-width: 1500px;left: 390%;
-                            .dropdown-wrapper{&::before{left: 31%;}}
+                            .dropdown-wrapper{&::before{left: 26%;}}
                         }
                     }
                     .dropdown2{
                         .dropdown-content{min-width: 1456px;left: 200%;
-                            .dropdown-wrapper{&::before{left: 41%;}}
+                            .dropdown-wrapper{&::before{left: 39%;}}
                         }
                     }
                     .dropdown3{
@@ -273,14 +276,13 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
         }
     }
     @media all and (max-width:1600px){
-        &.nav-up{top: -110px;}
         .navbar{
             .logo{width: 109px;padding: 22px 0px;}
             .headerContent{gap: 70px;
                 .nav-links{gap:70px;
                     .dropdown {padding: 22px 0px;
                         .dropbtn{
-                            &::before{right: -20px;width: 12px;height: 10px;}
+                            &::before{width: 12px;height: 10px;}
                         }
                         .dropdown-content{
                             .dropdown-wrapper{padding: 46px 40px;gap:60px;
@@ -321,12 +323,12 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                     }
                     .dropdown1{
                         .dropdown-content{min-width: 1400px;left: 400%;
-                            .dropdown-wrapper{&::before{left: 29%;}}
+                            .dropdown-wrapper{&::before{left: 23%;}}
                         }
                     }
                     .dropdown2{
                         .dropdown-content{min-width: 1350px;
-                            .dropdown-wrapper{&::before{left: 40%;}}
+                            .dropdown-wrapper{&::before{left: 37%;}}
                         }
                     }
                     .dropdown3{
@@ -357,14 +359,13 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
         }
     }
     @media all and (max-width:1536px){
-        &.nav-up{top: -100px;}
         .navbar{
             .logo{width: 100px;padding: 20px 0px;}
             .headerContent{gap:60px;
                 .nav-links{gap:60px;
                     .dropdown {padding: 20px 0px;
                         .dropbtn{
-                            &::before{right: -20px;height: 8px;}
+                            &::before{height: 8px;}
                         }
                         .dropdown-content{
                             .dropdown-wrapper{padding: 42px 36px;gap:50px;
@@ -405,7 +406,7 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                     }
                     .dropdown1{
                         .dropdown-content{min-width: 1350px;left:380%;
-                            .dropdown-wrapper{&::before{left: 29%;}}
+                            .dropdown-wrapper{&::before{left: 24%;}}
                         }
                     }
                     .dropdown2{
@@ -431,12 +432,12 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
     }
     @media all and (max-width:1440px){
         .navbar{
-            .logo{width: 120px;padding: 18px 0px;}
-            .headerContent{
-                .nav-links{
+            .logo{padding: 18px 0px;}
+            .headerContent{gap: 50px;
+                .nav-links{gap: 50px;
                     .dropdown {padding: 18px 0px;
-                        .dropbtn{
-                            &::before{right: -18px;height: 8px;}
+                        .dropbtn{padding-right: 18px;
+                            &::before{height: 8px;}
                         }
                         .dropdown-content{
                             .dropdown-wrapper{padding: 40px 32px;gap:45px;
@@ -477,12 +478,12 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                     }
                     .dropdown1{
                         .dropdown-content{min-width: 1200px;left: 420%;
-                            .dropdown-wrapper{&::before{left: 24%;}}
+                            .dropdown-wrapper{&::before{left: 18%;}}
                         }
                     }
                     .dropdown2{
                         .dropdown-content{min-width: 1100px;
-                            .dropdown-wrapper{&::before{left: 38%;}}
+                            .dropdown-wrapper{&::before{left: 35%;}}
                         }
                     }
                     .dropdown3{
@@ -501,6 +502,7 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                         }
                     }
                 }
+                .header-elements{gap: 22px;}
             }
         }
     }
@@ -520,14 +522,13 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
         }
     }
     @media all and (max-width:1366px){
-        &.nav-up{top: -90px;}
         .navbar{
             .logo{width: 100px;padding: 15px 0px;}
-            .headerContent{gap:50px;
-                .nav-links{gap:50px;
+            .headerContent{gap:40px;
+                .nav-links{gap:40px;
                     .dropdown {padding: 18px 0px;
                         .dropbtn{
-                            &::before{right: -18px;height: 8px;}
+                            &::before{height: 8px;}
                         }
                         .dropdown-content{
                             .dropdown-wrapper{padding: 30px 30px;gap:40px;
@@ -588,6 +589,7 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                         }
                     }
                 }
+                .header-elements{gap: 20px;}
             }
         }
     }
@@ -597,11 +599,13 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                 .nav-links{
                     .dropdown1{
                         .dropdown-content{min-width: 1000px;left: 380%;
-                            .dropdown-wrapper{&::before{left:22%;}}
+                            .dropdown-wrapper{&::before{left:16%;}}
                         }
                     }
                     .dropdown2{
-                        .dropdown-content{min-width: 1000px;}
+                        .dropdown-content{min-width: 1000px;
+                            .dropdown-wrapper{&::before{left:33%;}}
+                        }
                     }
                     .dropdown3{
                         .dropdown-content{min-width: 600px;}
@@ -637,9 +641,9 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
     }
     @media all and (max-width:1180px){
         .navbar{
-            .logo{width: 85px;padding: 15px 0px;}
-            .headerContent{
-                .nav-links{gap:50px;
+            .logo{width: 80px;padding: 15px 0px;}
+            .headerContent{gap:30px;
+                .nav-links{gap:30px;
                     .dropdown {padding: 16px 0px;
                         a{
                             &::before{right: -16px;height: 8px;}
@@ -682,13 +686,13 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                         }
                     }
                     .dropdown1{
-                        .dropdown-content{min-width: 1000px;left: 480%;
+                        .dropdown-content{min-width: 1000px;left: 400%;
                             .dropdown-wrapper{&::before{left: 13%;}}
                         }
                     }
                     .dropdown2{
                         .dropdown-content{min-width: 900px;left: 250%;
-                            .dropdown-wrapper{&::before{left: 30%;}
+                            .dropdown-wrapper{&::before{left: 26%;}
                                 .dropdown-section-menu2{
                                     .menu-wrapper{
                                         .dropdown-menu{width:30%}
@@ -787,13 +791,13 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                                 }
                                 .custom-select-mobile{position: relative;
                                     p{font-size: 14px;line-height: 17.09px;letter-spacing: -3%;font-family: $fonthelveticaneuemedium;margin: 12px 0px;}
-                                    .select-selected-mobile{padding: 17px 35px 17px 17px;font-size: 18px;line-height: 21.98px;font-family: $fonthelveticaneuemedium;border: 1px solid $colorBlack;border-radius: 12px;position:relative;
+                                    .select-selected-mobile{padding: 17px 35px 17px 17px;font-size: 18px;line-height: 21.98px;font-family: $fonthelveticaneuemedium;border: 1px solid $colorBlack;border-radius: 12px;position:relative;display:flex;gap:10px;
                                         &::before{content: "";position: absolute;z-index: 2;background: url("../images/humberger-arrow.svg") no-repeat;top: 50%;transform: translateY(-50%);right: 25px;width: 20px;height: 10px;transition:all 0.3s ease-in-out;}
                                         &.active-arrow{&::before{transform: rotate(180deg) translateY(50%);}}
                                     }
                                     .select-items-mobile{width: 100%;margin-top:10px;position: absolute;opacity: 0;height: 0;border-radius: 12px;transition: 0.3s all ease-in-out;overflow: hidden;
                                         &.show{height: auto;opacity: 1;border: 1px solid $colorBlack;}
-                                        li{padding: 17px;font-size: 18px;line-height: 21.98px;font-family: $fonthelveticaneuemedium;&:not(:last-child){border-bottom: 1px solid $colorBlack;}}
+                                        li{padding: 17px;font-size: 18px;line-height: 21.98px;font-family: $fonthelveticaneuemedium;&:not(:last-child){border-bottom: 1px solid $colorBlack;};display:flex;gap:10px;}
                                     }
                                 }
                             }
