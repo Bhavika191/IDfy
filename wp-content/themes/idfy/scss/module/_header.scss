@@ -6,7 +6,7 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
         .headerContent{display: flex;gap:76px;
             .nav-links{display: flex;gap:76px;align-items: center;
                 .dropdown {padding: 24px 0px;position:relative;cursor: pointer;
-                    .dropbtn{@include font14;font-family: $fonthelveticaneuebold;line-height: normal;text-transform: uppercase;color: $colorWhite;text-align: center;position: relative;padding-right:20px;
+                    .dropbtn{@include font14;font-family: $fonthelveticaneuebold;line-height: normal;text-transform: capitalize;color: $colorWhite;text-align: center;position: relative;padding-right:20px;
                         &::before{content: "";position: absolute;z-index: 2;background: url("../images/header-dropdown-icon.svg") no-repeat;top: 50%;transform: translateY(-50%);right: 0px;width: 12px;height: 10px;transition:all 0.3s ease-in-out;}
                     }
                     &.active{
@@ -63,7 +63,7 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                 }
                 .dropdown1{
                     .dropdown-content{min-width: 1690px;left: 275%;
-                        .dropdown-wrapper{&::before{left: 36%;}}
+                        .dropdown-wrapper{&::before{left: 38%;}}
                     }
                 }
                 .dropdown2{
@@ -159,8 +159,8 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                     .select-selected{border: 1px solid #080808;color: #080808;
                         &::after{content: url("../images/select-arrow-black.svg");}
                     }
-                    .select-items{border: 1px solid #080808;background: #fff;
-                        li{&:not(:last-child){border-bottom: 1px solid #080808;}color: #080808;}
+                    .select-items{background: #fff;
+                        li{border: 1px solid #080808;color: #080808;}
                     }
                 }
                 .nav-links{
@@ -248,12 +248,12 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                     }
                     .dropdown1{
                         .dropdown-content{min-width: 1500px;left: 390%;
-                            .dropdown-wrapper{&::before{left: 26%;}}
+                            .dropdown-wrapper{&::before{left: 30%;}}
                         }
                     }
                     .dropdown2{
                         .dropdown-content{min-width: 1456px;left: 200%;
-                            .dropdown-wrapper{&::before{left: 39%;}}
+                            .dropdown-wrapper{&::before{left: 40%;}}
                         }
                     }
                     .dropdown3{
@@ -323,12 +323,12 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                     }
                     .dropdown1{
                         .dropdown-content{min-width: 1400px;left: 400%;
-                            .dropdown-wrapper{&::before{left: 23%;}}
+                            .dropdown-wrapper{&::before{left: 28%;}}
                         }
                     }
                     .dropdown2{
                         .dropdown-content{min-width: 1350px;
-                            .dropdown-wrapper{&::before{left: 37%;}}
+                            .dropdown-wrapper{&::before{left: 39%;}}
                         }
                     }
                     .dropdown3{
@@ -406,7 +406,7 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                     }
                     .dropdown1{
                         .dropdown-content{min-width: 1350px;left:380%;
-                            .dropdown-wrapper{&::before{left: 24%;}}
+                            .dropdown-wrapper{&::before{left: 28%;}}
                         }
                     }
                     .dropdown2{
@@ -478,12 +478,12 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                     }
                     .dropdown1{
                         .dropdown-content{min-width: 1200px;left: 420%;
-                            .dropdown-wrapper{&::before{left: 18%;}}
+                            .dropdown-wrapper{&::before{left: 24%;}}
                         }
                     }
                     .dropdown2{
                         .dropdown-content{min-width: 1100px;
-                            .dropdown-wrapper{&::before{left: 35%;}}
+                            .dropdown-wrapper{&::before{left: 37%;}}
                         }
                     }
                     .dropdown3{
@@ -599,12 +599,12 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                 .nav-links{
                     .dropdown1{
                         .dropdown-content{min-width: 1000px;left: 380%;
-                            .dropdown-wrapper{&::before{left:16%;}}
+                            .dropdown-wrapper{&::before{left:22%;}}
                         }
                     }
                     .dropdown2{
                         .dropdown-content{min-width: 1000px;
-                            .dropdown-wrapper{&::before{left:33%;}}
+                            .dropdown-wrapper{&::before{left:36%;}}
                         }
                     }
                     .dropdown3{
@@ -687,12 +687,12 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                     }
                     .dropdown1{
                         .dropdown-content{min-width: 1000px;left: 400%;
-                            .dropdown-wrapper{&::before{left: 13%;}}
+                            .dropdown-wrapper{&::before{left: 20%;}}
                         }
                     }
                     .dropdown2{
                         .dropdown-content{min-width: 900px;left: 250%;
-                            .dropdown-wrapper{&::before{left: 26%;}
+                            .dropdown-wrapper{&::before{left: 30%;}
                                 .dropdown-section-menu2{
                                     .menu-wrapper{
                                         .dropdown-menu{width:30%}
