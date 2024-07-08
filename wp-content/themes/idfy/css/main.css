@@ -501,7 +501,7 @@ header .navbar .headerContent .nav-links .dropdown .dropbtn {
   font-size: 14px;
   font-family: "HelveticaNeueBold";
   line-height: normal;
-  text-transform: capitalize;
+  text-transform: uppercase;
   color: #FFFFFF;
   text-align: center;
   position: relative;
