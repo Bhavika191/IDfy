@@ -6,7 +6,7 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
         .headerContent{display: flex;gap:76px;
             .nav-links{display: flex;gap:76px;align-items: center;
                 .dropdown {padding: 24px 0px;position:relative;cursor: pointer;
-                    .dropbtn{@include font14;font-family: $fonthelveticaneuebold;line-height: normal;text-transform: uppercase;color: $colorWhite;text-align: center;position: relative;
+                    .dropbtn{@include font14;font-family: $fonthelveticaneuebold;line-height: normal;text-transform: capitalize;color: $colorWhite;text-align: center;position: relative;
                         &::before{content: "";position: absolute;z-index: 2;background: url("../images/header-dropdown-icon.svg") no-repeat;top: 50%;transform: translateY(-50%);right: -20px;width: 12px;height: 10px;transition:all 0.3s ease-in-out;}
                     }
                     &.active{

@@ -501,7 +501,7 @@ header .navbar .headerContent .nav-links .dropdown .dropbtn {
   font-size: 14px;
   font-family: "HelveticaNeueBold";
   line-height: normal;
-  text-transform: uppercase;
+  text-transform: capitalize;
   color: #FFFFFF;
   text-align: center;
   position: relative;
@@ -6212,6 +6212,7 @@ footer .footerWrapper .copyright h3 {
   text-align: center;
 }
 .productfamSection .innerWrapper .prodfamSlides .slider .tabs .tab span {
+  display: block;
   font-size: 12px;
   font-family: "HelveticaNeueLight";
   letter-spacing: 1px;
@@ -6230,6 +6231,9 @@ footer .footerWrapper .copyright h3 {
   line-height: 120%;
   color: #343434;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-self: center;
 }
 @media screen and (max-width: 1600px) {
   .productfamSection .innerWrapper .prodfamSlides .slider .tabs .tab h3 {
@@ -6717,6 +6721,12 @@ footer .footerWrapper .copyright h3 {
   font-size: 30px !important;
   color: #FFFFFF !important;
 }
+.fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes p span, .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes ul li span, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover p span, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover ul li span {
+  color: #fff;
+}
+.fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes p b, .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes ul li b, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover p b, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover ul li b {
+  color: #fff;
+}
 .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes a, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover a {
   display: inline-flex !important;
 }
@@ -6997,6 +7007,12 @@ footer .footerWrapper .copyright h3 {
   color: #FFFFFF;
   margin-bottom: 23px;
 }
+.fraudStoryslidermbl .fraudStoryslider .boxSlides .contentDiv p span, .fraudStoryslidermbl .fraudStoryslider .boxSlides .contentDiv ul li span {
+  color: #fff;
+}
+.fraudStoryslidermbl .fraudStoryslider .boxSlides .contentDiv p b, .fraudStoryslidermbl .fraudStoryslider .boxSlides .contentDiv ul li b {
+  color: #fff;
+}
 .fraudStoryslidermbl .fraudStoryslider .boxSlides .contentDiv a {
   width: 100%;
 }
@@ -7067,7 +7083,7 @@ footer .footerWrapper .copyright h3 {
 }
 
 .clientsSection {
-  margin-bottom: 150px;
+  margin-bottom: 250px;
 }
 .clientsSection .innerWrapper {
   padding-left: 80px;
@@ -7237,8 +7253,9 @@ footer .footerWrapper .copyright h3 {
   right: -40px;
 }
 .clientsSection .innerWrapper .clientSlider .slick-dots {
-  bottom: 72px;
-  right: 84px;
+  bottom: -60px;
+  right: 0;
+  left: 0;
   width: unset;
 }
 .clientsSection .innerWrapper .clientSlider .slick-dots li {
@@ -7278,7 +7295,7 @@ footer .footerWrapper .copyright h3 {
 }
 @media screen and (max-width: 1600px) {
   .clientsSection {
-    margin-bottom: 120px;
+    margin-bottom: 200px;
   }
   .clientsSection .innerWrapper .secHeading {
     margin-bottom: 50px;
@@ -7306,8 +7323,7 @@ footer .footerWrapper .copyright h3 {
     padding-right: 80px;
   }
   .clientsSection .innerWrapper .clientSlider .slick-dots {
-    bottom: 68px;
-    right: 74px;
+    bottom: -50px;
   }
   .clientsSection .innerWrapper .clientSlider .slick-dots li {
     width: 9px;
@@ -7321,7 +7337,7 @@ footer .footerWrapper .copyright h3 {
 }
 @media screen and (max-width: 1440px) {
   .clientsSection {
-    margin-bottom: 100px;
+    margin-bottom: 170px;
   }
   .clientsSection .innerWrapper .secHeading {
     margin-bottom: 40px;
@@ -7362,8 +7378,7 @@ footer .footerWrapper .copyright h3 {
     scale: 0.8;
   }
   .clientsSection .innerWrapper .clientSlider .slick-dots {
-    bottom: 30px;
-    right: 60px;
+    bottom: -45px;
   }
   .clientsSection .innerWrapper .clientSlider .slick-dots li {
     width: 9px;
@@ -7373,6 +7388,11 @@ footer .footerWrapper .copyright h3 {
   .clientsSection .innerWrapper .clientSlider .slick-dots .slick-active {
     width: 120px;
     height: 9px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .clientsSection {
+    margin-bottom: 140px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -7418,8 +7438,7 @@ footer .footerWrapper .copyright h3 {
     scale: 0.7;
   }
   .clientsSection .innerWrapper .clientSlider .slick-dots {
-    bottom: 10px;
-    right: 40px;
+    bottom: -30px;
   }
   .clientsSection .innerWrapper .clientSlider .slick-dots li {
     width: 7px;
@@ -7433,7 +7452,7 @@ footer .footerWrapper .copyright h3 {
 }
 @media screen and (max-width: 820px) {
   .clientsSection {
-    margin-bottom: 240px;
+    margin-bottom: 150px;
   }
   .clientsSection .innerWrapper .clientSlider {
     border: 0.5px solid rgba(0, 0, 0, 0.2);
@@ -7482,7 +7501,7 @@ footer .footerWrapper .copyright h3 {
     scale: 1;
   }
   .clientsSection .innerWrapper .clientSlider .slick-dots {
-    bottom: -90px;
+    bottom: -40px;
     right: 0;
     left: 0;
   }

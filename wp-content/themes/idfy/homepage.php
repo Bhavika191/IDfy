@@ -105,7 +105,10 @@
                 <div class="secHeading">
                     <h2><?php echo get_sub_field('section_heading'); ?></h2>
                     <p><?php echo get_sub_field('section_description'); ?></p>
-                    <a href="<?php echo get_sub_field('cta_link'); ?>" class="ctaRed"><?php echo get_sub_field('cta_text'); ?></a>
+                    <?php $valuetwo = get_sub_field("cta_link");
+                    if ($valuetwo) { ?>
+                        <a href="<?php echo get_sub_field('cta_link'); ?>" class="ctaRed"><?php echo get_sub_field('cta_text'); ?></a>
+                    <?php } ?>
                 </div>
                 <div class="journeyData">
                     <div class="contentDiv">
@@ -248,7 +251,12 @@
                                     <?php $counter = 1;
                                     while (have_rows('product_families_content')) : the_row(); ?>
                                         <li class="tab" id="tabDiv" data-slide="<?php echo $counter; ?>">
-                                            <h3><?php echo get_sub_field('card_heading'); ?></h3>
+                                            <h3><?php echo get_sub_field('card_heading'); ?>
+                                                <?php $valuenew = get_sub_field("new_tag");
+                                                if ($valuenew) { ?>
+                                                     <span><?php echo get_sub_field('new_tag'); ?></span>
+                                                <?php } ?>
+                                            </h3>
                                         </li>
                                     <?php $counter = $counter + 1;
                                     endwhile; ?>
@@ -257,7 +265,7 @@
                         </div>
                         <div id="slides">
                             <?php if (have_rows('product_families_content')) : ?>
-                                <?php $counter = 1; 
+                                <?php $counter = 1;
                                 while (have_rows('product_families_content')) : the_row(); ?>
                                     <div class="scroll-cards__item slide" aria-label="Wie - 1" data-slide="<?php echo $counter; ?>">
                                         <div class="dataImg">
@@ -273,7 +281,7 @@
                                             <a href="<?php echo get_sub_field('cta_link'); ?>" class="ctaRed"><?php echo get_sub_field('cta_text'); ?></a>
                                         </div>
                                     </div>
-                                    <?php $counter = $counter + 1;
+                                <?php $counter = $counter + 1;
                                 endwhile; ?>
                             <?php endif; ?>
                         </div>
@@ -301,8 +309,8 @@
                             <?php $counter = 1;
                             while (have_rows('fraud_stories_content')) : the_row(); ?>
                                 <div class="box boxContent <?php if ($counter == 1) {
-                                                    echo 'activeBoxes';
-                                                } ?>" id="boxesData">
+                                                                echo 'activeBoxes';
+                                                            } ?>" id="boxesData">
                                     <p><?php echo get_sub_field('card_description'); ?></p>
                                     <a href="<?php echo get_sub_field('cta_link'); ?>" class="ctaBlue"><?php echo get_sub_field('cta_text'); ?></a>
                                 </div>
