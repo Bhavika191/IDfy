@@ -756,9 +756,9 @@
                 .tabs{text-align: center;margin-bottom: 30px;display: flex;align-items: center;justify-content: center;width: max-content;margin-left: auto;margin-right: auto;
                     .tab{background: transparent !important;outline: none;cursor: pointer;margin-right: 50px;text-align: center;
                         
-                        span{@include font12;font-family: $fonthelveticaneuelight;letter-spacing: 1px;color: $colorWhite;background: #CE0F11;padding: 5px;border-radius: 6px;margin-left: 8px;}
+                        span{display: block;@include font12;font-family: $fonthelveticaneuelight;letter-spacing: 1px;color: $colorWhite;background: #CE0F11;padding: 5px;border-radius: 6px;margin-left: 8px;}
                         &:last-child{margin-right: 0px}
-                        h3{@include font20;font-family: $fonthelveticaneuebold;line-height: 120%;color: $colorGray;text-align: center;}
+                        h3{@include font20;font-family: $fonthelveticaneuebold;line-height: 120%;color: $colorGray;text-align: center;display: flex;align-items: center;justify-self: center;}
                         &.active{position: relative;
                             &::after{content: "";position: absolute;width: 100%;height: 3px;background: $colorRed;left: 0;right: 0;bottom: -10px;}
                         }
@@ -969,7 +969,7 @@
                 
                 .activeBoxes , #boxesData:hover{border-radius: 20px;border: 0.685px solid rgba(0, 0, 0, 0.20); background: #1C43B9 !important;box-shadow: 13.705px 13.705px 20.557px 0px rgba(0, 0, 0, 0.20);transition: 0.7s all ease-in-out;width: 88% !important;left: -46% !important;
                     &:nth-child(2){left: unset !important;}
-                    p, ul li{font-size: 30px !important;color: $colorWhite !important;}
+                    p, ul li{font-size: 30px !important;color: $colorWhite !important;span{color: #fff;}b{color: #fff;}}
                     a{display: inline-flex !important;}
                 }
             }
@@ -1127,7 +1127,7 @@
                 .dotsInner{position: absolute;top: 5%;right: 0%;img{width: 170px;}}
             }
             .contentDiv{border-radius: 20px;background: #1C43B9;padding: 24px 32px;box-shadow: 20px 20px 30px 0px rgba(0, 0, 0, 0.20);transform: translateY(-44%);
-                p, ul li{font-size: 24px;font-family: $fonthelveticaneuelight;letter-spacing: 1.7px;line-height: normal;color: $colorWhite;margin-bottom: 23px;}
+                p, ul li{font-size: 24px;font-family: $fonthelveticaneuelight;letter-spacing: 1.7px;line-height: normal;color: $colorWhite;margin-bottom: 23px;span{color: #fff;}b{color: #fff;}}
                 a{width: 100%;}
             }
         }
@@ -1166,7 +1166,7 @@
 
 
 
-.clientsSection{margin-bottom: 150px;
+.clientsSection{margin-bottom: 250px;
     .innerWrapper{@include wrapper;
         .secHeading{margin-bottom: 60px;text-align: center;position: relative;
             h2{@include font48;font-family: $fonthelveticaneuelight;text-transform: capitalize;line-height: 100%;letter-spacing: 0px;color: $colorGray;text-align: center;}
@@ -1191,7 +1191,7 @@
                     }
                 }
             }
-            .slick-dots{bottom: 72px;right: 84px;width: unset;
+            .slick-dots{bottom: -60px;right: 0;left: 0;width: unset;
                 li{width: 10px;height:10px;border-radius:90px;margin: 0px 6px;transition: 0.5s all ease-in-out;
                     button{width: 100%;height: 100%;border-radius:90px;background: transparent;padding: 0;background: #343434;
                         &::before{font-size: 0;}
@@ -1211,7 +1211,7 @@
         }
     }
 
-    @media screen and (max-width:1600px){margin-bottom: 120px;
+    @media screen and (max-width:1600px){margin-bottom: 200px;
         .innerWrapper{
             .secHeading{margin-bottom: 50px;
                 &::before{bottom: -20px;width: 164px;}
@@ -1229,7 +1229,7 @@
                     .contentDiv{width: 62%;padding-right: 80px;
                     }
                 }
-                .slick-dots{bottom: 68px;right: 74px;
+                .slick-dots{bottom: -50px;
                     li{width: 9px;height:9px;margin: 0px 5px;}
                     .slick-active{width: 120px;height:9px;}
                 }
@@ -1237,7 +1237,7 @@
         }
     }
 
-    @media screen and (max-width:1440px){margin-bottom: 100px;
+    @media screen and (max-width:1440px){margin-bottom: 170px;
         .innerWrapper{
             .secHeading{margin-bottom: 40px;
                 &::before{bottom: -18px;width: 170px;}
@@ -1260,12 +1260,16 @@
                         }
                     }
                 }
-                .slick-dots{bottom: 30px;right: 60px;
+                .slick-dots{bottom: -45px;
                     li{width: 9px;height:9px;margin: 0px 5px;}
                     .slick-active{width: 120px;height:9px;}
                 }
             }
         }
+    }
+
+    @media screen and (max-width:1280px) {
+        margin-bottom: 140px;
     }
     @media screen and (max-width:1024px){margin-bottom: 120px;
         .innerWrapper{
@@ -1290,7 +1294,7 @@
                         }
                     }
                 }
-                .slick-dots{bottom: 10px;right: 40px;
+                .slick-dots{bottom: -30px;
                     li{width: 7px;height:7px;margin: 0px 4px;}
                     .slick-active{width: 100px;height:7px;}
                 }
@@ -1298,7 +1302,7 @@
         }
     }
 
-    @media screen and (max-width:820px){margin-bottom: 240px;
+    @media screen and (max-width:820px){margin-bottom: 150px;
         .innerWrapper{
             .clientSlider{border: 0.5px solid #00000033;box-shadow: none;margin-top: 60px;padding: 10px 20px;
                 .clientsliderSlides{padding: 0px;display: block;
@@ -1318,7 +1322,7 @@
                         }
                     }
                 }
-                .slick-dots{bottom: -90px;right: 0;left: 0;
+                .slick-dots{bottom: -40px;right: 0;left: 0;
                     .slick-active{width: 24px;height:7px;}
                 }
             }

@@ -55,7 +55,7 @@
 					<div class="headerContent">
 						<ul class="nav-links">
 							<li class="dropdown dropdown1">
-								<a href="#!" class="dropbtn">SOLUTIONS</a>
+								<a href="#!" class="dropbtn">Solutions</a>
 								<div class="dropdown-content">
 									<div class="dropdown-wrapper">
 										<div class="dropdown-section-idfy">
@@ -101,6 +101,10 @@
 												<a href="" class="dropdown-menu">
 													<h4>Privy Suite</h4>
 													<p>Elevate Privacy Standards Today</p>
+												</a>
+												<a href="" class="dropdown-menu">
+													<h4>IDfy360</h4>
+													<p>Comprehensive Identity Verification Solution</p>
 												</a>
 											</div>
 										</div>
@@ -349,6 +353,9 @@
 													</li>
 													<li class="sub-list">
 														<a href="" class="sub-nav">Bank Statement Analysis</a>
+													</li>
+													<li class="sub-list">
+														<a href="" class="sub-nav">IDfy 360</a>
 													</li>
 													<div class="mobilePortal">
 														<h5>Self Serve Portal</h5>
