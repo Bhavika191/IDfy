@@ -977,18 +977,18 @@
         }
         .boxContent{position: relative;margin-top: 40px;
             .box-container{
-                #boxesData{position: absolute;top: 8%;left: -45%;width: 74%;border-radius: 20px;border: 0.685px solid rgba(0, 0, 0, 0.20);background: #FFF;box-shadow: 13.705px 13.705px 20.557px 0px rgba(0, 0, 0, 0.20);padding: 35px 45px;transition: 1s all ease-in-out;
+                #boxesData{position: absolute;top: 8%;left: -45%;width: 74%;border-radius: 20px;border: 0.685px solid rgba(0, 0, 0, 0.20);background: #FFF;box-shadow: 13.705px 13.705px 20.557px 0px rgba(0, 0, 0, 0.20);padding: 35px 45px;transition: 0.7s all ease-in-out;
                     &:nth-child(2){top: 40%;right: -40%;left: unset;}
                     &:nth-child(3){top: 60%;left: -45%}
-                    p, ul li{@include font24;font-family: $fonthelveticaneuelight;line-height: 133%;color: #080808;}
+                    p, ul li{@include font24;transition: 0.7s all ease-in-out;font-family: $fonthelveticaneuelight;line-height: 133%;color: #080808;}
                     ul li{list-style: disc;}
-                    a{margin-top: 20px;display: none;}
+                    a{margin-top: 20px;display: none;transition: 0.7s all ease-in-out;}
                 }
                 
-                .activeBoxes , #boxesData:hover{border-radius: 20px;border: 0.685px solid rgba(0, 0, 0, 0.20); background: #1C43B9 !important;box-shadow: 13.705px 13.705px 20.557px 0px rgba(0, 0, 0, 0.20);transition: 1s all ease-in-out;width: 88% !important;left: -46% !important;
+                .activeBoxes , #boxesData:hover{border-radius: 20px;border: 0.685px solid rgba(0, 0, 0, 0.20); background: #1C43B9 !important;box-shadow: 13.705px 13.705px 20.557px 0px rgba(0, 0, 0, 0.20);transition: 0.7s all ease-in-out;
                     &:nth-child(2){left: unset !important;}
-                    p, ul li{font-size: 30px !important;color: $colorWhite !important;span{color: #fff;}b{color: #fff;}}
-                    a{display: inline-flex !important;}
+                    p, ul li{transition: 0.7s all ease-in-out;color: $colorWhite !important;span{color: #fff;}b{color: #fff;}}
+                    a{display: inline-flex !important;transition: 0.7s all ease-in-out;}
                 }
             }
             .box-container-two{
@@ -1009,8 +1009,7 @@
                         &:nth-child(2){top: 40%;right: -32%;left: unset;}
                         &:nth-child(3){top: 64%;left: -30%}
                     }
-                    .activeBoxes ,#boxesData:hover{width: 70% !important;left: -30% !important;
-                    }
+                   
                 }
             }
         }
@@ -1030,9 +1029,6 @@
                         &:nth-child(2){top: 43%;right: -20%;left: unset;}
                         &:nth-child(3){top: 64%;left: -24%}
                         a{margin-top: 18px;}
-                    }
-                    .activeBoxes, #boxesData:hover{width: 70% !important;left: -25% !important;
-                        p, ul li{font-size: 24px !important;}
                     }
                 }
                 .box-container-two{
@@ -1058,9 +1054,6 @@
                         &:nth-child(3){top: 66%;left: -11%}
                         a{margin-top: 16px;}
                     }
-                    .activeBoxes , #boxesData:hover{width: 62% !important;left: -11% !important;
-                        p, ul li{font-size: 22px !important;}
-                    }
                 }
                 .box-container-two{
                     #boxesImg{
@@ -1083,9 +1076,6 @@
                         &:nth-child(3){top: 62%;left: -8%}
                         a{margin-top: 14px;}
                         p, ul li{font-size: 16px;}
-                    }
-                    .activeBoxes, #boxesData:hover{width: 56% !important;left: -8% !important;
-                        p, ul li{font-size: 20px !important;}
                     }
                 }
                 .box-container-two{
@@ -1111,9 +1101,6 @@
                         &:nth-child(3){top: 63%;left: 0%}
                         a{margin-top: 12px;}
                         p, ul li{font-size: 14px;}
-                    }
-                    .activeBoxes, #boxesData:hover{width: 43% !important;left: 0% !important;
-                        p, ul li{font-size: 18px !important;}
                     }
                 }
                 .box-container-two{
