@@ -802,7 +802,8 @@ if ($(".onboardingJourneysec").length) {
         $timeline.slick({
             infinite: false,
             autoplay: true,
-            autoplaySpeed: 3000,
+            autoplaySpeed: 6000,
+            speed: 1500,
             slidesToScroll: 8,
             slidesToShow: 8,
             arrows: false,
@@ -829,7 +830,7 @@ if ($(".onboardingJourneysec").length) {
 
         $yearContentData.slick({
             autoplay: true,
-            autoplaySpeed: 3000,
+            autoplaySpeed: 6000,
             infinite: true,
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -837,7 +838,7 @@ if ($(".onboardingJourneysec").length) {
             prevArrow: '.left-arrow',
             nextArrow: '.right-arrow',
             asNavFor: '.timeline',
-            speed: 500,
+            speed: 1500,
             responsive: [
                 {
                     breakpoint: 830,
@@ -908,51 +909,50 @@ document.addEventListener('DOMContentLoaded', function () {
     updateActiveYear(currentIndex);
 });
 
+
+
 //* jyoti code*/
 
 
 
-// ----------------------Timeline code--------------------------//
+// document.addEventListener('DOMContentLoaded', () => {
+//     const navItems = document.querySelectorAll('#navMenu li');
+//     const slides = document.querySelectorAll('.slide');
 
+//     const updateActiveState = (slideNumber) => {
+//         // Remove active class from all nav items and slides
+//         navItems.forEach(nav => nav.classList.remove('active'));
+//         slides.forEach(slide => slide.classList.remove('active'));
 
-document.addEventListener('DOMContentLoaded', () => {
-    const navItems = document.querySelectorAll('#navMenu li');
-    const slides = document.querySelectorAll('.slide');
+//         // Add active class to the clicked nav item and corresponding slide
+//         document.querySelector(`#navMenu li[data-slide="${slideNumber}"]`).classList.add('active');
+//         document.querySelector(`.slide[data-slide="${slideNumber}"]`).classList.add('active');
+//     };
 
-    const updateActiveState = (slideNumber) => {
-        // Remove active class from all nav items and slides
-        navItems.forEach(nav => nav.classList.remove('active'));
-        slides.forEach(slide => slide.classList.remove('active'));
+//     navItems.forEach(item => {
+//         item.addEventListener('click', (e) => {
+//             const slideNumber = item.getAttribute('data-slide');
+//             const targetSlide = document.querySelector(`.slide[data-slide="${slideNumber}"]`);
+//             targetSlide.scrollIntoView({ behavior: 'smooth' });
 
-        // Add active class to the clicked nav item and corresponding slide
-        document.querySelector(`#navMenu li[data-slide="${slideNumber}"]`).classList.add('active');
-        document.querySelector(`.slide[data-slide="${slideNumber}"]`).classList.add('active');
-    };
+//             // Manually update the active state
+//             updateActiveState(slideNumber);
+//         });
+//     });
 
-    navItems.forEach(item => {
-        item.addEventListener('click', (e) => {
-            const slideNumber = item.getAttribute('data-slide');
-            const targetSlide = document.querySelector(`.slide[data-slide="${slideNumber}"]`);
-            targetSlide.scrollIntoView({ behavior: 'smooth' });
-
-            // Manually update the active state
-            updateActiveState(slideNumber);
-        });
-    });
-
-    window.addEventListener('scroll', () => {
-        let currentSlide = null;
-        slides.forEach(slide => {
-            const rect = slide.getBoundingClientRect();
-            if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
-                currentSlide = slide.getAttribute('data-slide');
-            }
-        });
-        if (currentSlide) {
-            updateActiveState(currentSlide);
-        }
-    });
-});
+//     window.addEventListener('scroll', () => {
+//         let currentSlide = null;
+//         slides.forEach(slide => {
+//             const rect = slide.getBoundingClientRect();
+//             if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
+//                 currentSlide = slide.getAttribute('data-slide');
+//             }
+//         });
+//         if (currentSlide) {
+//             updateActiveState(currentSlide);
+//         }
+//     });
+// });
 
 
 
