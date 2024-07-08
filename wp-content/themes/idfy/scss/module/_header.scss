@@ -6,7 +6,7 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
         .headerContent{display: flex;gap:76px;
             .nav-links{display: flex;gap:76px;align-items: center;
                 .dropdown {padding: 24px 0px;position:relative;cursor: pointer;
-                    .dropbtn{@include font14;font-family: $fonthelveticaneuebold;line-height: normal;text-transform: uppercase;color: $colorWhite;text-align: center;position: relative;padding-right:20px;
+                    .dropbtn{@include font14;font-family: $fonthelveticaneuebold;line-height: normal;text-transform: capitalize;color: $colorWhite;text-align: center;position: relative;padding-right:20px;
                         &::before{content: "";position: absolute;z-index: 2;background: url("../images/header-dropdown-icon.svg") no-repeat;top: 50%;transform: translateY(-50%);right: 0px;width: 12px;height: 10px;transition:all 0.3s ease-in-out;}
                     }
                     &.active{
@@ -63,7 +63,7 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                 }
                 .dropdown1{
                     .dropdown-content{min-width: 1690px;left: 275%;
-                        .dropdown-wrapper{&::before{left: 36%;}}
+                        .dropdown-wrapper{&::before{left: 38%;}}
                     }
                 }
                 .dropdown2{
@@ -125,14 +125,15 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                 .search-icon{cursor: pointer;svg{width:30px;height:30px;}
                     .searchWhite{stroke: #fff;}
                 }
-                .custom-select{position: relative;display: inline-block;
-                    .select-selected{position: relative;background-color: transparent;padding: 15px 38px 15px 20px;border: 1px solid white;border-radius: 50px;cursor: pointer;text-align: center;@include font16;font-family: $fonthelveticaneuemedium;letter-spacing:  -0.32px;text-transform: uppercase;color: $colorWhite;
+                .custom-select{position: relative;display: inline-block;border:1px solid #fff;border-radius: 50px;cursor: pointer;
+                    &.active{border-radius: 50px 50px 0px 0px;border-bottom: none;}
+                    .select-selected{position: relative;background-color: transparent;padding: 15px 38px 15px 20px;text-align: center;@include font16;font-family: $fonthelveticaneuemedium;letter-spacing:  -0.32px;text-transform: uppercase;color: $colorWhite;
                         img{display: inline;margin-right: 4px;vertical-align: middle;}
                         &::after{position: absolute;content: url("../images/select-arrow.svg");z-index: 2;top: 50%;transform: translateY(-50%);transition:all 0.3s ease-in-out;padding:0px 4px;}
                         &.active-arrow{&::after{transform: rotate(180deg) translateY(50%);}}
                     }
-                    .select-items{padding-top: 10px;position: absolute;display: none;cursor: pointer;width: 100%;text-align:center;
-                        li{@include font16;font-family: $fonthelveticaneuemedium;line-height: 100%;letter-spacing:  -0.32px;text-transform: uppercase;color: $colorWhite;padding: 15px 20px;cursor: pointer;border: 1px solid white;border-radius:50px;
+                    .select-items{position: absolute;display: none;cursor: pointer;width: 102%;left: -1%;text-align:center;border:1px solid #fff;border-top:none;border-radius:0px 0px 50px 50px;margin-top:-1px;
+                        li{@include font16;font-family: $fonthelveticaneuemedium;line-height: 100%;letter-spacing:  -0.32px;text-transform: uppercase;color: $colorWhite;padding: 15px 20px;
                             img{display: inline;margin-right: 4px;vertical-align: middle;}
                         }
                     }
@@ -155,12 +156,12 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                         .searchWhite{stroke: #080808;}
                     }
                 }
-                .custom-select{
-                    .select-selected{border: 1px solid #080808;color: #080808;
+                .custom-select{border-color:#080808;
+                    .select-selected{color: #080808;
                         &::after{content: url("../images/select-arrow-black.svg");}
                     }
-                    .select-items{border: 1px solid #080808;background: #fff;
-                        li{&:not(:last-child){border-bottom: 1px solid #080808;}color: #080808;}
+                    .select-items{background: #fff;border-color:#080808;
+                        li{color: #080808;}
                     }
                 }
                 .nav-links{
@@ -248,12 +249,12 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                     }
                     .dropdown1{
                         .dropdown-content{min-width: 1500px;left: 390%;
-                            .dropdown-wrapper{&::before{left: 26%;}}
+                            .dropdown-wrapper{&::before{left: 30%;}}
                         }
                     }
                     .dropdown2{
                         .dropdown-content{min-width: 1456px;left: 200%;
-                            .dropdown-wrapper{&::before{left: 39%;}}
+                            .dropdown-wrapper{&::before{left: 40%;}}
                         }
                     }
                     .dropdown3{
@@ -323,12 +324,12 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                     }
                     .dropdown1{
                         .dropdown-content{min-width: 1400px;left: 400%;
-                            .dropdown-wrapper{&::before{left: 23%;}}
+                            .dropdown-wrapper{&::before{left: 28%;}}
                         }
                     }
                     .dropdown2{
                         .dropdown-content{min-width: 1350px;
-                            .dropdown-wrapper{&::before{left: 37%;}}
+                            .dropdown-wrapper{&::before{left: 39%;}}
                         }
                     }
                     .dropdown3{
@@ -406,7 +407,7 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                     }
                     .dropdown1{
                         .dropdown-content{min-width: 1350px;left:380%;
-                            .dropdown-wrapper{&::before{left: 24%;}}
+                            .dropdown-wrapper{&::before{left: 28%;}}
                         }
                     }
                     .dropdown2{
@@ -478,12 +479,12 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                     }
                     .dropdown1{
                         .dropdown-content{min-width: 1200px;left: 420%;
-                            .dropdown-wrapper{&::before{left: 18%;}}
+                            .dropdown-wrapper{&::before{left: 24%;}}
                         }
                     }
                     .dropdown2{
                         .dropdown-content{min-width: 1100px;
-                            .dropdown-wrapper{&::before{left: 35%;}}
+                            .dropdown-wrapper{&::before{left: 37%;}}
                         }
                     }
                     .dropdown3{
@@ -599,12 +600,12 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                 .nav-links{
                     .dropdown1{
                         .dropdown-content{min-width: 1000px;left: 380%;
-                            .dropdown-wrapper{&::before{left:16%;}}
+                            .dropdown-wrapper{&::before{left:22%;}}
                         }
                     }
                     .dropdown2{
                         .dropdown-content{min-width: 1000px;
-                            .dropdown-wrapper{&::before{left:33%;}}
+                            .dropdown-wrapper{&::before{left:36%;}}
                         }
                     }
                     .dropdown3{
@@ -687,12 +688,12 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                     }
                     .dropdown1{
                         .dropdown-content{min-width: 1000px;left: 400%;
-                            .dropdown-wrapper{&::before{left: 13%;}}
+                            .dropdown-wrapper{&::before{left: 20%;}}
                         }
                     }
                     .dropdown2{
                         .dropdown-content{min-width: 900px;left: 250%;
-                            .dropdown-wrapper{&::before{left: 26%;}
+                            .dropdown-wrapper{&::before{left: 30%;}
                                 .dropdown-section-menu2{
                                     .menu-wrapper{
                                         .dropdown-menu{width:30%}

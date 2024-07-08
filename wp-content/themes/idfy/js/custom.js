@@ -164,9 +164,11 @@ $(document).ready(function () {
     select.on('mouseover', function () {
         items.show();
         selected.addClass('active-arrow');
+        select.addClass('active');
     }).on('mouseout', function () {
         items.hide();
         selected.removeClass('active-arrow');
+        select.removeClass('active');
     });
 
     // Handle item selection
@@ -175,6 +177,7 @@ $(document).ready(function () {
         selected.html(selectedHTML);
         items.hide();
         selected.removeClass('active-arrow');
+        select.removeClass('active');
         updateItems();
     });
 
@@ -190,6 +193,7 @@ $(document).ready(function () {
         if (!select.is(e.target) && select.has(e.target).length === 0) {
             items.hide();
             selected.removeClass('active-arrow');
+            select.removeClass('active');
         }
     });
 });
