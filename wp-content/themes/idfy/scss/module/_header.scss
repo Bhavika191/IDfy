@@ -125,14 +125,15 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                 .search-icon{cursor: pointer;svg{width:30px;height:30px;}
                     .searchWhite{stroke: #fff;}
                 }
-                .custom-select{position: relative;display: inline-block;
-                    .select-selected{position: relative;background-color: transparent;padding: 15px 38px 15px 20px;border: 1px solid white;border-radius: 50px;cursor: pointer;text-align: center;@include font16;font-family: $fonthelveticaneuemedium;letter-spacing:  -0.32px;text-transform: uppercase;color: $colorWhite;
+                .custom-select{position: relative;display: inline-block;border:1px solid #fff;border-radius: 50px;cursor: pointer;
+                    &.active{border-radius: 50px 50px 0px 0px;border-bottom: none;}
+                    .select-selected{position: relative;background-color: transparent;padding: 15px 38px 15px 20px;text-align: center;@include font16;font-family: $fonthelveticaneuemedium;letter-spacing:  -0.32px;text-transform: uppercase;color: $colorWhite;
                         img{display: inline;margin-right: 4px;vertical-align: middle;}
                         &::after{position: absolute;content: url("../images/select-arrow.svg");z-index: 2;top: 50%;transform: translateY(-50%);transition:all 0.3s ease-in-out;padding:0px 4px;}
                         &.active-arrow{&::after{transform: rotate(180deg) translateY(50%);}}
                     }
-                    .select-items{padding-top: 10px;position: absolute;display: none;cursor: pointer;width: 100%;text-align:center;
-                        li{@include font16;font-family: $fonthelveticaneuemedium;line-height: 100%;letter-spacing:  -0.32px;text-transform: uppercase;color: $colorWhite;padding: 15px 20px;cursor: pointer;border: 1px solid white;border-radius:50px;
+                    .select-items{position: absolute;display: none;cursor: pointer;width: 102%;left: -1%;text-align:center;border:1px solid #fff;border-top:none;border-radius:0px 0px 50px 50px;margin-top:-1px;
+                        li{@include font16;font-family: $fonthelveticaneuemedium;line-height: 100%;letter-spacing:  -0.32px;text-transform: uppercase;color: $colorWhite;padding: 15px 20px;
                             img{display: inline;margin-right: 4px;vertical-align: middle;}
                         }
                     }
@@ -155,12 +156,12 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                         .searchWhite{stroke: #080808;}
                     }
                 }
-                .custom-select{
-                    .select-selected{border: 1px solid #080808;color: #080808;
+                .custom-select{border-color:#080808;
+                    .select-selected{color: #080808;
                         &::after{content: url("../images/select-arrow-black.svg");}
                     }
-                    .select-items{background: #fff;
-                        li{border: 1px solid #080808;color: #080808;}
+                    .select-items{background: #fff;border-color:#080808;
+                        li{color: #080808;}
                     }
                 }
                 .nav-links{

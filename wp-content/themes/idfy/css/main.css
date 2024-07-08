@@ -867,14 +867,18 @@ header .navbar .headerContent .header-elements .search-icon .searchWhite {
 header .navbar .headerContent .header-elements .custom-select {
   position: relative;
   display: inline-block;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  cursor: pointer;
+}
+header .navbar .headerContent .header-elements .custom-select.active {
+  border-radius: 50px 50px 0px 0px;
+  border-bottom: none;
 }
 header .navbar .headerContent .header-elements .custom-select .select-selected {
   position: relative;
   background-color: transparent;
   padding: 15px 38px 15px 20px;
-  border: 1px solid white;
-  border-radius: 50px;
-  cursor: pointer;
   text-align: center;
   font-size: 16px;
   font-family: "HelveticaNeueMedium";
@@ -910,12 +914,16 @@ header .navbar .headerContent .header-elements .custom-select .select-selected.a
   transform: rotate(180deg) translateY(50%);
 }
 header .navbar .headerContent .header-elements .custom-select .select-items {
-  padding-top: 10px;
   position: absolute;
   display: none;
   cursor: pointer;
-  width: 100%;
+  width: 102%;
+  left: -1%;
   text-align: center;
+  border: 1px solid #fff;
+  border-top: none;
+  border-radius: 0px 0px 50px 50px;
+  margin-top: -1px;
 }
 header .navbar .headerContent .header-elements .custom-select .select-items li {
   font-size: 16px;
@@ -925,9 +933,6 @@ header .navbar .headerContent .header-elements .custom-select .select-items li {
   text-transform: uppercase;
   color: #FFFFFF;
   padding: 15px 20px;
-  cursor: pointer;
-  border: 1px solid white;
-  border-radius: 50px;
 }
 @media screen and (max-width: 1600px) {
   header .navbar .headerContent .header-elements .custom-select .select-items li {
@@ -966,8 +971,10 @@ header.navColor .navbar .logo .logowordInner, header.scrolled .navbar .logo .log
 header.navColor .navbar .headerContent .header-elements .search-icon .searchWhite, header.scrolled .navbar .headerContent .header-elements .search-icon .searchWhite {
   stroke: #080808;
 }
+header.navColor .navbar .headerContent .custom-select, header.scrolled .navbar .headerContent .custom-select {
+  border-color: #080808;
+}
 header.navColor .navbar .headerContent .custom-select .select-selected, header.scrolled .navbar .headerContent .custom-select .select-selected {
-  border: 1px solid #080808;
   color: #080808;
 }
 header.navColor .navbar .headerContent .custom-select .select-selected::after, header.scrolled .navbar .headerContent .custom-select .select-selected::after {
@@ -975,9 +982,9 @@ header.navColor .navbar .headerContent .custom-select .select-selected::after, h
 }
 header.navColor .navbar .headerContent .custom-select .select-items, header.scrolled .navbar .headerContent .custom-select .select-items {
   background: #fff;
+  border-color: #080808;
 }
 header.navColor .navbar .headerContent .custom-select .select-items li, header.scrolled .navbar .headerContent .custom-select .select-items li {
-  border: 1px solid #080808;
   color: #080808;
 }
 header.navColor .navbar .headerContent .nav-links .dropdown a, header.scrolled .navbar .headerContent .nav-links .dropdown a {
@@ -8020,4 +8027,4 @@ footer .footerWrapper .copyright h3 {
   .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox .contentDiv {
     margin-top: 16px;
   }
-}/*# sourceMappingURL=main.css.map */
+}
