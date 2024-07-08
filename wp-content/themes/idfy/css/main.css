@@ -872,7 +872,7 @@ header .navbar .headerContent .header-elements .custom-select {
   cursor: pointer;
 }
 header .navbar .headerContent .header-elements .custom-select.active {
-  border-radius: 50px 50px 0px 0px;
+  border-radius: 30px 30px 0px 0px;
   border-bottom: none;
 }
 header .navbar .headerContent .header-elements .custom-select .select-selected {
@@ -922,8 +922,7 @@ header .navbar .headerContent .header-elements .custom-select .select-items {
   text-align: center;
   border: 1px solid #fff;
   border-top: none;
-  border-radius: 0px 0px 50px 50px;
-  margin-top: -1px;
+  border-radius: 0px 0px 30px 30px;
 }
 header .navbar .headerContent .header-elements .custom-select .select-items li {
   font-size: 16px;
