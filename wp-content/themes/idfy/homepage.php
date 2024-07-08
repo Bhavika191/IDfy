@@ -308,9 +308,7 @@
                         <?php if (have_rows('fraud_stories_content')) : ?>
                             <?php $counter = 1;
                             while (have_rows('fraud_stories_content')) : the_row(); ?>
-                                <div class="box boxContent <?php if ($counter == 1) {
-                                                                echo 'activeBoxes';
-                                                            } ?>" id="boxesData">
+                                <div class="box boxContent " id="boxesData">
                                     <p><?php echo get_sub_field('card_description'); ?></p>
                                     <a href="<?php echo get_sub_field('cta_link'); ?>" class="ctaBlue"><?php echo get_sub_field('cta_text'); ?></a>
                                 </div>

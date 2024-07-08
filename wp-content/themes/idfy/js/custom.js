@@ -523,14 +523,14 @@ if (window.innerWidth < 1025) {
 // }
 
 
-document.querySelectorAll('.boxContent').forEach(item => {
-    item.addEventListener('mouseover', () => {
-        item.classList.add('activeBoxes');
-    });
-    item.addEventListener('mouseout', () => {
-        item.classList.remove('activeBoxes');
-    });
-});
+// document.querySelectorAll('.boxContent').forEach(item => {
+//     item.addEventListener('mouseover', () => {
+//         item.classList.add('activeBoxes');
+//     });
+//     item.addEventListener('mouseout', () => {
+//         item.classList.remove('activeBoxes');
+//     });
+// });
 
 // on scroll sticky section fraud stories js starts
 

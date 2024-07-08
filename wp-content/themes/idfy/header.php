@@ -305,7 +305,7 @@
 
 							</div>
 							<div class="custom-select">
-								<div class="select-selected">ID</div>
+								<div class="select-selected">IND</div>
 								<ul class="select-items">
 									<li>IND</li>
 									<li>ID</li>
