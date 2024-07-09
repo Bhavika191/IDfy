@@ -1010,3 +1010,12 @@ if ($(".onboardingJourneysec").length) {
 
 
 
+
+
+$(".boxContentnew").hover(function (e) {
+    var animid = $(this).data('anim');
+    $('.boxContentnew').removeClass('showHover');
+    $(this).addClass('showHover');
+    $(".boxImgnew").removeClass('showAnim1');
+    $("."+animid).addClass('showAnim1');
+});

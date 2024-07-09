@@ -308,7 +308,9 @@
                         <?php if (have_rows('fraud_stories_content')) : ?>
                             <?php $counter = 1;
                             while (have_rows('fraud_stories_content')) : the_row(); ?>
-                                <div class="box boxContent " id="boxesData">
+                                <div class="box boxContentnew <?php if ($counter == 1) {
+                                                    echo 'showHover';
+                                                } ?>" id="boxesData"  data-anim="fraudstory<?php echo $counter; ?>">
                                     <p><?php echo get_sub_field('card_description'); ?></p>
                                     <a href="<?php echo get_sub_field('cta_link'); ?>" class="ctaBlue"><?php echo get_sub_field('cta_text'); ?></a>
                                 </div>
@@ -320,9 +322,9 @@
                         <?php if (have_rows('fraud_stories_content')) : ?>
                             <?php $counter = 1;
                             while (have_rows('fraud_stories_content')) : the_row(); ?>
-                                <div class="box <?php if ($counter == 1) {
-                                                    echo 'active-two';
-                                                } ?>" id="boxesImg">
+                                <div class="box boxImgnew  fraudstory<?php echo $counter; ?> <?php if ($counter == 1) {
+                                                    echo 'showAnim1';
+                                                } ?>"  id="boxesImg" >
                                     <?php $fraudimg = get_sub_field('card_image');
                                     if (!empty($fraudimg)) : ?>
                                         <img src="<?php echo esc_url($fraudimg['url']); ?>" loading="lazy" alt="<?php echo esc_attr($fraudimg['alt']); ?>" />

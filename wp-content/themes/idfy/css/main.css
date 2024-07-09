@@ -3362,6 +3362,7 @@ footer .footerWrapper .copyright h3 {
   line-height: normal;
   color: #101010;
   text-align: left;
+  margin-top: 20px;
 }
 @media screen and (max-width: 1600px) {
   .yearTimeline .timelineWrapper .timelineData .contentDiv .yearContentdata .year-content .innerContent h4 {
@@ -3379,7 +3380,7 @@ footer .footerWrapper .copyright h3 {
   line-height: normal;
   color: #000000;
   text-align: left;
-  margin: 15px 0px 38px;
+  margin: 30px 0px 38px;
   width: 75%;
 }
 @media screen and (max-width: 1600px) {
@@ -3592,8 +3593,11 @@ footer .footerWrapper .copyright h3 {
   .yearTimeline .timelineWrapper .timelineData .contentDiv .yearContentdata .year-content .innerContent {
     width: 54%;
   }
+  .yearTimeline .timelineWrapper .timelineData .contentDiv .yearContentdata .year-content .innerContent h4 {
+    margin-top: 18px;
+  }
   .yearTimeline .timelineWrapper .timelineData .contentDiv .yearContentdata .year-content .innerContent p {
-    margin: 12px 0px 32px;
+    margin: 26px 0px 32px;
     width: 80%;
   }
   .yearTimeline .timelineWrapper .timelineData .contentDiv .yearContentdata .year-content .innerImg {
@@ -3685,8 +3689,11 @@ footer .footerWrapper .copyright h3 {
   .yearTimeline .timelineWrapper .timelineData .contentDiv .yearContentdata .year-content .innerContent {
     width: 56%;
   }
+  .yearTimeline .timelineWrapper .timelineData .contentDiv .yearContentdata .year-content .innerContent h4 {
+    margin-top: 16px;
+  }
   .yearTimeline .timelineWrapper .timelineData .contentDiv .yearContentdata .year-content .innerContent p {
-    margin: 12px 0px 30px;
+    margin: 22px 0px 30px;
     width: 82%;
   }
   .yearTimeline .timelineWrapper .timelineData .contentDiv .yearContentdata .year-content .innerImg {
@@ -3811,8 +3818,11 @@ footer .footerWrapper .copyright h3 {
   .yearTimeline .timelineWrapper .timelineData .contentDiv .yearContentdata .year-content .innerContent {
     width: 58%;
   }
+  .yearTimeline .timelineWrapper .timelineData .contentDiv .yearContentdata .year-content .innerContent h4 {
+    margin-top: 14px;
+  }
   .yearTimeline .timelineWrapper .timelineData .contentDiv .yearContentdata .year-content .innerContent p {
-    margin: 12px 0px 26px;
+    margin: 20px 0px 26px;
     width: 85%;
   }
   .yearTimeline .timelineWrapper .timelineData .contentDiv .yearContentdata .year-content .innerImg {
@@ -3902,6 +3912,7 @@ footer .footerWrapper .copyright h3 {
   .yearTimeline .timelineWrapper .timelineData .contentDiv .yearContentdata .year-content .innerContent h4 {
     font-size: 24px;
     line-height: 133%;
+    margin-top: 0;
   }
   .yearTimeline .timelineWrapper .timelineData .contentDiv .yearContentdata .year-content .innerContent p {
     margin: 12px 0px 24px;
@@ -6772,27 +6783,27 @@ footer .footerWrapper .copyright h3 {
   display: none;
   transition: 0.7s all ease-in-out;
 }
-.fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover {
+.fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes, .fraudstoriesSec .innerWrapper .boxContent .box-container .showHover {
   border-radius: 20px;
   border: 0.685px solid rgba(0, 0, 0, 0.2);
   background: #1C43B9 !important;
   box-shadow: 13.705px 13.705px 20.557px 0px rgba(0, 0, 0, 0.2);
   transition: 0.7s all ease-in-out;
 }
-.fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes:nth-child(2), .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover:nth-child(2) {
+.fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes:nth-child(2), .fraudstoriesSec .innerWrapper .boxContent .box-container .showHover:nth-child(2) {
   left: unset !important;
 }
-.fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes p, .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes ul li, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover p, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover ul li {
+.fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes p, .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes ul li, .fraudstoriesSec .innerWrapper .boxContent .box-container .showHover p, .fraudstoriesSec .innerWrapper .boxContent .box-container .showHover ul li {
   transition: 0.7s all ease-in-out;
   color: #FFFFFF !important;
 }
-.fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes p span, .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes ul li span, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover p span, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover ul li span {
+.fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes p span, .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes ul li span, .fraudstoriesSec .innerWrapper .boxContent .box-container .showHover p span, .fraudstoriesSec .innerWrapper .boxContent .box-container .showHover ul li span {
   color: #fff;
 }
-.fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes p b, .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes ul li b, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover p b, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover ul li b {
+.fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes p b, .fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes ul li b, .fraudstoriesSec .innerWrapper .boxContent .box-container .showHover p b, .fraudstoriesSec .innerWrapper .boxContent .box-container .showHover ul li b {
   color: #fff;
 }
-.fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes a, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData:hover a {
+.fraudstoriesSec .innerWrapper .boxContent .box-container .activeBoxes a, .fraudstoriesSec .innerWrapper .boxContent .box-container .showHover a {
   display: inline-flex !important;
   transition: 0.7s all ease-in-out;
 }
@@ -6810,7 +6821,7 @@ footer .footerWrapper .copyright h3 {
   display: none;
   width: 72%;
 }
-.fraudstoriesSec .innerWrapper .boxContent .box-container-two .active-two {
+.fraudstoriesSec .innerWrapper .boxContent .box-container-two .showAnim1 {
   display: block !important;
 }
 @media screen and (max-width: 1800px) {

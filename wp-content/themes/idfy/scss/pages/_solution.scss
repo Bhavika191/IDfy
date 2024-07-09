@@ -88,8 +88,8 @@
                     .year-content{display: flex;align-items: center;justify-content: space-between;padding: 0px 20px;
                         .innerContent{width: 52%;
                             h3{@include font100;font-family: $fonthelveticaneuebold;line-height: normal;color: $colorBlue;text-align: left;}
-                            h4{@include font48;font-family: $fonthelveticaneuebold;line-height: normal;color: #101010;text-align: left;}
-                            p{@include font24;font-family: $fonthelveticaneuelight;line-height: normal;color: $colorBlack;text-align: left;margin: 15px 0px 38px;width: 75%;}
+                            h4{@include font48;font-family: $fonthelveticaneuebold;line-height: normal;color: #101010;text-align: left;margin-top: 20px}
+                            p{@include font24;font-family: $fonthelveticaneuelight;line-height: normal;color: $colorBlack;text-align: left;margin: 30px 0px 38px;width: 75%;}
                         }
                         .innerImg{width: 38%;position: relative;
                             .imgDiv{border-radius: 50%;overflow: hidden;}
@@ -178,7 +178,8 @@
                     .yearContentdata{margin: 0px 120px;
                         .year-content{
                             .innerContent{width: 54%;
-                                p{margin: 12px 0px 32px;width: 80%;}
+                                h4{margin-top: 18px;}
+                                p{margin: 26px 0px 32px;width: 80%;}
                             }
                             .innerImg{width: 36%;
                                 .imgDots{
@@ -235,7 +236,8 @@
                     .yearContentdata{margin: 0px 100px;
                         .year-content{
                             .innerContent{width: 56%;
-                                p{margin: 12px 0px 30px;width: 82%;}
+                                h4{margin-top: 16px;}
+                                p{margin: 22px 0px 30px;width: 82%;}
                             }
                             .innerImg{width: 34%;
                                 .imgDots{
@@ -331,7 +333,8 @@
                     .yearContentdata{margin: 0px 70px;
                         .year-content{
                             .innerContent{width: 58%;
-                                p{margin: 12px 0px 26px;width: 85%;}
+                                h4{margin-top: 14px;}
+                                p{margin: 20px 0px 26px;width: 85%;}
                             }
                             .innerImg{width: 34%;
                                 .imgDots{
@@ -374,7 +377,7 @@
                         .year-content{flex-direction: column-reverse;padding: 0px 0px;
                             .innerContent{width: 100%;margin-top: 24px;
                                 h3{font-size: 40px;line-height: normal;}
-                                h4{font-size: 24px;line-height: 133%;}
+                                h4{font-size: 24px;line-height: 133%;margin-top: 0;}
                                 p{margin: 12px 0px 24px;width: 100%;font-size: 16px;line-height: normal;color: rgba(52, 52, 52, 0.8);}
                             }
                             .innerImg{width: 75%;
