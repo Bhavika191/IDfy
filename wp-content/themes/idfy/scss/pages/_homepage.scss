@@ -182,7 +182,7 @@
             }
             .enterpriseLogos{
                 .logoDiv{
-                    .innerBoxes{padding: 50px 0px;width: 50%;border-bottom: none !important;
+                    .innerBoxes{padding: 50px 30px;width: 50%;border-bottom: none !important;
                     }
                 }
             }
@@ -606,7 +606,9 @@
         .leftContent{width: 100%;
             .contentDiv{
                 .innerBoxes{margin-top: 50px;
-                    p{margin-top: 24px;width: 100%;}
+                    h3{font-size: 24px;}
+                    p{margin-top: 24px;width: 100%;font-size: 16px;}
+                    a{margin-top: 22px;}
                 }
             }
             .slick-dots{bottom: -40px;left: 0;right: 0;}
@@ -722,7 +724,7 @@
                         h4{@include font24;font-family: $fonthelveticaneuebold;color: #4D4D4D;line-height: 133%;margin-bottom: 16px;}
                         ul{
                             li{@include font18;font-family: $fonthelveticaneuelight;color: #4D4D4D;line-height: 160%;position: relative;padding-left: 20px;
-                                &::before{content: "";position: absolute;top:14px;left: 0;width: 6px;height: 6px;background: #4D4D4D;border-radius: 50%;}
+                                &::before{content: "";position: absolute;top:8px;left: 0;width: 6px;height: 6px;background: #4D4D4D;border-radius: 50%;}
                             }
                         }
                     }
@@ -895,15 +897,15 @@
 
     @media screen and (max-width: 1024px) {margin-bottom: 120px;
         .innerWrapper{
-            .secHeading{
+            .secHeading{ 
                 h2{
                     &::before{bottom: -18px;}
                 }
                 p{margin: 28px auto 28px;}
-            }
-            .journeyData{display: none;}
-            .onboardingSliderData{display: block;margin-top: 50px;;
-                .centerCirclediv{width: 90%;margin: 0 auto;padding: 0px 50px;
+            } 
+            .journeyData{display: none;} 
+            .onboardingSliderData{display: block;margin-top: 50px;; 
+                .centerCirclediv{width: 90%;margin: 0 auto;padding: 0px 50px; 
                     .outerborderDiv{position: relative;border-radius: 50%;border: 3px solid #1C43B9;padding: 60px;
                         .mainImg{border-radius: 50%;overflow: hidden;}
                         .journeyIcons{position: absolute;background: #1C43B9;height: 80px;width: 80px;border-radius: 50%;display: flex;align-items: center;justify-content: center;
@@ -929,7 +931,8 @@
                         .journeyinnerData{
                             h4{font-size: 24px;font-family: $fonthelveticaneuebold;color: #000;line-height: 133%;margin-bottom: 10px;}
                             ul{
-                                li{@include font24;font-family: $fonthelveticaneuemedium;color: #000;line-height: 160%;position: relative;
+                                li{@include font24;font-family: $fonthelveticaneuemedium;color: #000;line-height: 160%;position: relative;padding-left: 14px;
+                                    &::before{content: "";position: absolute;top:10px;left: 0;width: 6px;height: 6px;background: #4D4D4D;border-radius: 50%;}
                                 }
                             }
                         }
@@ -1212,7 +1215,7 @@
                 
                 .slider{
                     .slide {padding: 20px;height: 650px;
-                        .dataContent a{width: 100%;}
+                        .dataContent a{width: auto;}
                     }
                 }
             }

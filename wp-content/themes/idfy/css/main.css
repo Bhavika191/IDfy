@@ -3997,9 +3997,17 @@ footer .footerWrapper .copyright h3 {
   .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year {
     margin-right: 100px;
   }
+  .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .circle {
+    width: 35px;
+    height: 35px;
+  }
+  .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .circle span {
+    width: 14px;
+    height: 14px;
+  }
   .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg {
-    left: 16px;
-    bottom: 36px;
+    left: 17px;
+    bottom: 40px;
   }
   .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg svg line:nth-last-child(1), .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg svg line:nth-last-child(2), .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg svg line:nth-last-child(3), .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg svg line:nth-last-child(4), .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg svg line:nth-last-child(5) {
     display: none;
@@ -4327,7 +4335,7 @@ footer .footerWrapper .copyright h3 {
 }
 @media screen and (max-width: 720px) {
   .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .contentDiv .ctaRed {
-    width: 100%;
+    width: auto;
   }
 }
 
@@ -4848,7 +4856,7 @@ footer .footerWrapper .copyright h3 {
     bottom: -16px;
   }
   .enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv .innerBoxes {
-    padding: 50px 0px;
+    padding: 50px 30px;
     width: 50%;
     border-bottom: none !important;
   }
@@ -5264,9 +5272,16 @@ footer .footerWrapper .copyright h3 {
   .pioneerSlidersec .sliderSection .leftContent .contentDiv .innerBoxes {
     margin-top: 50px;
   }
+  .pioneerSlidersec .sliderSection .leftContent .contentDiv .innerBoxes h3 {
+    font-size: 24px;
+  }
   .pioneerSlidersec .sliderSection .leftContent .contentDiv .innerBoxes p {
     margin-top: 24px;
     width: 100%;
+    font-size: 16px;
+  }
+  .pioneerSlidersec .sliderSection .leftContent .contentDiv .innerBoxes a {
+    margin-top: 22px;
   }
   .pioneerSlidersec .sliderSection .leftContent .slick-dots {
     bottom: -40px;
@@ -5579,7 +5594,7 @@ footer .footerWrapper .copyright h3 {
 .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney .journeyinnerData ul li::before {
   content: "";
   position: absolute;
-  top: 14px;
+  top: 8px;
   left: 0;
   width: 6px;
   height: 6px;
@@ -6032,6 +6047,7 @@ footer .footerWrapper .copyright h3 {
     color: #000;
     line-height: 160%;
     position: relative;
+    padding-left: 14px;
   }
 }
 @media screen and (max-width: 1024px) and (max-width: 1600px) {
@@ -6045,6 +6061,16 @@ footer .footerWrapper .copyright h3 {
   }
 }
 @media screen and (max-width: 1024px) {
+  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxesjourneyslide .journeyinnerData ul li::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    background: #4D4D4D;
+    border-radius: 50%;
+  }
   .onboardingJourneysec .innerWrapper .onboardingSliderData .slick-dots {
     bottom: 20px;
     right: 0;
@@ -6629,7 +6655,7 @@ footer .footerWrapper .copyright h3 {
     height: 650px;
   }
   .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent a {
-    width: 100%;
+    width: auto;
   }
 }
 

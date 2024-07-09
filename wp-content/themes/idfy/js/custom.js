@@ -992,7 +992,10 @@ if ($(".pioneerSlidersec").length) {
       slidesToScroll: 1,
       arrows: false,
       dots: true,
-      infinite: false,
+      infinite: true,
+      autoplay:true,
+      autoplaySpeed:2000,
+      speed:1000,
       asNavFor: '.imageSlider',
     });
   
@@ -1000,9 +1003,12 @@ if ($(".pioneerSlidersec").length) {
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
-      infinite: false,
+      infinite: true,
       dots:false,
       arrows:true,
+      autoplay:true,
+      autoplaySpeed:2000,
+      speed:1000,
       asNavFor: '.contentDiv',
       responsive:[
         {

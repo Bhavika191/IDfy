@@ -438,7 +438,8 @@
                 }
                 .timeline{
                     .timeline-year{margin-right: 100px;
-                        .progressSvg{left: 16px;bottom: 36px;
+                        .circle{width: 35px;height: 35px;span{width: 14px;height: 14px;}}
+                        .progressSvg{left: 17px;bottom: 40px;
                             svg{line{&:nth-last-child(1),&:nth-last-child(2),&:nth-last-child(3),&:nth-last-child(4),&:nth-last-child(5){display: none;}}}
                         }
                     }
@@ -555,7 +556,7 @@
             .innerDatadiv{
                 .innerDiv{
                     .contentDiv{
-                        .ctaRed{width: 100%;}
+                        .ctaRed{width: auto;}
                     }
                 }
             }
