@@ -165,6 +165,7 @@ $(document).ready(function () {
         items.show();
         selected.addClass('active-arrow');
         select.addClass('active');
+        updateItems(); // Update the items whenever they are shown
     }).on('mouseout', function () {
         items.hide();
         selected.removeClass('active-arrow');
@@ -178,14 +179,28 @@ $(document).ready(function () {
         items.hide();
         selected.removeClass('active-arrow');
         select.removeClass('active');
-        updateItems();
+        updateItems(); // Update the items after selection
     });
 
     function updateItems() {
         var selectedText = selected.text().trim();
+        var header = $('header');
+        var borderColor = '#fff';
+
+        // Change border color to #000000 if &.navColor, &.scrolled class is added to header
+        if (header.hasClass('navColor') || header.hasClass('scrolled')) {
+            borderColor = '#080808';
+        }
+
         items.find('li').show().filter(function () {
             return $(this).text().trim() === selectedText;
         }).hide();
+
+        // Remove border from all items first
+        items.find('li').css('border-bottom', 'none');
+
+        // Add border-bottom to all visible items except the last one
+        items.find('li:visible').css('border-bottom', '1px solid ' + borderColor).last().css('border-bottom', 'none');
     }
 
     // Handle clicking outside the dropdown
@@ -195,6 +210,11 @@ $(document).ready(function () {
             selected.removeClass('active-arrow');
             select.removeClass('active');
         }
+    });
+
+    // Update items on window scroll to handle dynamic changes
+    $(window).on('scroll', function () {
+        updateItems();
     });
 });
 //----------For Desktop-------//
@@ -212,6 +232,7 @@ $(document).ready(function () {
     selected.on('click', function () {
         items.toggleClass('show');
         $(this).toggleClass('active-arrow');
+        updateItems(); // Update the items whenever they are shown
     });
 
     // Handle item selection
@@ -220,7 +241,7 @@ $(document).ready(function () {
         selected.html(selectedHTML);
         items.removeClass('show');
         selected.removeClass('active-arrow');
-        updateItems();
+        updateItems(); // Update the items after selection
     });
 
     function updateItems() {
@@ -228,6 +249,12 @@ $(document).ready(function () {
         items.find('li').show().filter(function () {
             return $(this).text().trim() === selectedText;
         }).hide();
+
+        // Remove border from all items first
+        items.find('li').css('border-bottom', 'none');
+
+        // Add border-bottom to all visible items except the last one
+        items.find('li:visible').css('border-bottom', '1px solid #000000').last().css('border-bottom', 'none');
     }
 
     // Handle clicking outside the dropdown
@@ -958,6 +985,35 @@ document.addEventListener('DOMContentLoaded', function () {
 //     });
 // });
 
+
+if ($(".pioneerSlidersec").length) {  
+    $('.contentDiv').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: true,
+      infinite: false,
+      asNavFor: '.imageSlider',
+    });
+  
+    $('.imageSlider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      infinite: false,
+      dots:false,
+      arrows:true,
+      asNavFor: '.contentDiv',
+      responsive:[
+        {
+            breakpoint: 821,
+            settings: {
+                arrows:false,
+            }
+        },
+      ]
+    });
+  }
 
 
 

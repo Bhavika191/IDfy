@@ -129,7 +129,7 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                     .select-selected{position: relative;background-color: transparent;padding: 15px 38px 15px 22px;border:1px solid #fff;border-radius: 50px;text-align: center;@include font16;font-family: $fonthelveticaneuemedium;letter-spacing:  -0.32px;text-transform: uppercase;color: $colorWhite;
                         img{display: inline;margin-right: 4px;vertical-align: middle;}
                         &::after{position: absolute;content: url("../images/select-arrow.svg");z-index: 2;top: 50%;transform: translateY(-50%);transition:all 0.3s ease-in-out;padding:0px 4px;}
-                        &.active-arrow{border-radius: 30px 30px 0px 0px;border-bottom: none;&::after{transform: rotate(180deg) translateY(50%);}}
+                        &.active-arrow{border-radius: 30px 30px 0px 0px;&::after{transform: rotate(180deg) translateY(50%);}}
                     }
                     .select-items{position: absolute;display: none;cursor: pointer;width:100%;text-align:center;border:1px solid #fff;border-top:none;border-radius:0px 0px 30px 30px;
                         li{@include font16;font-family: $fonthelveticaneuemedium;line-height: 100%;letter-spacing:  -0.32px;text-transform: uppercase;color: $colorWhite;padding: 15px 20px;text-align:left;
@@ -809,7 +809,7 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                                     }
                                     .select-items-mobile{width: 100%;position: absolute;opacity: 0;height: 0;transition: 0.3s all ease-in-out;overflow: hidden;
                                         &.show{height: auto;opacity: 1;border: 1px solid $colorBlack;border-top: none;border-radius:0px 0px 12px 12px;}
-                                        li{padding: 17px;font-size: 18px;line-height: 21.98px;font-family: $fonthelveticaneuemedium;&:not(:last-child){border-bottom: 1px solid $colorBlack;};display:flex;gap:10px;}
+                                        li{padding: 17px;font-size: 18px;line-height: 21.98px;font-family: $fonthelveticaneuemedium;display:flex;gap:10px;}
                                     }
                                 }
                             }
