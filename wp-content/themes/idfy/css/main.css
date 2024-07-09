@@ -908,7 +908,6 @@ header .navbar .headerContent .header-elements .custom-select .select-selected::
 }
 header .navbar .headerContent .header-elements .custom-select .select-selected.active-arrow {
   border-radius: 30px 30px 0px 0px;
-  border-bottom: none;
 }
 header .navbar .headerContent .header-elements .custom-select .select-selected.active-arrow::after {
   transform: rotate(180deg) translateY(50%);
@@ -1932,9 +1931,6 @@ header.navColor .navbar .hamburger-menu .button_toggle span:nth-of-type(2), head
     font-family: "HelveticaNeueMedium";
     display: flex;
     gap: 10px;
-  }
-  header .navbar .hamburger-menu .overlay .overlay-wrapper .scrollDiv .overlay-menu .main-menu .custom-select-mobile .select-items-mobile li:not(:last-child) {
-    border-bottom: 1px solid #000000;
   }
   header .navbar .hamburger-menu .overlay .overlay-wrapper .fixCta {
     z-index: 8;
