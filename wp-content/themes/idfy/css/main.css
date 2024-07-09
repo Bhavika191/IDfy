@@ -878,7 +878,7 @@ header .navbar .headerContent .header-elements .custom-select.active {
 header .navbar .headerContent .header-elements .custom-select .select-selected {
   position: relative;
   background-color: transparent;
-  padding: 15px 38px 15px 20px;
+  padding: 15px 38px 15px 21px;
   text-align: center;
   font-size: 16px;
   font-family: "HelveticaNeueMedium";
@@ -932,6 +932,7 @@ header .navbar .headerContent .header-elements .custom-select .select-items li {
   text-transform: uppercase;
   color: #FFFFFF;
   padding: 15px 20px;
+  text-align: left;
 }
 @media screen and (max-width: 1600px) {
   header .navbar .headerContent .header-elements .custom-select .select-items li {
@@ -1202,7 +1203,7 @@ header.navColor .navbar .hamburger-menu .button_toggle span:nth-of-type(2), head
     height: 26px;
   }
   header .navbar .headerContent .header-elements .custom-select .select-selected {
-    padding: 14px 38px 14px 20px;
+    padding: 14px 38px 14px 21px;
     letter-spacing: -0.24px;
   }
   header .navbar .headerContent .header-elements .custom-select .select-items li {
@@ -1404,7 +1405,7 @@ header.navColor .navbar .hamburger-menu .button_toggle span:nth-of-type(2), head
     height: 24px;
   }
   header .navbar .headerContent .header-elements .custom-select .select-selected {
-    padding: 11px 36px 11px 18px;
+    padding: 11px 36px 11px 19px;
     letter-spacing: -0.2px;
   }
   header .navbar .headerContent .header-elements .custom-select .select-items li {
@@ -1535,7 +1536,7 @@ header.navColor .navbar .hamburger-menu .button_toggle span:nth-of-type(2), head
     height: 22px;
   }
   header .navbar .headerContent .header-elements .custom-select .select-selected {
-    padding: 10px 36px 10px 18px;
+    padding: 10px 36px 10px 19px;
     letter-spacing: -0.15px;
   }
   header .navbar .headerContent .header-elements .custom-select .select-items li {

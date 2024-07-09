@@ -127,13 +127,13 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                 }
                 .custom-select{position: relative;display: inline-block;border:1px solid #fff;border-radius: 50px;cursor: pointer;
                     &.active{border-radius: 30px 30px 0px 0px;border-bottom: none;}
-                    .select-selected{position: relative;background-color: transparent;padding: 15px 38px 15px 20px;text-align: center;@include font16;font-family: $fonthelveticaneuemedium;letter-spacing:  -0.32px;text-transform: uppercase;color: $colorWhite;
+                    .select-selected{position: relative;background-color: transparent;padding: 15px 38px 15px 21px;text-align: center;@include font16;font-family: $fonthelveticaneuemedium;letter-spacing:  -0.32px;text-transform: uppercase;color: $colorWhite;
                         img{display: inline;margin-right: 4px;vertical-align: middle;}
                         &::after{position: absolute;content: url("../images/select-arrow.svg");z-index: 2;top: 50%;transform: translateY(-50%);transition:all 0.3s ease-in-out;padding:0px 4px;}
                         &.active-arrow{&::after{transform: rotate(180deg) translateY(50%);}}
                     }
                     .select-items{position: absolute;display: none;cursor: pointer;width: 102%;left: -1%;text-align:center;border:1px solid #fff;border-top:none;border-radius:0px 0px 30px 30px;
-                        li{@include font16;font-family: $fonthelveticaneuemedium;line-height: 100%;letter-spacing:  -0.32px;text-transform: uppercase;color: $colorWhite;padding: 15px 20px;
+                        li{@include font16;font-family: $fonthelveticaneuemedium;line-height: 100%;letter-spacing:  -0.32px;text-transform: uppercase;color: $colorWhite;padding: 15px 20px;text-align:left;
                             img{display: inline;margin-right: 4px;vertical-align: middle;}
                         }
                     }
@@ -350,7 +350,7 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                 .header-elements{
                     .search-icon{svg{width:26px;height:26px;}}
                     .custom-select{
-                        .select-selected{padding: 14px 38px 14px 20px;letter-spacing:  -0.24px;}
+                        .select-selected{padding: 14px 38px 14px 21px;letter-spacing:  -0.24px;}
                         .select-items{
                             li{letter-spacing:  -0.24px;padding: 14px 20px;}
                         }
@@ -513,7 +513,7 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                 .header-elements{
                     .search-icon{svg{width:24px;height:24px;}}
                     .custom-select{
-                        .select-selected{padding: 11px 36px 11px 18px;letter-spacing:  -0.20px;}
+                        .select-selected{padding: 11px 36px 11px 19px;letter-spacing:  -0.20px;}
                         .select-items{
                             li{letter-spacing:  -0.20px;padding: 11px 18px;}
                         }
@@ -631,7 +631,7 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                 .header-elements{
                     .search-icon{svg{width:22px;height:22px;}}
                     .custom-select{
-                        .select-selected{padding: 10px 36px 10px 18px;letter-spacing:  -0.15px;}
+                        .select-selected{padding: 10px 36px 10px 19px;letter-spacing:  -0.15px;}
                         .select-items{
                             li{letter-spacing:  -0.15px;padding: 10px 18px;}
                         }
