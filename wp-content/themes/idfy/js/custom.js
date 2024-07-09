@@ -986,6 +986,35 @@ document.addEventListener('DOMContentLoaded', function () {
 // });
 
 
+if ($(".pioneerSlidersec").length) {  
+    $('.contentDiv').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: true,
+      infinite: false,
+      asNavFor: '.imageSlider',
+    });
+  
+    $('.imageSlider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      infinite: false,
+      dots:false,
+      arrows:true,
+      asNavFor: '.contentDiv',
+      responsive:[
+        {
+            breakpoint: 821,
+            settings: {
+                arrows:false,
+            }
+        },
+      ]
+    });
+  }
+
 
 
 
@@ -1034,6 +1063,10 @@ if ($(".onboardingJourneysec").length) {
         }
     });
 }
+
+
+
+
 
 
 
