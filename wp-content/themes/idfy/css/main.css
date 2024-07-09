@@ -489,7 +489,7 @@ header .navbar .headerContent {
 }
 header .navbar .headerContent .nav-links {
   display: flex;
-  gap: 76px;
+  gap: 66px;
   align-items: center;
 }
 header .navbar .headerContent .nav-links .dropdown {
@@ -867,18 +867,14 @@ header .navbar .headerContent .header-elements .search-icon .searchWhite {
 header .navbar .headerContent .header-elements .custom-select {
   position: relative;
   display: inline-block;
-  border: 1px solid #fff;
-  border-radius: 50px;
   cursor: pointer;
-}
-header .navbar .headerContent .header-elements .custom-select.active {
-  border-radius: 30px 30px 0px 0px;
-  border-bottom: none;
 }
 header .navbar .headerContent .header-elements .custom-select .select-selected {
   position: relative;
   background-color: transparent;
-  padding: 15px 38px 15px 21px;
+  padding: 15px 38px 15px 22px;
+  border: 1px solid #fff;
+  border-radius: 50px;
   text-align: center;
   font-size: 16px;
   font-family: "HelveticaNeueMedium";
@@ -910,6 +906,10 @@ header .navbar .headerContent .header-elements .custom-select .select-selected::
   transition: all 0.3s ease-in-out;
   padding: 0px 4px;
 }
+header .navbar .headerContent .header-elements .custom-select .select-selected.active-arrow {
+  border-radius: 30px 30px 0px 0px;
+  border-bottom: none;
+}
 header .navbar .headerContent .header-elements .custom-select .select-selected.active-arrow::after {
   transform: rotate(180deg) translateY(50%);
 }
@@ -917,8 +917,7 @@ header .navbar .headerContent .header-elements .custom-select .select-items {
   position: absolute;
   display: none;
   cursor: pointer;
-  width: 102%;
-  left: -1%;
+  width: 100%;
   text-align: center;
   border: 1px solid #fff;
   border-top: none;
@@ -971,11 +970,9 @@ header.navColor .navbar .logo .logowordInner, header.scrolled .navbar .logo .log
 header.navColor .navbar .headerContent .header-elements .search-icon .searchWhite, header.scrolled .navbar .headerContent .header-elements .search-icon .searchWhite {
   stroke: #080808;
 }
-header.navColor .navbar .headerContent .custom-select, header.scrolled .navbar .headerContent .custom-select {
-  border-color: #080808;
-}
 header.navColor .navbar .headerContent .custom-select .select-selected, header.scrolled .navbar .headerContent .custom-select .select-selected {
   color: #080808;
+  border-color: #080808;
 }
 header.navColor .navbar .headerContent .custom-select .select-selected::after, header.scrolled .navbar .headerContent .custom-select .select-selected::after {
   content: url("../images/select-arrow-black.svg");
@@ -1104,6 +1101,9 @@ header.navColor .navbar .hamburger-menu .button_toggle span:nth-of-type(2), head
   header .navbar .headerContent .nav-links .dropdown5 .dropdown-content {
     min-width: 600px;
   }
+  header .navbar .headerContent .header-elements .custom-select .select-selected {
+    padding: 15px 38px 15px 21px;
+  }
 }
 @media all and (max-width: 1600px) {
   header .navbar .logo {
@@ -1114,7 +1114,7 @@ header.navColor .navbar .hamburger-menu .button_toggle span:nth-of-type(2), head
     gap: 70px;
   }
   header .navbar .headerContent .nav-links {
-    gap: 70px;
+    gap: 60px;
   }
   header .navbar .headerContent .nav-links .dropdown {
     padding: 22px 0px;
@@ -1656,6 +1656,9 @@ header.navColor .navbar .hamburger-menu .button_toggle span:nth-of-type(2), head
   header .navbar .headerContent .nav-links .dropdown5 .dropdown-content .dropdown-wrapper .dropdown-section-menu2 .menu-wrapper .dropdown-menu {
     width: 44%;
   }
+  header .navbar .headerContent .header-elements .custom-select .select-selected {
+    padding: 10px 36px 10px 20x;
+  }
 }
 @media all and (max-width: 1024px) {
   header .navbar {
@@ -1901,16 +1904,17 @@ header.navColor .navbar .hamburger-menu .button_toggle span:nth-of-type(2), head
     height: 10px;
     transition: all 0.3s ease-in-out;
   }
+  header .navbar .hamburger-menu .overlay .overlay-wrapper .scrollDiv .overlay-menu .main-menu .custom-select-mobile .select-selected-mobile.active-arrow {
+    border-radius: 12px 12px 0px 0px;
+  }
   header .navbar .hamburger-menu .overlay .overlay-wrapper .scrollDiv .overlay-menu .main-menu .custom-select-mobile .select-selected-mobile.active-arrow::before {
     transform: rotate(180deg) translateY(50%);
   }
   header .navbar .hamburger-menu .overlay .overlay-wrapper .scrollDiv .overlay-menu .main-menu .custom-select-mobile .select-items-mobile {
     width: 100%;
-    margin-top: 10px;
     position: absolute;
     opacity: 0;
     height: 0;
-    border-radius: 12px;
     transition: 0.3s all ease-in-out;
     overflow: hidden;
   }
@@ -1918,6 +1922,8 @@ header.navColor .navbar .hamburger-menu .button_toggle span:nth-of-type(2), head
     height: auto;
     opacity: 1;
     border: 1px solid #000000;
+    border-top: none;
+    border-radius: 0px 0px 12px 12px;
   }
   header .navbar .hamburger-menu .overlay .overlay-wrapper .scrollDiv .overlay-menu .main-menu .custom-select-mobile .select-items-mobile li {
     padding: 17px;

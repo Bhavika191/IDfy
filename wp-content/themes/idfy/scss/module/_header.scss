@@ -4,7 +4,7 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
         .logo{width: 109px;overflow: hidden;padding: 24px 0px;
         }
         .headerContent{display: flex;gap:76px;
-            .nav-links{display: flex;gap:76px;align-items: center;
+            .nav-links{display: flex;gap:66px;align-items: center;
                 .dropdown {padding: 24px 0px;position:relative;cursor: pointer;
                     .dropbtn{@include font14;font-family: $fonthelveticaneuebold;line-height: normal;text-transform: capitalize;color: $colorWhite;text-align: center;position: relative;padding-right:20px;
                         &::before{content: "";position: absolute;z-index: 2;background: url("../images/header-dropdown-icon.svg") no-repeat;top: 50%;transform: translateY(-50%);right: 0px;width: 12px;height: 10px;transition:all 0.3s ease-in-out;}
@@ -125,14 +125,13 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                 .search-icon{cursor: pointer;svg{width:30px;height:30px;}
                     .searchWhite{stroke: #fff;}
                 }
-                .custom-select{position: relative;display: inline-block;border:1px solid #fff;border-radius: 50px;cursor: pointer;
-                    &.active{border-radius: 30px 30px 0px 0px;border-bottom: none;}
-                    .select-selected{position: relative;background-color: transparent;padding: 15px 38px 15px 21px;text-align: center;@include font16;font-family: $fonthelveticaneuemedium;letter-spacing:  -0.32px;text-transform: uppercase;color: $colorWhite;
+                .custom-select{position: relative;display: inline-block;cursor: pointer;
+                    .select-selected{position: relative;background-color: transparent;padding: 15px 38px 15px 22px;border:1px solid #fff;border-radius: 50px;text-align: center;@include font16;font-family: $fonthelveticaneuemedium;letter-spacing:  -0.32px;text-transform: uppercase;color: $colorWhite;
                         img{display: inline;margin-right: 4px;vertical-align: middle;}
                         &::after{position: absolute;content: url("../images/select-arrow.svg");z-index: 2;top: 50%;transform: translateY(-50%);transition:all 0.3s ease-in-out;padding:0px 4px;}
-                        &.active-arrow{&::after{transform: rotate(180deg) translateY(50%);}}
+                        &.active-arrow{border-radius: 30px 30px 0px 0px;border-bottom: none;&::after{transform: rotate(180deg) translateY(50%);}}
                     }
-                    .select-items{position: absolute;display: none;cursor: pointer;width: 102%;left: -1%;text-align:center;border:1px solid #fff;border-top:none;border-radius:0px 0px 30px 30px;
+                    .select-items{position: absolute;display: none;cursor: pointer;width:100%;text-align:center;border:1px solid #fff;border-top:none;border-radius:0px 0px 30px 30px;
                         li{@include font16;font-family: $fonthelveticaneuemedium;line-height: 100%;letter-spacing:  -0.32px;text-transform: uppercase;color: $colorWhite;padding: 15px 20px;text-align:left;
                             img{display: inline;margin-right: 4px;vertical-align: middle;}
                         }
@@ -156,8 +155,8 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                         .searchWhite{stroke: #080808;}
                     }
                 }
-                .custom-select{border-color:#080808;
-                    .select-selected{color: #080808;
+                .custom-select{
+                    .select-selected{color: #080808;border-color:#080808;
                         &::after{content: url("../images/select-arrow-black.svg");}
                     }
                     .select-items{background: #fff;border-color:#080808;
@@ -273,6 +272,12 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                         }
                     }
                 }
+                .header-elements{
+                    .custom-select{
+                        .select-selected{padding: 15px 38px 15px 21px;
+                        }
+                    }
+                }
             }
         }
     }
@@ -280,7 +285,7 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
         .navbar{
             .logo{width: 109px;padding: 22px 0px;}
             .headerContent{gap: 70px;
-                .nav-links{gap:70px;
+                .nav-links{gap:60px;
                     .dropdown {padding: 22px 0px;
                         .dropbtn{
                             &::before{width: 12px;height: 10px;}
@@ -736,6 +741,12 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                         }
                     }
                 }
+                .header-elements{
+                    .custom-select{
+                        .select-selected{padding: 10px 36px 10px 20x;
+                        }
+                    }
+                }
             }
         }
     }
@@ -794,10 +805,10 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                                     p{font-size: 14px;line-height: 17.09px;letter-spacing: -3%;font-family: $fonthelveticaneuemedium;margin: 12px 0px;}
                                     .select-selected-mobile{padding: 17px 35px 17px 17px;font-size: 18px;line-height: 21.98px;font-family: $fonthelveticaneuemedium;border: 1px solid $colorBlack;border-radius: 12px;position:relative;display:flex;gap:10px;
                                         &::before{content: "";position: absolute;z-index: 2;background: url("../images/humberger-arrow.svg") no-repeat;top: 50%;transform: translateY(-50%);right: 25px;width: 20px;height: 10px;transition:all 0.3s ease-in-out;}
-                                        &.active-arrow{&::before{transform: rotate(180deg) translateY(50%);}}
+                                        &.active-arrow{border-radius: 12px 12px 0px 0px;&::before{transform: rotate(180deg) translateY(50%);}}
                                     }
-                                    .select-items-mobile{width: 100%;margin-top:10px;position: absolute;opacity: 0;height: 0;border-radius: 12px;transition: 0.3s all ease-in-out;overflow: hidden;
-                                        &.show{height: auto;opacity: 1;border: 1px solid $colorBlack;}
+                                    .select-items-mobile{width: 100%;position: absolute;opacity: 0;height: 0;transition: 0.3s all ease-in-out;overflow: hidden;
+                                        &.show{height: auto;opacity: 1;border: 1px solid $colorBlack;border-top: none;border-radius:0px 0px 12px 12px;}
                                         li{padding: 17px;font-size: 18px;line-height: 21.98px;font-family: $fonthelveticaneuemedium;&:not(:last-child){border-bottom: 1px solid $colorBlack;};display:flex;gap:10px;}
                                     }
                                 }
