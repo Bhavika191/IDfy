@@ -5319,24 +5319,24 @@ footer .footerWrapper .copyright h3 {
 .onboardingJourneysec {
   margin-bottom: 150px;
 }
-.onboardingJourneysec.onboardingJourneysecanime .innerWrapper .journeyData .contentDiv:nth-child(1) .innerBoxes h3::after {
+.onboardingJourneysec.onboardingJourneysecanime .innerWrapper .journeyData .contentDivjourney:nth-child(1) .innerBoxesjourney h3::after {
   width: 56px;
 }
-.onboardingJourneysec.onboardingJourneysecanime .innerWrapper .journeyData .contentDiv:nth-child(1) .innerBoxes:nth-child(3) h3::after {
+.onboardingJourneysec.onboardingJourneysecanime .innerWrapper .journeyData .contentDivjourney:nth-child(1) .innerBoxesjourney:nth-child(3) h3::after {
   width: 56px;
 }
-.onboardingJourneysec.onboardingJourneysecanime .innerWrapper .journeyData .contentDiv:last-child .innerBoxes:nth-child(3) h3::after {
+.onboardingJourneysec.onboardingJourneysecanime .innerWrapper .journeyData .contentDivjourney:last-child .innerBoxesjourney:nth-child(3) h3::after {
   width: 56px;
 }
-.onboardingJourneysec.onboardingJourneysecanime .innerWrapper .journeyData .contentDiv .innerBoxesnew::after {
+.onboardingJourneysec.onboardingJourneysecanime .innerWrapper .journeyData .contentDivjourney .innerBoxesnew::after {
   opacity: 1;
   transition: 0.5s all ease-in-out;
 }
-.onboardingJourneysec.onboardingJourneysecanime .innerWrapper .journeyData .contentDiv .innerBoxes h3::after {
+.onboardingJourneysec.onboardingJourneysecanime .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney h3::after {
   animation: animBordertwo 2s linear;
   width: 50px;
 }
-.onboardingJourneysec.onboardingJourneysecanime .innerWrapper .journeyData .contentDiv .innerBoxes h3::before {
+.onboardingJourneysec.onboardingJourneysecanime .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney h3::before {
   animation: animBorder 2s linear;
   width: 100%;
 }
@@ -5446,30 +5446,30 @@ footer .footerWrapper .copyright h3 {
   margin-top: 72px;
   align-items: flex-start;
 }
-.onboardingJourneysec .innerWrapper .journeyData .contentDiv {
+.onboardingJourneysec .innerWrapper .journeyData .contentDivjourney {
   width: 35%;
 }
-.onboardingJourneysec .innerWrapper .journeyData .contentDiv:nth-child(1) .innerBoxes h3::after {
+.onboardingJourneysec .innerWrapper .journeyData .contentDivjourney:nth-child(1) .innerBoxesjourney h3::after {
   left: 99.5%;
   right: unset;
   height: 2px;
   bottom: -28px;
   transform: rotate(40deg);
 }
-.onboardingJourneysec .innerWrapper .journeyData .contentDiv:last-child .innerBoxes h3:before {
+.onboardingJourneysec .innerWrapper .journeyData .contentDivjourney:last-child .innerBoxesjourney h3:before {
   right: 0 !important;
   left: unset;
 }
-.onboardingJourneysec .innerWrapper .journeyData .contentDiv:last-child .innerBoxes .journeyinnerData {
+.onboardingJourneysec .innerWrapper .journeyData .contentDivjourney:last-child .innerBoxesjourney .journeyinnerData {
   padding-left: 100px;
 }
-.onboardingJourneysec .innerWrapper .journeyData .contentDiv:last-child .innerBoxes h3 {
+.onboardingJourneysec .innerWrapper .journeyData .contentDivjourney:last-child .innerBoxesjourney h3 {
   padding-left: 100px;
 }
-.onboardingJourneysec .innerWrapper .journeyData .contentDiv:nth-child(1) .innerBoxes:nth-child(2) h3::after, .onboardingJourneysec .innerWrapper .journeyData .contentDiv:last-child .innerBoxes:nth-child(2) h3::after {
+.onboardingJourneysec .innerWrapper .journeyData .contentDivjourney:nth-child(1) .innerBoxesjourney:nth-child(2) h3::after, .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney:last-child .innerBoxesjourney:nth-child(2) h3::after {
   content: none;
 }
-.onboardingJourneysec .innerWrapper .journeyData .contentDiv:nth-child(1) .innerBoxes:nth-child(3) h3::after {
+.onboardingJourneysec .innerWrapper .journeyData .contentDivjourney:nth-child(1) .innerBoxesjourney:nth-child(3) h3::after {
   left: 99.5%;
   right: unset;
   width: 56px;
@@ -5477,7 +5477,7 @@ footer .footerWrapper .copyright h3 {
   bottom: 8px;
   transform: rotate(-40deg);
 }
-.onboardingJourneysec .innerWrapper .journeyData .contentDiv:last-child .innerBoxes:nth-child(3) h3::after {
+.onboardingJourneysec .innerWrapper .journeyData .contentDivjourney:last-child .innerBoxesjourney:nth-child(3) h3::after {
   left: -57px;
   right: unset;
   width: 62px !important;
@@ -5485,14 +5485,14 @@ footer .footerWrapper .copyright h3 {
   bottom: 10px;
   transform: rotate(40deg);
 }
-.onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes {
+.onboardingJourneysec .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney {
   margin-bottom: 150px;
   height: 164px;
 }
-.onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes:last-child {
+.onboardingJourneysec .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney:last-child {
   margin-bottom: 0px;
 }
-.onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes h3 {
+.onboardingJourneysec .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney h3 {
   font-size: 32px;
   font-family: "HelveticaNeueBold";
   color: #1C43B9;
@@ -5501,31 +5501,31 @@ footer .footerWrapper .copyright h3 {
   position: relative;
 }
 @media screen and (max-width: 1600px) {
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes h3 {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney h3 {
     font-size: 24px;
   }
 }
 @media screen and (max-width: 1400px) {
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes h3 {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney h3 {
     font-size: 20px;
   }
 }
 @media screen and (max-width: 1280px) {
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes h3 {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney h3 {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 1024px) {
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes h3 {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney h3 {
     font-size: 14px;
   }
 }
 @media screen and (max-width: 720px) {
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes h3 {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney h3 {
     font-size: 12px;
   }
 }
-.onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes h3::after {
+.onboardingJourneysec .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney h3::after {
   content: "";
   position: absolute;
   left: -47px;
@@ -5536,7 +5536,7 @@ footer .footerWrapper .copyright h3 {
   transform: rotate(-40deg);
   border-bottom: 1px dashed #1C43B9;
 }
-.onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes h3:before {
+.onboardingJourneysec .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney h3:before {
   position: absolute;
   bottom: -10px;
   left: 0;
@@ -5546,7 +5546,7 @@ footer .footerWrapper .copyright h3 {
   display: block;
   content: "";
 }
-.onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes .journeyinnerData h4 {
+.onboardingJourneysec .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney .journeyinnerData h4 {
   font-size: 24px;
   font-family: "HelveticaNeueBold";
   color: #4D4D4D;
@@ -5554,16 +5554,16 @@ footer .footerWrapper .copyright h3 {
   margin-bottom: 16px;
 }
 @media screen and (max-width: 1600px) {
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes .journeyinnerData h4 {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney .journeyinnerData h4 {
     font-size: 20px;
   }
 }
 @media screen and (max-width: 1400px) {
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes .journeyinnerData h4 {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney .journeyinnerData h4 {
     font-size: 18px;
   }
 }
-.onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes .journeyinnerData ul li {
+.onboardingJourneysec .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney .journeyinnerData ul li {
   font-size: 18px;
   font-family: "HelveticaNeueLight";
   color: #4D4D4D;
@@ -5572,11 +5572,11 @@ footer .footerWrapper .copyright h3 {
   padding-left: 20px;
 }
 @media screen and (max-width: 1200px) {
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes .journeyinnerData ul li {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney .journeyinnerData ul li {
     font-size: 16px;
   }
 }
-.onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes .journeyinnerData ul li::before {
+.onboardingJourneysec .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney .journeyinnerData ul li::before {
   content: "";
   position: absolute;
   top: 14px;
@@ -5673,10 +5673,10 @@ footer .footerWrapper .copyright h3 {
   }
 }
 @media screen and (max-width: 1920px) {
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney {
     width: 40%;
   }
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv:last-child .innerBoxes:nth-child(3) h3::after {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney:last-child .innerBoxesjourney:nth-child(3) h3::after {
     left: -51px;
     right: unset;
     height: 2px;
@@ -5684,7 +5684,7 @@ footer .footerWrapper .copyright h3 {
     transform: rotate(40deg);
     width: 56px !important;
   }
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney {
     margin-bottom: 60px;
   }
   .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv {
@@ -5697,21 +5697,21 @@ footer .footerWrapper .copyright h3 {
   }
 }
 @media screen and (max-width: 1800px) {
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney {
     width: 36%;
   }
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv:nth-child(1) .innerBoxes:nth-child(3) h3::after {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney:nth-child(1) .innerBoxesjourney:nth-child(3) h3::after {
     left: 99%;
   }
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv:last-child .innerBoxes:nth-child(3) h3::after {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney:last-child .innerBoxesjourney:nth-child(3) h3::after {
     height: 2px;
     transform: rotate(40deg);
   }
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney {
     margin-bottom: 40px;
     height: 200px;
   }
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes h3 {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney h3 {
     margin-bottom: 18px;
   }
   .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv {
@@ -5731,7 +5731,7 @@ footer .footerWrapper .copyright h3 {
   .onboardingJourneysec .innerWrapper .journeyData {
     margin-top: 60px;
   }
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney {
     margin-bottom: 32px;
   }
   .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv {
@@ -5761,43 +5761,43 @@ footer .footerWrapper .copyright h3 {
   .onboardingJourneysec .innerWrapper .secHeading p {
     margin: 30px auto 30px;
   }
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney {
     width: 35%;
   }
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv:last-child .innerBoxes:nth-child(3) h3::after {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney:last-child .innerBoxesjourney:nth-child(3) h3::after {
     bottom: 13px;
   }
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv:nth-child(1) .innerBoxes:nth-child(3) h3::after {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney:nth-child(1) .innerBoxesjourney:nth-child(3) h3::after {
     bottom: 12px;
   }
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv:nth-child(1) .innerBoxes h3::after {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney:nth-child(1) .innerBoxesjourney h3::after {
     bottom: -24px;
   }
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv:nth-child(1) {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney:nth-child(1) {
     width: 32%;
   }
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv:last-child .innerBoxes h3 {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney:last-child .innerBoxesjourney h3 {
     padding-left: 80px;
     margin-bottom: 12px;
   }
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv:last-child .innerBoxes .journeyinnerData {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney:last-child .innerBoxesjourney .journeyinnerData {
     padding-left: 80px;
   }
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney {
     margin-bottom: 20px;
     height: 194px;
   }
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes h3 {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney h3 {
     margin-bottom: 16px;
     font-size: 22px;
   }
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes h3::before {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney h3::before {
     bottom: -6px;
   }
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes h3::after {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney h3::after {
     bottom: -23px;
   }
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes .journeyinnerData ul li {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney .journeyinnerData ul li {
     font-size: 16px;
   }
   .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv {
@@ -5832,42 +5832,42 @@ footer .footerWrapper .copyright h3 {
   .onboardingJourneysec .innerWrapper .secHeading p {
     margin: 25px auto 25px;
   }
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney {
     width: 36%;
   }
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv:nth-child(1) .innerBoxes:nth-child(3) h3::after {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney:nth-child(1) .innerBoxesjourney:nth-child(3) h3::after {
     width: 49px;
     bottom: 7px;
     left: 99.5%;
     transform: rotate(-29deg);
   }
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv:nth-child(1) {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney:nth-child(1) {
     width: 30%;
   }
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv:last-child .innerBoxes:nth-child(3) h3::after {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney:last-child .innerBoxesjourney:nth-child(3) h3::after {
     bottom: 6px;
     transform: rotate(28deg);
     left: -50px;
     width: 50px !important;
   }
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv:last-child .innerBoxes h3 {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney:last-child .innerBoxesjourney h3 {
     padding-left: 70px;
     margin-bottom: 10px;
   }
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv:last-child .innerBoxes .journeyinnerData {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney:last-child .innerBoxesjourney .journeyinnerData {
     padding-left: 70px;
   }
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney {
     margin-bottom: 20px;
     height: 160px;
   }
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes h3 {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney h3 {
     margin-bottom: 16px;
   }
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes .journeyinnerData ul li {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney .journeyinnerData ul li {
     font-size: 14px;
   }
-  .onboardingJourneysec .innerWrapper .journeyData .contentDiv .innerBoxes .journeyinnerData h4 {
+  .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney .journeyinnerData h4 {
     margin-bottom: 10px;
   }
   .onboardingJourneysec .innerWrapper .journeyData .centerCirclediv {
@@ -6006,27 +6006,27 @@ footer .footerWrapper .copyright h3 {
     padding: 0px 50px;
     margin-top: 32px;
   }
-  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxes {
+  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxesjourneyslide {
     margin-bottom: 70px;
     border-top: 1px solid #808080;
     border-bottom: 1px solid #808080;
     padding: 15px 0px;
   }
-  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxes h3 {
+  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxesjourneyslide h3 {
     font-size: 32px;
     font-family: "HelveticaNeueBold";
     color: #1C43B9;
     line-height: normal;
     position: relative;
   }
-  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxes .journeyinnerData h4 {
+  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxesjourneyslide .journeyinnerData h4 {
     font-size: 24px;
     font-family: "HelveticaNeueBold";
     color: #000;
     line-height: 133%;
     margin-bottom: 10px;
   }
-  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxes .journeyinnerData ul li {
+  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxesjourneyslide .journeyinnerData ul li {
     font-size: 24px;
     font-family: "HelveticaNeueMedium";
     color: #000;
@@ -6035,12 +6035,12 @@ footer .footerWrapper .copyright h3 {
   }
 }
 @media screen and (max-width: 1024px) and (max-width: 1600px) {
-  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxes .journeyinnerData ul li {
+  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxesjourneyslide .journeyinnerData ul li {
     font-size: 20px;
   }
 }
 @media screen and (max-width: 1024px) and (max-width: 1400px) {
-  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxes .journeyinnerData ul li {
+  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxesjourneyslide .journeyinnerData ul li {
     font-size: 18px;
   }
 }
@@ -6157,23 +6157,23 @@ footer .footerWrapper .copyright h3 {
   .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider {
     padding: 0px 20px;
   }
-  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxes h3 {
+  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxesjourney h3 {
     font-size: 24px;
   }
-  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxes .journeyinnerData h4 {
+  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxesjourney .journeyinnerData h4 {
     font-size: 16px;
   }
-  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxes .journeyinnerData ul li {
+  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxesjourney .journeyinnerData ul li {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 720px) and (max-width: 1600px) {
-  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxes .journeyinnerData ul li {
+  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxesjourney .journeyinnerData ul li {
     font-size: 14px;
   }
 }
 @media screen and (max-width: 720px) and (max-width: 1400px) {
-  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxes .journeyinnerData ul li {
+  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxesjourney .journeyinnerData ul li {
     font-size: 12px;
   }
 }
@@ -7986,4 +7986,4 @@ footer .footerWrapper .copyright h3 {
   .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox .contentDiv {
     margin-top: 16px;
   }
-}
+}/*# sourceMappingURL=main.css.map */

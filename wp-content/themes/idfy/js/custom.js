@@ -733,7 +733,7 @@ if ($(".onboardingJourneysec").length) {
                     $(".onboardingJourneysec").addClass("onboardingJourneysecanime")
                 }, 1000);
                 setTimeout(() => {
-                    $(".innerBoxes h3").addClass("innerBoxesnew")
+                    $(".innerBoxesjourney h3").addClass("innerBoxesnew")
                 }, 2800);
             }
             else {
@@ -741,7 +741,7 @@ if ($(".onboardingJourneysec").length) {
                     $(".onboardingJourneysec").removeClass("onboardingJourneysecanime")
                 }, 1000);
                 setTimeout(() => {
-                    $(".innerBoxes h3").removeClass("innerBoxesnew")
+                    $(".innerBoxesjourney h3").removeClass("innerBoxesnew")
                 }, 2800);
             }
 
