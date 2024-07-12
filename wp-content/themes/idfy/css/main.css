@@ -3997,9 +3997,17 @@ footer .footerWrapper .copyright h3 {
   .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year {
     margin-right: 100px;
   }
+  .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .circle {
+    width: 35px;
+    height: 35px;
+  }
+  .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .circle span {
+    width: 14px;
+    height: 14px;
+  }
   .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg {
-    left: 16px;
-    bottom: 36px;
+    left: 17px;
+    bottom: 40px;
   }
   .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg svg line:nth-last-child(1), .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg svg line:nth-last-child(2), .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg svg line:nth-last-child(3), .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg svg line:nth-last-child(4), .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg svg line:nth-last-child(5) {
     display: none;
@@ -4327,7 +4335,7 @@ footer .footerWrapper .copyright h3 {
 }
 @media screen and (max-width: 720px) {
   .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .contentDiv .ctaRed {
-    width: 100%;
+    width: auto;
   }
 }
 
@@ -4848,7 +4856,7 @@ footer .footerWrapper .copyright h3 {
     bottom: -16px;
   }
   .enterpriseSection .enterpriseWrapper .enterpriseLogos .logoDiv .innerBoxes {
-    padding: 50px 0px;
+    padding: 50px 30px;
     width: 50%;
     border-bottom: none !important;
   }
@@ -5264,9 +5272,16 @@ footer .footerWrapper .copyright h3 {
   .pioneerSlidersec .sliderSection .leftContent .contentDiv .innerBoxes {
     margin-top: 50px;
   }
+  .pioneerSlidersec .sliderSection .leftContent .contentDiv .innerBoxes h3 {
+    font-size: 24px;
+  }
   .pioneerSlidersec .sliderSection .leftContent .contentDiv .innerBoxes p {
     margin-top: 24px;
     width: 100%;
+    font-size: 16px;
+  }
+  .pioneerSlidersec .sliderSection .leftContent .contentDiv .innerBoxes a {
+    margin-top: 22px;
   }
   .pioneerSlidersec .sliderSection .leftContent .slick-dots {
     bottom: -40px;
@@ -5579,7 +5594,7 @@ footer .footerWrapper .copyright h3 {
 .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney .journeyinnerData ul li::before {
   content: "";
   position: absolute;
-  top: 14px;
+  top: 8px;
   left: 0;
   width: 6px;
   height: 6px;
@@ -6032,6 +6047,7 @@ footer .footerWrapper .copyright h3 {
     color: #000;
     line-height: 160%;
     position: relative;
+    padding-left: 14px;
   }
 }
 @media screen and (max-width: 1024px) and (max-width: 1600px) {
@@ -6045,6 +6061,16 @@ footer .footerWrapper .copyright h3 {
   }
 }
 @media screen and (max-width: 1024px) {
+  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxesjourneyslide .journeyinnerData ul li::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    background: #4D4D4D;
+    border-radius: 50%;
+  }
   .onboardingJourneysec .innerWrapper .onboardingSliderData .slick-dots {
     bottom: 20px;
     right: 0;
@@ -6629,7 +6655,7 @@ footer .footerWrapper .copyright h3 {
     height: 650px;
   }
   .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent a {
-    width: 100%;
+    width: auto;
   }
 }
 
@@ -7024,14 +7050,14 @@ footer .footerWrapper .copyright h3 {
 .fraudStoryslidermbl .fraudStoryslider .boxSlides .imgDiv .dotsInner img {
   width: 170px;
 }
-.fraudStoryslidermbl .fraudStoryslider .boxSlides .contentDiv {
+.fraudStoryslidermbl .fraudStoryslider .boxSlides .contentDivfraud {
   border-radius: 20px;
   background: #1C43B9;
   padding: 24px 32px;
   box-shadow: 20px 20px 30px 0px rgba(0, 0, 0, 0.2);
   transform: translateY(-44%);
 }
-.fraudStoryslidermbl .fraudStoryslider .boxSlides .contentDiv p, .fraudStoryslidermbl .fraudStoryslider .boxSlides .contentDiv ul li {
+.fraudStoryslidermbl .fraudStoryslider .boxSlides .contentDivfraud p, .fraudStoryslidermbl .fraudStoryslider .boxSlides .contentDivfraud ul li {
   font-size: 24px;
   font-family: "HelveticaNeueLight";
   letter-spacing: 1.7px;
@@ -7039,13 +7065,13 @@ footer .footerWrapper .copyright h3 {
   color: #FFFFFF;
   margin-bottom: 23px;
 }
-.fraudStoryslidermbl .fraudStoryslider .boxSlides .contentDiv p span, .fraudStoryslidermbl .fraudStoryslider .boxSlides .contentDiv ul li span {
+.fraudStoryslidermbl .fraudStoryslider .boxSlides .contentDivfraud p span, .fraudStoryslidermbl .fraudStoryslider .boxSlides .contentDivfraud ul li span {
   color: #fff;
 }
-.fraudStoryslidermbl .fraudStoryslider .boxSlides .contentDiv p b, .fraudStoryslidermbl .fraudStoryslider .boxSlides .contentDiv ul li b {
+.fraudStoryslidermbl .fraudStoryslider .boxSlides .contentDivfraud p b, .fraudStoryslidermbl .fraudStoryslider .boxSlides .contentDivfraud ul li b {
   color: #fff;
 }
-.fraudStoryslidermbl .fraudStoryslider .boxSlides .contentDiv a {
+.fraudStoryslidermbl .fraudStoryslider .boxSlides .contentDivfraud a {
   width: 100%;
 }
 .fraudStoryslidermbl .slick-dots {
@@ -7105,10 +7131,10 @@ footer .footerWrapper .copyright h3 {
   .fraudStoryslidermbl .fraudStoryslider .boxSlides .imgDiv .dotsInner img {
     width: 100px;
   }
-  .fraudStoryslidermbl .fraudStoryslider .boxSlides .contentDiv {
+  .fraudStoryslidermbl .fraudStoryslider .boxSlides .contentDivfraud {
     transform: translateY(-23%);
   }
-  .fraudStoryslidermbl .fraudStoryslider .boxSlides .contentDiv p, .fraudStoryslidermbl .fraudStoryslider .boxSlides .contentDiv ul li {
+  .fraudStoryslidermbl .fraudStoryslider .boxSlides .contentDivfraud p, .fraudStoryslidermbl .fraudStoryslider .boxSlides .contentDivfraud ul li {
     font-size: 20px;
     letter-spacing: 1px;
   }
@@ -7250,11 +7276,11 @@ footer .footerWrapper .copyright h3 {
     font-size: 16px;
   }
 }
-.clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDiv {
+.clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDivclient {
   width: 65%;
   padding-right: 110px;
 }
-.clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDiv h3 {
+.clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDivclient h3 {
   font-size: 38px;
   font-family: "HelveticaNeueLight";
   letter-spacing: 1px;
@@ -7264,32 +7290,32 @@ footer .footerWrapper .copyright h3 {
   position: relative;
 }
 @media screen and (max-width: 1600px) {
-  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDiv h3 {
+  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDivclient h3 {
     font-size: 30px;
   }
 }
 @media screen and (max-width: 1400px) {
-  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDiv h3 {
+  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDivclient h3 {
     font-size: 26px;
   }
 }
 @media screen and (max-width: 1280px) {
-  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDiv h3 {
+  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDivclient h3 {
     font-size: 22px;
   }
 }
 @media screen and (max-width: 1024px) {
-  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDiv h3 {
+  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDivclient h3 {
     font-size: 20px;
   }
 }
-.clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDiv h3::before {
+.clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDivclient h3::before {
   content: url(../images/colon-up.svg);
   position: absolute;
   top: -22px;
   left: -50px;
 }
-.clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDiv h3::after {
+.clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDivclient h3::after {
   content: url(../images/colon-down.svg);
   position: absolute;
   bottom: -45px;
@@ -7361,7 +7387,7 @@ footer .footerWrapper .copyright h3 {
   .clientsSection .innerWrapper .clientSlider .clientsliderSlides .imgnameDiv .nameDiv h5 {
     margin-top: 7px;
   }
-  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDiv {
+  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDivclient {
     width: 62%;
     padding-right: 80px;
   }
@@ -7406,16 +7432,16 @@ footer .footerWrapper .copyright h3 {
   .clientsSection .innerWrapper .clientSlider .clientsliderSlides .imgnameDiv {
     width: 26%;
   }
-  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDiv {
+  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDivclient {
     width: 65%;
     padding-right: 70px;
   }
-  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDiv h3::before {
+  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDivclient h3::before {
     top: -18px;
     left: -40px;
     scale: 0.8;
   }
-  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDiv h3::after {
+  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDivclient h3::after {
     bottom: -38px;
     right: -30px;
     scale: 0.8;
@@ -7466,16 +7492,16 @@ footer .footerWrapper .copyright h3 {
   .clientsSection .innerWrapper .clientSlider .clientsliderSlides .imgnameDiv {
     width: 24%;
   }
-  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDiv {
+  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDivclient {
     width: 68%;
     padding-right: 40px;
   }
-  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDiv h3::before {
+  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDivclient h3::before {
     top: -20px;
     left: -38px;
     scale: 0.7;
   }
-  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDiv h3::after {
+  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDivclient h3::after {
     bottom: -30px;
     right: -20px;
     scale: 0.7;
@@ -7525,20 +7551,20 @@ footer .footerWrapper .copyright h3 {
   .clientsSection .innerWrapper .clientSlider .clientsliderSlides .imgnameDiv .nameDiv h5 {
     margin-top: 8px;
   }
-  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDiv {
+  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDivclient {
     width: 90%;
     padding-right: 0px;
     margin: 70px auto 30px;
   }
-  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDiv h3 {
+  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDivclient h3 {
     text-align: center;
   }
-  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDiv h3::before {
+  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDivclient h3::before {
     top: -50px;
     left: 0px;
     scale: 1;
   }
-  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDiv h3::after {
+  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDivclient h3::after {
     bottom: -30px;
     right: 0px;
     scale: 1;
@@ -7579,11 +7605,11 @@ footer .footerWrapper .copyright h3 {
     margin-top: 5px;
     font-size: 20px;
   }
-  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDiv {
+  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDivclient {
     width: 90%;
     padding-right: 0px;
   }
-  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDiv h3 {
+  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDivclient h3 {
     font-size: 20px;
   }
 }
@@ -7669,10 +7695,10 @@ footer .footerWrapper .copyright h3 {
   justify-content: center;
   align-items: center;
 }
-.awardscertificateSec .innerWrapper .awardCertiInner .awardDiv .imgBox .contentDiv {
+.awardscertificateSec .innerWrapper .awardCertiInner .awardDiv .imgBox .contentDivaward {
   margin-top: 32px;
 }
-.awardscertificateSec .innerWrapper .awardCertiInner .awardDiv .imgBox .contentDiv h3 {
+.awardscertificateSec .innerWrapper .awardCertiInner .awardDiv .imgBox .contentDivaward h3 {
   font-size: 20px;
   font-family: "HelveticaNeueLight";
   line-height: 140%;
@@ -7680,12 +7706,12 @@ footer .footerWrapper .copyright h3 {
   text-align: center;
 }
 @media screen and (max-width: 1600px) {
-  .awardscertificateSec .innerWrapper .awardCertiInner .awardDiv .imgBox .contentDiv h3 {
+  .awardscertificateSec .innerWrapper .awardCertiInner .awardDiv .imgBox .contentDivaward h3 {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 720px) {
-  .awardscertificateSec .innerWrapper .awardCertiInner .awardDiv .imgBox .contentDiv h3 {
+  .awardscertificateSec .innerWrapper .awardCertiInner .awardDiv .imgBox .contentDivaward h3 {
     font-size: 16px;
   }
 }
@@ -7714,10 +7740,10 @@ footer .footerWrapper .copyright h3 {
   justify-content: center;
   align-items: center;
 }
-.awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox .contentDiv {
+.awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox .contentDivaward {
   margin-top: 32px;
 }
-.awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox .contentDiv h3 {
+.awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox .contentDivaward h3 {
   font-size: 20px;
   font-family: "HelveticaNeueLight";
   line-height: 140%;
@@ -7725,12 +7751,12 @@ footer .footerWrapper .copyright h3 {
   text-align: center;
 }
 @media screen and (max-width: 1600px) {
-  .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox .contentDiv h3 {
+  .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox .contentDivaward h3 {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 720px) {
-  .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox .contentDiv h3 {
+  .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox .contentDivaward h3 {
     font-size: 16px;
   }
 }
@@ -7760,7 +7786,7 @@ footer .footerWrapper .copyright h3 {
     height: 190px;
     padding: 20px;
   }
-  .awardscertificateSec .innerWrapper .awardCertiInner .awardDiv .imgBox .contentDiv {
+  .awardscertificateSec .innerWrapper .awardCertiInner .awardDiv .imgBox .contentDivaward {
     margin-top: 30px;
   }
   .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv {
@@ -7771,7 +7797,7 @@ footer .footerWrapper .copyright h3 {
     height: 190px;
     padding: 20px;
   }
-  .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox .contentDiv {
+  .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox .contentDivaward {
     margin-top: 30px;
   }
 }
@@ -7785,7 +7811,7 @@ footer .footerWrapper .copyright h3 {
     height: 170px;
     padding: 18px;
   }
-  .awardscertificateSec .innerWrapper .awardCertiInner .awardDiv .imgBox .contentDiv {
+  .awardscertificateSec .innerWrapper .awardCertiInner .awardDiv .imgBox .contentDivaward {
     margin-top: 26px;
   }
   .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv {
@@ -7796,7 +7822,7 @@ footer .footerWrapper .copyright h3 {
     height: 170px;
     padding: 18px;
   }
-  .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox .contentDiv {
+  .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox .contentDivaward {
     margin-top: 26px;
   }
 }
@@ -7822,7 +7848,7 @@ footer .footerWrapper .copyright h3 {
     width: 160px;
     height: 160px;
   }
-  .awardscertificateSec .innerWrapper .awardCertiInner .awardDiv .imgBox .contentDiv {
+  .awardscertificateSec .innerWrapper .awardCertiInner .awardDiv .imgBox .contentDivaward {
     margin-top: 22px;
   }
   .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv {
@@ -7832,7 +7858,7 @@ footer .footerWrapper .copyright h3 {
     width: 160px;
     height: 160px;
   }
-  .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox .contentDiv {
+  .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox .contentDivaward {
     margin-top: 22px;
   }
 }
@@ -7850,7 +7876,7 @@ footer .footerWrapper .copyright h3 {
     width: 140px;
     height: 140px;
   }
-  .awardscertificateSec .innerWrapper .awardCertiInner .awardDiv .imgBox .contentDiv {
+  .awardscertificateSec .innerWrapper .awardCertiInner .awardDiv .imgBox .contentDivaward {
     margin-top: 20px;
   }
   .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv {
@@ -7860,7 +7886,7 @@ footer .footerWrapper .copyright h3 {
     width: 140px;
     height: 140px;
   }
-  .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox .contentDiv {
+  .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox .contentDivaward {
     margin-top: 20px;
   }
 }
@@ -7881,7 +7907,7 @@ footer .footerWrapper .copyright h3 {
     width: 120px;
     height: 120px;
   }
-  .awardscertificateSec .innerWrapper .awardCertiInner .awardDiv .imgBox .contentDiv {
+  .awardscertificateSec .innerWrapper .awardCertiInner .awardDiv .imgBox .contentDivaward {
     margin-top: 18px;
   }
   .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv {
@@ -7891,7 +7917,7 @@ footer .footerWrapper .copyright h3 {
     width: 120px;
     height: 120px;
   }
-  .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox .contentDiv {
+  .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox .contentDivaward {
     margin-top: 18px;
   }
 }
@@ -7934,7 +7960,7 @@ footer .footerWrapper .copyright h3 {
     width: 300px;
     height: 300px;
   }
-  .awardscertificateSec .innerWrapper .awardCertiInner .awardDiv .imgBox .contentDiv {
+  .awardscertificateSec .innerWrapper .awardCertiInner .awardDiv .imgBox .contentDivaward {
     margin-top: 18px;
   }
   .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv {
@@ -7958,7 +7984,7 @@ footer .footerWrapper .copyright h3 {
     width: 300px;
     height: 300px;
   }
-  .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox .contentDiv {
+  .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox .contentDivaward {
     margin-top: 18px;
   }
 }
@@ -7973,7 +7999,7 @@ footer .footerWrapper .copyright h3 {
     width: 150px;
     height: 150px;
   }
-  .awardscertificateSec .innerWrapper .awardCertiInner .awardDiv .imgBox .contentDiv {
+  .awardscertificateSec .innerWrapper .awardCertiInner .awardDiv .imgBox .contentDivaward {
     margin-top: 16px;
   }
   .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox {
@@ -7983,7 +8009,7 @@ footer .footerWrapper .copyright h3 {
     width: 150px;
     height: 150px;
   }
-  .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox .contentDiv {
+  .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox .contentDivaward {
     margin-top: 16px;
   }
 }/*# sourceMappingURL=main.css.map */

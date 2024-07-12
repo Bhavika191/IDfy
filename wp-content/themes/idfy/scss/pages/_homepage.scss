@@ -182,7 +182,7 @@
             }
             .enterpriseLogos{
                 .logoDiv{
-                    .innerBoxes{padding: 50px 0px;width: 50%;border-bottom: none !important;
+                    .innerBoxes{padding: 50px 30px;width: 50%;border-bottom: none !important;
                     }
                 }
             }
@@ -606,7 +606,9 @@
         .leftContent{width: 100%;
             .contentDiv{
                 .innerBoxes{margin-top: 50px;
-                    p{margin-top: 24px;width: 100%;}
+                    h3{font-size: 24px;}
+                    p{margin-top: 24px;width: 100%;font-size: 16px;}
+                    a{margin-top: 22px;}
                 }
             }
             .slick-dots{bottom: -40px;left: 0;right: 0;}
@@ -722,7 +724,7 @@
                         h4{@include font24;font-family: $fonthelveticaneuebold;color: #4D4D4D;line-height: 133%;margin-bottom: 16px;}
                         ul{
                             li{@include font18;font-family: $fonthelveticaneuelight;color: #4D4D4D;line-height: 160%;position: relative;padding-left: 20px;
-                                &::before{content: "";position: absolute;top:14px;left: 0;width: 6px;height: 6px;background: #4D4D4D;border-radius: 50%;}
+                                &::before{content: "";position: absolute;top:8px;left: 0;width: 6px;height: 6px;background: #4D4D4D;border-radius: 50%;}
                             }
                         }
                     }
@@ -895,15 +897,15 @@
 
     @media screen and (max-width: 1024px) {margin-bottom: 120px;
         .innerWrapper{
-            .secHeading{
+            .secHeading{ 
                 h2{
                     &::before{bottom: -18px;}
                 }
                 p{margin: 28px auto 28px;}
-            }
-            .journeyData{display: none;}
-            .onboardingSliderData{display: block;margin-top: 50px;;
-                .centerCirclediv{width: 90%;margin: 0 auto;padding: 0px 50px;
+            } 
+            .journeyData{display: none;} 
+            .onboardingSliderData{display: block;margin-top: 50px;; 
+                .centerCirclediv{width: 90%;margin: 0 auto;padding: 0px 50px; 
                     .outerborderDiv{position: relative;border-radius: 50%;border: 3px solid #1C43B9;padding: 60px;
                         .mainImg{border-radius: 50%;overflow: hidden;}
                         .journeyIcons{position: absolute;background: #1C43B9;height: 80px;width: 80px;border-radius: 50%;display: flex;align-items: center;justify-content: center;
@@ -929,7 +931,8 @@
                         .journeyinnerData{
                             h4{font-size: 24px;font-family: $fonthelveticaneuebold;color: #000;line-height: 133%;margin-bottom: 10px;}
                             ul{
-                                li{@include font24;font-family: $fonthelveticaneuemedium;color: #000;line-height: 160%;position: relative;
+                                li{@include font24;font-family: $fonthelveticaneuemedium;color: #000;line-height: 160%;position: relative;padding-left: 14px;
+                                    &::before{content: "";position: absolute;top:10px;left: 0;width: 6px;height: 6px;background: #4D4D4D;border-radius: 50%;}
                                 }
                             }
                         }
@@ -1212,7 +1215,7 @@
                 
                 .slider{
                     .slide {padding: 20px;height: 650px;
-                        .dataContent a{width: 100%;}
+                        .dataContent a{width: auto;}
                     }
                 }
             }
@@ -1386,7 +1389,7 @@
                 .innerImg{border-radius: 50%;overflow: hidden;}
                 .dotsInner{position: absolute;top: 5%;right: 0%;img{width: 170px;}}
             }
-            .contentDiv{border-radius: 20px;background: #1C43B9;padding: 24px 32px;box-shadow: 20px 20px 30px 0px rgba(0, 0, 0, 0.20);transform: translateY(-44%);
+            .contentDivfraud{border-radius: 20px;background: #1C43B9;padding: 24px 32px;box-shadow: 20px 20px 30px 0px rgba(0, 0, 0, 0.20);transform: translateY(-44%);
                 p, ul li{font-size: 24px;font-family: $fonthelveticaneuelight;letter-spacing: 1.7px;line-height: normal;color: $colorWhite;margin-bottom: 23px;span{color: #fff;}b{color: #fff;}}
                 a{width: 100%;}
             }
@@ -1416,7 +1419,7 @@
                 .imgDiv{
                     .dotsInner{top: 2%;right: 0%;img{width: 100px;}}
                 }
-                .contentDiv{transform: translateY(-23%);
+                .contentDivfraud{transform: translateY(-23%);
                     p,  ul li{font-size: 20px;letter-spacing: 1px;}
                 }
             }
@@ -1444,7 +1447,7 @@
                         h5{@include font20;font-family: $fonthelveticaneuelight;line-height: normal;color: $colorGray;text-align: center;margin-top: 8px;}
                     }
                 }
-                .contentDiv{width: 65%;padding-right: 110px;
+                .contentDivclient{width: 65%;padding-right: 110px;
                     h3{@include font38;font-family: $fonthelveticaneuelight;letter-spacing: 1px;line-height:  normal;color: $colorGray;text-align: left;position: relative;
                         &::before{content:url(../images/colon-up.svg);position: absolute;top: -22px;left: -50px;}
                         &::after{content:url(../images/colon-down.svg);position: absolute;bottom: -45px;right: -40px;}
@@ -1486,7 +1489,7 @@
                             h5{margin-top: 7px;}
                         }
                     }
-                    .contentDiv{width: 62%;padding-right: 80px;
+                    .contentDivclient{width: 62%;padding-right: 80px;
                     }
                 }
                 .slick-dots{bottom: -50px;
@@ -1513,7 +1516,7 @@
                         }
                     }
                     .imgnameDiv{width: 26%;}
-                    .contentDiv{width: 65%;padding-right: 70px;
+                    .contentDivclient{width: 65%;padding-right: 70px;
                         h3{
                             &::before{top: -18px;left: -40px;scale: 0.8;}
                             &::after{bottom: -38px;right: -30px;scale: 0.8;}
@@ -1547,7 +1550,7 @@
                         }
                     }
                     .imgnameDiv{width: 24%;}
-                    .contentDiv{width: 68%;padding-right: 40px;
+                    .contentDivclient{width: 68%;padding-right: 40px;
                         h3{
                             &::before{top: -20px;left: -38px;scale: 0.7;}
                             &::after{bottom: -30px;right: -20px;scale: 0.7;}
@@ -1575,7 +1578,7 @@
                             h5{margin-top: 8px;}
                         }
                     }
-                    .contentDiv{width: 90%;padding-right: 0px;margin: 70px auto 30px;
+                    .contentDivclient{width: 90%;padding-right: 0px;margin: 70px auto 30px;
                         h3{text-align: center;
                             &::before{top: -50px;left: 0px;scale: 1;}
                             &::after{bottom: -30px;right: 0px;scale: 1;}
@@ -1602,7 +1605,7 @@
                             h5{margin-top: 5px;font-size: 20px;}
                         }
                     }
-                    .contentDiv{width: 90%;padding-right: 0px;
+                    .contentDivclient{width: 90%;padding-right: 0px;
                         h3{font-size: 20px;}
                     }
                 }
@@ -1624,7 +1627,7 @@
                 .imgBox{width: 45%;margin-top: 40px;
                     &:nth-child(1),&:nth-child(2){margin-top: 0px;}
                     .imgDiv{width: 220px;height: 220px;padding: 25px;margin: 0 auto;border-radius: 50%;background: #EEEEEE;display: flex;justify-content: center;align-items: center;}
-                    .contentDiv{margin-top: 32px;
+                    .contentDivaward{margin-top: 32px;
                         h3{@include font20;font-family: $fonthelveticaneuelight;line-height: 140%;color: #080808;text-align: center;}
                     }
                 }
@@ -1633,7 +1636,7 @@
                 .imgBox{width: 22%;margin-top: 40px;
                     &:nth-child(1),&:nth-child(2),&:nth-child(3),&:nth-child(4){margin-top: 0px;}
                     .imgDiv{width: 220px;height: 220px;margin: 0 auto;padding: 25px;;border-radius: 50%;background: #EEEEEE;display: flex;justify-content: center;align-items: center;}
-                    .contentDiv{margin-top: 32px;
+                    .contentDivaward{margin-top: 32px;
                         h3{@include font20;font-family: $fonthelveticaneuelight;line-height: 140%;color: #080808;text-align: center;}
                     }
                 }
@@ -1651,13 +1654,13 @@
                     &::before{top: 50px;right: -15%;}
                     .imgBox{
                         .imgDiv{width: 190px;height: 190px;padding: 20px;}
-                        .contentDiv{margin-top: 30px;}
+                        .contentDivaward{margin-top: 30px;}
                     }
                 }
                 .certificateDiv{width: 62%;
                     .imgBox{
                         .imgDiv{width: 190px;height: 190px;padding: 20px;}
-                        .contentDiv{margin-top: 30px;}
+                        .contentDivaward{margin-top: 30px;}
                     }
                 }
             }
@@ -1672,13 +1675,13 @@
                     &::before{top: 45px;right: -19%;}
                     .imgBox{
                         .imgDiv{width: 170px;height: 170px;padding: 18px;}
-                        .contentDiv{margin-top: 26px;}
+                        .contentDivaward{margin-top: 26px;}
                     }
                 }
                 .certificateDiv{width: 62%;
                     .imgBox{
                         .imgDiv{width: 170px;height: 170px;padding: 18px;}
-                        .contentDiv{margin-top: 26px;}
+                        .contentDivaward{margin-top: 26px;}
                     }
                 }
             }
@@ -1695,13 +1698,13 @@
                     &::before{top: 26px;right: -14%;}
                     .imgBox{
                         .imgDiv{width: 160px;height: 160px;}
-                        .contentDiv{margin-top: 22px;}
+                        .contentDivaward{margin-top: 22px;}
                     }
                 }
                 .certificateDiv{width: 62%;
                     .imgBox{
                         .imgDiv{width: 160px;height: 160px;}
-                        .contentDiv{margin-top: 22px;}
+                        .contentDivaward{margin-top: 22px;}
                     }
                 }
             }
@@ -1715,13 +1718,13 @@
                     &::before{top: 22px;}
                     .imgBox{
                         .imgDiv{width: 140px;height: 140px;}
-                        .contentDiv{margin-top: 20px;}
+                        .contentDivaward{margin-top: 20px;}
                     }
                 }
                 .certificateDiv{width: 62%;
                     .imgBox{
                         .imgDiv{width: 140px;height: 140px;}
-                        .contentDiv{margin-top: 20px;}
+                        .contentDivaward{margin-top: 20px;}
                     }
                 }
             }
@@ -1735,13 +1738,13 @@
                     &::before{right: -19%;}
                     .imgBox{
                         .imgDiv{width: 120px;height: 120px;}
-                        .contentDiv{margin-top: 18px;}
+                        .contentDivaward{margin-top: 18px;}
                     }
                 }
                 .certificateDiv{width: 62%;
                     .imgBox{
                         .imgDiv{width: 120px;height: 120px;}
-                        .contentDiv{margin-top: 18px;}
+                        .contentDivaward{margin-top: 18px;}
                     }
                 }
             }
@@ -1758,7 +1761,7 @@
                         &:nth-child(1),&:nth-child(2){margin-top: 40px;}
                         &:nth-child(2n+2){margin-right: 0px;}
                         .imgDiv{width: 300px;height: 300px;}
-                        .contentDiv{margin-top: 18px;}
+                        .contentDivaward{margin-top: 18px;}
                     }
                 }
                 .certificateDiv{width: 100%;
@@ -1767,7 +1770,7 @@
                         &:nth-child(1),&:nth-child(2),&:nth-child(3),&:nth-child(4){margin-top: 40px;}
                         &:nth-child(2n+2){margin-right: 0px;}
                         .imgDiv{width: 300px;height: 300px;}
-                        .contentDiv{margin-top: 18px;}
+                        .contentDivaward{margin-top: 18px;}
                     }
                 }
             }
@@ -1779,13 +1782,13 @@
                 .awardDiv{
                   .imgBox{width: 44%;
                         .imgDiv{width: 150px;height: 150px;}
-                        .contentDiv{margin-top: 16px;}
+                        .contentDivaward{margin-top: 16px;}
                     }
                 }
                 .certificateDiv{
                     .imgBox{width: 44%;
                         .imgDiv{width: 150px;height: 150px;}
-                        .contentDiv{margin-top: 16px;}
+                        .contentDivaward{margin-top: 16px;}
                     }
                 }
             }

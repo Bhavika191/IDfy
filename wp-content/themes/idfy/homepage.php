@@ -374,7 +374,7 @@
                                     <img src="<?php bloginfo('template_directory'); ?>/images/fraud-stories-dots.svg" alt="">
                                 </div>
                             </div>
-                            <div class="contentDiv">
+                            <div class="contentDivfraud">
                                 <p><?php echo get_sub_field('card_description'); ?></p>
                                 <a href="<?php echo get_sub_field('cta_link'); ?>" class="ctaBlue"><?php echo get_sub_field('cta_text'); ?></a>
                             </div>
@@ -412,7 +412,7 @@
                                         <h5><?php echo get_sub_field('clients_designation'); ?></h5>
                                     </div>
                                 </div>
-                                <div class="contentDiv">
+                                <div class="contentDivclient">
                                     <h3><?php echo get_sub_field('clients_review_text'); ?>"</h3>
                                 </div>
                             </div>
@@ -442,7 +442,7 @@
                                             <img src="<?php echo esc_url($awardlogo['url']); ?>" loading="lazy" alt="<?php echo esc_attr($awardlogo['alt']); ?>" />
                                         <?php endif; ?>
                                     </div>
-                                    <div class="contentDiv">
+                                    <div class="contentDivaward">
                                         <h3><?php echo get_sub_field('award_name'); ?></h3>
                                     </div>
                                 </div>
@@ -459,7 +459,7 @@
                                             <img src="<?php echo esc_url($certificateslogo['url']); ?>" loading="lazy" alt="<?php echo esc_attr($certificateslogo['alt']); ?>" />
                                         <?php endif; ?>
                                     </div>
-                                    <div class="contentDiv">
+                                    <div class="contentDivaward">
                                         <h3><?php echo get_sub_field('certificates_name'); ?></h3>
                                     </div>
                                 </div>
