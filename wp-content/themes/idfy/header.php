@@ -498,6 +498,12 @@
 						</div>
 					</div>
 				</nav>
+
+				<div class="Stickybtn">
+					<a href="#">
+						<img src="<?php bloginfo('template_directory'); ?>/images/sticky-mailbtn.svg" alt="">
+					</a>
+				</div>
 				</header>
 
 				<div class="search-modal" id="search-modal">
@@ -565,10 +571,4 @@
 							<input type="text" placeholder="Solutions, APIs, industries" name="" id="">
 						</div>
 					</div>
-				</div>
-
-				<div class="Stickybtn">
-					<a href="#">
-						<img src="<?php bloginfo('template_directory'); ?>/images/sticky-mailbtn.svg" alt="">
-					</a>
 				</div>

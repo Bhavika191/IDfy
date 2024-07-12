@@ -644,7 +644,6 @@ document.addEventListener('DOMContentLoaded', function () {
     function addClassOnScroll() {
         if (window.scrollY > banner.clientHeight) {
             header.classList.add('scrolled');
-            
         } else {
             header.classList.remove('scrolled');
         }
@@ -1002,6 +1001,14 @@ if ($(".pioneerSlidersec").length) {
         speed: 3000,
         asNavFor: '.imageSlider',
         rtl: true,
+        responsive: [
+            {
+                breakpoint: 821,
+                settings: {
+                    rtl: false,
+                }
+            },
+        ]
     });
 
     $('.imageSlider').slick({

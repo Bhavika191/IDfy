@@ -101,9 +101,16 @@
     }
     @media screen  and (max-width:720px){
         .bannerWrapper{
-            .bannerContent{top: 200px;margin: 0 auto;
+            .bannerContent{top: 150px;
                 h1{font-size: 42px;}
                 h2{margin-top: 16px;}
+            }
+        }
+    }
+    @media screen  and (max-width:360px){
+        .bannerWrapper{
+            .bannerContent{
+                h1{font-size: 34px;}
             }
         }
     }
@@ -468,8 +475,11 @@
     .pionnerwrapper{
         .secHeading{margin-bottom: -200px;}
     }
-    .sliderSection{
+    .sliderSection{padding: 0px 200px;
         .rightImage{
+            .imageSlider .imageDiv{margin: 0px 12px;
+                .dots{bottom: -24px;right: -56px;}
+            }
             .slick-prev,
             .slick-next {
                 &.slick-next {right: -150px;}
@@ -494,6 +504,9 @@
             }
         }
         .rightImage{width: 42%;
+            .imageSlider .imageDiv{
+                .dots{bottom: -34px;right: -50px;svg{width: 190px;}}
+            }
             .slick-prev,
             .slick-next {
                 &.slick-next {right: -125px;}
@@ -543,6 +556,9 @@
     @media all and (max-width:1400px){
         .sliderSection{
             .rightImage{
+                .imageSlider .imageDiv{ margin: 0px 14px;
+                    .dots{svg{width: 170px;}}
+                }
                 .slick-prev,
                 .slick-next {
                     &.slick-next {right: -110px;}
@@ -571,6 +587,9 @@
                 .slick-dots{bottom: -70px;}
             }
             .rightImage{
+                .imageSlider .imageDiv{ margin: 0px 14px;
+                    .dots{bottom: -54px;right: -40px;svg{width: 150px;}}
+                }
                 .slick-prev,
                 .slick-next {
                     &.slick-next {right: -100px;}
@@ -601,6 +620,9 @@
                 .slick-dots{bottom: -60px;}
             }
             .rightImage{
+                .imageSlider .imageDiv{ margin: 0px 14px;
+                    .dots{bottom: -64px;right: -35px;svg{width: 130px;}}
+                }
                 .slick-prev,
                 .slick-next {width: 30px;height: 30px;
                     &.slick-next {right: -90px;
@@ -621,6 +643,7 @@
        .sliderSection{padding: 12px 50px;flex-direction: column-reverse;
         .leftContent{width: 100%;
             .contentDiv{
+                .slick-track{float: unset;}
                 .innerBoxes{margin-top: 50px;
                     h3{font-size: 24px;}
                     p{margin-top: 24px;width: 100%;font-size: 16px;}
@@ -631,8 +654,8 @@
         }
         .rightImage{width: 70%;margin:0 auto;
             .imageSlider{
-                .imageDiv{
-                    .dots{right: -40px;}
+                .imageDiv{margin: 0px;
+                    .dots{bottom: -45px;right: -34px;svg{width: 180px;}}
                 }
             }
             .slick-prev,.slick-next {display: none;}
@@ -654,10 +677,10 @@
                 }
             }
         }
-        .rightImage{width: 90%;
+        .rightImage{width: 100%;
             .imageSlider{
                 .imageDiv{
-                    .dots{bottom: -12px;right: -32px;width: 150px;}
+                    .dots{bottom: -72px;right: -20px;svg{width: 120px;}}
                 }
             }
         }
@@ -848,7 +871,7 @@
                         h3{padding-left: 80px;margin-bottom: 12px;}
                         .journeyinnerData{padding-left: 80px;}
                     }
-                    .innerBoxesjourney{margin-bottom: 20px;height: 194px;h3{margin-bottom: 16px;font-size: 22px;&::before{bottom: -6px;};&::after{bottom: -23px;}}.journeyinnerData ul li{font-size: 16px;}}
+                    .innerBoxesjourney{margin-bottom: 20px;height: 194px;h3{margin-bottom: 16px;font-size: 22px;&::before{bottom: -6px;};&::after{bottom: -23px;}}.journeyinnerData ul li{font-size: 16px;&::before{top: 9px;}}}
                 }
                 .centerCirclediv{margin-top: 10px;
                     .outerborderDiv{padding: 50px;
@@ -881,11 +904,12 @@
                     &:last-child .innerBoxesjourney:nth-child(3) h3::after{bottom: 6px;transform: rotate(28deg);left: -50px;width: 50px !important;;}
                     &:last-child .innerBoxesjourney{
                         h3{padding-left: 70px;margin-bottom: 10px;}
-                        .journeyinnerData{padding-left: 70px;}
+                        .journeyinnerData{padding-left: 70px;
+                        }
                     }
                     .innerBoxesjourney{margin-bottom: 20px;height: 160px;
                         h3{margin-bottom: 16px;}
-                        .journeyinnerData ul li{font-size: 14px;}
+                        .journeyinnerData ul li{font-size: 14px;&::before{top: 8px;}}
                         .journeyinnerData h4{margin-bottom: 10px;}
                     }
                 }
@@ -1023,6 +1047,7 @@
                             h4{font-size: 16px;}
                             ul{
                                 li{@include font16;
+                                    &::before{top: 5px}
                                 }
                             }
                         }
@@ -1056,7 +1081,7 @@
                         }
                     }
                 }
-                .slide {width: 100%;border-radius: 34.359px;border: 0.687px solid rgba(0, 0, 0, 0.20);background: #FFF;box-shadow: 0.744px -0.256px 24.615px 0px rgba(0, 0, 0, 0.2);display: flex;padding: 35px;;align-items: flex-start;justify-content: space-between; --offset: 1em;position: sticky;top: max(10vh, 9em);height: 751px;;
+                .slide {width: 100%;border-radius: 34.359px;border: 0.687px solid rgba(0, 0, 0, 0.20);background: #FFF;box-shadow:-1.256px 2.744px 15.615px 0px rgba(0, 0, 0, 0.1);display: flex;padding: 35px;;align-items: flex-start;justify-content: space-between; --offset: 1em;position: sticky;top: max(10vh, 9em);height: 751px;;
                     @for $i from 0 through 9 {
                         &:nth-of-type(#{$i}) {
                           transform: translateY( calc((#{$i} - 5) * var(--offset)));
