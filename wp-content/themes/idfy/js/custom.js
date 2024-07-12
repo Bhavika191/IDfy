@@ -98,6 +98,7 @@ $(document).ready(function () {
     if ($(window).width() <= 1024) {
         $("#toggle").click(function () {
             $(this).toggleClass("active");
+            $('body').toggleClass("bodyNav");
             $("#overlay").toggleClass("open");
             if ($("#overlay").hasClass("open")) {
                 menuOpen = true; // Menu is open
@@ -419,11 +420,13 @@ $("#trigger").click(function () {
     if (!more) {
         $("#more-content").slideDown();
         $("#trigger").text("Show Less");
+        $("#trigger").addClass("btnArrow");
         more = true;
     }
     else {
         $("#more-content").slideUp();
         $("#trigger").text("Show More");
+        $("#trigger").removeClass("btnArrow");
         more = false;
     }
 });
@@ -641,6 +644,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function addClassOnScroll() {
         if (window.scrollY > banner.clientHeight) {
             header.classList.add('scrolled');
+            
         } else {
             header.classList.remove('scrolled');
         }
@@ -986,40 +990,41 @@ document.addEventListener('DOMContentLoaded', function () {
 // });
 
 
-if ($(".pioneerSlidersec").length) {  
+if ($(".pioneerSlidersec").length) {
     $('.contentDiv').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
-      dots: true,
-      infinite: true,
-      autoplay:true,
-      autoplaySpeed:2000,
-      speed:1000,
-      asNavFor: '.imageSlider',
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        speed: 3000,
+        asNavFor: '.imageSlider',
+        rtl: true,
     });
-  
+
     $('.imageSlider').slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
-      infinite: true,
-      dots:false,
-      arrows:true,
-      autoplay:true,
-      autoplaySpeed:2000,
-      speed:1000,
-      asNavFor: '.contentDiv',
-      responsive:[
-        {
-            breakpoint: 821,
-            settings: {
-                arrows:false,
-            }
-        },
-      ]
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        infinite: true,
+        dots: false,
+        arrows: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        speed: 3000,
+        asNavFor: '.contentDiv',
+        responsive: [
+            {
+                breakpoint: 821,
+                settings: {
+                    arrows: false,
+                }
+            },
+        ]
     });
-  }
+}
 
 
 
@@ -1079,5 +1084,14 @@ $(".boxContentnew").hover(function (e) {
     $('.boxContentnew').removeClass('showHover');
     $(this).addClass('showHover');
     $(".boxImgnew").removeClass('showAnim1');
-    $("."+animid).addClass('showAnim1');
+    $("." + animid).addClass('showAnim1');
 });
+
+
+
+
+if ($('.imageDiv').hasClass('slick-current')) {
+    $('.imageDiv').addClass('slickDots');
+} else {
+    $('.imageDiv').removeClass('slickDots');
+}

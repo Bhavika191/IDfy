@@ -98,7 +98,11 @@
                                             <?php endif; ?>
                                         </div>
                                         <div class="dots">
-                                            <img src="<?php bloginfo('template_directory'); ?>/images/hp-pioneer-slide-dots.svg" alt="">
+                                            <svg width="218" height="242" viewBox="0 0 218 242" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="122.829" cy="78.7868" r="47.0901" transform="rotate(15 122.829 78.7868)" fill="#CE1010" class="bigCircle"/>
+                                                <circle cx="128.353" cy="185.193" r="14.3537" transform="rotate(15 128.353 185.193)" fill="#CE1010" class="smallCircle"/>
+                                                <ellipse cx="55.0377" cy="168.744" rx="26.441" ry="26.6928" transform="rotate(15 55.0377 168.744)" fill="#CE1010" class="mediumCircle"/>
+                                            </svg>
                                         </div>
                                     </div>
                                 <?php endwhile; ?>

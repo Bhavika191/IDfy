@@ -830,6 +830,17 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
     }
 }
 
+.bodyNav{
+    header .navbar{
+        .logo{
+            .logoColor{fill: #606060;}
+            .logoBG{fill: #CE1010;}
+            .logoWord{fill: #fff;}
+            .logowordInner{fill: #CE1010;}
+        }
+    }
+}
+
 .search-modal{opacity: 0;visibility: hidden;position: fixed;top: 0;right: 0;left: 0;background: $colorWhite;z-index: 99;transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
     &.active{opacity: 1;visibility: visible;}
     .modal-container{width: 100%;
@@ -905,3 +916,8 @@ body{
 }
 
 .productHeader{display: none;}
+
+
+.Stickybtn{position: fixed;bottom: 40px;z-index: 99;right: 80px;
+    a{display: inline-flex;align-items: center;justify-content: center;height: 50px;width: 50px;border-radius: 50%;background: #fff;}
+}

@@ -1954,6 +1954,19 @@ header.navColor .navbar .hamburger-menu .button_toggle span:nth-of-type(2), head
   }
 }
 
+.bodyNav header .navbar .logo .logoColor {
+  fill: #606060;
+}
+.bodyNav header .navbar .logo .logoBG {
+  fill: #CE1010;
+}
+.bodyNav header .navbar .logo .logoWord {
+  fill: #fff;
+}
+.bodyNav header .navbar .logo .logowordInner {
+  fill: #CE1010;
+}
+
 .search-modal {
   opacity: 0;
   visibility: hidden;
@@ -2194,6 +2207,22 @@ body.overlay::after {
   display: none;
 }
 
+.Stickybtn {
+  position: fixed;
+  bottom: 40px;
+  z-index: 99;
+  right: 80px;
+}
+.Stickybtn a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: #fff;
+}
+
 footer {
   background: #000;
 }
@@ -2397,17 +2426,34 @@ footer .footerWrapper .showmore-lessdiv #trigger {
   color: #FFFFFF;
   line-height: normal;
   font-family: "HelveticaNeueBold";
-  padding: 8px 20px;
+  padding: 8px 40px 8px 20px;
   cursor: pointer;
   z-index: 2;
   position: relative;
   display: block;
   margin: 0 auto;
+  position: relative;
 }
 @media screen and (max-width: 1200px) {
   footer .footerWrapper .showmore-lessdiv #trigger {
     font-size: 16px;
   }
+}
+footer .footerWrapper .showmore-lessdiv #trigger::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  background: url("../images/youtube-footer-arrow.svg") no-repeat;
+  top: 44%;
+  right: 20px;
+  width: 11px;
+  height: 7px;
+  transition: all 0.4s ease-in-out;
+}
+footer .footerWrapper .showmore-lessdiv #trigger.btnArrow::before {
+  transform: rotate(180deg);
+  transition: 0.4s all ease-in-out;
+  top: 40%;
 }
 footer .footerWrapper .footerBottom {
   padding-top: 80px;
@@ -2537,7 +2583,10 @@ footer .footerWrapper .copyright h3 {
     padding: 12px 16px;
   }
   footer .footerWrapper .showmore-lessdiv #trigger {
-    padding: 8px 18px;
+    padding: 8px 35px 8px 18px;
+  }
+  footer .footerWrapper .showmore-lessdiv #trigger::before {
+    right: 15px;
   }
   footer .footerWrapper .footerBottom {
     padding-top: 60px;
@@ -2855,9 +2904,23 @@ footer .footerWrapper .copyright h3 {
     background: #2A2A2A;
   }
   footer .footerWrapper .showmore-lessdiv #trigger {
-    padding: 8px 20px;
+    padding: 8px 60px 8px 20px;
     background: #101010;
     border: none;
+  }
+  footer .footerWrapper .showmore-lessdiv #trigger::before {
+    right: 26px;
+  }
+  footer .footerWrapper .showmore-lessdiv #trigger::after {
+    content: "";
+    position: absolute;
+    background: #313131;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
   }
   footer .footerWrapper .footerBottom {
     padding-top: 25px;
@@ -2898,6 +2961,7 @@ footer .footerWrapper .copyright h3 {
   footer .footerWrapper .copyright h3 {
     letter-spacing: 1px;
     color: #616161;
+    line-height: 18px;
   }
 }
 
@@ -3376,7 +3440,7 @@ footer .footerWrapper .copyright h3 {
   line-height: normal;
   color: #000000;
   text-align: left;
-  margin: 30px 0px 38px;
+  margin: 50px 0px 38px;
   width: 75%;
 }
 @media screen and (max-width: 1600px) {
@@ -3593,7 +3657,7 @@ footer .footerWrapper .copyright h3 {
     margin-top: 18px;
   }
   .yearTimeline .timelineWrapper .timelineData .contentDiv .yearContentdata .year-content .innerContent p {
-    margin: 26px 0px 32px;
+    margin: 46px 0px 32px;
     width: 80%;
   }
   .yearTimeline .timelineWrapper .timelineData .contentDiv .yearContentdata .year-content .innerImg {
@@ -3689,7 +3753,7 @@ footer .footerWrapper .copyright h3 {
     margin-top: 16px;
   }
   .yearTimeline .timelineWrapper .timelineData .contentDiv .yearContentdata .year-content .innerContent p {
-    margin: 22px 0px 30px;
+    margin: 42px 0px 30px;
     width: 82%;
   }
   .yearTimeline .timelineWrapper .timelineData .contentDiv .yearContentdata .year-content .innerImg {
@@ -3818,7 +3882,7 @@ footer .footerWrapper .copyright h3 {
     margin-top: 14px;
   }
   .yearTimeline .timelineWrapper .timelineData .contentDiv .yearContentdata .year-content .innerContent p {
-    margin: 20px 0px 26px;
+    margin: 40px 0px 26px;
     width: 85%;
   }
   .yearTimeline .timelineWrapper .timelineData .contentDiv .yearContentdata .year-content .innerImg {
@@ -3882,7 +3946,7 @@ footer .footerWrapper .copyright h3 {
     margin-top: 26px;
   }
   .yearTimeline .timelineWrapper .secHeading .idfyDesc h4 {
-    line-height: 100%;
+    line-height: 130%;
   }
   .yearTimeline .timelineWrapper .timelineData .contentDiv {
     margin-bottom: 40px;
@@ -4006,11 +4070,16 @@ footer .footerWrapper .copyright h3 {
     height: 14px;
   }
   .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg {
-    left: 17px;
+    left: 34%;
     bottom: 40px;
   }
   .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg svg line:nth-last-child(1), .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg svg line:nth-last-child(2), .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg svg line:nth-last-child(3), .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg svg line:nth-last-child(4), .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg svg line:nth-last-child(5) {
     display: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year .progressSvg {
+    left: 60%;
   }
 }
 
@@ -4693,6 +4762,18 @@ footer .footerWrapper .copyright h3 {
     right: 20px;
   }
 }
+@media screen and (max-width: 720px) {
+  .bannerSectionhp .bannerWrapper .bannerContent {
+    top: 200px;
+    margin: 0 auto;
+  }
+  .bannerSectionhp .bannerWrapper .bannerContent h1 {
+    font-size: 42px;
+  }
+  .bannerSectionhp .bannerWrapper .bannerContent h2 {
+    margin-top: 16px;
+  }
+}
 
 .enterpriseSection {
   margin-bottom: 150px;
@@ -4922,6 +5003,9 @@ footer .footerWrapper .copyright h3 {
 .pioneerSlidersec .sliderSection .leftContent {
   width: 42%;
 }
+.pioneerSlidersec .sliderSection .leftContent .contentDiv .slick-track {
+  float: inline-end;
+}
 .pioneerSlidersec .sliderSection .leftContent .contentDiv .innerBoxes {
   margin-top: 170px;
 }
@@ -5013,11 +5097,27 @@ footer .footerWrapper .copyright h3 {
   border-radius: 50%;
   overflow: hidden;
   position: relative;
+  scale: 0.6;
+  transition: 1s all ease-in-out;
 }
 .pioneerSlidersec .sliderSection .rightImage .imageSlider .imageDiv .dots {
   position: absolute;
   bottom: 10px;
   right: -40px;
+  opacity: 0;
+}
+.pioneerSlidersec .sliderSection .rightImage .imageSlider .imageDiv.slick-current .mainImg {
+  scale: 1;
+  transition: 1s all ease-in-out;
+}
+.pioneerSlidersec .sliderSection .rightImage .imageSlider .imageDiv.slick-current .dots {
+  animation: bigcircle 4s linear 3s;
+  opacity: 1;
+}
+@keyframes bigcircle {
+  100% {
+    opacity: 1;
+  }
 }
 .pioneerSlidersec .sliderSection .rightImage .slick-prev,
 .pioneerSlidersec .sliderSection .rightImage .slick-next {
@@ -5594,7 +5694,7 @@ footer .footerWrapper .copyright h3 {
 .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney .journeyinnerData ul li::before {
   content: "";
   position: absolute;
-  top: 8px;
+  top: 10px;
   left: 0;
   width: 6px;
   height: 6px;
@@ -6183,23 +6283,23 @@ footer .footerWrapper .copyright h3 {
   .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider {
     padding: 0px 20px;
   }
-  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxesjourney h3 {
+  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxesjourneyslide h3 {
     font-size: 24px;
   }
-  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxesjourney .journeyinnerData h4 {
+  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxesjourneyslide .journeyinnerData h4 {
     font-size: 16px;
   }
-  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxesjourney .journeyinnerData ul li {
+  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxesjourneyslide .journeyinnerData ul li {
     font-size: 16px;
   }
 }
 @media screen and (max-width: 720px) and (max-width: 1600px) {
-  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxesjourney .journeyinnerData ul li {
+  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxesjourneyslide .journeyinnerData ul li {
     font-size: 14px;
   }
 }
 @media screen and (max-width: 720px) and (max-width: 1400px) {
-  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxesjourney .journeyinnerData ul li {
+  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxesjourneyslide .journeyinnerData ul li {
     font-size: 12px;
   }
 }
@@ -6355,7 +6455,7 @@ footer .footerWrapper .copyright h3 {
   box-shadow: 0.744px -0.256px 24.615px 0px rgba(0, 0, 0, 0.2);
   display: flex;
   padding: 35px;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   --offset: 1em;
   position: sticky;
@@ -6363,34 +6463,37 @@ footer .footerWrapper .copyright h3 {
   height: 751px;
 }
 .productfamSection .innerWrapper .prodfamSlides .slider .slide:nth-of-type(0) {
-  transform: translateY(calc((0 - 1) * var(--offset)));
+  transform: translateY(calc((0 - 5) * var(--offset)));
 }
 .productfamSection .innerWrapper .prodfamSlides .slider .slide:nth-of-type(1) {
-  transform: translateY(calc((1 - 1) * var(--offset)));
+  transform: translateY(calc((1 - 5) * var(--offset)));
 }
 .productfamSection .innerWrapper .prodfamSlides .slider .slide:nth-of-type(2) {
-  transform: translateY(calc((2 - 1) * var(--offset)));
+  transform: translateY(calc((2 - 5) * var(--offset)));
 }
 .productfamSection .innerWrapper .prodfamSlides .slider .slide:nth-of-type(3) {
-  transform: translateY(calc((3 - 1) * var(--offset)));
+  transform: translateY(calc((3 - 5) * var(--offset)));
 }
 .productfamSection .innerWrapper .prodfamSlides .slider .slide:nth-of-type(4) {
-  transform: translateY(calc((4 - 1) * var(--offset)));
+  transform: translateY(calc((4 - 5) * var(--offset)));
 }
 .productfamSection .innerWrapper .prodfamSlides .slider .slide:nth-of-type(5) {
-  transform: translateY(calc((5 - 1) * var(--offset)));
+  transform: translateY(calc((5 - 5) * var(--offset)));
 }
 .productfamSection .innerWrapper .prodfamSlides .slider .slide:nth-of-type(6) {
-  transform: translateY(calc((6 - 1) * var(--offset)));
+  transform: translateY(calc((6 - 5) * var(--offset)));
 }
 .productfamSection .innerWrapper .prodfamSlides .slider .slide:nth-of-type(7) {
-  transform: translateY(calc((7 - 1) * var(--offset)));
+  transform: translateY(calc((7 - 5) * var(--offset)));
 }
 .productfamSection .innerWrapper .prodfamSlides .slider .slide:nth-of-type(8) {
-  transform: translateY(calc((8 - 1) * var(--offset)));
+  transform: translateY(calc((8 - 5) * var(--offset)));
 }
 .productfamSection .innerWrapper .prodfamSlides .slider .slide:nth-of-type(9) {
-  transform: translateY(calc((9 - 1) * var(--offset)));
+  transform: translateY(calc((9 - 5) * var(--offset)));
+}
+.productfamSection .innerWrapper .prodfamSlides .slider .slide:nth-child(1), .productfamSection .innerWrapper .prodfamSlides .slider .slide:nth-child(2), .productfamSection .innerWrapper .prodfamSlides .slider .slide:nth-child(3), .productfamSection .innerWrapper .prodfamSlides .slider .slide:nth-child(4), .productfamSection .innerWrapper .prodfamSlides .slider .slide:nth-child(5) {
+  transform: unset !important;
 }
 .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataImg {
   border-radius: 28px;
@@ -6398,7 +6501,8 @@ footer .footerWrapper .copyright h3 {
   width: 52%;
 }
 .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent {
-  width: 40%;
+  width: 43%;
+  margin-top: 35px;
 }
 .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent h4 {
   font-size: 20px;
@@ -6442,21 +6546,21 @@ footer .footerWrapper .copyright h3 {
     font-size: 24px;
   }
 }
-.productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ul li, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
+.productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ul li, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ol li, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
   font-size: 20px;
   font-family: "HelveticaNeueLight";
   color: #343434;
   line-height: 150%;
   margin-bottom: 30px;
-  width: 65%;
+  width: 75%;
 }
 @media screen and (max-width: 1600px) {
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ul li, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ul li, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ol li, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
     font-size: 18px;
   }
 }
 @media screen and (max-width: 720px) {
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ul li, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ul li, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ol li, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
     font-size: 16px;
   }
 }
@@ -6468,7 +6572,7 @@ footer .footerWrapper .copyright h3 {
     height: 650px;
     top: max(10vh, 7em);
   }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ul li, .productfamSection .innerWrapper .prodfamSlides .slider .slide p {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ul li, .productfamSection .innerWrapper .prodfamSlides .slider .slide ol li, .productfamSection .innerWrapper .prodfamSlides .slider .slide p {
     width: 80%;
   }
 }
@@ -6476,8 +6580,8 @@ footer .footerWrapper .copyright h3 {
   .productfamSection .innerWrapper .prodfamSlides .slider .slide {
     height: 690px;
   }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ul li, .productfamSection .innerWrapper .prodfamSlides .slider .slide p {
-    width: 82%;
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ul li, .productfamSection .innerWrapper .prodfamSlides .slider .slide ol li, .productfamSection .innerWrapper .prodfamSlides .slider .slide p {
+    width: 85%;
   }
 }
 @media screen and (max-width: 1600px) {
@@ -6505,14 +6609,18 @@ footer .footerWrapper .copyright h3 {
   .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataImg {
     width: 50%;
   }
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent {
+    margin-top: 30px;
+    width: 45%;
+  }
   .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent h3 {
     letter-spacing: 0px;
     margin: 26px 0px;
     width: 78%;
   }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ul li, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ul li, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ol li, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
     margin-bottom: 26px;
-    width: 68%;
+    width: 90%;
   }
 }
 @media screen and (max-width: 1440px) {
@@ -6539,13 +6647,13 @@ footer .footerWrapper .copyright h3 {
     height: 540px;
   }
   .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent {
-    width: 43%;
+    margin-top: 28px;
   }
   .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent h3 {
     margin: 22px 0px;
-    width: 80%;
+    width: 90%;
   }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ul li, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ul li, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ol li, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
     margin-bottom: 24px;
   }
 }
@@ -6568,12 +6676,13 @@ footer .footerWrapper .copyright h3 {
   }
   .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent {
     width: 45%;
+    margin-top: 26px;
   }
   .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent h3 {
     margin: 18px 0px;
     width: 100%;
   }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ul li, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ul li, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ol li, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
     margin-bottom: 24px;
     width: 100%;
   }
@@ -6595,7 +6704,7 @@ footer .footerWrapper .copyright h3 {
     margin: 14px 0px;
     line-height: 112%;
   }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ul li, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ul li, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ol li, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
     margin-bottom: 20px;
     line-height: 132%;
   }
@@ -6639,7 +6748,7 @@ footer .footerWrapper .copyright h3 {
     margin: 12px 0px;
     line-height: 112%;
   }
-  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ul li, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ul li, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ol li, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p {
     margin-bottom: 21px;
     line-height: 132%;
   }
@@ -6653,6 +6762,12 @@ footer .footerWrapper .copyright h3 {
   .productfamSection .innerWrapper .prodfamSlides .slider .slide {
     padding: 20px;
     height: 650px;
+  }
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent {
+    text-align: center;
+  }
+  .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent h4, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent h3, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent p, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ul li, .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent ol li {
+    text-align: left;
   }
   .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataContent a {
     width: auto;
@@ -6832,10 +6947,12 @@ footer .footerWrapper .copyright h3 {
 }
 .fraudstoriesSec .innerWrapper .boxContent .box-container-two #boxesImg {
   display: none;
+  opacity: 0;
   width: 72%;
 }
 .fraudstoriesSec .innerWrapper .boxContent .box-container-two .showAnim1 {
   display: block !important;
+  opacity: 1 !important;
 }
 @media screen and (max-width: 1800px) {
   .fraudstoriesSec .innerWrapper .boxContent {

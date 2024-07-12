@@ -89,7 +89,7 @@
                         .innerContent{width: 52%;
                             h3{@include font100;font-family: $fonthelveticaneuebold;line-height: normal;color: $colorBlue;text-align: left;}
                             h4{@include font48;font-family: $fonthelveticaneuebold;line-height: normal;color: #101010;text-align: left;margin-top: 20px}
-                            p{@include font24;font-family: $fonthelveticaneuelight;line-height: normal;color: $colorBlack;text-align: left;margin: 30px 0px 38px;width: 75%;}
+                            p{@include font24;font-family: $fonthelveticaneuelight;line-height: normal;color: $colorBlack;text-align: left;margin: 50px 0px 38px;width: 75%;}
                         }
                         .innerImg{width: 38%;position: relative;
                             .imgDiv{border-radius: 50%;overflow: hidden;}
@@ -179,7 +179,7 @@
                         .year-content{
                             .innerContent{width: 54%;
                                 h4{margin-top: 18px;}
-                                p{margin: 26px 0px 32px;width: 80%;}
+                                p{margin: 46px 0px 32px;width: 80%;}
                             }
                             .innerImg{width: 36%;
                                 .imgDots{
@@ -237,7 +237,7 @@
                         .year-content{
                             .innerContent{width: 56%;
                                 h4{margin-top: 16px;}
-                                p{margin: 22px 0px 30px;width: 82%;}
+                                p{margin: 42px 0px 30px;width: 82%;}
                             }
                             .innerImg{width: 34%;
                                 .imgDots{
@@ -334,7 +334,7 @@
                         .year-content{
                             .innerContent{width: 58%;
                                 h4{margin-top: 14px;}
-                                p{margin: 20px 0px 26px;width: 85%;}
+                                p{margin: 40px 0px 26px;width: 85%;}
                             }
                             .innerImg{width: 34%;
                                 .imgDots{
@@ -367,7 +367,7 @@
             .secHeading{margin-bottom: 36px;
                 h2::before{width: 190px;bottom: -12px;}
                 .idfyDesc{margin-top: 26px;
-                    h4{line-height: 100%;}
+                    h4{line-height: 130%;}
                 }
             }
             .timelineData{
@@ -439,8 +439,20 @@
                 .timeline{
                     .timeline-year{margin-right: 100px;
                         .circle{width: 35px;height: 35px;span{width: 14px;height: 14px;}}
-                        .progressSvg{left: 17px;bottom: 40px;
+                        .progressSvg{left: 34%;bottom: 40px;
                             svg{line{&:nth-last-child(1),&:nth-last-child(2),&:nth-last-child(3),&:nth-last-child(4),&:nth-last-child(5){display: none;}}}
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width:400px) {
+        .timelineWrapper{
+            .timelineData{
+                .timeline{
+                    .timeline-year{
+                        .progressSvg{left: 60%;
                         }
                     }
                 }

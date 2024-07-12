@@ -566,3 +566,9 @@
 						</div>
 					</div>
 				</div>
+
+				<div class="Stickybtn">
+					<a href="#">
+						<img src="<?php bloginfo('template_directory'); ?>/images/sticky-mailbtn.svg" alt="">
+					</a>
+				</div>
