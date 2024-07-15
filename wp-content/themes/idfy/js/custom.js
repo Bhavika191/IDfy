@@ -1097,6 +1097,7 @@ $(".boxContentnew").hover(function (e) {
 
 
 
+
 if ($('.imageDiv').hasClass('slick-current')) {
     $('.imageDiv').addClass('slickDots');
 } else {
