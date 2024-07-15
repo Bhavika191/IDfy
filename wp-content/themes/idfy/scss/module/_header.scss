@@ -131,7 +131,7 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                         &::after{position: absolute;content: url("../images/select-arrow.svg");z-index: 2;top: 50%;transform: translateY(-50%);transition:all 0.3s ease-in-out;padding:0px 4px;}
                         &.active-arrow{border-radius: 10px 10px 0px 0px;box-shadow: 0 1px 4px 0 #00000026;background: #fff;color: $colorBlack;&::after{transform: rotate(180deg) translateY(50%);content: url("../images/select-arrow-black.svg");}}
                     }
-                    .select-items{position: absolute;display: none;cursor: pointer;width:100%;text-align:center;border-radius:0px 0px 10px 10px;box-shadow: 0 1px 4px 0 #00000026;background: #fff;
+                    .select-items{position: absolute;display: none;cursor: pointer;width:100%;text-align:center;border-radius:0px 0px 10px 10px;box-shadow: 0 4px 4px 0 #00000026;background: #fff;
                         li{@include font16;font-family: $fonthelveticaneuemedium;line-height: 100%;letter-spacing:  -0.32px;text-transform: uppercase;color: $colorBlack;padding: 15px 20px;text-align:left;
                             img{display: inline;margin-right: 4px;vertical-align: middle;}
                         }

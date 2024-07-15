@@ -922,7 +922,7 @@ header .navbar .headerContent .header-elements .custom-select .select-items {
   width: 100%;
   text-align: center;
   border-radius: 0px 0px 10px 10px;
-  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1490196078);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1490196078);
   background: #fff;
 }
 header .navbar .headerContent .header-elements .custom-select .select-items li {
