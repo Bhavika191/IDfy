@@ -185,23 +185,10 @@ $(document).ready(function () {
 
     function updateItems() {
         var selectedText = selected.text().trim();
-        var header = $('header');
-        var borderColor = '#fff';
-
-        // Change border color to #000000 if &.navColor, &.scrolled class is added to header
-        if (header.hasClass('navColor') || header.hasClass('scrolled')) {
-            borderColor = '#080808';
-        }
 
         items.find('li').show().filter(function () {
             return $(this).text().trim() === selectedText;
         }).hide();
-
-        // Remove border from all items first
-        items.find('li').css('border-bottom', 'none');
-
-        // Add border-bottom to all visible items except the last one
-        items.find('li:visible').css('border-bottom', '1px solid ' + borderColor).last().css('border-bottom', 'none');
     }
 
     // Handle clicking outside the dropdown

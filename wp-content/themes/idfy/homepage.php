@@ -250,8 +250,6 @@
     <?php endif; ?>
 </section>
 
-
-
 <section class="productfamSection">
     <?php if (have_rows('product_families_section')) : ?>
         <?php while (have_rows('product_families_section')) : the_row(); ?>
@@ -308,9 +306,6 @@
         <?php endwhile; ?>
     <?php endif; ?>
 </section>
-
-
-
 
 <section class="fraudstoriesSec fixed-section" id="fixedSection">
     <?php if (have_rows('fraud_stories_section')) : ?>
@@ -476,7 +471,5 @@
     <?php endif; ?>
 
 </section>
-
-
 
 <?php get_footer(); ?>

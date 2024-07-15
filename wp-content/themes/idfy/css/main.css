@@ -873,8 +873,7 @@ header .navbar .headerContent .header-elements .custom-select .select-selected {
   position: relative;
   background-color: transparent;
   padding: 15px 38px 15px 22px;
-  border: 1px solid #fff;
-  border-radius: 50px;
+  border-radius: 10px;
   text-align: center;
   font-size: 16px;
   font-family: "HelveticaNeueMedium";
@@ -907,10 +906,14 @@ header .navbar .headerContent .header-elements .custom-select .select-selected::
   padding: 0px 4px;
 }
 header .navbar .headerContent .header-elements .custom-select .select-selected.active-arrow {
-  border-radius: 30px 30px 0px 0px;
+  border-radius: 10px 10px 0px 0px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1490196078);
+  background: #fff;
+  color: #000000;
 }
 header .navbar .headerContent .header-elements .custom-select .select-selected.active-arrow::after {
   transform: rotate(180deg) translateY(50%);
+  content: url("../images/select-arrow-black.svg");
 }
 header .navbar .headerContent .header-elements .custom-select .select-items {
   position: absolute;
@@ -918,9 +921,9 @@ header .navbar .headerContent .header-elements .custom-select .select-items {
   cursor: pointer;
   width: 100%;
   text-align: center;
-  border: 1px solid #fff;
-  border-top: none;
-  border-radius: 0px 0px 30px 30px;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.1490196078);
+  background: #fff;
 }
 header .navbar .headerContent .header-elements .custom-select .select-items li {
   font-size: 16px;
@@ -928,7 +931,7 @@ header .navbar .headerContent .header-elements .custom-select .select-items li {
   line-height: 100%;
   letter-spacing: -0.32px;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #000000;
   padding: 15px 20px;
   text-align: left;
 }
@@ -8248,4 +8251,4 @@ footer .footerWrapper .copyright h3 {
   .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox .contentDivaward {
     margin-top: 16px;
   }
-}/*# sourceMappingURL=main.css.map */
+}
