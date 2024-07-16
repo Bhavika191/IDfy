@@ -14,6 +14,7 @@
 
 .scroll-cards__item.slide.active {
     transform: translateY(0) !important;
+    z-index: 1;
 }
 
 /* Generating the nth-of-type styles */

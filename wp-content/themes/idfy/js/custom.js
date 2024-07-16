@@ -636,6 +636,7 @@ if (window.innerWidth < 1025) {
 // });>
 // product families js ends
 
+
 document.addEventListener('DOMContentLoaded', function () {
     var header = document.getElementById('main-header');
     var banner = document.querySelector('.bannerSectionhp');
@@ -654,8 +655,7 @@ document.addEventListener('DOMContentLoaded', function () {
         addClassOnScroll();
     };
 });
-
-
+/* product section jyoti */
 document.addEventListener('DOMContentLoaded', () => {
     const navItems = document.querySelectorAll('#navMenu li');
     const slides = document.querySelectorAll('.slide');
@@ -676,6 +676,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetSlide = document.querySelector(`.slide[data-slide="${slideNumber}"]`);
               
             console.log(targetSlide);
+            
             // Scroll smoothly to the target slide
             targetSlide.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
@@ -701,50 +702,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     const navItems = document.querySelectorAll('#navMenu li');
-//     const slides = document.querySelectorAll('.slide');
-
-//     const updateActiveState = (slideNumber) => {
-//         // Remove active class from all nav items and slides
-//         navItems.forEach(nav => nav.classList.remove('active'));
-//         slides.forEach(slide => slide.classList.remove('active'));
-
-//         // Add active class to the clicked nav item and corresponding slide
-//         document.querySelector(`#navMenu li[data-slide="${slideNumber}"]`).classList.add('active');
-//         document.querySelector(`.slide[data-slide="${slideNumber}"]`).classList.add('active');
-//     };
-
-//     navItems.forEach(item => {
-//         item.addEventListener('click', (e) => {
-//             const slideNumber = item.getAttribute('data-slide');
-//             const targetSlide = document.querySelector(`.slide[data-slide="${slideNumber}"]`);
-//             console.log(targetSlide);
-//             targetSlide.scrollIntoView({ behavior: 'smooth' });
-
-//             // Manually update the active state
-//             updateActiveState(slideNumber);
-//         });
-//     });
-
-//     window.addEventListener('scroll', () => {
-//         let currentSlide = null;
-//         slides.forEach(slide => {
-//             const rect = slide.getBoundingClientRect();
-//             if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
-//                 currentSlide = slide.getAttribute('data-slide');
-//             }
-//         });
-//         if (currentSlide) {
-//             updateActiveState(currentSlide);
-//         }
-//     });
-// });
-
-
-
+/* product section jyoti */
 
 
 
