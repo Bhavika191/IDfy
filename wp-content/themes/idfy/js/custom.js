@@ -185,10 +185,23 @@ $(document).ready(function () {
 
     function updateItems() {
         var selectedText = selected.text().trim();
+        var header = $('header');
+        var borderColor = '#fff';
+
+        // Change border color to #000000 if &.navColor, &.scrolled class is added to header
+        if (header.hasClass('navColor') || header.hasClass('scrolled')) {
+            borderColor = '#080808';
+        }
 
         items.find('li').show().filter(function () {
             return $(this).text().trim() === selectedText;
         }).hide();
+
+        // Remove border from all items first
+        items.find('li').css('border-bottom', 'none');
+
+        // Add border-bottom to all visible items except the last one
+        items.find('li:visible').css('border-bottom', '1px solid ' + borderColor).last().css('border-bottom', 'none');
     }
 
     // Handle clicking outside the dropdown
@@ -661,13 +674,19 @@ document.addEventListener('DOMContentLoaded', () => {
         item.addEventListener('click', (e) => {
             const slideNumber = item.getAttribute('data-slide');
             const targetSlide = document.querySelector(`.slide[data-slide="${slideNumber}"]`);
-            targetSlide.scrollIntoView({ behavior: 'smooth' });
+              
+            console.log(targetSlide);
+            // Scroll smoothly to the target slide
+            targetSlide.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-            // Manually update the active state
-            updateActiveState(slideNumber);
+            // Update active state after a slight delay to ensure scroll completion
+            setTimeout(() => {
+                updateActiveState(slideNumber);
+            }, 500); // Adjust delay as needed based on your transition speed
         });
     });
 
+    // Detect current active slide on scroll
     window.addEventListener('scroll', () => {
         let currentSlide = null;
         slides.forEach(slide => {
@@ -681,6 +700,48 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     const navItems = document.querySelectorAll('#navMenu li');
+//     const slides = document.querySelectorAll('.slide');
+
+//     const updateActiveState = (slideNumber) => {
+//         // Remove active class from all nav items and slides
+//         navItems.forEach(nav => nav.classList.remove('active'));
+//         slides.forEach(slide => slide.classList.remove('active'));
+
+//         // Add active class to the clicked nav item and corresponding slide
+//         document.querySelector(`#navMenu li[data-slide="${slideNumber}"]`).classList.add('active');
+//         document.querySelector(`.slide[data-slide="${slideNumber}"]`).classList.add('active');
+//     };
+
+//     navItems.forEach(item => {
+//         item.addEventListener('click', (e) => {
+//             const slideNumber = item.getAttribute('data-slide');
+//             const targetSlide = document.querySelector(`.slide[data-slide="${slideNumber}"]`);
+//             console.log(targetSlide);
+//             targetSlide.scrollIntoView({ behavior: 'smooth' });
+
+//             // Manually update the active state
+//             updateActiveState(slideNumber);
+//         });
+//     });
+
+//     window.addEventListener('scroll', () => {
+//         let currentSlide = null;
+//         slides.forEach(slide => {
+//             const rect = slide.getBoundingClientRect();
+//             if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
+//                 currentSlide = slide.getAttribute('data-slide');
+//             }
+//         });
+//         if (currentSlide) {
+//             updateActiveState(currentSlide);
+//         }
+//     });
+// });
 
 
 
@@ -1080,7 +1141,6 @@ $(".boxContentnew").hover(function (e) {
     $(".boxImgnew").removeClass('showAnim1');
     $("." + animid).addClass('showAnim1');
 });
-
 
 
 

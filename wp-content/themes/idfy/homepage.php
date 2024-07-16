@@ -1,5 +1,65 @@
 <?php get_header(); /* Template Name: Homepage */ ?>
+<style>
+.scroll-cards__item.slide {
+    scroll-snap-align: start !important;
+    transition: transform 0.5s ease-in-out !important;
+    position: sticky !important;
+    top: max(10vh, 9em) !important;
+    height: 751px !important;
+}
 
+.scroll-cards {
+    scroll-snap-type: y mandatory !important;
+}
+
+.scroll-cards__item.slide.active {
+    transform: translateY(0) !important;
+}
+
+/* Generating the nth-of-type styles */
+.scroll-cards__item.slide:nth-of-type(0) {
+    transform: translateY(calc((0 - 5) * var(--offset))) !important;
+}
+
+.scroll-cards__item.slide:nth-of-type(1) {
+    transform: translateY(calc((1 - 5) * var(--offset))) !important;
+}
+
+.scroll-cards__item.slide:nth-of-type(2) {
+    transform: translateY(calc((2 - 5) * var(--offset))) !important;
+}
+
+.scroll-cards__item.slide:nth-of-type(3) {
+    transform: translateY(calc((3 - 5) * var(--offset))) !important;
+}
+
+.scroll-cards__item.slide:nth-of-type(4) {
+    transform: translateY(calc((4 - 5) * var(--offset))) !important;
+}
+
+.scroll-cards__item.slide:nth-of-type(5) {
+    transform: translateY(calc((5 - 5) * var(--offset))) !important;
+}
+
+.scroll-cards__item.slide:nth-of-type(6) {
+    transform: translateY(calc((6 - 5) * var(--offset))) !important;
+}
+
+.scroll-cards__item.slide:nth-of-type(7) {
+    transform: translateY(calc((7 - 5) * var(--offset))) !important;
+}
+
+.scroll-cards__item.slide:nth-of-type(8) {
+    transform: translateY(calc((8 - 5) * var(--offset))) !important;
+}
+
+.scroll-cards__item.slide:nth-of-type(9) {
+    transform: translateY(calc((9 - 5) * var(--offset))) !important;
+}
+
+
+
+</style>
 <section class="bannerSectionhp">
     <?php if (have_rows('banner_section')) : ?>
         <?php while (have_rows('banner_section')) : the_row(); ?>
@@ -251,61 +311,135 @@
 </section>
 
 <section class="productfamSection">
-    <?php if (have_rows('product_families_section')) : ?>
-        <?php while (have_rows('product_families_section')) : the_row(); ?>
-            <div class="innerWrapper">
-                <div class="secHeading">
-                    <h2><?php echo get_sub_field('section_heading'); ?></h2>
+    <div class="innerWrapper">
+        <div class="secHeading">
+            <h2>Product Families</h2>
+        </div>
+        <div class="prodfamSlides scroll-cards">
+            <div class="slider slider-for">
+                <div class="innerDiv">
+                    <ul class="tabs slider-nav " id="navMenu">
+                        <li class="tab" id="tabDiv" data-slide="1">
+                            <h3>KYC API Suite 1</h3>
+                        </li>
+                        <li class="tab" id="tabDiv" data-slide="2">
+                            <h3>KYC API Suite 2</h3>
+                        </li>
+                        <li class="tab" id="tabDiv" data-slide="3">
+                            <h3>KYC API Suite 3</h3>
+                        </li>
+                        <li class="tab" id="tabDiv" data-slide="4">
+                            <h3>KYC API Suite 4</h3>
+                        </li>
+                        <li class="tab" id="tabDiv" data-slide="5">
+                            <h3>KYC API Suite 5</h3>
+                        </li>
+                        <li class="tab" id="tabDiv" data-slide="6">
+                            <h3>KYC API Suite 6</h3>
+                        </li>
+                        <li class="tab" id="tabDiv" data-slide="7">
+                            <h3>KYC API Suite 7</h3>
+                        </li>
+                        <li class="tab" id="tabDiv" data-slide="8">
+                            <h3>KYC API Suite 8</h3>
+                        </li>
+                    </ul>
                 </div>
-                <div class="prodfamSlides scroll-cards">
-
-                    <div class="slider slider-for">
-                        <div class="innerDiv">
-                            <ul class="tabs slider-nav " id="navMenu">
-                                <?php if (have_rows('product_families_content')) : ?>
-                                    <?php $counter = 1;
-                                    while (have_rows('product_families_content')) : the_row(); ?>
-                                        <li class="tab" id="tabDiv" data-slide="<?php echo $counter; ?>">
-                                            <h3><?php echo get_sub_field('card_heading'); ?>
-                                                <?php $valuenew = get_sub_field("new_tag");
-                                                if ($valuenew) { ?>
-                                                    <span><?php echo get_sub_field('new_tag'); ?></span>
-                                                <?php } ?>
-                                            </h3>
-                                        </li>
-                                    <?php $counter = $counter + 1;
-                                    endwhile; ?>
-                                <?php endif; ?>
-                            </ul>
+                <div id="slides">
+                    <div class="scroll-cards__item slide" aria-label="Wie - 1" data-slide="1">
+                        <div class="dataImg">
+                            <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
                         </div>
-                        <div id="slides">
-                            <?php if (have_rows('product_families_content')) : ?>
-                                <?php $counter = 1;
-                                while (have_rows('product_families_content')) : the_row(); ?>
-                                    <div class="scroll-cards__item slide" aria-label="Wie - 1" data-slide="<?php echo $counter; ?>">
-                                        <div class="dataImg">
-                                            <?php $profamimg = get_sub_field('card_image');
-                                            if (!empty($profamimg)) : ?>
-                                                <img src="<?php echo esc_url($profamimg['url']); ?>" loading="lazy" alt="<?php echo esc_attr($profamimg['alt']); ?>" />
-                                            <?php endif; ?>
-                                        </div>
-                                        <div class="dataContent">
-                                            <h4><?php echo get_sub_field('card_heading'); ?></h4>
-                                            <h3><?php echo get_sub_field('card_intro_heading'); ?></h3>
-                                            <p><?php echo get_sub_field('card_description'); ?></p>
-                                            <a href="<?php echo get_sub_field('cta_link'); ?>" class="ctaRed"><?php echo get_sub_field('cta_text'); ?></a>
-                                        </div>
-                                    </div>
-                                <?php $counter = $counter + 1;
-                                endwhile; ?>
-                            <?php endif; ?>
+                        <div class="dataContent">
+                            <h4>KYC API SUITE 1</h4>
+                            <h3>150+ APIs to help you with onboarding</h3>
+                            <p>Come and explore our iBeta Certified, ML-powered, highly-scalable and secure API suite.</p>
+                            <a href="#" class="ctaRed">Explore API Documentation</a>
+                        </div>
+                    </div>
+                    <div class="scroll-cards__item slide" aria-label="Wie - 1" data-slide="2">
+                        <div class="dataImg">
+                            <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
+                        </div>
+                        <div class="dataContent">
+                            <h4>KYC API SUITE 2</h4>
+                            <h3>150+ APIs to help you with onboarding</h3>
+                            <p>Come and explore our iBeta Certified, ML-powered, highly-scalable and secure API suite.</p>
+                            <a href="#" class="ctaRed">Explore API Documentation</a>
+                        </div>
+                    </div>
+                    <div class="scroll-cards__item slide" aria-label="Wie - 1" data-slide="3">
+                        <div class="dataImg">
+                            <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
+                        </div>
+                        <div class="dataContent">
+                            <h4>KYC API SUITE 3</h4>
+                            <h3>150+ APIs to help you with onboarding</h3>
+                            <p>Come and explore our iBeta Certified, ML-powered, highly-scalable and secure API suite.</p>
+                            <a href="#" class="ctaRed">Explore API Documentation</a>
+                        </div>
+                    </div>
+                    <div class="scroll-cards__item slide" aria-label="Wie - 1" data-slide="4">
+                        <div class="dataImg">
+                            <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
+                        </div>
+                        <div class="dataContent">
+                            <h4>KYC API SUITE 4</h4>
+                            <h3>150+ APIs to help you with onboarding</h3>
+                            <p>Come and explore our iBeta Certified, ML-powered, highly-scalable and secure API suite.</p>
+                            <a href="#" class="ctaRed">Explore API Documentation</a>
+                        </div>
+                    </div>
+                    <div class="scroll-cards__item slide" aria-label="Wie - 1" data-slide="5">
+                        <div class="dataImg">
+                            <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
+                        </div>
+                        <div class="dataContent">
+                            <h4>KYC API SUITE 5</h4>
+                            <h3>150+ APIs to help you with onboarding</h3>
+                            <p>Come and explore our iBeta Certified, ML-powered, highly-scalable and secure API suite.</p>
+                            <a href="#" class="ctaRed">Explore API Documentation</a>
+                        </div>
+                    </div>
+                    <div class="scroll-cards__item slide" aria-label="Wie - 1" data-slide="6">
+                        <div class="dataImg">
+                            <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
+                        </div>
+                        <div class="dataContent">
+                            <h4>KYC API SUITE 6</h4>
+                            <h3>150+ APIs to help you with onboarding</h3>
+                            <p>Come and explore our iBeta Certified, ML-powered, highly-scalable and secure API suite.</p>
+                            <a href="#" class="ctaRed">Explore API Documentation</a>
+                        </div>
+                    </div>
+                    <div class="scroll-cards__item slide" aria-label="Wie - 1" data-slide="7">
+                        <div class="dataImg">
+                            <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
+                        </div>
+                        <div class="dataContent">
+                            <h4>KYC API SUITE 7</h4>
+                            <h3>150+ APIs to help you with onboarding</h3>
+                            <p>Come and explore our iBeta Certified, ML-powered, highly-scalable and secure API suite.</p>
+                            <a href="#" class="ctaRed">Explore API Documentation</a>
+                        </div>
+                    </div>
+                    <div class="scroll-cards__item slide" aria-label="Wie - 1" data-slide="8">
+                        <div class="dataImg">
+                            <img src="<?php bloginfo('template_directory'); ?>/images/product-family-img.webp" alt="">
+                        </div>
+                        <div class="dataContent">
+                            <h4>KYC API SUITE 8</h4>
+                            <h3>150+ APIs to help you with onboarding</h3>
+                            <p>Come and explore our iBeta Certified, ML-powered, highly-scalable and secure API suite.</p>
+                            <a href="#" class="ctaRed">Explore API Documentation</a>
                         </div>
                     </div>
                 </div>
             </div>
-        <?php endwhile; ?>
-    <?php endif; ?>
+        </div>
+    </div>
 </section>
+
 
 <section class="fraudstoriesSec fixed-section" id="fixedSection">
     <?php if (have_rows('fraud_stories_section')) : ?>
