@@ -1082,11 +1082,11 @@
                     }
                 }
                 .slide {width: 100%;border-radius: 34.359px;border: 0.687px solid rgba(0, 0, 0, 0.20);background: #FFF;box-shadow:-1.256px 2.744px 15.615px 0px rgba(0, 0, 0, 0.1);display: flex;padding: 35px;;align-items: flex-start;justify-content: space-between; --offset: 1em;position: sticky;top: max(10vh, 9em);height: 751px;;
-                    @for $i from 0 through 9 {
-                        &:nth-of-type(#{$i}) {
-                          transform: translateY( calc((#{$i} - 5) * var(--offset)));
-                        }
-                    }
+                    // @for $i from 0 through 9 {
+                    //     &:nth-of-type(#{$i}) {
+                    //       transform: translateY( calc((#{$i} - 5) * var(--offset)));
+                    //     }
+                    // }
                     
                     &:nth-child(1),&:nth-child(2),&:nth-child(3),&:nth-child(4),&:nth-child(5){transform: unset !important;}
                    

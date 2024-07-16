@@ -6614,9 +6614,12 @@ footer .footerWrapper .copyright h3 {
 .productfamSection .innerWrapper .prodfamSlides .slider .slide:nth-of-type(9) {
   transform: translateY(calc((9 - 5) * var(--offset)));
 }
-.productfamSection .innerWrapper .prodfamSlides .slider .slide:nth-child(1), .productfamSection .innerWrapper .prodfamSlides .slider .slide:nth-child(2), .productfamSection .innerWrapper .prodfamSlides .slider .slide:nth-child(3), .productfamSection .innerWrapper .prodfamSlides .slider .slide:nth-child(4), .productfamSection .innerWrapper .prodfamSlides .slider .slide:nth-child(5) {
+/* product section jyoti */
+/* .productfamSection .innerWrapper .prodfamSlides .slider .slide:nth-child(1), .productfamSection .innerWrapper .prodfamSlides .slider .slide:nth-child(2), .productfamSection .innerWrapper .prodfamSlides .slider .slide:nth-child(3), .productfamSection .innerWrapper .prodfamSlides .slider .slide:nth-child(4), .productfamSection .innerWrapper .prodfamSlides .slider .slide:nth-child(5) {
   transform: unset !important;
-}
+} */
+
+/* End product section jyoti */
 .productfamSection .innerWrapper .prodfamSlides .slider .slide .dataImg {
   border-radius: 28px;
   overflow: hidden;
