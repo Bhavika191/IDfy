@@ -185,23 +185,10 @@ $(document).ready(function () {
 
     function updateItems() {
         var selectedText = selected.text().trim();
-        var header = $('header');
-        var borderColor = '#fff';
-
-        // Change border color to #000000 if &.navColor, &.scrolled class is added to header
-        if (header.hasClass('navColor') || header.hasClass('scrolled')) {
-            borderColor = '#080808';
-        }
 
         items.find('li').show().filter(function () {
             return $(this).text().trim() === selectedText;
         }).hide();
-
-        // Remove border from all items first
-        items.find('li').css('border-bottom', 'none');
-
-        // Add border-bottom to all visible items except the last one
-        items.find('li:visible').css('border-bottom', '1px solid ' + borderColor).last().css('border-bottom', 'none');
     }
 
     // Handle clicking outside the dropdown
@@ -449,7 +436,9 @@ if ($(".pioneerSlidersec").length) {
         infinite: false,
         autoplay: true,
         speed: 1000,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 3000,
+        fade: true,
+        cssEase: 'linear',
         responsive: [
             {
                 breakpoint: 720,
@@ -636,7 +625,6 @@ if (window.innerWidth < 1025) {
 // });>
 // product families js ends
 
-
 document.addEventListener('DOMContentLoaded', function () {
     var header = document.getElementById('main-header');
     var banner = document.querySelector('.bannerSectionhp');
@@ -655,7 +643,8 @@ document.addEventListener('DOMContentLoaded', function () {
         addClassOnScroll();
     };
 });
-/* product section jyoti */
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const navItems = document.querySelectorAll('#navMenu li');
     const slides = document.querySelectorAll('.slide');
@@ -674,20 +663,13 @@ document.addEventListener('DOMContentLoaded', () => {
         item.addEventListener('click', (e) => {
             const slideNumber = item.getAttribute('data-slide');
             const targetSlide = document.querySelector(`.slide[data-slide="${slideNumber}"]`);
-              
-            console.log(targetSlide);
-            
-            // Scroll smoothly to the target slide
-            targetSlide.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            targetSlide.scrollIntoView({ behavior: 'smooth' });
 
-            // Update active state after a slight delay to ensure scroll completion
-            setTimeout(() => {
-                updateActiveState(slideNumber);
-            }, 500); // Adjust delay as needed based on your transition speed
+            // Manually update the active state
+            updateActiveState(slideNumber);
         });
     });
 
-    // Detect current active slide on scroll
     window.addEventListener('scroll', () => {
         let currentSlide = null;
         slides.forEach(slide => {
@@ -702,7 +684,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-/* product section jyoti */
+
+
 
 
 
@@ -995,49 +978,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // });
 
 
-if ($(".pioneerSlidersec").length) {
-    $('.contentDiv').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: true,
-        infinite: true,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        speed: 3000,
-        asNavFor: '.imageSlider',
-        rtl: true,
-        responsive: [
-            {
-                breakpoint: 821,
-                settings: {
-                    rtl: false,
-                }
-            },
-        ]
-    });
 
-    $('.imageSlider').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        infinite: true,
-        dots: false,
-        arrows: true,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        speed: 3000,
-        asNavFor: '.contentDiv',
-        responsive: [
-            {
-                breakpoint: 821,
-                settings: {
-                    arrows: false,
-                }
-            },
-        ]
-    });
-}
 
 
 
@@ -1099,6 +1040,7 @@ $(".boxContentnew").hover(function (e) {
     $(".boxImgnew").removeClass('showAnim1');
     $("." + animid).addClass('showAnim1');
 });
+
 
 
 
