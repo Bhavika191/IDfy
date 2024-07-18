@@ -998,7 +998,7 @@
  
 
 
-.fraudstoriesSec{margin-bottom: 150px;display: flex;justify-content: center;align-items: center; position: relative;width: 100%; 
+.fraudstoriesSec{margin-bottom: 350px;display: flex;justify-content: center;align-items: center; position: relative;width: 100%; 
     .innerWrapper{@include wrapper;
         .secHeading{
             h2{@include font48;font-family: $fonthelveticaneuelight;text-transform: capitalize;line-height: 100%;letter-spacing: 0px;color: $colorGray;text-align: center;position: relative;
@@ -1034,7 +1034,7 @@
         }
     }
 
-    @media screen and (max-width:1920px) {
+    @media screen and (max-width:1920px) {margin-bottom: 150px;
         .innerWrapper{
             .boxContent{margin-top: 32px;
                 .box-container{
@@ -1051,7 +1051,7 @@
         }
     }
 
-    @media screen and (max-width:1600px) {margin-bottom: 120px;
+    @media screen and (max-width:1600px) {
         .innerWrapper{
             .secHeading{
                 h2{
@@ -1078,7 +1078,7 @@
         }
     }
 
-    @media screen and (max-width:1440px) {margin-bottom: 100px;
+    @media screen and (max-width:1440px) {margin-bottom: 140px;
         .innerWrapper{
             .secHeading{
                 h2:before{bottom: -17px;}
@@ -1102,7 +1102,9 @@
             }
         }
     }
-    @media screen and (max-width:1280px) {
+
+    @media screen and (max-width:1400px) {margin-bottom: 80px;}
+    @media screen and (max-width:1280px) {margin-bottom: 60px;
         .innerWrapper{
             .secHeading{
                 p{margin: 25px auto 0px;}
@@ -1127,7 +1129,7 @@
         }
     }
 
-    @media screen and (max-width:1024px) {margin-bottom: 80px;
+    @media screen and (max-width:1024px) {margin-bottom: 10px;
         .innerWrapper{
             .secHeading{
                 h2:before{bottom: -13px;}

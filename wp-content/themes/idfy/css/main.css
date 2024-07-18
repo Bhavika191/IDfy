@@ -6873,7 +6873,7 @@ footer .footerWrapper .copyright h3 {
 }
 
 .fraudstoriesSec {
-  margin-bottom: 150px;
+  margin-bottom: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7069,6 +7069,9 @@ footer .footerWrapper .copyright h3 {
   transition: 0.6s all ease-in-out;
 }
 @media screen and (max-width: 1920px) {
+  .fraudstoriesSec {
+    margin-bottom: 150px;
+  }
   .fraudstoriesSec .innerWrapper .boxContent {
     margin-top: 32px;
   }
@@ -7091,9 +7094,6 @@ footer .footerWrapper .copyright h3 {
   }
 }
 @media screen and (max-width: 1600px) {
-  .fraudstoriesSec {
-    margin-bottom: 120px;
-  }
   .fraudstoriesSec .innerWrapper .secHeading h2::before {
     bottom: -20px;
     width: 164px;
@@ -7136,7 +7136,7 @@ footer .footerWrapper .copyright h3 {
 }
 @media screen and (max-width: 1440px) {
   .fraudstoriesSec {
-    margin-bottom: 100px;
+    margin-bottom: 140px;
   }
   .fraudstoriesSec .innerWrapper .secHeading h2:before {
     bottom: -17px;
@@ -7175,7 +7175,15 @@ footer .footerWrapper .copyright h3 {
     width: 80%;
   }
 }
+@media screen and (max-width: 1400px) {
+  .fraudstoriesSec {
+    margin-bottom: 80px;
+  }
+}
 @media screen and (max-width: 1280px) {
+  .fraudstoriesSec {
+    margin-bottom: 60px;
+  }
   .fraudstoriesSec .innerWrapper .secHeading p {
     margin: 25px auto 0px;
   }
@@ -7216,7 +7224,7 @@ footer .footerWrapper .copyright h3 {
 }
 @media screen and (max-width: 1024px) {
   .fraudstoriesSec {
-    margin-bottom: 80px;
+    margin-bottom: 10px;
   }
   .fraudstoriesSec .innerWrapper .secHeading h2:before {
     bottom: -13px;
