@@ -53,43 +53,46 @@ $(window).scroll(function (event) {
 //-------------------Header Desktop Dropdown JS----------------------//
 $(document).ready(function () {
     const dropdowns = document.querySelectorAll('.dropdown');
+    const windowWidth = window.innerWidth;
+    if (windowWidth > 1025) {
+        dropdowns.forEach(dropdown => {
+            // Handle mouseover event
+            dropdown.addEventListener('mouseover', function () {
+                dropdown.classList.add('active');
+            });
 
-    dropdowns.forEach(dropdown => {
-        const dropbtn = dropdown.querySelector('.dropbtn');
-
-        // Handle click event
-        // dropbtn.addEventListener('click', function (event) {
-        //     // Prevent default behavior for the dropdown button
-        //     event.preventDefault();
-        //     // Close other open dropdowns
-        //     dropdowns.forEach(dd => {
-        //         if (dd !== dropdown) {
-        //             dd.classList.remove('active');
-        //         }
-        //     });
-        //     // Toggle the current dropdown
-        //     dropdown.classList.toggle('active');
-        // });
-
-        // Handle mouseover event
-        dropdown.addEventListener('mouseover', function () {
-            dropdown.classList.add('active');
+            // Handle mouseout event to close dropdown when mouse leaves the entire dropdown
+            dropdown.addEventListener('mouseleave', function () {
+                dropdown.classList.remove('active');
+            });
+        });
+    } else {
+        dropdowns.forEach(dropdown => {
+            const dropbtn = dropdown.querySelector('.dropbtn');
+            // Handle click event
+            dropbtn.addEventListener('click', function (event) {
+                // Prevent default behavior for the dropdown button
+                event.preventDefault();
+                // Close other open dropdowns
+                dropdowns.forEach(dd => {
+                    if (dd !== dropdown) {
+                        dd.classList.remove('active');
+                    }
+                });
+                // Toggle the current dropdown
+                dropdown.classList.toggle('active');
+            });
         });
 
-        // Handle mouseout event to close dropdown when mouse leaves the entire dropdown
-        dropdown.addEventListener('mouseleave', function () {
-            dropdown.classList.remove('active');
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', function (event) {
+            if (!event.target.closest('.dropdown')) {
+                dropdowns.forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            }
         });
-    });
-
-    // Close dropdowns when clicking outside
-    // document.addEventListener('click', function (event) {
-    //     if (!event.target.closest('.dropdown')) {
-    //         dropdowns.forEach(dropdown => {
-    //             dropdown.classList.remove('active');
-    //         });
-    //     }
-    // });
+    }
 });
 //-------------------Header Desktop Dropdown JS----------------------//
 
@@ -99,8 +102,8 @@ $(document).ready(function () {
         $("#toggle").click(function () {
             $(this).toggleClass("active");
             $('body').toggleClass("bodyNav");
-            $("#overlay").toggleClass("open");
-            if ($("#overlay").hasClass("open")) {
+            $(".nav-menu").toggleClass("open");
+            if ($(".nav-menu").hasClass("open")) {
                 menuOpen = true; // Menu is open
                 $('body').css("overflow", "hidden");
                 $('html').css("overflow", "hidden");
@@ -121,34 +124,34 @@ $(document).ready(function () {
 //------------------Mobile Humberger Menu------------------------//
 
 //---------------------Mobile dropdown Menu --------------------//
-$(document).ready(function () {
-    const mainNavs = document.querySelectorAll('.main-nav');
+// $(document).ready(function () {
+//     const mainNavs = document.querySelectorAll('.main-nav');
 
-    mainNavs.forEach(mainNav => {
-        mainNav.addEventListener('click', function (event) {
-            // Prevent default behavior
-            event.preventDefault();
-            // Toggle the current dropdown
-            const parentLi = this.closest('.main-list');
-            parentLi.classList.toggle('active');
-            // Close other open dropdowns
-            mainNavs.forEach(nav => {
-                if (nav !== this) {
-                    nav.closest('.main-list').classList.remove('active');
-                }
-            });
-        });
-    });
+//     mainNavs.forEach(mainNav => {
+//         mainNav.addEventListener('click', function (event) {
+//             // Prevent default behavior
+//             event.preventDefault();
+//             // Toggle the current dropdown
+//             const parentLi = this.closest('.main-list');
+//             parentLi.classList.toggle('active');
+//             // Close other open dropdowns
+//             mainNavs.forEach(nav => {
+//                 if (nav !== this) {
+//                     nav.closest('.main-list').classList.remove('active');
+//                 }
+//             });
+//         });
+//     });
 
-    // Close dropdowns when clicking outside
-    document.addEventListener('click', function (event) {
-        if (!event.target.closest('.main-list')) {
-            mainNavs.forEach(mainNav => {
-                mainNav.closest('.main-list').classList.remove('active');
-            });
-        }
-    });
-});
+//     // Close dropdowns when clicking outside
+//     document.addEventListener('click', function (event) {
+//         if (!event.target.closest('.main-list')) {
+//             mainNavs.forEach(mainNav => {
+//                 mainNav.closest('.main-list').classList.remove('active');
+//             });
+//         }
+//     });
+// });
 //-------------------Mobile dropdown Menu ---------------------//
 
 //----------------------Header Country Select Dropdown-----------------//
