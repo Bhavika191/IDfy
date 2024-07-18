@@ -1008,11 +1008,10 @@
         }
         .boxContent{position: relative;margin-top: 40px;height: 700px;
             .box-container{
-                #boxesData{position: absolute;top: 8%;left: -45%;width: 74%;z-index: 2;border-radius: 20px;border: 0.685px solid rgba(0, 0, 0, 0.20);background: #FFF;box-shadow: 13.705px 13.705px 20.557px 0px rgba(0, 0, 0, 0.20);transition: 0.7s all ease-in-out;
-                    &:nth-child(2){top: 40%;right: -40%;left: unset;}
-                    &:nth-child(3){top: 60%;left: -45%}
-                    .fraudArrow{display: flex;align-items: flex-end;}
-                    svg{fill: #080808;transition: 0.7s all ease-in-out;transform: translateX(0)}
+                #boxesData{position: absolute;top: 14%;left: -60%;width: 90%;z-index: 2;border-radius: 20px;border: 0.685px solid rgba(0, 0, 0, 0.20);background: #FFF;box-shadow: 13.705px 13.705px 20.557px 0px rgba(0, 0, 0, 0.20);transition: 0.7s all ease-in-out;
+                    &:nth-child(2){top: 50%;right: -60%;left: unset;}
+                    &:nth-child(3){top: 80%;left: -60%}
+                    .fraudArrow svg{position: absolute;bottom: 18px;right: 25px;fill: #080808;transition: 0.7s all ease-in-out;transform: translateX(0)}
                     p, ul li{@include font24;transition: 0.7s all ease-in-out;font-family: $fonthelveticaneuelight;line-height: 133%;color: #080808;width: 94%;}
                     ul li{list-style: disc;}
                     a{padding: 35px 45px;display: block;}
@@ -1021,14 +1020,15 @@
                 .activeBoxes , .showHover{border-radius: 20px;border: 0.685px solid rgba(0, 0, 0, 0.20); background: #1C43B9 !important;box-shadow: 13.705px 13.705px 20.557px 0px rgba(0, 0, 0, 0.20);transition: 0.7s all ease-in-out;
                     &:nth-child(2){left: unset !important;}
                     p, ul li{transition: 0.7s all ease-in-out;color: $colorWhite !important;span{color: #fff;}b{color: #fff;}}
-                    svg{fill: #fff !important;transition: 0.7s all ease-in-out;transform: translateX(10px) !important;}
+                    .fraudArrow svg{fill: #fff !important;transition: 0.7s all ease-in-out;transform: translateX(10px) !important;}
                 }
             }
             .box-container-two{
-                #boxesImg{border-radius: 50%;overflow: hidden;margin: 0 auto;position: absolute;left: 0;right: 0;top: 0;transition: 0.6s all ease-in-out;
+                #boxesImg{margin: 0 auto;position: absolute;left: 0;right: 0;top: 0;transition: 0.6s all ease-in-out;
+                    .mainImg{border-radius: 50%;overflow: hidden;}
                     .dotsInner{position: absolute;top: 22%;right: 11%;}
                 }
-               #boxesImg{opacity: 0;width: 72%;}
+               #boxesImg{opacity: 0;width: 100%;}
                 .showAnim1{opacity: 1 !important;transition: 0.6s all ease-in-out;}
             }
         }
@@ -1038,11 +1038,14 @@
         .innerWrapper{
             .boxContent{margin-top: 32px;
                 .box-container{
-                    #boxesData{left: -48%;width: 80%;
-                        &:nth-child(2){top: 32%;right: -57%;}
+                    #boxesData{left: -48%;width: 80%;top: 8%;
+                        &:nth-child(2){top: 32%;right: -48%;}
                         &:nth-child(3){top: 64%;left: -48%}
                     }
                    
+                }
+                .box-container-two{
+                   #boxesImg{opacity: 0;width: 80%;}
                 }
             }
         }
@@ -1058,9 +1061,10 @@
             }
             .boxContent{margin-top: 32px;height: 540px;
                 .box-container{
-                    #boxesData{left: -48%;width: 80%;
-                        &:nth-child(2){top: 32%;right: -57%;}
-                        &:nth-child(3){top: 64%;left: -48%}
+                    #boxesData{left: -50%;width: 80%;
+                        &:nth-child(2){top: 34%;right: -50%;}
+                        &:nth-child(3){top: 64%;left: -50%}
+                        .fraudArrow svg{bottom: 14px;right: 25px;width: 24px;}
                         a{padding: 24px 32px;}
                     }
                 }
@@ -1082,9 +1086,10 @@
             }
             .boxContent{margin-top: 30px;
                 .box-container{
-                    #boxesData{width: 47%;top: 3%;left: -11%;
-                        &:nth-child(2){top: 39%;right: -13%;}
-                        &:nth-child(3){top: 66%;left: -11%}
+                    #boxesData{left: -42%;width: 74%;
+                        &:nth-child(2){top: 34%;right: -42%;}
+                        &:nth-child(3){top: 64%;left: -42%}
+                        .fraudArrow svg{bottom: 12px;right: 22px;width: 20px;}
                         a{padding: 20px 26px;}
                     }
                 }
@@ -1092,7 +1097,7 @@
                     #boxesImg{
                         .dotsInner{top: 18%;right: 15%;}
                     }
-                   #boxesImg{width: 56%;}
+                   #boxesImg{width: 80%;}
                 }
             }
         }
@@ -1104,9 +1109,10 @@
             }
             .boxContent{margin-top: 28px;height: 550px;
                 .box-container{
-                    #boxesData{width: 42%;top: 4%;left: -8%;
-                        &:nth-child(2){top: 37%;right: -9%;}
-                        &:nth-child(3){top: 62%;left: -8%}
+                    #boxesData{left: -36%;width: 70%;
+                        &:nth-child(2){top: 34%;right: -36%;}
+                        &:nth-child(3){top: 64%;left: -36%}
+                        .fraudArrow svg{bottom: 12px;right: 20px;width: 18px;}
                         a{padding: 18px 22px;}
                         p, ul li{font-size: 16px;}
                     }
@@ -1115,7 +1121,7 @@
                     #boxesImg{
                         .dotsInner{top: 16%;right: 15%;}
                     }
-                   #boxesImg{width: 56%;}
+                   #boxesImg{width: 80%;}
                 }
             }
         }
@@ -1129,9 +1135,10 @@
             }
             .boxContent{margin-top: 24px;
                 .box-container{
-                    #boxesData{width: 40%;top: 4%;left: 0;
-                        &:nth-child(2){top: 34%;right: 0%;}
-                        &:nth-child(3){top: 63%;left: 0%}
+                    #boxesData{left: -25%;width: 60%;
+                        &:nth-child(2){top: 34%;right: -25%;}
+                        &:nth-child(3){top: 60%;left: -25%}
+                        .fraudArrow svg{bottom: 10px;right: 18px;width: 16px;}
                         a{padding: 16px 20px;}
                         p, ul li{font-size: 14px;}
                     }
@@ -1140,7 +1147,7 @@
                     #boxesImg{
                         .dotsInner{top: 14%;right: 17%;}
                     }
-                   #boxesImg{width: 58%;}
+                   #boxesImg{width: 76%;}
                 }
             }
         }
@@ -1164,9 +1171,10 @@
                 .innerImg{border-radius: 50%;overflow: hidden;}
                 .dotsInner{position: absolute;top: 5%;right: 0%;img{width: 170px;}}
             }
-            .contentDivfraud{border-radius: 20px;background: #1C43B9;box-shadow: 20px 20px 30px 0px rgba(0, 0, 0, 0.20);transform: translateY(-44%);
-                p, ul li{font-size: 24px;font-family: $fonthelveticaneuelight;letter-spacing: 1.7px;line-height: normal;color: $colorWhite;margin-bottom: 23px;span{color: #fff;}b{color: #fff;}}
+            .contentDivfraud{border-radius: 20px;background: #1C43B9;box-shadow: 20px 20px 30px 0px rgba(0, 0, 0, 0.20);transform: translateY(-44%);position: relative;
+                p, ul li{font-size: 24px;font-family: $fonthelveticaneuelight;letter-spacing: 1.7px;line-height: normal;color: $colorWhite;margin-bottom: 30px;span{color: #fff;}b{color: #fff;}}
                 a{padding: 24px 32px;display: block;}
+                .fraudArrow svg{position: absolute;bottom: 18px;right: 16px;fill: #fff;}
             }
         }
     }

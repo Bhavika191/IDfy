@@ -8,10 +8,6 @@
                     <video autoplay muted loop playsinline preload="metadata">
                         <source src="<?php echo get_sub_field('banner_video'); ?>" type="video/mp4">
                     </video>
-                    <?php $bannerimage = get_sub_field('banner_image_placeholder');
-                    if (!empty($bannerimage)) : ?>
-                        <img src="<?php echo esc_url($bannerimage['url']); ?>" loading="lazy" alt="<?php echo esc_attr($bannerimage['alt']); ?>" />
-                    <?php endif; ?>
                 </div>
                 <div class="bannerContent">
                     <h1><?php echo get_sub_field('banner_heading'); ?></h1>
@@ -327,10 +323,12 @@
                                 <div class="box boxImgnew  fraudstory<?php echo $counter; ?> <?php if ($counter == 1) {
                                                                                                     echo 'showAnim1';
                                                                                                 } ?>" id="boxesImg">
-                                    <?php $fraudimg = get_sub_field('card_image');
-                                    if (!empty($fraudimg)) : ?>
-                                        <img src="<?php echo esc_url($fraudimg['url']); ?>" loading="lazy" alt="<?php echo esc_attr($fraudimg['alt']); ?>" />
-                                    <?php endif; ?>
+                                    <div class="mainImg">
+                                        <?php $fraudimg = get_sub_field('card_image');
+                                        if (!empty($fraudimg)) : ?>
+                                            <img src="<?php echo esc_url($fraudimg['url']); ?>" loading="lazy" alt="<?php echo esc_attr($fraudimg['alt']); ?>" />
+                                        <?php endif; ?>
+                                    </div>
                                     <div class="dotsInner">
                                         <img src="<?php bloginfo('template_directory'); ?>/images/fraud-stories-dots.svg" alt="">
                                     </div>
@@ -365,8 +363,11 @@
                             </div>
                             <div class="contentDivfraud">
                                 <a href="<?php echo get_sub_field('cta_link'); ?>">
-                                    <div>
+                                    <div class="fraudArrow">
                                         <p><?php echo get_sub_field('card_description'); ?></p>
+                                        <svg width="32" height="25" viewBox="0 0 32 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1 17H0V18H1V17ZM31.7071 17.7071C32.0976 17.3166 32.0976 16.6834 31.7071 16.2929L25.3431 9.92893C24.9526 9.53841 24.3195 9.53841 23.9289 9.92893C23.5384 10.3195 23.5384 10.9526 23.9289 11.3431L29.5858 17L23.9289 22.6569C23.5384 23.0474 23.5384 23.6805 23.9289 24.0711C24.3195 24.4616 24.9526 24.4616 25.3431 24.0711L31.7071 17.7071ZM2 1.5C2 0.947715 1.55228 0.5 1 0.5C0.447715 0.5 0 0.947715 0 1.5H2ZM1 18H31V16H1V18ZM2 17V1.5H0V17H2Z" />
+                                        </svg>
                                     </div>
                                 </a>
                             </div>
