@@ -50,6 +50,12 @@ function idfy_setup() {
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__( 'Primary', 'idfy' ),
+			'corporate-menu' => esc_html__( 'Corporate Menu', 'idfy' ),
+			'quicklinks-menu' => esc_html__( 'Quicklinks Menu', 'idfy' ),
+			'solutions-menu' => esc_html__( 'Solutions Menu', 'idfy' ),
+			'industries-menu' => esc_html__( 'Industries Menu', 'idfy' ),
+			'usecases-menu' => esc_html__( 'Usecases Menu', 'idfy' ),
+			'resources-menu' => esc_html__( 'Resources Menu', 'idfy' ),
 		)
 	);
 
@@ -176,3 +182,23 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// Template Setting - functions.php
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page(array(
+		'page_title'  => 'Theme General Settings',
+		'menu_title'  => 'Theme Settings',
+		'menu_slug'   => 'theme-general-settings',
+		'capability'  => 'edit_posts',
+		'redirect'    => false
+	));
+	acf_add_options_sub_page(array(
+		'page_title'  => 'Theme Header Settings',
+	  	'menu_title'  => 'Header Update',
+	  	'parent_slug' => 'theme-general-settings',
+  	));
+	acf_add_options_sub_page(array(
+  		'page_title'  => 'Theme Footer Settings',
+		'menu_title'  => 'Footer Update',
+		'parent_slug' => 'theme-general-settings',
+	));
+}

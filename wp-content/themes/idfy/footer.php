@@ -17,37 +17,36 @@
 		<div class="topFooter">
 			<div class="footerlogo">
 				<div class="logoDiv">
-					<a href="#">
-						<img src="<?php bloginfo('template_directory'); ?>/images/footer-logo.svg" alt="">
-					</a>
+					<?php the_custom_logo();?>
 				</div>
 				<div class="socialmediaIcons">
-					<a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/linkdin-footer-icon.svg" alt=""></a>
-					<a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/youtube-footer-icon.svg" alt=""></a>
-					<a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/insta-footer-icon.svg" alt=""></a>
+					<?php if( have_rows('social_links','option') ): ?>
+						<?php while( have_rows('social_links','option') ): the_row(); ?>
+							<a href="<?php echo get_sub_field('social_site_link'); ?>" target="_blank">
+								<?php $socialimg = get_sub_field('social_site_image'); if( !empty( $socialimg ) ): ?>
+									<img src="<?php echo esc_url($socialimg['url']); ?>" loading="lazy" alt="<?php echo esc_attr($socialimg['alt']); ?>" />
+								<?php endif; ?>
+							</a>
+						<?php endwhile; ?>
+					<?php endif; ?>
 				</div>
 			</div>
 			<div class="footerLinks">
 				<div class="innerLinks">
-					<h3>Corporate</h3>
-					<ul>
-						<li><a href="#">Privacy Policy</a></li>
-						<li><a href="#">Terms and Conditions</a></li>
-						<li><a href="#">SSS Agreement</a></li>
-						<li><a href="#">Contact Us</a></li>
-					</ul>
+					<h3><?php echo get_field('top_first_menu_heading','option'); ?></h3>
+					<?php wp_nav_menu([
+						'menu'            => 'corporate-menu',
+						'theme_location'  => 'corporate-menu',
+						'menu_class'      => '',
+					]); ?>
 				</div>
 				<div class="innerLinks">
-					<h3>Quick links</h3>
-					<ul>
-						<li><a href="#">Company</a></li>
-						<li><a href="#">Life at IDfy</a></li>
-						<li><a href="#">Clients</a></li>
-						<li><a href="#">Partners</a></li>
-						<li><a href="#">Our team</a></li>
-						<li><a href="#">IDfy in the news</a></li>
-						<li><a href="#">Careers</a></li>
-					</ul>
+					<h3><?php echo get_field('top_second_menu_heading','option'); ?></h3>
+					<?php wp_nav_menu([
+						'menu'            => 'quicklinks-menu',
+						'theme_location'  => 'quicklinks-menu',
+						'menu_class'      => '',
+					]); ?>
 				</div>
 			</div>
 			<div class="footerForm">
@@ -77,65 +76,41 @@
 		<div class="view-more-content footerBottom" id="more-content">
 			<div class="footerLinks">
 				<div class="innerLinks">
-					<h3>Solutions</h3>
-					<ul>
-						<li><a href="#">KYC API Suite</a></li>
-						<li><a href="#">Video Solutions</a></li>
-						<li><a href="#">Background Verification</a></li>
-						<li><a href="#">IDfy360</a></li>
-						<li><a href="#">Privy</a></li>
-						<li><a href="#">Bank Statement Analysis</a></li>
-						<li><a href="#">CrimeCheck</a></li>
-						<li><a href="#">Risk and Fraud</a></li>
-					</ul>
+					<h3><?php echo get_field('bottom_first_menu_heading','option'); ?></h3>
+					<?php wp_nav_menu([
+						'menu'            => 'solutions-menu',
+						'theme_location'  => 'solutions-menu',
+						'menu_class'      => '',
+					]); ?>
 				</div>
 				<div class="innerLinks">
-					<h3>Industries</h3>
-					<ul>
-						<li><a href="#">Banking</a></li>
-						<li><a href="#">eCom & Payments</a></li>
-						<li><a href="#">Capital Markets & Wealth</a></li>
-						<li><a href="#">Insurance</a></li>
-						<li><a href="#">Gaming</a></li>
-						<li><a href="#">Fintech</a></li>
-						<li><a href="#">HR & Recruitment</a></li>
-						<li><a href="#">Payment Aggregators and Payment Gateways</a></li>
-						<li><a href="#">Gig Workers</a></li>
-						<li><a href="#">Logistics</a></li>
-						<li><a href="#">Digital Natives</a></li>
-						<li><a href="#">FMCG</a></li>
-						<li><a href="#">IT</a></li>
-					</ul>
+					<h3><?php echo get_field('bottom_second_menu_heading','option'); ?></h3>
+					<?php wp_nav_menu([
+						'menu'            => 'industries-menu',
+						'theme_location'  => 'industries-menu',
+						'menu_class'      => '',
+					]); ?>
 				</div>
 				<div class="innerLinks">
-					<h3>Use Cases</h3>
-					<ul>
-						<li><a href="#">Digital Onboarding</a></li>
-						<li><a href="#">AML</a></li>
-						<li><a href="#">ID Verification</a></li>
-						<li><a href="#">Legal History Checks</a></li>
-						<li><a href="#">KYC</a></li>
-						<li><a href="#">KYB I Merchant Onboarding</a></li>
-						<li><a href="#">Background Verification</a></li>
-						<li><a href="#">Privacy & Data Protection</a></li>
-					</ul>
+					<h3><?php echo get_field('bottom_third_menu_heading','option'); ?></h3>
+					<?php wp_nav_menu([
+						'menu'            => 'usecases-menu',
+						'theme_location'  => 'usecases-menu',
+						'menu_class'      => '',
+					]); ?>
 				</div>
 				<div class="innerLinks">
-					<h3>Resources</h3>
-					<ul>
-						<li><a href="#">Blogs</a></li>
-						<li><a href="#">Testimonials</a></li>
-						<li><a href="#">Casestudies</a></li>
-						<li><a href="#">Webinars</a></li>
-						<li><a href="#">Industry Insights</a></li>
-						<li><a href="#">BGV Cost Calculator</a></li>
-					</ul>
+					<h3><?php echo get_field('bottom_fourth_menu_heading','option'); ?></h3>
+					<?php wp_nav_menu([
+						'menu'            => 'resources-menu',
+						'theme_location'  => 'resources-menu',
+						'menu_class'      => '',
+					]); ?>
 				</div>
 			</div>
-
 		</div>
 		<div class="copyright">
-			<h3>Baldor Technologies Pvt Ltd, CIN: U74900MH2011PTC291275</h3>
+			<h3><?php echo get_field('company_registration_text','option'); ?></h3>
 		</div>
 	</div>
 </footer>
