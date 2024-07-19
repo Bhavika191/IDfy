@@ -731,6 +731,21 @@ if ($(".enterpriseSection").length) {
     });
 }
 
+if ($("footer").length) {
+    $(window).on('resize scroll', function () {
+        if ($('footer').length) {
+            if ($('footer').isInViewport()) {
+                $(".Stickybtn").addClass("Stickybtnnewfooter")
+            }
+            else {
+                $(".Stickybtn").removeClass("Stickybtnnewfooter")
+            }
+        }
+    });
+}
+
+
+
 
 
 if ($(".onboardingJourneysec").length) {

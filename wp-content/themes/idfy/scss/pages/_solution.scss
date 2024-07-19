@@ -88,9 +88,9 @@
                     .slick-track{gap: 2px;}
                     .year-content{display: flex;align-items: center;justify-content: space-between;padding: 0px 200px;
                         .innerContent{width: 52%;
-                            h3{@include font100;font-family: $fonthelveticaneuebold;line-height: normal;color: $colorBlue;text-align: left;}
-                            h4{@include font48;font-family: $fonthelveticaneuebold;line-height: normal;color: #101010;text-align: left;margin-top: 20px}
-                            p{@include font24;font-family: $fonthelveticaneuelight;line-height: normal;color: $colorBlack;text-align: left;margin: 50px 0px 38px;width: 75%;}
+                            h3{@include font100;font-family: $fonthelveticaneuemedium;line-height: normal;color: $colorBlue;text-align: left;}
+                            h4{@include font48;font-family: $fonthelveticaneuemedium;line-height: normal;color: #101010;text-align: left;margin-top: 20px;letter-spacing: 1px}
+                            p{@include font24;font-family: $fonthelveticaneuelight;line-height: 130%;color: $colorBlack;text-align: left;margin: 50px 0px 38px;width: 75%;letter-spacing: 1px;}
                         }
                         .innerImg{width: 38%;position: relative;
                             .imgDiv{border-radius: 50%;overflow: hidden;}
@@ -115,7 +115,7 @@
                     .circle{border-radius: 50%;border:none;width: 42px;height: 42px;display: flex;align-items: center;justify-content: center;background: #fff;
                         span{background: #A7B0CA;border-radius: 50%;display: block;height: 20px;width: 20px;}
                     }
-                    h4{@include font24;font-family: $fonthelveticaneuebold;color:#838EAE;line-height: normal;margin-top: 20px;}
+                    h4{@include font24;font-family: $fonthelveticaneuemedium;color:#838EAE;line-height: normal;margin-top: 20px;}
                     &:nth-last-child(1){margin-right: 0;}
                     &:nth-last-child(1){
                         .progressSvg{display: none;}
@@ -495,9 +495,9 @@
                 }
                 .imgDiv{width: 45%;border-radius: 40px;overflow: hidden;}
                 .contentDiv{width: 45%;
-                    h4{@include font20;font-family: $fonthelveticaneuebold;line-height: 100%;text-transform: uppercase;color: $colorGray;letter-spacing: -0.8px;}
-                    h3{@include font40;font-family: $fonthelveticaneuebold;line-height: 125%;color: $colorGray;letter-spacing: -1.6px;margin: 10px 0px 24px;}
-                    p{@include font20;font-family: $fonthelveticaneuemedium;line-height: 150%;color: $colorGray;}
+                    h4{@include font20;font-family: $fonthelveticaneuemedium;line-height: 100%;text-transform: uppercase;color: $colorGray;letter-spacing: 0.5px;}
+                    h3{@include font40;font-family: $fonthelveticaneuemedium;line-height: 130%;color: $colorGray;letter-spacing: 1px;margin: 10px 0px 24px;}
+                    p{@include font20;font-family: $fonthelveticaneuelight;line-height: 150%;color: $colorGray;letter-spacing: 1;}
                     .solutionList{margin: 24px 0px 64px;
                         ul li{@include font20;font-family: $fonthelveticaneuemedium;line-height: normal;color: rgba(52, 52, 52, 0.8);display: flex;align-items: center;padding: 0px 0px 20px 32px;background: url("../images/right-icon.svg") no-repeat;
                            img{margin-right: 8px;width: 24px;height: 24px;}
@@ -516,8 +516,7 @@
                 .innerDiv{padding: 60px 70px;
                     .imgDiv{width: 46%;}
                     .contentDiv{width: 46%;
-                        h4{letter-spacing: 0px;}
-                        h3{letter-spacing: -1px;margin: 8px 0px 22px;}
+                        h3{margin: 8px 0px 22px;}
                         .solutionList{margin: 20px 0px 50px;
                             ul li{padding: 0px 0px 16px 32px;img{margin-right: 10px;width: 20px;height: 20px;}}
                         }
@@ -572,7 +571,7 @@
                     .imgDiv{width: 100%;}
                     .contentDiv{margin-top: 24px;width: 100%;
                         h4{line-height: 112%;}
-                        h3{margin: 12px 0px 24px;line-height: 100%;font-size: 32px;}
+                        h3{margin: 12px 0px 24px;line-height: 120%;font-size: 32px;}
                         p{line-height: 150%;}
                         .solutionList{margin: 24px 0px 48px;
                             ul li{padding: 0px 0px 22px 32px;img{margin-right: 8px;width: 24px;height: 24px;}}

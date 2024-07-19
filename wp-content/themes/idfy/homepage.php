@@ -332,9 +332,9 @@
                                             <img src="<?php echo esc_url($fraudimg['url']); ?>" loading="lazy" alt="<?php echo esc_attr($fraudimg['alt']); ?>" />
                                         <?php endif; ?>
                                     </div>
-                                    <div class="dotsInner">
+                                    <!-- <div class="dotsInner">
                                         <img src="<?php bloginfo('template_directory'); ?>/images/fraud-stories-dots.svg" alt="">
-                                    </div>
+                                    </div> -->
                                 </div>
                             <?php $counter = $counter + 1;
                             endwhile; ?>

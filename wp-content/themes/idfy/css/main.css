@@ -708,7 +708,7 @@ header .navbar .headerContent .nav-links .dropdown .dropdown-content .dropdown-w
   width: 20%;
 }
 header .navbar .headerContent .nav-links .dropdown .dropdown-content .dropdown-wrapper .dropdown-section-portal .portal-wrapper {
-  padding: 20px 58px;
+  padding: 20px 0px 20px 58px;
 }
 header .navbar .headerContent .nav-links .dropdown .dropdown-content .dropdown-wrapper .dropdown-section-portal .portal-wrapper h5 {
   font-size: 14px;
@@ -981,6 +981,9 @@ header .Stickybtn.Stickybtnnewtwo {
 header .Stickybtn.Stickybtnnewtwo a {
   box-shadow: 0px 10px 25px 8px rgba(0, 0, 0, 0.2);
 }
+header .Stickybtn.Stickybtnnewfooter {
+  display: none !important;
+}
 header .Stickybtn a {
   display: inline-flex;
   align-items: center;
@@ -1102,9 +1105,6 @@ header.navColor .Stickybtn a, header.scrolled .Stickybtn a {
   header .navbar .headerContent .nav-links .dropdown .dropdown-content .dropdown-wrapper .dropdown-section-portal {
     width: 20%;
   }
-  header .navbar .headerContent .nav-links .dropdown .dropdown-content .dropdown-wrapper .dropdown-section-portal .portal-wrapper {
-    padding: 20px 58px;
-  }
   header .navbar .headerContent .nav-links .dropdown .dropdown-content .dropdown-wrapper .dropdown-section-portal .portal-wrapper h5 {
     margin-bottom: 25px;
   }
@@ -1204,7 +1204,7 @@ header.navColor .Stickybtn a, header.scrolled .Stickybtn a {
     width: 20%;
   }
   header .navbar .headerContent .nav-links .dropdown .dropdown-content .dropdown-wrapper .dropdown-section-portal .portal-wrapper {
-    padding: 20px 54px;
+    padding: 20px 0px 20px 54px;
   }
   header .navbar .headerContent .nav-links .dropdown .dropdown-content .dropdown-wrapper .dropdown-section-portal .portal-wrapper h5 {
     margin-bottom: 24px;
@@ -1317,7 +1317,7 @@ header.navColor .Stickybtn a, header.scrolled .Stickybtn a {
     width: 20%;
   }
   header .navbar .headerContent .nav-links .dropdown .dropdown-content .dropdown-wrapper .dropdown-section-portal .portal-wrapper {
-    padding: 18px 50px;
+    padding: 18px 0px 18px 50px;
   }
   header .navbar .headerContent .nav-links .dropdown .dropdown-content .dropdown-wrapper .dropdown-section-portal .portal-wrapper h5 {
     margin-bottom: 22px;
@@ -1410,7 +1410,7 @@ header.navColor .Stickybtn a, header.scrolled .Stickybtn a {
     width: 20%;
   }
   header .navbar .headerContent .nav-links .dropdown .dropdown-content .dropdown-wrapper .dropdown-section-portal .portal-wrapper {
-    padding: 18px 40px;
+    padding: 18px 0px 18px 40px;
   }
   header .navbar .headerContent .nav-links .dropdown .dropdown-content .dropdown-wrapper .dropdown-section-portal .portal-wrapper h5 {
     margin-bottom: 20px;
@@ -1534,7 +1534,7 @@ header.navColor .Stickybtn a, header.scrolled .Stickybtn a {
     width: 20%;
   }
   header .navbar .headerContent .nav-links .dropdown .dropdown-content .dropdown-wrapper .dropdown-section-portal .portal-wrapper {
-    padding: 16px 40px;
+    padding: 16px 0px 16px 40px;
   }
   header .navbar .headerContent .nav-links .dropdown .dropdown-content .dropdown-wrapper .dropdown-section-portal .portal-wrapper h5 {
     margin-bottom: 20px;
@@ -1596,6 +1596,9 @@ header.navColor .Stickybtn a, header.scrolled .Stickybtn a {
   }
 }
 @media all and (max-width: 1280px) {
+  header .navbar .headerContent .nav-links .dropdown .dropdown-content .dropdown-wrapper .dropdown-section-portal .portal-wrapper {
+    padding: 16px 0px 16px 30px;
+  }
   header .navbar .headerContent .header-elements .search-icon svg {
     width: 22px;
     height: 22px;
@@ -1680,7 +1683,7 @@ header.navColor .Stickybtn a, header.scrolled .Stickybtn a {
     width: 20%;
   }
   header .navbar .headerContent .nav-links .dropdown .dropdown-content .dropdown-wrapper .dropdown-section-portal .portal-wrapper {
-    padding: 14px 36px;
+    padding: 14px 0px 14px 36px;
   }
   header .navbar .headerContent .nav-links .dropdown .dropdown-content .dropdown-wrapper .dropdown-section-portal .portal-wrapper h5 {
     margin-bottom: 20px;
@@ -3560,7 +3563,7 @@ footer .footerWrapper .copyright h3 {
 }
 .yearTimeline .timelineWrapper .timelineData .contentDiv .yearContentdata .year-content .innerContent h3 {
   font-size: 100px;
-  font-family: "HelveticaNeueBold";
+  font-family: "HelveticaNeueMedium";
   line-height: normal;
   color: #1C43B9;
   text-align: left;
@@ -3587,11 +3590,12 @@ footer .footerWrapper .copyright h3 {
 }
 .yearTimeline .timelineWrapper .timelineData .contentDiv .yearContentdata .year-content .innerContent h4 {
   font-size: 48px;
-  font-family: "HelveticaNeueBold";
+  font-family: "HelveticaNeueMedium";
   line-height: normal;
   color: #101010;
   text-align: left;
   margin-top: 20px;
+  letter-spacing: 1px;
 }
 @media screen and (max-width: 1600px) {
   .yearTimeline .timelineWrapper .timelineData .contentDiv .yearContentdata .year-content .innerContent h4 {
@@ -3606,11 +3610,12 @@ footer .footerWrapper .copyright h3 {
 .yearTimeline .timelineWrapper .timelineData .contentDiv .yearContentdata .year-content .innerContent p {
   font-size: 24px;
   font-family: "HelveticaNeueLight";
-  line-height: normal;
+  line-height: 130%;
   color: #000000;
   text-align: left;
   margin: 50px 0px 38px;
   width: 75%;
+  letter-spacing: 1px;
 }
 @media screen and (max-width: 1600px) {
   .yearTimeline .timelineWrapper .timelineData .contentDiv .yearContentdata .year-content .innerContent p {
@@ -3719,7 +3724,7 @@ footer .footerWrapper .copyright h3 {
 }
 .yearTimeline .timelineWrapper .timelineData .timeline .timeline-year h4 {
   font-size: 24px;
-  font-family: "HelveticaNeueBold";
+  font-family: "HelveticaNeueMedium";
   color: #838EAE;
   line-height: normal;
   margin-top: 20px;
@@ -4380,11 +4385,11 @@ footer .footerWrapper .copyright h3 {
 }
 .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .contentDiv h4 {
   font-size: 20px;
-  font-family: "HelveticaNeueBold";
+  font-family: "HelveticaNeueMedium";
   line-height: 100%;
   text-transform: uppercase;
   color: #343434;
-  letter-spacing: -0.8px;
+  letter-spacing: 0.5px;
 }
 @media screen and (max-width: 1600px) {
   .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .contentDiv h4 {
@@ -4398,10 +4403,10 @@ footer .footerWrapper .copyright h3 {
 }
 .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .contentDiv h3 {
   font-size: 40px;
-  font-family: "HelveticaNeueBold";
-  line-height: 125%;
+  font-family: "HelveticaNeueMedium";
+  line-height: 130%;
   color: #343434;
-  letter-spacing: -1.6px;
+  letter-spacing: 1px;
   margin: 10px 0px 24px;
 }
 @media screen and (max-width: 1600px) {
@@ -4421,9 +4426,10 @@ footer .footerWrapper .copyright h3 {
 }
 .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .contentDiv p {
   font-size: 20px;
-  font-family: "HelveticaNeueMedium";
+  font-family: "HelveticaNeueLight";
   line-height: 150%;
   color: #343434;
+  letter-spacing: 1;
 }
 @media screen and (max-width: 1600px) {
   .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .contentDiv p {
@@ -4483,11 +4489,7 @@ footer .footerWrapper .copyright h3 {
   .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .contentDiv {
     width: 46%;
   }
-  .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .contentDiv h4 {
-    letter-spacing: 0px;
-  }
   .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .contentDiv h3 {
-    letter-spacing: -1px;
     margin: 8px 0px 22px;
   }
   .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .contentDiv .solutionList {
@@ -4586,7 +4588,7 @@ footer .footerWrapper .copyright h3 {
   }
   .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .contentDiv h3 {
     margin: 12px 0px 24px;
-    line-height: 100%;
+    line-height: 120%;
     font-size: 32px;
   }
   .ourSolutions .solutionWrapper .innerDatadiv .innerDiv .contentDiv p {
@@ -7773,6 +7775,9 @@ footer .footerWrapper .copyright h3 {
   .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDivclient {
     width: 62%;
     padding-right: 80px;
+  }
+  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDivclient h3 {
+    letter-spacing: 1.5px;
   }
   .clientsSection .innerWrapper .clientSlider .slick-dots {
     bottom: -50px;
