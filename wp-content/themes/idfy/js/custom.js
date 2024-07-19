@@ -720,6 +720,19 @@ if ($(".productfamSection").length) {
 }
 
 
+
+if ($(".enterpriseSection").length) {
+    $(window).on('resize scroll', function () {
+        if ($('.enterpriseSection').length) {
+            if ($('.enterpriseSection').isInViewport()) {
+                $(".Stickybtn").addClass("Stickybtnnewtwo")
+            }
+        }
+    });
+}
+
+
+
 if ($(".onboardingJourneysec").length) {
     $(window).on('resize scroll', function () {
         if ($('.onboardingJourneysec').length) {
@@ -743,6 +756,7 @@ if ($(".onboardingJourneysec").length) {
         }
     });
 }
+
 
 
 
@@ -987,50 +1001,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-$.fn.isInViewport = function () {
-    var elementTop = $(this).offset().top;
-    var elementBottom = elementTop + $(this).outerHeight();
-    var viewportTop = $(window).scrollTop();
-    var viewportBottom = viewportTop + $(window).height();
-    return elementBottom > viewportTop && elementTop < viewportBottom;
-};
 
-if ($(".productfamSection").length) {
-    $(window).on('resize scroll', function () {
-        if ($('.productfamSection').length) {
-            if ($('.productfamSection').isInViewport()) {
-                setTimeout(() => {
-                    $("header").addClass("productHeader")
-                }, 1000);
-            }
-            else {
-                setTimeout(() => {
-                    $("header").removeClass("productHeader")
-                }, 1000);
-            }
-
-        }
-    });
-}
-
-
-if ($(".onboardingJourneysec").length) {
-    $(window).on('resize scroll', function () {
-        if ($('.onboardingJourneysec').length) {
-            if ($('.onboardingJourneysec').isInViewport()) {
-                setTimeout(() => {
-                    $(".onboardingJourneysec").addClass("onboardingJourneysecanime")
-                }, 1000);
-            }
-            else {
-                setTimeout(() => {
-                    $(".onboardingJourneysec").removeClass("onboardingJourneysecanime")
-                }, 1000);
-            }
-
-        }
-    });
-}
 
 
 
@@ -1052,4 +1023,11 @@ if ($('.imageDiv').hasClass('slick-current')) {
     $('.imageDiv').addClass('slickDots');
 } else {
     $('.imageDiv').removeClass('slickDots');
+}
+
+
+if ($('body').hasClass('page-template-homepage')) {
+    $('.Stickybtn').addClass('Stickybtnnew');
+} else {
+    $('.Stickybtn').removeClass('Stickybtnnew');
 }

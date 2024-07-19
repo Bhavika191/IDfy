@@ -228,14 +228,21 @@ button {
 /************************************************ Fonts **************************************************/
 @font-face {
     font-family: 'HelveticaNeueBlack';
-    src: url('fonts/HelveticaNeueBlack.woff2') format('woff2'),
-        url('fonts/HelveticaNeueBlack.woff') format('woff');
+    src: url('fonts/NeueHaasDisplayBlack.eot') format('eot'),
+        url('fonts/NeueHaasDisplay-Black.svg') format('svg'),
+        url('fonts/NeueHaasDisplay-Black.ttf') format('ttf'),
+        url('fonts/NeueHaasDisplay-Black.woff') format('woff'),
+        url('fonts/NeueHaasDisplayBlack.woff2') format('woff2');
 }
 @font-face {
     font-family: 'HelveticaNeueBold';
-    src: url('fonts/HelveticaNeueBold.woff2') format('woff2'),
-        url('fonts/HelveticaNeueBold.woff') format('woff');
+    src: url('fonts/NeueHaasDisplayBold.eot') format('eot'),
+        url('fonts/NeueHaasDisplay-Bold.svg') format('svg'),
+        url('fonts/NeueHaasDisplay-Bold.ttf') format('ttf'),
+        url('fonts/NeueHaasDisplay-Bold.woff') format('woff'),
+        url('fonts/NeueHaasDisplayBold.woff2') format('woff2');
 }
+
 @font-face {
     font-family: 'HelveticaNeueLight';
     src: url('fonts/HelveticaNeueLight.woff2') format('woff2'),
@@ -243,18 +250,36 @@ button {
 }
 @font-face {
     font-family: 'HelveticaNeueMedium';
-    src: url('fonts/HelveticaNeueMedium.woff2') format('woff2'),
-        url('fonts/HelveticaNeueMedium.woff') format('woff');
+    src: url('fonts/NeueHaasDisplayMediu.eot') format('eot'),
+        url('fonts/NeueHaasDisplay-Mediu.svg') format('svg'),
+        url('fonts/NeueHaasDisplay-Mediu.ttf') format('ttf'),
+        url('fonts/NeueHaasDisplay-Mediu.woff') format('woff'),
+        url('fonts/NeueHaasDisplayMediu.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'HelveticaNeueRoman';
+    src: url('fonts/NeueHaasDisplayRoman.eot') format('eot'),
+        url('fonts/NeueHaasDisplay-Roman.svg') format('svg'),
+        url('fonts/NeueHaasDisplay-Roman.ttf') format('ttf'),
+        url('fonts/NeueHaasDisplay-Roman.woff') format('woff'),
+        url('fonts/NeueHaasDisplayRoman.woff2') format('woff2');
 }
 @font-face {
     font-family: 'HelveticaNeueThin';
-    src: url('fonts/HelveticaNeueThin.woff2') format('woff2'),
-        url('fonts/HelveticaNeueThin.woff') format('woff');
+    src: url('fonts/NeueHaasDisplayThin.eot') format('eot'),
+        url('fonts/NeueHaasDisplay-Thin.svg') format('svg'),
+        url('fonts/NeueHaasDisplay-Thin.ttf') format('ttf'),
+        url('fonts/NeueHaasDisplay-Thin.woff') format('woff'),
+        url('fonts/NeueHaasDisplayThin.woff2') format('woff2');
 }
 @font-face {
     font-family: 'HelveticaNeueUltraLight';
-    src: url('fonts/HelveticaNeueUltraLight.woff2') format('woff2'),
-        url('fonts/HelveticaNeueUltraLight.woff') format('woff');
+    src: url('fonts/NeueHaasDisplayXThin.eot') format('eot'),
+        url('fonts/NeueHaasDisplay-XThin.svg') format('svg'),
+        url('fonts/NeueHaasDisplay-XThin.ttf') format('ttf'),
+        url('fonts/NeueHaasDisplay-XThin.woff') format('woff'),
+        url('fonts/NeueHaasDisplayXThin.woff2') format('woff2');
 }
 
 

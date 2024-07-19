@@ -149,6 +149,8 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
         }
     }
     .Stickybtn{position: fixed;bottom: 40px;z-index: 99;right: 80px;
+        &.Stickybtnnew{display: none ;}
+        &.Stickybtnnewtwo{display: block !important; a{box-shadow: 0px 10px 25px 8px #00000033;}}
         a{display: inline-flex;align-items: center;justify-content: center;height: 50px;width: 50px;border-radius: 50%;background: #fff;}
     }
     &.navColor, &.scrolled{background: #fff;box-shadow: 0px 6px 25px 0px #00000033;
@@ -871,6 +873,7 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
         }
     }
 }
+
 
 .bodyNav{
     header .navbar{

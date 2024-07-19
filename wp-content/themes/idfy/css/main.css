@@ -226,11 +226,11 @@ button {
 /************************************************ Fonts **************************************************/
 @font-face {
   font-family: "HelveticaNeueBlack";
-  src: url("fonts/HelveticaNeueBlack.woff2") format("woff2"), url("fonts/HelveticaNeueBlack.woff") format("woff");
+  src: url("fonts/NeueHaasDisplayBlack.eot") format("eot"), url("fonts/NeueHaasDisplay-Black.svg") format("svg"), url("fonts/NeueHaasDisplay-Black.ttf") format("ttf"), url("fonts/NeueHaasDisplay-Black.woff") format("woff"), url("fonts/NeueHaasDisplayBlack.woff2") format("woff2");
 }
 @font-face {
   font-family: "HelveticaNeueBold";
-  src: url("fonts/HelveticaNeueBold.woff2") format("woff2"), url("fonts/HelveticaNeueBold.woff") format("woff");
+  src: url("fonts/NeueHaasDisplayBold.eot") format("eot"), url("fonts/NeueHaasDisplay-Bold.svg") format("svg"), url("fonts/NeueHaasDisplay-Bold.ttf") format("ttf"), url("fonts/NeueHaasDisplay-Bold.woff") format("woff"), url("fonts/NeueHaasDisplayBold.woff2") format("woff2");
 }
 @font-face {
   font-family: "HelveticaNeueLight";
@@ -238,15 +238,19 @@ button {
 }
 @font-face {
   font-family: "HelveticaNeueMedium";
-  src: url("fonts/HelveticaNeueMedium.woff2") format("woff2"), url("fonts/HelveticaNeueMedium.woff") format("woff");
+  src: url("fonts/NeueHaasDisplayMediu.eot") format("eot"), url("fonts/NeueHaasDisplay-Mediu.svg") format("svg"), url("fonts/NeueHaasDisplay-Mediu.ttf") format("ttf"), url("fonts/NeueHaasDisplay-Mediu.woff") format("woff"), url("fonts/NeueHaasDisplayMediu.woff2") format("woff2");
+}
+@font-face {
+  font-family: "HelveticaNeueRoman";
+  src: url("fonts/NeueHaasDisplayRoman.eot") format("eot"), url("fonts/NeueHaasDisplay-Roman.svg") format("svg"), url("fonts/NeueHaasDisplay-Roman.ttf") format("ttf"), url("fonts/NeueHaasDisplay-Roman.woff") format("woff"), url("fonts/NeueHaasDisplayRoman.woff2") format("woff2");
 }
 @font-face {
   font-family: "HelveticaNeueThin";
-  src: url("fonts/HelveticaNeueThin.woff2") format("woff2"), url("fonts/HelveticaNeueThin.woff") format("woff");
+  src: url("fonts/NeueHaasDisplayThin.eot") format("eot"), url("fonts/NeueHaasDisplay-Thin.svg") format("svg"), url("fonts/NeueHaasDisplay-Thin.ttf") format("ttf"), url("fonts/NeueHaasDisplay-Thin.woff") format("woff"), url("fonts/NeueHaasDisplayThin.woff2") format("woff2");
 }
 @font-face {
   font-family: "HelveticaNeueUltraLight";
-  src: url("fonts/HelveticaNeueUltraLight.woff2") format("woff2"), url("fonts/HelveticaNeueUltraLight.woff") format("woff");
+  src: url("fonts/NeueHaasDisplayXThin.eot") format("eot"), url("fonts/NeueHaasDisplay-XThin.svg") format("svg"), url("fonts/NeueHaasDisplay-XThin.ttf") format("ttf"), url("fonts/NeueHaasDisplay-XThin.woff") format("woff"), url("fonts/NeueHaasDisplayXThin.woff2") format("woff2");
 }
 /************************************************ Common CSS **************************************************/
 body {
@@ -967,6 +971,15 @@ header .Stickybtn {
   bottom: 40px;
   z-index: 99;
   right: 80px;
+}
+header .Stickybtn.Stickybtnnew {
+  display: none;
+}
+header .Stickybtn.Stickybtnnewtwo {
+  display: block !important;
+}
+header .Stickybtn.Stickybtnnewtwo a {
+  box-shadow: 0px 10px 25px 8px rgba(0, 0, 0, 0.2);
 }
 header .Stickybtn a {
   display: inline-flex;
@@ -2362,15 +2375,20 @@ footer .footerWrapper .topFooter {
   margin-bottom: 54px;
 }
 footer .footerWrapper .topFooter h3 {
-  font-size: 18px;
-  font-family: "HelveticaNeueBold";
+  font-size: 24px;
+  font-family: "HelveticaNeueMedium";
   line-height: normal;
-  letter-spacing: 0.72px;
+  letter-spacing: 1px;
   color: #FFFFFF;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1600px) {
   footer .footerWrapper .topFooter h3 {
-    font-size: 16px;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  footer .footerWrapper .topFooter h3 {
+    font-size: 18px;
   }
 }
 footer .footerWrapper .topFooter .footerlogo {
@@ -2417,18 +2435,28 @@ footer .footerWrapper .topFooter .footerLinks .innerLinks ul {
 }
 footer .footerWrapper .topFooter .footerLinks .innerLinks ul li {
   width: 48%;
-  margin-bottom: 14px;
+  margin-bottom: 20px;
 }
 footer .footerWrapper .topFooter .footerLinks .innerLinks ul li:last-child {
   margin-bottom: 0px;
 }
 footer .footerWrapper .topFooter .footerLinks .innerLinks ul li a {
-  font-size: 12px;
+  font-size: 16px;
   font-family: "HelveticaNeueLight";
   color: #D0D0D0;
   text-decoration: underline;
   line-height: normal;
   word-wrap: break-word;
+}
+@media screen and (max-width: 1600px) {
+  footer .footerWrapper .topFooter .footerLinks .innerLinks ul li a {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  footer .footerWrapper .topFooter .footerLinks .innerLinks ul li a {
+    font-size: 12px;
+  }
 }
 footer .footerWrapper .topFooter .footerLinks .innerLinks ul li a:hover, footer .footerWrapper .topFooter .footerLinks .innerLinks ul li a:focus, footer .footerWrapper .topFooter .footerLinks .innerLinks ul li a:visited, footer .footerWrapper .topFooter .footerLinks .innerLinks ul li a:active {
   color: #D0D0D0;
@@ -2437,7 +2465,7 @@ footer .footerWrapper .topFooter .footerForm {
   width: 25%;
 }
 footer .footerWrapper .topFooter .footerForm .checkboxForm {
-  margin-top: 20px;
+  margin-top: 28px;
 }
 footer .footerWrapper .topFooter .footerForm .checkboxForm .form-group {
   margin-bottom: 14px;
@@ -2589,15 +2617,20 @@ footer .footerWrapper .footerBottom {
   margin-bottom: 30px;
 }
 footer .footerWrapper .footerBottom h3 {
-  font-size: 18px;
-  font-family: "HelveticaNeueBold";
+  font-size: 24px;
+  font-family: "HelveticaNeueMedium";
   line-height: normal;
-  letter-spacing: 0.72px;
+  letter-spacing: 1px;
   color: #FFFFFF;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1600px) {
   footer .footerWrapper .footerBottom h3 {
-    font-size: 16px;
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  footer .footerWrapper .footerBottom h3 {
+    font-size: 18px;
   }
 }
 footer .footerWrapper .footerBottom .footerLinks {
@@ -2626,18 +2659,28 @@ footer .footerWrapper .footerBottom .footerLinks .innerLinks ul {
 }
 footer .footerWrapper .footerBottom .footerLinks .innerLinks ul li {
   width: 48%;
-  margin-bottom: 14px;
+  margin-bottom: 20px;
 }
 footer .footerWrapper .footerBottom .footerLinks .innerLinks ul li:last-child {
   margin-bottom: 0px;
 }
 footer .footerWrapper .footerBottom .footerLinks .innerLinks ul li a {
-  font-size: 12px;
+  font-size: 16px;
   font-family: "HelveticaNeueLight";
   color: #D0D0D0;
   text-decoration: underline;
   line-height: normal;
   word-wrap: break-word;
+}
+@media screen and (max-width: 1600px) {
+  footer .footerWrapper .footerBottom .footerLinks .innerLinks ul li a {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  footer .footerWrapper .footerBottom .footerLinks .innerLinks ul li a {
+    font-size: 12px;
+  }
 }
 footer .footerWrapper .footerBottom .footerLinks .innerLinks ul li a:hover, footer .footerWrapper .footerBottom .footerLinks .innerLinks ul li a:focus, footer .footerWrapper .footerBottom .footerLinks .innerLinks ul li a:visited, footer .footerWrapper .footerBottom .footerLinks .innerLinks ul li a:active {
   color: #D0D0D0;
@@ -4694,6 +4737,9 @@ footer .footerWrapper .copyright h3 {
   height: 100%;
   object-fit: cover;
 }
+.bannerSectionhp .bannerWrapper .bannerBg .mblVideo {
+  display: none;
+}
 .bannerSectionhp .bannerWrapper .bannerContent {
   position: absolute;
   top: 50%;
@@ -4702,10 +4748,10 @@ footer .footerWrapper .copyright h3 {
 }
 .bannerSectionhp .bannerWrapper .bannerContent h1 {
   font-size: 100px;
-  font-family: "HelveticaNeueBold";
+  font-family: "HelveticaNeueLight";
   color: #FFFFFF;
   text-transform: capitalize;
-  letter-spacing: -3px;
+  letter-spacing: 1px;
   line-height: 100%;
 }
 @media screen and (max-width: 1600px) {
@@ -4734,6 +4780,8 @@ footer .footerWrapper .copyright h3 {
   color: rgba(255, 255, 255, 0.8);
   line-height: 112%;
   margin-top: 48px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
 }
 @media screen and (max-width: 1600px) {
   .bannerSectionhp .bannerWrapper .bannerContent h2 {
@@ -4779,7 +4827,7 @@ footer .footerWrapper .copyright h3 {
   font-size: 18px;
   font-family: "HelveticaNeueMedium";
   color: #FFFFFF;
-  letter-spacing: 0.2px;
+  letter-spacing: 1px;
   line-height: normal;
   text-align: center;
   margin-bottom: 10px;
@@ -4818,12 +4866,8 @@ footer .footerWrapper .copyright h3 {
   .bannerSectionhp {
     margin-bottom: 120px;
   }
-  .bannerSectionhp .bannerWrapper .bannerContent h1 {
-    letter-spacing: 0px;
-  }
   .bannerSectionhp .bannerWrapper .bannerContent h2 {
     margin-top: 40px;
-    letter-spacing: 2px;
   }
   .bannerSectionhp .bannerWrapper .bannerbtmLinks {
     padding: 0px 50px;
@@ -4831,7 +4875,7 @@ footer .footerWrapper .copyright h3 {
   }
   .bannerSectionhp .bannerWrapper .bannerbtmLinks ul li {
     padding-right: 40px;
-    letter-spacing: 1px;
+    letter-spacing: 1.4px;
     font-size: 16px;
   }
   .bannerSectionhp .bannerWrapper .bannerbtmLinks ul li::before {
@@ -4865,6 +4909,9 @@ footer .footerWrapper .copyright h3 {
   .bannerSectionhp {
     margin-bottom: 80px;
   }
+  .bannerSectionhp .bannerWrapper .bannerContent h1 {
+    letter-spacing: 2px;
+  }
   .bannerSectionhp .bannerWrapper .bannerContent h2 {
     margin-top: 24px;
   }
@@ -4880,6 +4927,20 @@ footer .footerWrapper .copyright h3 {
     right: 9px;
     width: 7px;
     height: 7px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .bannerSectionhp .bannerWrapper .bannerContent h2 {
+    letter-spacing: 1px;
+  }
+  .bannerSectionhp .bannerWrapper .bannerbtmLink ul li {
+    letter-spacing: 1px;
+  }
+  .bannerSectionhp .bannerWrapper .bannerBg .mblVideo {
+    display: block;
+  }
+  .bannerSectionhp .bannerWrapper .bannerBg .desktopVideo {
+    display: none;
   }
 }
 @media screen and (max-width: 820px) {
@@ -4977,7 +5038,7 @@ footer .footerWrapper .copyright h3 {
   font-size: 48px;
   font-family: "HelveticaNeueLight";
   line-height: 100%;
-  letter-spacing: 0px;
+  letter-spacing: 1px;
   color: #000000;
   letter-spacing: 1px;
   text-transform: capitalize;
@@ -5029,9 +5090,6 @@ footer .footerWrapper .copyright h3 {
   }
   .enterpriseSection .enterpriseWrapper .secHeading {
     margin-bottom: 120px;
-  }
-  .enterpriseSection .enterpriseWrapper .secHeading h2 {
-    letter-spacing: 1px;
   }
   .enterpriseSection .enterpriseWrapper .secHeading::before {
     width: 250px;
@@ -5135,9 +5193,9 @@ footer .footerWrapper .copyright h3 {
 }
 .pioneerSlidersec .pionnerwrapper .secHeading h2 {
   font-size: 160px;
-  font-family: "HelveticaNeueBold";
+  font-family: "HelveticaNeueMedium";
   text-transform: capitalize;
-  letter-spacing: -4px;
+  letter-spacing: 2px;
   line-height: normal;
   color: #343434;
   margin-left: -10px;
@@ -5174,10 +5232,11 @@ footer .footerWrapper .copyright h3 {
 }
 .pioneerSlidersec .pionnerwrapper .pioneerSlider .innerSlides .contentDiv h3 {
   font-size: 48px;
-  font-family: "HelveticaNeueBold";
-  letter-spacing: -1px;
-  line-height: 66%;
+  font-family: "HelveticaNeueMedium";
+  letter-spacing: 1px;
+  line-height: 110%;
   color: #343434;
+  text-transform: uppercase;
 }
 @media screen and (max-width: 1600px) {
   .pioneerSlidersec .pionnerwrapper .pioneerSlider .innerSlides .contentDiv h3 {
@@ -5192,7 +5251,7 @@ footer .footerWrapper .copyright h3 {
 .pioneerSlidersec .pionnerwrapper .pioneerSlider .innerSlides .contentDiv p {
   font-size: 24px;
   font-family: "HelveticaNeueLight";
-  line-height: normal;
+  line-height: 140%;
   color: #343434;
   margin-top: 24px;
   width: 60%;
@@ -5304,9 +5363,6 @@ footer .footerWrapper .copyright h3 {
     width: 50%;
     padding-left: 190px;
   }
-  .pioneerSlidersec .pionnerwrapper .secHeading h2 {
-    letter-spacing: -2px;
-  }
   .pioneerSlidersec .pionnerwrapper .pioneerSlider .innerSlides {
     padding: 0px 190px;
   }
@@ -5314,7 +5370,7 @@ footer .footerWrapper .copyright h3 {
     width: 45%;
   }
   .pioneerSlidersec .pionnerwrapper .pioneerSlider .innerSlides .contentDiv h3 {
-    letter-spacing: 0px;
+    letter-spacing: 0.5px;
   }
   .pioneerSlidersec .pionnerwrapper .pioneerSlider .innerSlides .contentDiv p {
     margin-top: 20px;
@@ -5657,7 +5713,7 @@ footer .footerWrapper .copyright h3 {
   font-family: "HelveticaNeueLight";
   text-transform: capitalize;
   line-height: 100%;
-  letter-spacing: 0px;
+  letter-spacing: 1px;
   color: #343434;
   text-align: center;
   position: relative;
@@ -5759,7 +5815,7 @@ footer .footerWrapper .copyright h3 {
 }
 .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney h3 {
   font-size: 32px;
-  font-family: "HelveticaNeueBold";
+  font-family: "HelveticaNeueMedium";
   color: #1C43B9;
   line-height: normal;
   margin-bottom: 24px;
@@ -5813,7 +5869,7 @@ footer .footerWrapper .copyright h3 {
 }
 .onboardingJourneysec .innerWrapper .journeyData .contentDivjourney .innerBoxesjourney .journeyinnerData h4 {
   font-size: 24px;
-  font-family: "HelveticaNeueBold";
+  font-family: "HelveticaNeueMedium";
   color: #4D4D4D;
   line-height: 133%;
   margin-bottom: 16px;
@@ -6292,21 +6348,24 @@ footer .footerWrapper .copyright h3 {
   }
   .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxesjourneyslide h3 {
     font-size: 32px;
-    font-family: "HelveticaNeueBold";
+    font-family: "HelveticaNeueMedium";
     color: #1C43B9;
     line-height: normal;
     position: relative;
   }
+  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxesjourneyslide .journeyinnerData {
+    margin-top: 10px;
+  }
   .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxesjourneyslide .journeyinnerData h4 {
     font-size: 24px;
-    font-family: "HelveticaNeueBold";
+    font-family: "HelveticaNeueMedium";
     color: #000;
     line-height: 133%;
     margin-bottom: 10px;
   }
   .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxesjourneyslide .journeyinnerData ul li {
     font-size: 24px;
-    font-family: "HelveticaNeueMedium";
+    font-family: "HelveticaNeueLight";
     color: #000;
     line-height: 160%;
     position: relative;
@@ -6446,29 +6505,23 @@ footer .footerWrapper .copyright h3 {
   .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider {
     padding: 0px 20px;
   }
+  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxesjourneyslide {
+    padding: 15px 8px 15px 0px;
+  }
   .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxesjourneyslide h3 {
     font-size: 24px;
+  }
+  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxesjourneyslide .journeyinnerData {
+    margin-top: 6px;
   }
   .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxesjourneyslide .journeyinnerData h4 {
     font-size: 16px;
   }
   .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxesjourneyslide .journeyinnerData ul li {
-    font-size: 16px;
-  }
-}
-@media screen and (max-width: 720px) and (max-width: 1600px) {
-  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxesjourneyslide .journeyinnerData ul li {
     font-size: 14px;
   }
-}
-@media screen and (max-width: 720px) and (max-width: 1400px) {
-  .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxesjourneyslide .journeyinnerData ul li {
-    font-size: 12px;
-  }
-}
-@media screen and (max-width: 720px) {
   .onboardingJourneysec .innerWrapper .onboardingSliderData .onboardingSlider .innerBoxesjourneyslide .journeyinnerData ul li::before {
-    top: 5px;
+    top: 7px;
   }
 }
 
@@ -6983,7 +7036,7 @@ footer .footerWrapper .copyright h3 {
   font-family: "HelveticaNeueLight";
   text-transform: capitalize;
   line-height: 100%;
-  letter-spacing: 0px;
+  letter-spacing: 1px;
   color: #343434;
   text-align: center;
   position: relative;
@@ -7011,13 +7064,12 @@ footer .footerWrapper .copyright h3 {
 }
 .fraudstoriesSec .innerWrapper .secHeading p {
   font-size: 24px;
-  line-height: 141%;
   font-family: "HelveticaNeueLight";
-  line-height: normal;
   margin: 40px auto 0px;
   color: #343434;
   text-align: center;
-  width: 50%;
+  width: 60%;
+  line-height: 130%;
 }
 @media screen and (max-width: 1600px) {
   .fraudstoriesSec .innerWrapper .secHeading p {
@@ -7065,9 +7117,10 @@ footer .footerWrapper .copyright h3 {
 }
 .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData p, .fraudstoriesSec .innerWrapper .boxContent .box-container #boxesData ul li {
   font-size: 24px;
+  letter-spacing: 1px;
   transition: 0.7s all ease-in-out;
   font-family: "HelveticaNeueLight";
-  line-height: 133%;
+  line-height: 126%;
   color: #080808;
   width: 94%;
 }
@@ -7387,7 +7440,7 @@ footer .footerWrapper .copyright h3 {
   font-size: 24px;
   font-family: "HelveticaNeueLight";
   letter-spacing: 1.7px;
-  line-height: normal;
+  line-height: 125%;
   color: #FFFFFF;
   margin-bottom: 30px;
 }
@@ -7514,7 +7567,7 @@ footer .footerWrapper .copyright h3 {
   font-family: "HelveticaNeueLight";
   text-transform: capitalize;
   line-height: 100%;
-  letter-spacing: 0px;
+  letter-spacing: 1px;
   color: #343434;
   text-align: center;
 }
@@ -7616,8 +7669,8 @@ footer .footerWrapper .copyright h3 {
 .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDivclient h3 {
   font-size: 38px;
   font-family: "HelveticaNeueLight";
-  letter-spacing: 1px;
-  line-height: normal;
+  letter-spacing: 2px;
+  line-height: 120%;
   color: #343434;
   text-align: left;
   position: relative;
@@ -7818,6 +7871,9 @@ footer .footerWrapper .copyright h3 {
   .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDivclient {
     width: 68%;
     padding-right: 40px;
+  }
+  .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDivclient h3 {
+    letter-spacing: 1.5px;
   }
   .clientsSection .innerWrapper .clientSlider .clientsliderSlides .contentDivclient h3 span img {
     width: 20px;
@@ -8328,4 +8384,4 @@ footer .footerWrapper .copyright h3 {
   .awardscertificateSec .innerWrapper .awardCertiInner .certificateDiv .imgBox .contentDivaward {
     margin-top: 16px;
   }
-}
+}/*# sourceMappingURL=main.css.map */
