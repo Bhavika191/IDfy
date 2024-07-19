@@ -1,12 +1,15 @@
 <?php get_header(); /* Template Name: Homepage */ ?>
 
-<section class="bannerSectionhp">
+<section class="bannerSectionhp" id="bannerSectionhp">
     <?php if (have_rows('banner_section')) : ?>
         <?php while (have_rows('banner_section')) : the_row(); ?>
             <div class="bannerWrapper">
                 <div class="bannerBg">
-                    <video autoplay muted loop playsinline preload="metadata">
+                    <video autoplay muted loop playsinline preload="metadata" class="desktopVideo">
                         <source src="<?php echo get_sub_field('banner_video'); ?>" type="video/mp4">
+                    </video>
+                    <video autoplay muted loop playsinline preload="metadata" class="mblVideo">
+                        <source src="<?php echo get_sub_field('banner_mobile_video'); ?>" type="video/mp4">
                     </video>
                 </div>
                 <div class="bannerContent">

@@ -44,7 +44,7 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                             }
                             .dropdown-section-portal{border-left:1px solid #D8D8D8;width:20%;
                                 .portal-wrapper{padding: 20px 58px;
-                                    h5{@include font14;font-weight: 700;line-height: 142.857%;text-transform: uppercase;color:$colorGray;font-family: $fonthelveticaneuemedium;margin-bottom: 25px;}
+                                    h5{@include font14;font-weight: 700;line-height: 142.857%;text-transform: uppercase;color:#808080;font-family: $fonthelveticaneuemedium;margin-bottom: 25px;}
                                     ul{
                                         li{
                                             a{@include font20;font-weight: 500;line-height: 100%;font-family: $fonthelveticaneuemedium;color: $colorBlack;margin-bottom: 44px;display: block;text-align: left;text-transform: capitalize;
@@ -149,6 +149,8 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
         }
     }
     .Stickybtn{position: fixed;bottom: 40px;z-index: 99;right: 80px;
+        &.Stickybtnnew{display: none ;}
+        &.Stickybtnnewtwo{display: block !important; a{box-shadow: 0px 10px 25px 8px #00000033;}}
         a{display: inline-flex;align-items: center;justify-content: center;height: 50px;width: 50px;border-radius: 50%;background: #fff;}
     }
     &.navColor, &.scrolled{background: #fff;box-shadow: 0px 6px 25px 0px #00000033;
@@ -184,16 +186,15 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                         }
                     }
                 }
-               
-            }
-            .hamburger-menu {
-                .button_toggle {
-                  span {background: #343434;
-                    &:nth-of-type(1) {background: #343434;}
-                    &:nth-of-type(2) {background: #343434;}
+                .hamburger-menu {
+                    .button_toggle {
+                      span {background: #343434;
+                        &:nth-of-type(1) {background: #343434;}
+                        &:nth-of-type(2) {background: #343434;}
+                      }
+                    }
                   }
-                }
-              }
+            }
         }
         .Stickybtn a{box-shadow: 0px 10px 25px 8px #00000033;}
     }
@@ -791,9 +792,9 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
                     &::before {content: '';position: absolute;top: 0;left: 0;right: 0;bottom: 0;width: 100%;height: 100%;z-index: -1;}
                     &.open {right: 0;background: #fff;flex-direction: column;}
                     &.searchOverlay{&::after{content: "";position: absolute;width: 100%;height: 100%;top: 0;left: 0;right: 0;bottom: 0;background: rgba(0, 0, 0, 0.5);z-index: 999;}}
-                    .scroll-nav{position: relative;padding: 24px;width: 100%;height: 100%;
+                    .scroll-nav{position: relative;padding: 64px 24px 24px 24px;width: 100%;height: 100%;
                         .nav-wrapper{overflow-y: scroll;height:calc(100% - 83px);overflow-x:hidden;
-                            .nav-links{margin-top: 60px;flex-direction:column;gap:0;
+                            .nav-links{margin-top: 12px;flex-direction:column;gap:0;
                                 .dropdown{width: 100%;padding:0px;
                                     .dropbtn{position: relative;display: block;font-size: 18px;font-weight: 500;line-height: normal;letter-spacing: -0.54px;text-transform: capitalize;color: $colorBlack;font-family: $fonthelveticaneuemedium;padding: 15px;border-radius: 8px;background: rgba(28, 67, 185, 0.10);margin-bottom: 12px;text-align:left;
                                         &::before{content: "";position: absolute;z-index: 2;background: url("../images/humberger-arrow.svg") no-repeat;right: 25px;width: 20px;height: 10px;transition:all 0.3s ease-in-out;}}
@@ -858,7 +859,7 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
             }
         }
     }
-    @media screen and (max-width:820px) {
+    @media screen and (max-width:820px){
         .Stickybtn{bottom: 80px;right: 30px;
             a{height: 60px;width: 60px;img{width: 30px;}}
         }
@@ -871,6 +872,7 @@ header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;
         }
     }
 }
+
 
 .bodyNav{
     header .navbar{

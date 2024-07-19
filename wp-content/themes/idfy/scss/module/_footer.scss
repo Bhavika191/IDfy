@@ -1,7 +1,7 @@
 footer{background: #000;
     .footerWrapper{padding: 112px 200px 35px;
         .topFooter{display: flex;justify-content: space-between;align-items: flex-start;margin-bottom: 54px;
-            h3{@include font18;font-family: $fonthelveticaneuebold;line-height: normal;letter-spacing: 0.72px;color: $colorWhite;}
+            h3{@include font24;font-family: $fonthelveticaneuemedium;line-height: normal;letter-spacing: 1px;color: $colorWhite;}
             .footerlogo{width: 15%;
                 .socialmediaIcons{margin-top: 28px;display: flex;
                     a{width: 32px;height: 32px;border-radius: 50%;background: #2B2B2B;display: inline-flex;align-items: center;justify-content: center;margin-right: 14px;
@@ -13,9 +13,9 @@ footer{background: #000;
                 .innerLinks{width: 48%;
                     &:nth-child(1) ul{display: block;li{width: 100%;}}
                     ul{display: flex;align-items: flex-start;justify-content: space-between;flex-wrap: wrap;margin-top: 16px;
-                        li{width: 48%;margin-bottom: 14px;
+                        li{width: 48%;margin-bottom: 20px;
                             &:last-child{margin-bottom: 0px;}
-                            a{@include font12;font-family: $fonthelveticaneuelight;color: #D0D0D0;text-decoration: underline;line-height: normal;word-wrap: break-word;
+                            a{@include font16;font-family: $fonthelveticaneuelight;color: #D0D0D0;text-decoration: underline;line-height: normal;word-wrap: break-word;
                                 &:hover,&:focus, &:visited, &:active{color: #D0D0D0;}
                             }
                         }
@@ -23,7 +23,7 @@ footer{background: #000;
                 }
             }
             .footerForm{width: 25%;
-                .checkboxForm{margin-top: 20px ;                      
+                .checkboxForm{margin-top: 28px ;                      
                     .form-group {margin-bottom: 14px;
                         input {display: none;cursor: pointer;} 
                         label {position: relative;cursor: pointer;@include font16;font-family: $fonthelveticaneuemedium;color: $colorWhite;line-height: 112%;
@@ -48,15 +48,15 @@ footer{background: #000;
             }
         }
         .footerBottom{padding-top: 80px;border-bottom: 1px solid #656565;padding-bottom: 50px; display: none;margin-bottom: 30px;
-            h3{@include font18;font-family: $fonthelveticaneuebold;line-height: normal;letter-spacing: 0.72px;color: $colorWhite;}
+            h3{@include font24;font-family: $fonthelveticaneuemedium;line-height: normal;letter-spacing: 1px;color: $colorWhite;}
             .footerLinks{display: flex;align-items: flex-start;justify-content: space-between;
                 .innerLinks{width: 15%;
                     &:nth-child(2){width: 40%;}
                     &:nth-child(1) ul, &:nth-child(3) ul, &:nth-child(4) ul {display: block;li{width: 100%;}}
                     ul{display: flex;align-items: flex-start;justify-content: space-between;flex-wrap: wrap;margin-top: 16px;
-                        li{width: 48%;margin-bottom: 14px;
+                        li{width: 48%;margin-bottom: 20px;
                             &:last-child{margin-bottom: 0px;}
-                            a{@include font12;font-family: $fonthelveticaneuelight;color: #D0D0D0;text-decoration: underline;line-height: normal;word-wrap: break-word;
+                            a{@include font16;font-family: $fonthelveticaneuelight;color: #D0D0D0;text-decoration: underline;line-height: normal;word-wrap: break-word;
                                 &:hover,&:focus, &:visited, &:active{color: #D0D0D0;}
                             }
                         }
