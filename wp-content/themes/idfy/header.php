@@ -81,7 +81,7 @@
 																	<div class="menu-wrapper">
 																		<?php if( have_rows('menu_sub_items') ): ?>
 																			<?php while( have_rows('menu_sub_items') ): the_row(); ?>
-																				<a href="<?php echo get_sub_field('sub_items_heading'); ?>sub_items_link" class="dropdown-menu">
+																				<a href="<?php echo get_sub_field('sub_items_heading'); ?>sub_items_link" class="dropdown-menu" target="_blank">
 																					<h4><?php echo get_sub_field('sub_items_heading'); ?></h4>
 																					<?php $value = get_sub_field( "sub_items_description" ); if ( $value ) {?>
 																						<p><?php echo get_sub_field('sub_items_description'); ?></p>
@@ -99,7 +99,7 @@
 																				<ul>
 																					<?php if( have_rows('secondary_menu_items') ): ?>
 																						<?php while( have_rows('secondary_menu_items') ): the_row(); ?>
-																							<li><a href="<?php echo get_sub_field('menu_link'); ?>"><?php echo get_sub_field('menu_name'); ?></a></li>
+																							<li><a href="<?php echo get_sub_field('menu_link'); ?>" target="_blank"><?php echo get_sub_field('menu_name'); ?></a></li>
 																						<?php endwhile; ?>
 																					<?php endif; ?>
 																				</ul>
@@ -122,7 +122,7 @@
 																<div class="menu-wrapper">
 																	<?php if( have_rows('menu_sub_items') ): ?>
 																		<?php while( have_rows('menu_sub_items') ): the_row(); ?>
-																			<a href="<?php echo get_sub_field('sub_items_link'); ?>" class="dropdown-menu">
+																			<a href="<?php echo get_sub_field('sub_items_link'); ?>" class="dropdown-menu" target="_blank">
 																				<h4><?php echo get_sub_field('sub_items_heading'); ?></h4>
 																				<?php $value = get_sub_field( "sub_items_description" ); if ( $value ) {?>
 																					<p><?php echo get_sub_field('sub_items_description'); ?></p>
@@ -150,7 +150,7 @@
 								</div>
 								<div class="fixCta">
 									<?php $value = get_field("header_fix_cta_link",'option'); if ( $value ) {?>
-										<a href="<?php echo get_field('header_fix_cta_link','option'); ?>" class="ctaRed"><?php echo get_sub_field('header_fix_cta_text','option'); ?></a>
+										<a href="<?php echo get_field('header_fix_cta_link','option'); ?>" class="ctaRed" target="_blank"><?php echo get_sub_field('header_fix_cta_text','option'); ?></a>
 									<?php } ?>
 								</div>
 							</div>
@@ -179,7 +179,7 @@
 								</ul>
 							</div>
 							<?php $value = get_field("header_fix_cta_link",'option'); if ( $value ) {?>
-								<a href="<?php echo get_field('header_fix_cta_link','option'); ?>" class="ctaRed"><?php echo get_sub_field('header_fix_cta_text','option'); ?></a>
+								<a href="<?php echo get_field('header_fix_cta_link','option'); ?>" class="ctaRed" target="_blank"><?php echo get_sub_field('header_fix_cta_text','option'); ?></a>
 							<?php } ?>
 						</div>
 						<div class="hamburger-menu">
