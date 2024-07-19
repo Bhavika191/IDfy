@@ -150,7 +150,7 @@
 								</div>
 								<div class="fixCta">
 									<?php $value = get_field("header_fix_cta_link",'option'); if ( $value ) {?>
-										<a href="<?php echo get_field('header_fix_cta_link','option'); ?>" class="ctaRed" target="_blank"><?php echo get_sub_field('header_fix_cta_text','option'); ?></a>
+										<a href="<?php echo get_field('header_fix_cta_link','option'); ?>" class="ctaRed" target="_blank"><?php echo get_field('header_fix_cta_text','option'); ?></a>
 									<?php } ?>
 								</div>
 							</div>
@@ -179,7 +179,7 @@
 								</ul>
 							</div>
 							<?php $value = get_field("header_fix_cta_link",'option'); if ( $value ) {?>
-								<a href="<?php echo get_field('header_fix_cta_link','option'); ?>" class="ctaRed" target="_blank"><?php echo get_sub_field('header_fix_cta_text','option'); ?></a>
+								<a href="<?php echo get_field('header_fix_cta_link','option'); ?>" class="ctaRed" target="_blank"><?php echo get_field('header_fix_cta_text','option'); ?></a>
 							<?php } ?>
 						</div>
 						<div class="hamburger-menu">
