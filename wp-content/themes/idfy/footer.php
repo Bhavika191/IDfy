@@ -11,7 +11,7 @@
  */
 
 ?>
-
+<?php $base_path = get_template_directory_uri() ; ?>
 <footer>
 	<div class="footerWrapper">
 		<div class="topFooter">

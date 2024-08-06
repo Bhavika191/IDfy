@@ -1,5 +1,5 @@
 <?php get_header(); /* Template Name: Solutions */ ?>
-
+<?php $base_path = get_template_directory_uri() ; ?>
 <section class="bannerSection">
     <?php if (have_rows('banner_section')) : ?>
         <?php while (have_rows('banner_section')) : the_row(); ?>
@@ -8,7 +8,7 @@
                 <h2><?php echo get_sub_field('banner_name'); ?></h2>
                 <h3><?php echo get_sub_field('banner_description'); ?></h3>
                 <div class="downArrow">
-                    <a href="#nextSection"> <img src="<?php bloginfo('template_directory'); ?>/images/banner-down-arrow.svg" alt=""></a>
+                    <a href="#nextSection"> <img src="<?php echo $base_path; ?>/images/banner-down-arrow.svg" alt=""></a>
                 </div>
             </div>
         <?php endwhile; ?>
@@ -27,7 +27,7 @@
                 </div>
                 <div class="timelineData">
                     <div class="contentDiv" id="contentDiv">
-                        <div class="arrow left-arrow" id="left-arrow"> <img src="<?php bloginfo('template_directory'); ?>/images/timeline-prev-arrow.svg" alt=""></div>
+                        <div class="arrow left-arrow" id="left-arrow"> <img src="<?php echo $base_path; ?>/images/timeline-prev-arrow.svg" alt=""></div>
                         <div class="yearContentdata">
                             <?php if (have_rows('our_journey_content')) : ?>
                                 <?php while (have_rows('our_journey_content')) : the_row(); ?>
@@ -58,7 +58,7 @@
                                 <?php endwhile; ?>
                             <?php endif; ?>
                         </div>
-                        <div class="arrow right-arrow" id="right-arrow"> <img src="<?php bloginfo('template_directory'); ?>/images/timeline-next-arrow.svg" alt=""></div>
+                        <div class="arrow right-arrow" id="right-arrow"> <img src="<?php echo $base_path; ?>/images/timeline-next-arrow.svg" alt=""></div>
                     </div>
                     <div class="timelineContainerdiv">
                         <div class="timeline">

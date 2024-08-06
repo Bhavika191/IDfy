@@ -490,8 +490,12 @@
             .innerDiv{display: flex;align-items: center;justify-content: space-between;padding: 72px 85px;border-bottom: 1px solid rgba(0, 0, 0, 0.2);
                 &:first-child{padding-top: 0px;}
                 &:last-child{padding-bottom: 0px;border-bottom: none;}
-                &:nth-child(even){flex-direction: row-reverse;
+                &:nth-child(even){flex-direction: row-reverse;position: relative;
+                    &::before{content: "";position: absolute;right: -80px;top: 50%;transform: translateY(-50%);background: url("../images/blue-dots-linesolution.png") no-repeat center;width: 110px;height: 450px;;}
                     .contentDiv{padding-right: 0px;}
+                }
+                &:nth-child(odd){position: relative;
+                    &::before{content: "";position: absolute;left: -80px;top: 50%;transform: translateY(-50%);background: url("../images/red-dotsline-solution.png") no-repeat center;width: 110px;height: 450px;;}
                 }
                 .imgDiv{width: 45%;border-radius: 40px;overflow: hidden;}
                 .contentDiv{width: 45%;
@@ -514,6 +518,12 @@
             }
             .innerDatadiv{
                 .innerDiv{padding: 60px 70px;
+                    &:nth-child(even){
+                        &::before{width: 90px;height: 380px;right: -70px;}
+                    }
+                    &:nth-child(odd){
+                        &::before{width: 75px;height: 300px;left: -70px;}
+                    }
                     .imgDiv{width: 46%;}
                     .contentDiv{width: 46%;
                         h3{margin: 8px 0px 22px;}
@@ -532,12 +542,32 @@
             }
             .innerDatadiv{
                 .innerDiv{padding: 50px;
-                    
+                    &:nth-child(even){
+                        &::before{right: -60px;}
+                    }
+                    &:nth-child(odd){
+                        &::before{left: -60px;}
+                    }
                     .contentDiv{
                         h3{letter-spacing: 0px;margin: 8px 0px 20px;}
                         .solutionList{margin: 18px 0px 40px;
                             ul li{padding: 0px 0px 14px 32px;img{margin-right: 8px;width: 18px;height: 18px;}}
                         }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:1280px) {
+        .solutionWrapper{
+            .innerDatadiv{
+                .innerDiv{
+                    &:nth-child(even){
+                        &::before{scale: unset;width: 79px;height: 300px;right: -60px;}
+                    }
+                    &:nth-child(odd){
+                        &::before{scale: unset;width: 68px;height: 230px;left: -60px;}
                     }
                 }
             }
@@ -568,6 +598,12 @@
             }
             .innerDatadiv{
                 .innerDiv{padding: 40px 0px;display: block;
+                    &:nth-child(even){
+                        &::before{content: none;}
+                    }
+                    &:nth-child(odd){
+                        &::before{content: none;}
+                    }
                     .imgDiv{width: 100%;}
                     .contentDiv{margin-top: 24px;width: 100%;
                         h4{line-height: 112%;}

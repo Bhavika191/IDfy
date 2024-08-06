@@ -404,6 +404,11 @@ function closeSearchMobile() {
 // });
 // // Timeline JS starts
 
+
+
+
+
+
 // Show more footer js starts
 var more = false;
 $("#trigger").click(function () {
@@ -648,44 +653,44 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-document.addEventListener('DOMContentLoaded', () => {
-    const navItems = document.querySelectorAll('#navMenu li');
-    const slides = document.querySelectorAll('.slide');
+// document.addEventListener('DOMContentLoaded', () => {
+//     const navItems = document.querySelectorAll('#navMenu li');
+//     const slides = document.querySelectorAll('.slide');
 
-    const updateActiveState = (slideNumber) => {
-        // Remove active class from all nav items and slides
-        navItems.forEach(nav => nav.classList.remove('active'));
-        slides.forEach(slide => slide.classList.remove('active'));
+//     const updateActiveState = (slideNumber) => {
+//         // Remove active class from all nav items and slides
+//         navItems.forEach(nav => nav.classList.remove('active'));
+//         slides.forEach(slide => slide.classList.remove('active'));
 
-        // Add active class to the clicked nav item and corresponding slide
-        document.querySelector(`#navMenu li[data-slide="${slideNumber}"]`).classList.add('active');
-        document.querySelector(`.slide[data-slide="${slideNumber}"]`).classList.add('active');
-    };
+//         // Add active class to the clicked nav item and corresponding slide
+//         document.querySelector(`#navMenu li[data-slide="${slideNumber}"]`).classList.add('active');
+//         document.querySelector(`.slide[data-slide="${slideNumber}"]`).classList.add('active');
+//     };
 
-    navItems.forEach(item => {
-        item.addEventListener('click', (e) => {
-            const slideNumber = item.getAttribute('data-slide');
-            const targetSlide = document.querySelector(`.slide[data-slide="${slideNumber}"]`);
-            targetSlide.scrollIntoView({ behavior: 'smooth' });
+//     navItems.forEach(item => {
+//         item.addEventListener('click', (e) => {
+//             const slideNumber = item.getAttribute('data-slide');
+//             const targetSlide = document.querySelector(`.slide[data-slide="${slideNumber}"]`);
+//             targetSlide.scrollIntoView({ behavior: 'smooth' });
 
-            // Manually update the active state
-            updateActiveState(slideNumber);
-        });
-    });
+//             // Manually update the active state
+//             updateActiveState(slideNumber);
+//         });
+//     });
 
-    window.addEventListener('scroll', () => {
-        let currentSlide = null;
-        slides.forEach(slide => {
-            const rect = slide.getBoundingClientRect();
-            if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
-                currentSlide = slide.getAttribute('data-slide');
-            }
-        });
-        if (currentSlide) {
-            updateActiveState(currentSlide);
-        }
-    });
-});
+//     window.addEventListener('scroll', () => {
+//         let currentSlide = null;
+//         slides.forEach(slide => {
+//             const rect = slide.getBoundingClientRect();
+//             if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
+//                 currentSlide = slide.getAttribute('data-slide');
+//             }
+//         });
+//         if (currentSlide) {
+//             updateActiveState(currentSlide);
+//         }
+//     });
+// });
 
 
 
@@ -701,23 +706,6 @@ $.fn.isInViewport = function () {
     return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
-if ($(".productfamSection").length) {
-    $(window).on('resize scroll', function () {
-        if ($('.productfamSection').length) {
-            if ($('.productfamSection').isInViewport()) {
-                setTimeout(() => {
-                    $("header").addClass("productHeader")
-                }, 1000);
-            }
-            else {
-                setTimeout(() => {
-                    $("header").removeClass("productHeader")
-                }, 1000);
-            }
-
-        }
-    });
-}
 
 
 
@@ -1046,3 +1034,91 @@ if ($('body').hasClass('page-template-homepage')) {
 } else {
     $('.Stickybtn').removeClass('Stickybtnnew');
 }
+
+
+
+
+
+var rev = $('.rev_slider');
+rev.on('init', function (event, slick, currentSlide) {
+    var
+        cur = $(slick.$slides[slick.currentSlide]),
+        next = cur.next(),
+        prev = cur.prev();
+    prev.addClass('slick-sprev');
+    next.addClass('slick-snext');
+    cur.removeClass('slick-snext').removeClass('slick-sprev');
+    slick.$prev = prev;
+    slick.$next = next;
+}).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+
+    var cur = $(slick.$slides[nextSlide]);
+    slick.$prev.removeClass('slick-sprev');
+    slick.$next.removeClass('slick-snext');
+    next = cur.next(),
+        prev = cur.prev();
+    prev.prev();
+    prev.next();
+    prev.addClass('slick-sprev');
+    next.addClass('slick-snext');
+    slick.$prev = prev;
+    slick.$next = next;
+    cur.removeClass('slick-next').removeClass('slick-sprev');
+});
+
+rev.slick({
+    speed: 1000,
+    arrows: true,
+    dots: false,
+    focusOnSelect: true,
+    asNavFor: '.slider-nav',
+
+    infinite: true,
+    centerMode: false,
+    slidesPerRow: 1,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerPadding: '0',
+    swipe: true,
+    customPaging: function (slider, i) {
+        return '';
+    },
+    /*infinite: false,*/
+});
+
+$('.slider-nav').slick({
+    slidesToShow: 9,
+    slidesToScroll: 9,
+    asNavFor: '.rev_slider',
+    dots: false,
+    arrows:false,
+    infinite:false,
+    centerMode: false,
+    focusOnSelect: true,
+    responsive: [
+        {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 7.9,
+                slidesToScroll: 1,
+                infinite: true,
+            }
+        },
+        {
+            breakpoint: 920,
+            settings: {
+                slidesToShow: 6.9,
+                slidesToScroll: 1,
+                infinite: true,
+            }
+        },
+        {
+            breakpoint: 500,
+            settings: {
+                slidesToShow: 2.7,
+                slidesToScroll: 1,
+                infinite: true,
+            }
+        },
+    ]
+  });

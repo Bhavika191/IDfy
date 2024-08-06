@@ -1,5 +1,5 @@
 <?php get_header(); /* Template Name: Homepage */ ?>
-
+<?php $base_path = get_template_directory_uri() ; ?>
 <section class="bannerSectionhp" id="bannerSectionhp">
     <?php if (have_rows('banner_section')) : ?>
         <?php while (have_rows('banner_section')) : the_row(); ?>
@@ -76,7 +76,7 @@
                                         <?php endif; ?>
                                     </div>
                                     <div class="dots">
-                                        <img src="<?php bloginfo('template_directory'); ?>/images/hp-pioneer-slide-dots.svg" alt="">
+                                        <img src="<?php echo $base_path; ?>/images/hp-pioneer-slide-dots.svg" alt="">
                                     </div>
                                 </div>
                                 <div class="contentDiv">
@@ -260,11 +260,11 @@
                                 <?php endif; ?>
                             </ul>
                         </div>
-                        <div id="slides">
+                        <div class="rev_slider">
                             <?php if (have_rows('product_families_content')) : ?>
                                 <?php $counter = 1;
                                 while (have_rows('product_families_content')) : the_row(); ?>
-                                    <div class="scroll-cards__item slide" aria-label="Wie - 1" data-slide="<?php echo $counter; ?>">
+                                    <div class="scroll-cards__item slide rev_slide" aria-label="Wie - 1" data-slide="<?php echo $counter; ?>">
                                         <div class="dataImg">
                                             <?php $profamimg = get_sub_field('card_image');
                                             if (!empty($profamimg)) : ?>
@@ -275,6 +275,17 @@
                                             <h4><?php echo get_sub_field('card_heading'); ?></h4>
                                             <h3><?php echo get_sub_field('card_intro_heading'); ?></h3>
                                             <p><?php echo get_sub_field('card_description'); ?></p>
+                                            <div class="productList">
+                                                <ul>
+                                                    <?php if (have_rows('card_pointers')) : ?>
+                                                        <?php while (have_rows('card_pointers')) : the_row(); ?>
+                                                            <li>
+                                                                <?php echo get_sub_field('pointers_text'); ?>
+                                                            </li>
+                                                        <?php endwhile; ?>
+                                                    <?php endif; ?>
+                                                </ul>
+                                            </div>
                                             <a href="<?php echo get_sub_field('cta_link'); ?>" class="ctaRed"><?php echo get_sub_field('cta_text'); ?></a>
                                         </div>
                                     </div>
@@ -288,6 +299,11 @@
         <?php endwhile; ?>
     <?php endif; ?>
 </section>
+
+
+
+
+
 
 <section class="fraudstoriesSec fixed-section" id="fixedSection">
     <?php if (have_rows('fraud_stories_section')) : ?>
@@ -308,9 +324,10 @@
                                     <a href="<?php echo get_sub_field('cta_link'); ?>">
                                         <div class="fraudArrow">
                                             <p><?php echo get_sub_field('card_description'); ?></p>
-                                            <svg width="32" height="25" viewBox="0 0 32 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1 17H0V18H1V17ZM31.7071 17.7071C32.0976 17.3166 32.0976 16.6834 31.7071 16.2929L25.3431 9.92893C24.9526 9.53841 24.3195 9.53841 23.9289 9.92893C23.5384 10.3195 23.5384 10.9526 23.9289 11.3431L29.5858 17L23.9289 22.6569C23.5384 23.0474 23.5384 23.6805 23.9289 24.0711C24.3195 24.4616 24.9526 24.4616 25.3431 24.0711L31.7071 17.7071ZM2 1.5C2 0.947715 1.55228 0.5 1 0.5C0.447715 0.5 0 0.947715 0 1.5H2ZM1 18H31V16H1V18ZM2 17V1.5H0V17H2Z" />
+                                            <svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1.59375 7.20312C1.04147 7.20313 0.59375 7.65084 0.59375 8.20313C0.59375 8.75541 1.04147 9.20313 1.59375 9.20312L1.59375 7.20312ZM18.7111 8.91023C19.1017 8.5197 19.1017 7.88654 18.7111 7.49602L12.3472 1.13206C11.9567 0.741531 11.3235 0.741531 10.933 1.13206C10.5424 1.52258 10.5424 2.15574 10.933 2.54627L16.5898 8.20312L10.933 13.86C10.5425 14.2505 10.5425 14.8837 10.933 15.2742C11.3235 15.6647 11.9567 15.6647 12.3472 15.2742L18.7111 8.91023ZM1.59375 9.20312L18.004 9.20312L18.004 7.20312L1.59375 7.20312L1.59375 9.20312Z" />
                                             </svg>
+
 
                                         </div>
                                     </a>
@@ -333,7 +350,7 @@
                                         <?php endif; ?>
                                     </div>
                                     <!-- <div class="dotsInner">
-                                        <img src="<?php bloginfo('template_directory'); ?>/images/fraud-stories-dots.svg" alt="">
+                                        <img src="<?php echo $base_path; ?>/images/fraud-stories-dots.svg" alt="">
                                     </div> -->
                                 </div>
                             <?php $counter = $counter + 1;
@@ -361,15 +378,15 @@
                                     <?php endif; ?>
                                 </div>
                                 <div class="dotsInner">
-                                    <img src="<?php bloginfo('template_directory'); ?>/images/fraud-stories-dots.svg" alt="">
+                                    <img src="<?php echo $base_path; ?>/images/fraud-stories-dots.svg" alt="">
                                 </div>
                             </div>
                             <div class="contentDivfraud">
                                 <a href="<?php echo get_sub_field('cta_link'); ?>">
                                     <div class="fraudArrow">
                                         <p><?php echo get_sub_field('card_description'); ?></p>
-                                        <svg width="32" height="25" viewBox="0 0 32 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 17H0V18H1V17ZM31.7071 17.7071C32.0976 17.3166 32.0976 16.6834 31.7071 16.2929L25.3431 9.92893C24.9526 9.53841 24.3195 9.53841 23.9289 9.92893C23.5384 10.3195 23.5384 10.9526 23.9289 11.3431L29.5858 17L23.9289 22.6569C23.5384 23.0474 23.5384 23.6805 23.9289 24.0711C24.3195 24.4616 24.9526 24.4616 25.3431 24.0711L31.7071 17.7071ZM2 1.5C2 0.947715 1.55228 0.5 1 0.5C0.447715 0.5 0 0.947715 0 1.5H2ZM1 18H31V16H1V18ZM2 17V1.5H0V17H2Z" />
+                                        <svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.59375 7.20312C1.04147 7.20313 0.59375 7.65084 0.59375 8.20313C0.59375 8.75541 1.04147 9.20313 1.59375 9.20312L1.59375 7.20312ZM18.7111 8.91023C19.1017 8.5197 19.1017 7.88654 18.7111 7.49602L12.3472 1.13206C11.9567 0.741531 11.3235 0.741531 10.933 1.13206C10.5424 1.52258 10.5424 2.15574 10.933 2.54627L16.5898 8.20312L10.933 13.86C10.5425 14.2505 10.5425 14.8837 10.933 15.2742C11.3235 15.6647 11.9567 15.6647 12.3472 15.2742L18.7111 8.91023ZM1.59375 9.20312L18.004 9.20312L18.004 7.20312L1.59375 7.20312L1.59375 9.20312Z" />
                                         </svg>
                                     </div>
                                 </a>
@@ -400,7 +417,7 @@
                                             <img src="<?php echo esc_url($clientimg['url']); ?>" loading="lazy" alt="<?php echo esc_attr($clientimg['alt']); ?>" />
                                         <?php endif; ?>
                                         <div class="dotsInner">
-                                            <img src="<?php bloginfo('template_directory'); ?>/images/client-slider-dots.svg" alt="">
+                                            <img src="<?php echo $base_path; ?>/images/client-slider-dots.svg" alt="">
                                         </div>
                                     </div>
                                     <div class="nameDiv">
@@ -410,7 +427,7 @@
                                 </div>
                                 <div class="contentDivclient">
                                     <!-- <h3><?php echo get_sub_field('clients_review_text'); ?></h3> -->
-                                    <h3><span class="topColon"> <img src="<?php bloginfo('template_directory'); ?>/images/colon-up.svg" alt=""></span><?php echo get_sub_field('clients_review_text'); ?><span class="btmColon"> <img src="<?php bloginfo('template_directory'); ?>/images/colon-down.svg" alt=""></span></h3>
+                                    <h3><span class="topColon"> <img src="<?php echo $base_path; ?>/images/colon-up.svg" alt=""></span><?php echo get_sub_field('clients_review_text'); ?><span class="btmColon"> <img src="<?php echo $base_path; ?>/images/colon-down.svg" alt=""></span></h3>
                                 </div>
                             </div>
                         <?php endwhile; ?>
