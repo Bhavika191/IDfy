@@ -23,6 +23,7 @@
 	<link href="<?php bloginfo('template_directory'); ?>/css/main.css" rel="stylesheet">
 
 	<?php wp_head(); ?>
+	<?php $base_path = get_template_directory_uri() ; ?>
 </head>
 
 <body <?php body_class(); ?>>
@@ -64,7 +65,7 @@
 																				<ul>
 																					<?php if( have_rows('card_pointers') ): ?>
 																						<?php while( have_rows('card_pointers') ): the_row(); ?>
-																							<li><img src="<?php bloginfo('template_directory'); ?>/images/360-card-rightimg.svg" alt=""><?php echo get_sub_field('pointers_text'); ?></li>
+																							<li><img src="<?php echo $base_path; ?>/images/360-card-rightimg.svg" alt=""><?php echo get_sub_field('pointers_text'); ?></li>
 																						<?php endwhile; ?>
 																					<?php endif; ?>
 																				</ul>
@@ -73,9 +74,9 @@
 																	</div>
 																</div>
 																<a href="" class="idfy360">
-																	<img src="<?php bloginfo('template_directory'); ?>/images/mobile-360.svg" alt="" class="image360">
+																	<img src="<?php echo $base_path; ?>/images/mobile-360.svg" alt="" class="image360">
 																	<h4>IDfy</h4>
-																	<img src="<?php bloginfo('template_directory'); ?>/images/mobile-redirect-arrow.svg" alt="" class="redirectArrow">
+																	<img src="<?php echo $base_path; ?>/images/mobile-redirect-arrow.svg" alt="" class="redirectArrow">
 																</a>
 																<div class="dropdown-section-menu">
 																	<div class="menu-wrapper">
@@ -139,11 +140,11 @@
 										<?php endif; ?>
 										<div class="custom-select-mobile">
 											<p>Global</p>
-											<div class="select-selected-mobile"><img src="<?php bloginfo('template_directory'); ?>/images/india-flag.svg" alt=""> IND</div>
+											<div class="select-selected-mobile"><img src="<?php echo $base_path; ?>/images/india-flag.svg" alt=""> IND</div>
 											<ul class="select-items-mobile">
-												<li><img src="<?php bloginfo('template_directory'); ?>/images/india-flag.svg" alt=""> IND</li>
-												<li><img src="<?php bloginfo('template_directory'); ?>/images/indonesia-flag.svg" alt=""> ID</li>
-												<li><img src="<?php bloginfo('template_directory'); ?>/images/philippines-flag.svg" alt=""> PH</li>
+												<li><img src="<?php echo $base_path; ?>/images/india-flag.svg" alt=""> IND</li>
+												<li><img src="<?php echo $base_path; ?>/images/indonesia-flag.svg" alt=""> ID</li>
+												<li><img src="<?php echo $base_path; ?>/images/philippines-flag.svg" alt=""> PH</li>
 											</ul>
 										</div>
 									</ul>
@@ -167,14 +168,14 @@
 							</div>
 							<div class="custom-select">
 								<div class="select-selected"><img
-										src="<?php bloginfo('template_directory'); ?>/images/india-flag.svg" alt=""> IND
+										src="<?php echo $base_path; ?>/images/india-flag.svg" alt=""> IND
 								</div>
 								<ul class="select-items">
-									<li><img src="<?php bloginfo('template_directory'); ?>/images/india-flag.svg"
+									<li><img src="<?php echo $base_path; ?>/images/india-flag.svg"
 											alt=""> IND</li>
-									<li><img src="<?php bloginfo('template_directory'); ?>/images/indonesia-flag.svg"
+									<li><img src="<?php echo $base_path; ?>/images/indonesia-flag.svg"
 											alt=""> ID</li>
-									<li><img src="<?php bloginfo('template_directory'); ?>/images/philippines-flag.svg"
+									<li><img src="<?php echo $base_path; ?>/images/philippines-flag.svg"
 											alt=""> PH</li>
 								</ul>
 							</div>
@@ -184,7 +185,7 @@
 						</div>
 						<div class="hamburger-menu">
 							<div class="search-icon-mobile" onclick="searchToggleMobile();">
-								<img src="<?php bloginfo('template_directory'); ?>/images/search-icon-mobile.svg"
+								<img src="<?php echo $base_path; ?>/images/search-icon-mobile.svg"
 									alt="">
 							</div>
 							<div class="button_toggle" id="toggle">
@@ -196,7 +197,7 @@
 				</nav>
 				<div class="Stickybtn">
 					<a href="#">
-						<img src="<?php bloginfo('template_directory'); ?>/images/sticky-mailbtn.svg" alt="">
+						<img src="<?php echo $base_path; ?>/images/sticky-mailbtn.svg" alt="">
 					</a>
 				</div>
 			</header>
@@ -205,11 +206,11 @@
 				<div class="modal-container">
 					<div class="search-input">
 						<div class="search-icon">
-							<img src="<?php bloginfo('template_directory'); ?>/images/search-icon-modal.svg" alt="">
+							<img src="<?php echo $base_path; ?>/images/search-icon-modal.svg" alt="">
 						</div>
 						<input type="text" placeholder="Solutions, APIs, Industries">
 						<div class="closeButton" onclick="closeSearch();">
-							<img src="<?php bloginfo('template_directory'); ?>/images/close-logo.svg" alt="">
+							<img src="<?php echo $base_path; ?>/images/close-logo.svg" alt="">
 						</div>
 					</div>
 					<div class="relatedSearch">
@@ -217,30 +218,30 @@
 						<ul class="relatedMenu">
 							<li class="relatedTab">
 								<a href="">
-									<img src="<?php bloginfo('template_directory'); ?>/images/clock-svg.svg" alt=""> KYC
+									<img src="<?php echo $base_path; ?>/images/clock-svg.svg" alt=""> KYC
 								</a>
 							</li>
 							<li class="relatedTab">
 								<a href="">
-									<img src="<?php bloginfo('template_directory'); ?>/images/clock-svg.svg" alt="">
+									<img src="<?php echo $base_path; ?>/images/clock-svg.svg" alt="">
 									Verification
 								</a>
 							</li>
 							<li class="relatedTab">
 								<a href="">
-									<img src="<?php bloginfo('template_directory'); ?>/images/clock-svg.svg" alt="">
+									<img src="<?php echo $base_path; ?>/images/clock-svg.svg" alt="">
 									Crime
 								</a>
 							</li>
 							<li class="relatedTab">
 								<a href="">
-									<img src="<?php bloginfo('template_directory'); ?>/images/clock-svg.svg" alt="">
+									<img src="<?php echo $base_path; ?>/images/clock-svg.svg" alt="">
 									Onboarding
 								</a>
 							</li>
 							<li class="relatedTab">
 								<a href="">
-									<img src="<?php bloginfo('template_directory'); ?>/images/clock-svg.svg" alt="">
+									<img src="<?php echo $base_path; ?>/images/clock-svg.svg" alt="">
 									Risk
 								</a>
 							</li>
@@ -254,17 +255,17 @@
 					<div class="search-wrapper">
 						<div class="logo">
 							<a href="">
-								<img src="<?php bloginfo('template_directory'); ?>/images/idfy-logo-mobile.png"
+								<img src="<?php echo $base_path; ?>/images/idfy-logo-mobile.png"
 									alt="IDfy Logo">
 							</a>
 						</div>
 						<div class="search-modal-elements">
 							<div class="search-icon">
-								<img src="<?php bloginfo('template_directory'); ?>/images/search-icon-mobile.svg"
+								<img src="<?php echo $base_path; ?>/images/search-icon-mobile.svg"
 									alt="">
 							</div>
 							<div class="search-close-button" onclick="closeSearchMobile();">
-								<img src="<?php bloginfo('template_directory'); ?>/images/close-logo.svg" alt="">
+								<img src="<?php echo $base_path; ?>/images/close-logo.svg" alt="">
 							</div>
 						</div>
 					</div>
