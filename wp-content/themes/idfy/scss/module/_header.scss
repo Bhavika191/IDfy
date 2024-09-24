@@ -1,8 +1,7 @@
 header{position: fixed;top: 0;left: 0;right: 0;transition: top 0.5s ease-in-out;background: transparent;width: 100%;z-index: 4;
     &.nav-up{top: -150px;}
     .navbar{@include wrapper;display: flex;justify-content: space-between;align-items: center;
-        .logo{width: 109px;overflow: hidden;padding: 24px 0px;
-        }
+        .logo{width: 109px;overflow: hidden;padding: 24px 0px;}
         .headerContent{display: flex;gap:76px;
             .nav-menu{
                 .scroll-nav{
